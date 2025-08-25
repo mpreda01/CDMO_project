@@ -1,5 +1,5 @@
 % Sports Tournament Scheduling (STS) Problem - Optimization Version
-% MiniZinc Implementation
+% MiniZinc Implementation with JSON Output
 
 % =============================================================================
 % IMPORTS
@@ -71,21 +71,11 @@ constraint forall(p in PERIODS, t in TEAMS) (
 % Symmetry breaking 1: Fix team 1 in first position
 constraint schedule[1,1,1] = 1;
 
-% Symmetry breaking 2: Team 2 plays in week 1
-% constraint exists(p in PERIODS) (
-%     schedule[1,p,1] = 2 \/ schedule[1,p,2] = 2
-% );
-
 % Symmetry breaking 3: Order periods within each week by minimum team number
 constraint forall(p in 1..periods-1) (
     min(schedule[1,p,1], schedule[1,p,2]) <= 
     min(schedule[1,p+1,1], schedule[1,p+1,2])
 );
-
-% constraint forall(w in WEEKS, p in 1..periods-1) (
-%     min(schedule[w,p,1], schedule[w,p,2]) <= 
-%     min(schedule[w,p+1,1], schedule[w,p+1,2])
-% );
 
 % =============================================================================
 % IMPLIED CONSTRAINTS (for better propagation)
@@ -137,9 +127,6 @@ solve
     ])
     minimize max_imbalance;
 
-% Alternative: minimize total imbalance
-% solve minimize total_imbalance;
-
 % =============================================================================
 % OUTPUT
 % =============================================================================
@@ -166,58 +153,22 @@ output [
 ];
 
 % =============================================================================
-% JSON OUTPUT FORMAT
-% =============================================================================
-
-% output [
-%     "\n--- JSON SOLUTION FORMAT ---\n",
-%     "{\n",
-%     "  \"obj\": " ++ show(max_imbalance) ++ ",\n",
-%     "  \"sol\": [\n"
-% ] ++
-% [
-%     "    [" ++
-%     concat([
-%         "[" ++ show(home_team[w,p]) ++ "," ++ show(away_team[w,p]) ++ "]" ++
-%         if w < weeks then "," else "" endif
-%         | w in WEEKS
-%     ]) ++
-%     if p < periods then "],\n" else "]\n" endif
-%     | p in PERIODS
-% ] ++
-% [
-%     "  ]\n",
-%     "}\n"
-% ];
-% =============================================================================
-% OUTPUT SECTION FOR JSON FORMAT (Section 2.4 Requirements)
-% =============================================================================
-
-% =============================================================================
-% JSON OUTPUT - Exact format for section 2.4
+% SOLUTION MATRIX OUTPUT
 % =============================================================================
 output [
-    "=== JSON SOLUTION (for checker) ===\n"
-];
-
-% Output the solution matrix in the exact format required:
-% (n/2) × (n-1) matrix where each entry is [home_team, away_team]
-% Format: [[[2,4],[5,1],...], [[5,6],[2,3],...], ...]
-
-output [
+    "\n=== SOLUTION MATRIX ===\n",
     "[\n"
 ] ++
 [
-    "  [" ++
+    "  [[" ++
     concat([
-        "[" ++ show(home_team[w,p]) ++ ", " ++ show(away_team[w,p]) ++ "]" ++
-        if w < weeks then ", " else "" endif
+        show(home_team[w,p]) ++ " , " ++ show(away_team[w,p]) ++
+        if w < weeks then "] , [" else "" endif
         | w in WEEKS
     ]) ++
-    if p < periods then "],\n" else "]\n" endif
+    if p < periods then "]]\n" else "]]\n" endif
     | p in PERIODS
 ] ++
 [
     "]\n"
 ];
-
