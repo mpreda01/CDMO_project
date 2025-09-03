@@ -1,0 +1,58 @@
+{
+  "cbc": {
+    "decision": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    },
+    "optimization": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    }
+  },
+  "highs": {
+    "decision": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    },
+    "optimization": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    }
+  },
+  "cplex": {
+    "decision": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    },
+    "optimization": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    }
+  },
+  "gurobi": {
+    "decision": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    },
+    "optimization": {
+      "time": 0,
+      "optimal": false,
+      "obj": null,
+      "sol": null
+    }
+  }
+}
