@@ -2,23 +2,28 @@
 # Decision and Optimization versions
 
 # Parameters
-param n >= 4;  # Number of teams
-check: n mod 2 = 0;  # Ensure n is even
+param n >= 4;
+check: n mod 2 = 0;
+
+# Parameter to control optimization - default: decision version
+param optimize_balance default 0 binary;
+
+# Sets
 set TEAMS := 1..n;
 set WEEKS := 1..(n-1);
 set PERIODS := 1..(n/2);
 
 # Decision Variables
-# x[t1,t2,w,p] = 1 if team t1 plays at home against team t2 in week w, period p
 var x{t1 in TEAMS, t2 in TEAMS, w in WEEKS, p in PERIODS: t1 != t2} binary;
 
-# For optimization version: count home/away games per team
+# Optimization variables - count home/away games per team
 var home_games{t in TEAMS} >= 0;
 var away_games{t in TEAMS} >= 0;
 var max_imbalance >= 0;
 
-# Objective function for optimization version: minimize the maximum imbalance between home and away games
-minimize MaxImbalance: max_imbalance;
+# Objective function for optimization version
+minimize MaxImbalance: 
+    if optimize_balance = 1 then max_imbalance else 0;
 
 # Constraint 1: Every team plays with every other team exactly once
 subject to PlayOnce{t1 in TEAMS, t2 in TEAMS: t1 < t2}:
@@ -36,18 +41,19 @@ subject to OnePeriodPerWeek{w in WEEKS, p in PERIODS}:
 subject to AtMostTwiceInPeriod{t in TEAMS, p in PERIODS}:
     sum{w in WEEKS, t2 in TEAMS: t2 != t} (x[t,t2,w,p] + x[t2,t,w,p]) <= 2;
 
-# For optimization version: count home and away games
-subject to CountHomeGames{t in TEAMS}:
+# Optimization constraints
+# Count home and away games
+subject to CountHomeGames{t in TEAMS: optimize_balance = 1}:
     home_games[t] = sum{t2 in TEAMS, w in WEEKS, p in PERIODS: t2 != t} x[t,t2,w,p];
 
-subject to CountAwayGames{t in TEAMS}:
+subject to CountAwayGames{t in TEAMS: optimize_balance = 1}:
     away_games[t] = sum{t2 in TEAMS, w in WEEKS, p in PERIODS: t2 != t} x[t2,t,w,p];
 
-# Imbalance constraints for optimization
-subject to Imbalance1{t in TEAMS}:
+# Imbalance constraints
+subject to Imbalance1{t in TEAMS: optimize_balance = 1}:
     max_imbalance >= home_games[t] - away_games[t];
 
-subject to Imbalance2{t in TEAMS}:
+subject to Imbalance2{t in TEAMS: optimize_balance = 1}:
     max_imbalance >= away_games[t] - home_games[t];
 
 # Symmetry breaking constraints
@@ -55,10 +61,6 @@ subject to Imbalance2{t in TEAMS}:
 subject to SymBreak1:
     sum{t2 in TEAMS: t2 != 1} x[1,t2,1,1] = 1;
 
-# Team 1 plays against team 2 in week 1
+# Fix team 1 to play against team 2 in week 1, period 1
 subject to SymBreak2:
     x[1,2,1,1] = 1;
-
-# Team n plays in period 1 of week 1
-subject to SymBreak3:
-    sum{t2 in TEAMS, w in 1..1: t2 != n} (x[n,t2,w,1] + x[t2,n,w,1]) = 1;
