@@ -6,6 +6,7 @@ Runs the AMPL model with multiple solvers and generates JSON results
 import os
 import sys
 import json
+import orjson
 import time
 import math
 import pandas as pd
@@ -70,6 +71,8 @@ class STSMIPRunner:
                 
                 solution.append(period_games)
             
+            solution = str(solution)
+            
             return solution
             
         except Exception as e:
@@ -93,7 +96,9 @@ class STSMIPRunner:
             if not self.load_model(ampl, optimization):
                 return {
                     "time": self.time_limit,
+                    "version": "optimal" if optimization else "decision",
                     "optimal": False,
+                    "stop_reason": "unsat",
                     "obj": None,
                     "sol": None
                 }
@@ -115,9 +120,22 @@ class STSMIPRunner:
             solve_result = str(ampl.getValue('solve_result')).lower()
             is_optimal = 'optimal' in solve_result or "solved" in solve_result
             
+            # Determine stop reason
+            stop_reason = None
+            if is_optimal or 'feasible' in solve_result:
+                stop_reason = None  # Solution found
+            elif 'infeasible' in solve_result or 'unsat' in solve_result:
+                stop_reason = "unsat"
+            elif runtime >= self.time_limit or 'time' in solve_result or 'limit' in solve_result:
+                stop_reason = "time_limit"
+            else:
+                stop_reason = "unknown"  # Default for other failure cases
+            
             result = {
                 "time": min(runtime, self.time_limit),
+                "version": "optimal" if optimization else "decision",
                 "optimal": is_optimal,
+                "stop_reason": stop_reason,
                 "obj": None,
                 "sol": None
             }
@@ -145,7 +163,9 @@ class STSMIPRunner:
             print(f"Error with solver {solver}: {e}")
             return {
                 "time": self.time_limit,
+                "version": "optimal" if optimization else "decision",
                 "optimal": False,
+                "stop_reason": "unsat",
                 "obj": None,
                 "sol": None
             }
@@ -207,37 +227,55 @@ class STSMIPRunner:
             print(f"\n=== Running experiments for {n} teams ===")
             
             # Combined results structure
-            combined_results = {}
+            merged_results = {}
             
             for solver in available_solvers:
-                combined_results[solver] = {}
+                solver_results = []
                 
                 # Run decision version if requested
                 if run_decision:
                     print(f"  Running {solver} (decision)...")
                     decision_result = self.run_solver(solver, n, optimization=False)
-                    combined_results[solver]["decision"] = decision_result
+                    solver_results.append(decision_result)
                     
                     status = "OK" if decision_result["optimal"] else "FAIL"
-                    print(f"    {status} {solver} (decision): {decision_result['time']}s")
+                    reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
+                    print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
                 
                 # Run optimization version if requested
                 if run_optimization:
                     print(f"  Running {solver} (optimization)...")
                     optimization_result = self.run_solver(solver, n, optimization=True)
-                    combined_results[solver]["optimization"] = optimization_result
+                    solver_results.append(optimization_result)
                     
                     status = "OK" if optimization_result["optimal"] else "FAIL"
                     obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
-                    print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}")
+                    reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
+                    print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+                merged_results[solver] = solver_results
             
             # Save combined results
             results_dir = Path("res/MIP")
             results_dir.mkdir(parents=True, exist_ok=True)
             
             filename = f"{n}.json"
-            with open(results_dir / filename, 'w') as f:
-                json.dump(combined_results, f, indent=2)
+            with open(results_dir / filename, "wb") as f:
+                f.write(orjson.dumps(merged_results, option=orjson.OPT_INDENT_2 | orjson.OPT_NON_STR_KEYS))
+            
+            with open(results_dir / filename, "r") as f:
+                lines = f.readlines()
+
+            with open(results_dir / filename, "w") as f:
+                for line in lines:
+                    if '"sol": "' in line and "unsat" not in line and "timeout" not in line:
+                        # Remove surrounding quotes
+                        line = line.replace('\\"', '"') 
+                        line = line.replace('"sol": "', '"sol": ').rstrip()
+                        if line.endswith('"'):
+                            line = line[:-1]  # remove closing quote
+                        f.write(line + "\n")
+                    else:
+                        f.write(line)
             
             print(f"Results saved to {filename}")
 

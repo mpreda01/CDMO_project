@@ -1,58 +1,74 @@
 {
-  "cbc": {
-    "decision": {
+  "cbc": [
+    {
       "time": 0,
+      "version": "decision",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     },
-    "optimization": {
+    {
       "time": 0,
+      "version": "optimal",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     }
-  },
-  "highs": {
-    "decision": {
+  ],
+  "highs": [
+    {
       "time": 0,
+      "version": "decision",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     },
-    "optimization": {
+    {
       "time": 0,
+      "version": "optimal",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     }
-  },
-  "cplex": {
-    "decision": {
+  ],
+  "cplex": [
+    {
       "time": 0,
+      "version": "decision",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     },
-    "optimization": {
+    {
       "time": 0,
+      "version": "optimal",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     }
-  },
-  "gurobi": {
-    "decision": {
+  ],
+  "gurobi": [
+    {
       "time": 0,
+      "version": "decision",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     },
-    "optimization": {
+    {
       "time": 0,
+      "version": "optimal",
       "optimal": false,
+      "stop_reason": null,
       "obj": null,
       "sol": null
     }
-  }
+  ]
 }
