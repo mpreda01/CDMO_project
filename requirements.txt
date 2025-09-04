@@ -1,1 +1,3 @@
-
+amplpy
+pandas
+orjson
