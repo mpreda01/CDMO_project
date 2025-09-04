@@ -232,13 +232,11 @@ class STSMIPRunner:
             merged_results = {}
             
             for solver in available_solvers:
-                #solver_results = {}
                 
                 # Run decision version if requested
                 if run_decision:
                     print(f"  Running {solver} (decision)...")
                     decision_result = self.run_solver(solver, n, optimization=False)
-                    #solver_results.append(decision_result)
                     
                     status = "OK" if decision_result["optimal"] else "FAIL"
                     reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
@@ -250,7 +248,6 @@ class STSMIPRunner:
                 if run_optimization:
                     print(f"  Running {solver} (optimization)...")
                     optimization_result = self.run_solver(solver, n, optimization=True)
-                    #solver_results.append(optimization_result)
                     
                     status = "OK" if optimization_result["optimal"] else "FAIL"
                     obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
@@ -262,7 +259,7 @@ class STSMIPRunner:
             # Save combined results
             results_dir = (Path(__file__).parent.parent.parent / "res" / "MIP")
             results_dir.mkdir(parents=True, exist_ok=True)
-            
+
             filename = f"{n}.json"
             with open(results_dir / filename, "wb") as f:
                 f.write(orjson.dumps(merged_results, option=orjson.OPT_INDENT_2 | orjson.OPT_NON_STR_KEYS))

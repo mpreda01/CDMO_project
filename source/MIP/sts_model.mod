@@ -2,7 +2,7 @@
 # Decision and Optimization versions
 
 # Parameters
-param n >= 4;
+param n >= 2;
 check: n mod 2 = 0;
 
 # Parameter to control optimization - default: decision version
