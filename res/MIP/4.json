@@ -1,74 +1,66 @@
 {
-  "cbc": [
-    {
-      "time": 0,
-      "version": "decision",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    },
-    {
-      "time": 0,
-      "version": "optimal",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    }
-  ],
-  "highs": [
-    {
-      "time": 0,
-      "version": "decision",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    },
-    {
-      "time": 0,
-      "version": "optimal",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    }
-  ],
-  "cplex": [
-    {
-      "time": 0,
-      "version": "decision",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    },
-    {
-      "time": 0,
-      "version": "optimal",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    }
-  ],
-  "gurobi": [
-    {
-      "time": 0,
-      "version": "decision",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    },
-    {
-      "time": 0,
-      "version": "optimal",
-      "optimal": false,
-      "stop_reason": "infeasible",
-      "obj": null,
-      "sol": null
-    }
-  ]
+  "cbc_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  }
 }

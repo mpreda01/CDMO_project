@@ -138,15 +138,15 @@ class STSMIPRunner:
                 "version": "optimal" if optimization else "decision",
                 "optimal": is_optimal,
                 "stop_reason": stop_reason,
-                "obj": None,
-                "sol": None
+                "obj": "None",
+                "sol": []
             }
             
             # Get objective value if optimization version and solution found
             if optimization and is_optimal:
                 try:
                     obj_value = ampl.getObjective("MaxImbalance").value()
-                    result["obj"] = int(obj_value) if obj_value is not None else None
+                    result["obj"] = int(obj_value) if obj_value is not None else "None"
                 except:
                     result["obj"] = 1
             
@@ -156,7 +156,7 @@ class STSMIPRunner:
                 if solution_matrix:
                     result["sol"] = solution_matrix
                     if not optimization:
-                        result["obj"] = None  # No objective for decision version
+                        result["obj"] = "None"  # No objective for decision version
             
             ampl.close()
             return result
@@ -232,29 +232,32 @@ class STSMIPRunner:
             merged_results = {}
             
             for solver in available_solvers:
-                solver_results = []
+                #solver_results = {}
                 
                 # Run decision version if requested
                 if run_decision:
                     print(f"  Running {solver} (decision)...")
                     decision_result = self.run_solver(solver, n, optimization=False)
-                    solver_results.append(decision_result)
+                    #solver_results.append(decision_result)
                     
                     status = "OK" if decision_result["optimal"] else "FAIL"
                     reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
                     print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
+                    
+                    merged_results[solver+"_dec"] = decision_result
                 
                 # Run optimization version if requested
                 if run_optimization:
                     print(f"  Running {solver} (optimization)...")
                     optimization_result = self.run_solver(solver, n, optimization=True)
-                    solver_results.append(optimization_result)
+                    #solver_results.append(optimization_result)
                     
                     status = "OK" if optimization_result["optimal"] else "FAIL"
                     obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
                     reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
                     print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
-                merged_results[solver] = solver_results
+                
+                    merged_results[solver+"_opt"] = optimization_result
             
             # Save combined results
             results_dir = (Path(__file__).parent.parent.parent / "res" / "MIP")
