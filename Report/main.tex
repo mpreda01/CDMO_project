@@ -10,6 +10,50 @@
 \maketitle
 
 \section{Introduction}
+The report provides an in-depth study of the Sports Tournament Scheduling (STS) problem, emphasizing the formulation and comparison of different optimization models. The models examined in this project are built upon a shared formalization, which is outlined in the following section. The main goal of the presented work is to build a unified infrastructure for modeling, analyzing, and solving the STS problem, by considering the different techniques in these areas.  
+
+\subsection{Model Formalization}
+
+\paragraph{Input Parameters.}
+The STS problem is defined by the following parameters, which are common to all models:
+\begin{itemize}
+    \item $n$: Number of teams (even integer)
+    \item $w = n-1$: Number of weeks
+    \item $p = n/2$: Number of periods (matches per week)
+    \item Teams are indexed by $t \in \{1, 2, \ldots, n\}$
+    \item Weeks are indexed by $w \in \{1, 2, \ldots, n-1\}$
+    \item Periods are indexed by $p \in \{1, 2, \ldots, n/2\}$
+\end{itemize}
+
+\paragraph{Objective Variable and its Bounds.}
+The objective function, which is only related to the optimization version, represents the maximum imbalance in home and away games for any team, with the goal of minimizing it:
+\[
+M = \max_{t \in \{1, \ldots, n\}} |h_t - a_t|
+\]
+where $h_t$ and $a_t$ represent the number of home and away games played by the team $t$, respectively. 
+The theoretical upper bound for $M$ is $n-1$, while the lower bound for $M$ is $1$, since having an even $n$ implies that the matches each team plays (equal to $w$) are odd. For this reason, $h_t$ and $a_t$ must be different.
+
+\paragraph{Constraints.}
+All models rest on the following core constraints:
+\begin{enumerate}
+    \item Every team plays every other team only once in the tournament.
+    \item Every team plays once a week.
+    \item Each period in each week has exactly one game.
+    \item Every team plays at most twice in the same period over the tournament.
+    \item A team cannot play against itself.
+\end{enumerate}
+
+\paragraph{Pre-processing steps and Symmetry Breaking constraints.}
+To increase solver performance, preprocessing steps might have been included in the examined models:
+\begin{itemize}
+    \item Building the model using a solver-independent language, like AMPL, which may require additional preprocessing time before the actual solving phase.
+    \item Introducing implied constraints, such as the number of matches per team.
+    \item Fixing the date of some matches to break team symmetries.
+\end{itemize}
+
+\subsection{Code Availability}
+The project work can be found at \url{https://github.com/mpreda01/Combinatorial-and-decision-making-project}.
+
 
 \section{CP Model}
 
