@@ -1,0 +1,74 @@
+{
+  "cbc": [
+    {
+      "time": 0,
+      "version": "decision",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    },
+    {
+      "time": 0,
+      "version": "optimal",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    }
+  ],
+  "highs": [
+    {
+      "time": 0,
+      "version": "decision",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    },
+    {
+      "time": 0,
+      "version": "optimal",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    }
+  ],
+  "cplex": [
+    {
+      "time": 0,
+      "version": "decision",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    },
+    {
+      "time": 0,
+      "version": "optimal",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    }
+  ],
+  "gurobi": [
+    {
+      "time": 0,
+      "version": "decision",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    },
+    {
+      "time": 0,
+      "version": "optimal",
+      "optimal": false,
+      "stop_reason": "infeasible",
+      "obj": null,
+      "sol": null
+    }
+  ]
+}
