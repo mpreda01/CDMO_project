@@ -1,3 +1,4 @@
 amplpy
 pandas
 orjson
+z3-solver

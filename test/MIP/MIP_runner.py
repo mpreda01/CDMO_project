@@ -24,7 +24,7 @@ class STSMIPRunner:
         self.results = {}
         self.ampl_path = ampl_path
         
-    def load_model(self, ampl, optimization=True):
+    def load_model(self, ampl, optimization=True, sym_t1=True, sym_w1=True):
         """Load unified AMPL model and configure for decision/optimization"""
         try:
             # Load the unified model
@@ -33,6 +33,10 @@ class STSMIPRunner:
             # Set optimization parameter
             optimize_param = 1 if optimization else 0
             ampl.getParameter("optimize_balance").set(optimize_param)
+            sym_t1_param = 1 if sym_t1 else 0
+            ampl.getParameter("sym_t1").set(sym_t1_param)
+            sym_w1_param = 1 if sym_w1 else 0
+            ampl.getParameter("sym_w1").set(sym_w1_param)
             
             return True
             
@@ -81,9 +85,8 @@ class STSMIPRunner:
             print(f"Error extracting solution: {e}")
             return None
     
-    def run_solver(self, solver, n, optimization=True):
+    def run_solver(self, solver, n, optimization=True, sym_t1=True, sym_w1=True):
         """Run AMPL with specific solver using AMPLpy"""
-        print(f"Running {solver} for n={n}...")
         
         try:
             # Create AMPL instance
@@ -95,10 +98,12 @@ class STSMIPRunner:
             start_time = time.time()
             
             # Load model from file
-            if not self.load_model(ampl, optimization):
+            if not self.load_model(ampl, optimization, sym_t1, sym_w1):
+                                
                 return {
                     "time": self.time_limit,
                     "version": "optimal" if optimization else "decision",
+                    "symmetry_breaking": None, 
                     "optimal": False,
                     "stop_reason": None,
                     "obj": None,
@@ -133,9 +138,19 @@ class STSMIPRunner:
             else:
                 stop_reason = "unknown"  # Default for other failure cases
             
+            if sym_t1 and sym_w1:
+                    symmbreak = "all"
+            elif sym_t1:
+                    symmbreak = "symmetry_team1"
+            elif sym_w1:
+                    symmbreak = "symmetry_week1"
+            else:
+                    symmbreak = "None"
+
             result = {
                 "time": min(runtime, self.time_limit),
                 "version": "optimal" if optimization else "decision",
+                "symmetry_breaking": symmbreak,
                 "optimal": is_optimal,
                 "stop_reason": stop_reason,
                 "obj": "None",
@@ -200,7 +215,7 @@ class STSMIPRunner:
             print(f"Solver {solver} not available: {e}")
             return False
     
-    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True):
+    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True, symmetry_combinations=True):
         """Run experiments for different team sizes"""
         mode_str = []
         if run_decision:
@@ -210,7 +225,7 @@ class STSMIPRunner:
         
         print(f"\n=== Running experiments for {' and '.join(mode_str)} ===")
         print(f"Time limit: {self.time_limit}s")
-        print(f"Solvers to use: {', '.join(self.solvers)}")
+        print(f"Solvers to use: {', '.join(self.solvers)}\n")
         
         # Check available solvers
         available_solvers = []
@@ -232,30 +247,63 @@ class STSMIPRunner:
             merged_results = {}
             
             for solver in available_solvers:
-                
-                # Run decision version if requested
-                if run_decision:
-                    print(f"  Running {solver} (decision)...")
-                    decision_result = self.run_solver(solver, n, optimization=False)
+                if symmetry_combinations:
+                    for s1 in [False,True]:
+                        for s2 in [False,True]:
+                            # Run decision version if requested
+                            if run_decision:
+                                print(f"  Running {solver} (decision) for {n} teams")
+                                decision_result = self.run_solver(solver, n, optimization=False, sym_t1=s1, sym_w1=s2)
                     
-                    status = "OK" if decision_result["optimal"] else "FAIL"
-                    reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
-                    print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
-                    
-                    merged_results[solver+"_dec"] = decision_result
+                                status = "OK" if decision_result["optimal"] else "FAIL"
+                                reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
+                                print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
+
+                                comb = "_dec"
+                                comb += "_st1" if s1 else ""
+                                comb += "_sw1" if s2 else ""
+
+                                merged_results[solver+comb] = decision_result
                 
-                # Run optimization version if requested
-                if run_optimization:
-                    print(f"  Running {solver} (optimization)...")
-                    optimization_result = self.run_solver(solver, n, optimization=True)
+                            # Run optimization version if requested
+                            if run_optimization:
+                                print(f"  Running {solver} (optimization) for {n} teams")
+                                optimization_result = self.run_solver(solver, n, optimization=True, sym_t1=s1, sym_w1=s2)
                     
-                    status = "OK" if optimization_result["optimal"] else "FAIL"
-                    obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
-                    reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
-                    print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+                                status = "OK" if optimization_result["optimal"] else "FAIL"
+                                obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
+                                reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
+                                print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+
+                                comb = "_opt"
+                                comb += "_st1" if s1 else ""
+                                comb += "_sw1" if s2 else ""
                 
-                    merged_results[solver+"_opt"] = optimization_result
+                                merged_results[solver+comb] = optimization_result
+                else:
+                    if run_decision:
+                        print(f"  Running {solver} (decision) for {n} teams")
+                        decision_result = self.run_solver(solver, n, optimization=False, sym_t1=True, sym_w1=True)
+                    
+                        status = "OK" if decision_result["optimal"] else "FAIL"
+                        reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
+                        print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
+
+                        merged_results[solver+"_dec"] = decision_result
+                
+                    # Run optimization version if requested
+                    if run_optimization:
+                        print(f"  Running {solver} (optimization) for {n} teams")
+                        optimization_result = self.run_solver(solver, n, optimization=True, sym_t1=True, sym_w1=True)
+                    
+                        status = "OK" if optimization_result["optimal"] else "FAIL"
+                        obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
+                        reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
+                        print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+                
+                        merged_results[solver+"_opt"] = optimization_result
             
+
             # Save combined results
             results_dir = (Path(__file__).parent.parent.parent / "res" / "MIP")
             results_dir.mkdir(parents=True, exist_ok=True)
@@ -290,6 +338,7 @@ def main():
         time_limit = 300
         run_decision = True
         run_optimization = True
+        symmetry_combinations = True
     else:
         # Parse arguments
         team_sizes = []
@@ -298,6 +347,7 @@ def main():
         time_limit = 300
         run_decision = True
         run_optimization = True
+        symmetry_combinations = True
     
         i = 1
         while i < len(sys.argv):
@@ -345,6 +395,8 @@ def main():
             elif arg == '--optimization-only':
                 run_decision = False
                 run_optimization = True
+            elif arg == '--no-combinations':
+                symmetry_combinations = False
             else:
                 try:
                     n = int(arg)
@@ -358,15 +410,14 @@ def main():
             i += 1
     
         if not team_sizes:
-            print("Error: No valid team sizes provided")
-            sys.exit(1)
+            team_sizes = [2,4,6,8,10,12]
     
         if not run_decision and not run_optimization:
             print("Error: Cannot use both --decision-only and --optimization-only")
             sys.exit(1)
     
     runner = STSMIPRunner(ampl_path=ampl_path, time_limit=time_limit, solvers=solvers)
-    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization)
+    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization, symmetry_combinations=symmetry_combinations)
 
 if __name__ == "__main__":
     main()
