@@ -17,12 +17,9 @@ The report provides an in-depth study of the Sports Tournament Scheduling (STS) 
 \paragraph{Input Parameters.}
 The STS problem is defined by the following parameters, which are common to all models:
 \begin{itemize}
-    \item $n$: Number of teams (even integer)
-    \item $w = n-1$: Number of weeks
-    \item $p = n/2$: Number of periods (matches per week)
-    \item Teams are indexed by $t \in \{1, 2, \ldots, n\}$
-    \item Weeks are indexed by $w \in \{1, 2, \ldots, n-1\}$
-    \item Periods are indexed by $p \in \{1, 2, \ldots, n/2\}$
+    \item $n$: Number of teams (even number). Teams are indexed by $t \in \{1, 2, \ldots, n\}$ 
+    \item $w = n-1$: Number of weeks. Weeks are indexed by $w \in \{1, 2, \ldots, n-1\}$
+    \item $p = n/2$: Number of periods (matches per week). Periods are indexed by $p \in \{1, 2, \ldots, n/2\}$
 \end{itemize}
 
 \paragraph{Objective Variable and its Bounds.}
@@ -112,10 +109,7 @@ Since the absolute value, used in the other optimization techniques, is a non-li
 For this reason, the minimization has linked to two linearization constraints:
 
 \begin{align}
-\text{minimize} \quad M
-\end{align}
-
-\begin{align}
+\text{minimize} \quad M \\
 h_t - a_t &\leq M \quad \forall t \\
 a_t - h_t &\leq M \quad \forall t
 \end{align}
