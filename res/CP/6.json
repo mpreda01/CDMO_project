@@ -1,0 +1,3290 @@
+{
+  "1757023422.701712": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023423.428413": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023424.151788": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023424.9717267": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.33,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.47,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023425.7013307": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023426.4127314": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023427.1678517": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023427.8869035": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023428.6872225": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023429.4193463": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023430.1183224": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023430.832129": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023431.5518575": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023432.4036398": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.49,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023433.119925": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023433.8076859": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023434.520172": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023435.3325272": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.47,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023436.0357022": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023436.7524078": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023437.4705505": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023438.269308": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.42,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023438.9868717": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.33,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023439.685535": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.33,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023440.486821": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.45,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023441.1857505": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023441.8874574": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023442.5928981": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023443.2725005": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023444.02307": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.39,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023444.7911253": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023445.5179853": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023745.5310123": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757023746.2614126": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023746.9551647": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023747.6326048": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.33,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023748.3393974": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023749.1335516": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.42,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757023749.9187603": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.46,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757023750.6560745": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024050.676231": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757024051.376031": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.33,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024052.09491": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024052.7824864": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024053.5662572": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.42,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024054.2591941": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.33,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024054.9487379": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024055.6251917": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024355.6580317": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757024356.5090585": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.47,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024357.2260106": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757024358.0753272": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.44,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024358.9422185": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.48,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757024359.6711557": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024360.493243": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.45,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757024361.2070422": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024661.2339275": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757024662.1061883": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.42,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024663.027558": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.44,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.47,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024663.9741714": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.43,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.5,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024664.842773": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.41,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024665.694997": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.39,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024666.5913153": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.46,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.42,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024667.443174": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.44,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757024668.5203776": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.49,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.56,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024669.4596086": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.48,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024670.4774203": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.53,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.47,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024671.4581773": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.44,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.5,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024672.3638732": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.44,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024673.3500545": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.47,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.5,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024674.327089": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.49,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.46,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024675.3189125": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.47,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.51,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024676.1478484": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.39,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.42,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 8"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 6], [6, 2], [5, 2], [4, 3]],
+      [[2, 4], [2, 3], [4, 1], [3, 1], [5, 6]],
+      [[6, 3], [5, 4], [3, 5], [4, 6], [2, 1]]
+    ]
+  },
+  "1757024676.9462442": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.4,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024677.7459462": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.39,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 8"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 6], [6, 2], [5, 2], [4, 3]],
+      [[2, 4], [2, 3], [4, 1], [3, 1], [5, 6]],
+      [[6, 3], [5, 4], [3, 5], [4, 6], [2, 1]]
+    ]
+  },
+  "1757024678.6632566": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.52,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024679.4514341": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.4,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024680.28766": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.47,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024681.4093108": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.47,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.63,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024682.1844103": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024683.1210155": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.4,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.51,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024683.9871547": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.41,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024684.8024943": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.41,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024685.571109": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.38,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024686.3934116": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.41,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024687.2293112": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.47,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024687.9665296": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024688.7285473": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024689.4672842": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.35,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 8"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 6], [6, 2], [5, 2], [4, 3]],
+      [[2, 4], [2, 3], [4, 1], [3, 1], [5, 6]],
+      [[6, 3], [5, 4], [3, 5], [4, 6], [2, 1]]
+    ]
+  },
+  "1757024690.2136233": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024690.9707634": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 8"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 6], [6, 2], [5, 2], [4, 3]],
+      [[2, 4], [2, 3], [4, 1], [3, 1], [5, 6]],
+      [[6, 3], [5, 4], [3, 5], [4, 6], [2, 1]]
+    ]
+  },
+  "1757024691.877262": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.51,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024692.6457086": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024693.526843": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.44,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024694.2992635": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.38,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024695.0521848": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757024995.0855286": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757024996.5397363": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.85,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.57,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024997.813292": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.76,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.49,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757024998.9111292": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.59,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.48,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757024999.9428878": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.57,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.43,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757025001.0439565": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.59,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.49,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757025002.0367033": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.56,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757025002.9896972": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.53,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757025303.0221517": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757025303.9682744": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.52,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025304.8655593": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.47,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 8"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 6], [6, 2], [5, 2], [4, 3]],
+      [[2, 4], [2, 3], [4, 1], [3, 1], [5, 6]],
+      [[6, 3], [5, 4], [3, 5], [4, 6], [2, 1]]
+    ]
+  },
+  "1757025305.8309345": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.53,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025306.77632": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.51,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025307.761882": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.56,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025308.9372241": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.62,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.52,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025309.9196537": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.52,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "optimizer_error": "",
+    "time": 0,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025609.9558027": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757025611.156312": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.69,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.48,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757025612.2536616": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.62,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757025613.363644": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.61,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.47,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757025614.5746794": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.64,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.53,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757025615.721921": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.66,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.46,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757025616.808463": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.6,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 4], [1, 5], [3, 2], [6, 4], [6, 5]],
+      [[5, 2], [4, 3], [6, 1], [5, 3], [4, 2]],
+      [[3, 6], [2, 6], [4, 5], [2, 1], [3, 1]]
+    ]
+  },
+  "1757025617.8862424": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.59,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.46,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [4, 2], [6, 2], [6, 3], [4, 3]],
+      [[2, 3], [1, 6], [5, 4], [4, 1], [5, 6]],
+      [[6, 4], [3, 5], [3, 1], [2, 5], [2, 1]]
+    ]
+  },
+  "1757025917.9362075": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757025919.540707": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.91,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.65,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025920.9683094": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.74,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.66,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 8"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 6], [6, 2], [5, 2], [4, 3]],
+      [[2, 4], [2, 3], [4, 1], [3, 1], [5, 6]],
+      [[6, 3], [5, 4], [3, 5], [4, 6], [2, 1]]
+    ]
+  },
+  "1757025922.352382": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.69,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.66,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025923.6317258": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.66,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.58,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025924.9309318": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.64,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.63,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025926.2936811": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.72,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.6,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025927.6352732": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": false, "ic_matches_per_team": false, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.68,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.62,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 5], [1, 4], [6, 2], [5, 3], [4, 3]],
+      [[3, 2], [6, 3], [5, 4], [6, 1], [2, 1]],
+      [[4, 6], [2, 5], [3, 1], [2, 4], [5, 6]]
+    ]
+  },
+  "1757025929.2985904": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.78,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.84,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025930.6895654": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.74,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.61,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025931.8744893": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.58,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.57,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025933.2861626": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.79,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.59,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025934.846143": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.67,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.81,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025936.4497583": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.81,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.74,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025938.2415876": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.83,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.92,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025940.0114002": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.9,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.81,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025941.517655": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.77,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.69,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025942.8728654": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.7,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.62,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025944.119774": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.61,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.6,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025945.4102807": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.61,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.64,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025946.6251814": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.59,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.59,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025947.9074683": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.65,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.6,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025949.2486432": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.58,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.72,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025950.5722535": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.62,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.66,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025951.89621": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.66,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.63,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025953.2102244": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.58,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.69,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025954.5847728": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.68,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.65,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025956.0719378": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.78,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.67,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025957.6057622": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.74,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.76,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025959.0358188": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.73,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.64,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025960.4882636": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.67,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.75,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757025961.8921368": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.75,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.61,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025963.1890187": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.61,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.65,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025964.634045": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.7,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.7,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025966.3327556": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.95,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.66,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025967.7213514": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.72,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.63,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025969.1656077": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.66,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.75,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025970.3809285": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.6,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.58,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025971.8980448": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.76,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.7,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757025973.1558604": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.64,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.57,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757026273.2151637": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": false
+  },
+  "1757026274.3719072": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.57,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.55,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757026275.5001237": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.54,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.52,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757026276.7200925": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.58,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.6,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757026277.9689145": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.6,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.6,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757026279.1899223": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.57,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.61,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  },
+  "1757026280.5185223": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 0.66,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.62,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 10"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [3, 2], [5, 4], [6, 4]],
+      [[2, 5], [6, 3], [4, 1], [6, 2], [5, 3]],
+      [[4, 3], [2, 4], [5, 6], [3, 1], [2, 1]]
+    ]
+  },
+  "1757026281.8162396": {
+    "n": 6,
+    "params": {"sb_weeks": true, "sb_periods": false, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": true,
+    "cp_time": 0.66,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.6,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "summary": ["Original Total Imbalance: 18", "Optimized Total Imbalance: 6", "Improvement: 12", "Total Swaps Made: 9"],
+    "obj": 6,
+    "optimal": true,
+    "sol": [
+      [[1, 6], [1, 5], [4, 2], [5, 3], [6, 3]],
+      [[2, 5], [6, 4], [3, 1], [6, 2], [5, 4]],
+      [[3, 4], [2, 3], [5, 6], [4, 1], [2, 1]]
+    ]
+  }
+}
