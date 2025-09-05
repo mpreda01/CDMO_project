@@ -283,95 +283,87 @@ class STSMIPRunner:
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python sts_runner_copy.py <team_sizes> [options]")
-        print("Options:")
-        print("  --solvers <solver1,solver2,...>  Specify solvers to use (default: all available)")
-        print("                                   Available: cbc,highs,cplex,gurobi")
-        print("  --decision-only                  Run only decision version (feasibility)")
-        print("  --optimization-only              Run only optimization version")
-        print("  --time-limit <seconds>           Set time limit in seconds (default: 300)")
-        print("  --ampl-path <path>               Path to AMPL installation")
-        print()
-        print("Examples:")
-        print("  python sts_runner_copy.py 2 4 6 8 10")
-        print("  python sts_runner_copy.py 6 8 --solvers cbc,highs --time-limit 600")
-        print("  python sts_runner_copy.py 6 --decision-only")
-        print("  python sts_runner_copy.py 8 --optimization-only --solvers cplex")
-        sys.exit(1)
+        # Parse arguments
+        team_sizes = [2,4,6,8,10,12]
+        ampl_path = None
+        solvers = None
+        time_limit = 300
+        run_decision = True
+        run_optimization = True
+    else:
+        # Parse arguments
+        team_sizes = []
+        ampl_path = None
+        solvers = None
+        time_limit = 300
+        run_decision = True
+        run_optimization = True
     
-    # Parse arguments
-    team_sizes = []
-    ampl_path = None
-    solvers = None
-    time_limit = 300
-    run_decision = True
-    run_optimization = True
-    
-    i = 1
-    while i < len(sys.argv):
-        arg = sys.argv[i]
-        if arg == '--ampl-path':
-            if i + 1 < len(sys.argv):
-                ampl_path = sys.argv[i + 1]
-                i += 1
-            else:
-                print("Error: --ampl-path requires a path argument")
-                sys.exit(1)
-        elif arg == '--solvers':
-            if i + 1 < len(sys.argv):
-                solver_list = sys.argv[i + 1].split(',')
-                valid_solvers = ["cbc", "highs", "cplex", "gurobi"]
-                solvers = []
-                for solver in solver_list:
-                    solver = solver.strip()
-                    if solver in valid_solvers:
-                        solvers.append(solver)
-                    else:
-                        print(f"Error: {solver} is not a valid solver. Valid solvers: {', '.join(valid_solvers)}")
-                        sys.exit(1)
-                i += 1
-            else:
-                print("Error: --solvers requires a comma-separated list of solvers")
-                sys.exit(1)
-        elif arg == '--time-limit':
-            if i + 1 < len(sys.argv):
-                try:
-                    time_limit = int(sys.argv[i + 1])
-                    if time_limit <= 0:
-                        print("Error: time limit must be positive")
-                        sys.exit(1)
+        i = 1
+        while i < len(sys.argv):
+            arg = sys.argv[i]
+            if arg == '--ampl-path':
+                if i + 1 < len(sys.argv):
+                    ampl_path = sys.argv[i + 1]
                     i += 1
-                except ValueError:
-                    print("Error: time limit must be an integer")
+                else:
+                    print("Error: --ampl-path requires a path argument")
                     sys.exit(1)
+            elif arg == '--solvers':
+                if i + 1 < len(sys.argv):
+                    solver_list = sys.argv[i + 1].split(',')
+                    valid_solvers = ["cbc", "highs", "cplex", "gurobi"]
+                    solvers = []
+                    for solver in solver_list:
+                        solver = solver.strip()
+                        if solver in valid_solvers:
+                            solvers.append(solver)
+                        else:
+                            print(f"Error: {solver} is not a valid solver. Valid solvers: {', '.join(valid_solvers)}")
+                            sys.exit(1)
+                    i += 1
+                else:
+                    print("Error: --solvers requires a comma-separated list of solvers")
+                    sys.exit(1)
+            elif arg == '--time-limit':
+                if i + 1 < len(sys.argv):
+                    try:
+                        time_limit = int(sys.argv[i + 1])
+                        if time_limit <= 0:
+                            print("Error: time limit must be positive")
+                            sys.exit(1)
+                        i += 1
+                    except ValueError:
+                        print("Error: time limit must be an integer")
+                        sys.exit(1)
+                else:
+                    print("Error: --time-limit requires a time value in seconds")
+                    sys.exit(1)
+            elif arg == '--decision-only':
+                run_decision = True
+                run_optimization = False
+            elif arg == '--optimization-only':
+                run_decision = False
+                run_optimization = True
             else:
-                print("Error: --time-limit requires a time value in seconds")
-                sys.exit(1)
-        elif arg == '--decision-only':
-            run_decision = True
-            run_optimization = False
-        elif arg == '--optimization-only':
-            run_decision = False
-            run_optimization = True
-        else:
-            try:
-                n = int(arg)
-                if n < 2 or n % 2 != 0:
-                    print(f"Error: {n} is not valid (must be even and >= 2)")
+                try:
+                    n = int(arg)
+                    if n < 2 or n % 2 != 0:
+                        print(f"Error: {n} is not valid (must be even and >= 2)")
+                        sys.exit(1)
+                    team_sizes.append(n)
+                except ValueError:
+                    print(f"Error: {arg} is not a valid team size or option")
                     sys.exit(1)
-                team_sizes.append(n)
-            except ValueError:
-                print(f"Error: {arg} is not a valid team size or option")
-                sys.exit(1)
-        i += 1
+            i += 1
     
-    if not team_sizes:
-        print("Error: No valid team sizes provided")
-        sys.exit(1)
+        if not team_sizes:
+            print("Error: No valid team sizes provided")
+            sys.exit(1)
     
-    if not run_decision and not run_optimization:
-        print("Error: Cannot use both --decision-only and --optimization-only")
-        sys.exit(1)
+        if not run_decision and not run_optimization:
+            print("Error: Cannot use both --decision-only and --optimization-only")
+            sys.exit(1)
     
     runner = STSMIPRunner(ampl_path=ampl_path, time_limit=time_limit, solvers=solvers)
     runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization)
