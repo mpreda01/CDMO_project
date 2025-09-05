@@ -293,7 +293,7 @@ def main():
         print("  --ampl-path <path>               Path to AMPL installation")
         print()
         print("Examples:")
-        print("  python sts_runner_copy.py 4 6 8 10")
+        print("  python sts_runner_copy.py 2 4 6 8 10")
         print("  python sts_runner_copy.py 6 8 --solvers cbc,highs --time-limit 600")
         print("  python sts_runner_copy.py 6 --decision-only")
         print("  python sts_runner_copy.py 8 --optimization-only --solvers cplex")
@@ -356,8 +356,8 @@ def main():
         else:
             try:
                 n = int(arg)
-                if n < 4 or n % 2 != 0:
-                    print(f"Error: {n} is not valid (must be even and >= 4)")
+                if n < 2 or n % 2 != 0:
+                    print(f"Error: {n} is not valid (must be even and >= 2)")
                     sys.exit(1)
                 team_sizes.append(n)
             except ValueError:

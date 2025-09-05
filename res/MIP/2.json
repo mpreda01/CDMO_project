@@ -1,0 +1,66 @@
+{
+  "cbc_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "highs_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "highs_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "cplex_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cplex_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_dec": {
+    "time": 0,
+    "version": "decision",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt": {
+    "time": 0,
+    "version": "optimal",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  }
+}
