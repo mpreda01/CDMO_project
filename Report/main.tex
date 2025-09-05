@@ -109,9 +109,9 @@ Since the absolute value, used in the other optimization techniques, is a non-li
 For this reason, the minimization has linked to two linearization constraints:
 
 \begin{align}
-\text{minimize} \quad M \\
-h_t - a_t &\leq M \quad \forall t \\
-a_t - h_t &\leq M \quad \forall t
+& \text{minimize} \quad M \\
+& h_t - a_t \leq M \quad \forall t \\
+& a_t - h_t \leq M \quad \forall t
 \end{align}
 
 Thanks to these two constraints, it has been possible to represent the absolute value in a linear format, where the minimization leads $M$ to be equal to $\max_{t} |h_t - a_t|$.
