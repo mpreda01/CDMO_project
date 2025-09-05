@@ -238,6 +238,12 @@ class MinizincRunner:
         if not cp_success:
             print(f"CP_3.0.mzn failed: {cp_error}")
             result['time'] = cp_time
+            result['opt'] = False
+            remaining_time -= cp_time
+            if remaining_time <= 0:
+                print(f"Timeout reached after CP_3.0.mzn")
+                result['timeout_reached'] = True
+                result['time'] = self.timeout_seconds
             return result
             
         # Check remaining time
@@ -263,9 +269,10 @@ class MinizincRunner:
         )
         summary, sol = self.parse_optimized_matrix_to_solution(optimizer_output = opt_output, n_teams = n) 
 
-        for item in summary:
-            if "Optimized Total Imbalance:" in item:
-                value = int(item.split(": ")[1])        
+        if summary:
+            for item in summary:
+                if "Optimized Total Imbalance:" in item:
+                    value = int(item.split(": ")[1])        
         
         if value == n:
             result.update({
@@ -530,5 +537,5 @@ class MinizincRunner:
             sys.exit(1)
 
 if __name__ == "__main__":
-    runner = MinizincRunner(timeout_seconds=20)
+    runner = MinizincRunner(timeout_seconds=300)
     runner.run()
