@@ -2,11 +2,13 @@
 # Decision and Optimization versions
 
 # Parameters
-param n >= 4;
+param n >= 2;
 check: n mod 2 = 0;
 
 # Parameter to control optimization - default: decision version
 param optimize_balance default 0 binary;
+param sym_t1 default 0 binary;
+param sym_w1 default 0 binary;
 
 # Sets
 set TEAMS := 1..n;
@@ -19,7 +21,7 @@ var x{t1 in TEAMS, t2 in TEAMS, w in WEEKS, p in PERIODS: t1 != t2} binary;
 # Optimization variables - count home/away games per team
 var home_games{t in TEAMS} >= 0;
 var away_games{t in TEAMS} >= 0;
-var max_imbalance >= 0;
+var max_imbalance >= 0, <= n-1;
 
 # Objective function for optimization version
 minimize MaxImbalance: 
@@ -41,6 +43,10 @@ subject to OnePeriodPerWeek{w in WEEKS, p in PERIODS}:
 subject to AtMostTwiceInPeriod{t in TEAMS, p in PERIODS}:
     sum{w in WEEKS, t2 in TEAMS: t2 != t} (x[t,t2,w,p] + x[t2,t,w,p]) <= 2;
 
+# Implied constraint: Every team plays n-1 matches in the tournament
+subject to TotalMatches{t in TEAMS}:
+    sum{t2 in TEAMS, w in WEEKS, p in PERIODS: t2 != t} (x[t,t2,w,p] + x[t2,t,w,p]) = n-1;
+
 # Optimization constraints
 # Count home and away games
 subject to CountHomeGames{t in TEAMS: optimize_balance = 1}:
@@ -57,10 +63,10 @@ subject to Imbalance2{t in TEAMS: optimize_balance = 1}:
     max_imbalance >= away_games[t] - home_games[t];
 
 # Symmetry breaking constraints
-# Fix team 1 to play at home in week 1, period 1
-subject to SymBreak1:
-    sum{t2 in TEAMS: t2 != 1} x[1,t2,1,1] = 1;
+# Fix team 1 to play against team w+1 in week w
+subject to SymBreak_team1{w in WEEKS: w+1 <= n}:
+    sym_t1 * (sum{p in PERIODS} (x[1,w+1,w,p] + x[w+1,1,w,p])) = sym_t1;
 
-# Fix team 1 to play against team 2 in week 1, period 1
-subject to SymBreak2:
-    x[1,2,1,1] = 1;
+# Fix team (2p-1) to play at home against team 2p in week 1, period p
+subject to SymBreak_week1{p in PERIODS: 2*p <= n}:
+    sym_w1 * x[2*p-1, 2*p, 1, p] = sym_w1;

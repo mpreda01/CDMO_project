@@ -24,7 +24,7 @@ class STSMIPRunner:
         self.results = {}
         self.ampl_path = ampl_path
         
-    def load_model(self, ampl, optimization=True):
+    def load_model(self, ampl, optimization=True, sym_t1=True, sym_w1=True):
         """Load unified AMPL model and configure for decision/optimization"""
         try:
             # Load the unified model
@@ -33,6 +33,10 @@ class STSMIPRunner:
             # Set optimization parameter
             optimize_param = 1 if optimization else 0
             ampl.getParameter("optimize_balance").set(optimize_param)
+            sym_t1_param = 1 if sym_t1 else 0
+            ampl.getParameter("sym_t1").set(sym_t1_param)
+            sym_w1_param = 1 if sym_w1 else 0
+            ampl.getParameter("sym_w1").set(sym_w1_param)
             
             return True
             
@@ -81,9 +85,8 @@ class STSMIPRunner:
             print(f"Error extracting solution: {e}")
             return None
     
-    def run_solver(self, solver, n, optimization=True):
+    def run_solver(self, solver, n, optimization=True, sym_t1=True, sym_w1=True):
         """Run AMPL with specific solver using AMPLpy"""
-        print(f"Running {solver} for n={n}...")
         
         try:
             # Create AMPL instance
@@ -95,10 +98,12 @@ class STSMIPRunner:
             start_time = time.time()
             
             # Load model from file
-            if not self.load_model(ampl, optimization):
+            if not self.load_model(ampl, optimization, sym_t1, sym_w1):
+                                
                 return {
                     "time": self.time_limit,
                     "version": "optimal" if optimization else "decision",
+                    "symmetry_breaking": None, 
                     "optimal": False,
                     "stop_reason": None,
                     "obj": None,
@@ -133,9 +138,19 @@ class STSMIPRunner:
             else:
                 stop_reason = "unknown"  # Default for other failure cases
             
+            if sym_t1 and sym_w1:
+                    symmbreak = "all"
+            elif sym_t1:
+                    symmbreak = "symmetry_team1"
+            elif sym_w1:
+                    symmbreak = "symmetry_week1"
+            else:
+                    symmbreak = "None"
+
             result = {
                 "time": min(runtime, self.time_limit),
                 "version": "optimal" if optimization else "decision",
+                "symmetry_breaking": symmbreak,
                 "optimal": is_optimal,
                 "stop_reason": stop_reason,
                 "obj": "None",
@@ -200,7 +215,7 @@ class STSMIPRunner:
             print(f"Solver {solver} not available: {e}")
             return False
     
-    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True):
+    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True, symmetry_combinations=True):
         """Run experiments for different team sizes"""
         mode_str = []
         if run_decision:
@@ -210,7 +225,7 @@ class STSMIPRunner:
         
         print(f"\n=== Running experiments for {' and '.join(mode_str)} ===")
         print(f"Time limit: {self.time_limit}s")
-        print(f"Solvers to use: {', '.join(self.solvers)}")
+        print(f"Solvers to use: {', '.join(self.solvers)}\n")
         
         # Check available solvers
         available_solvers = []
@@ -232,37 +247,67 @@ class STSMIPRunner:
             merged_results = {}
             
             for solver in available_solvers:
-                #solver_results = {}
-                
-                # Run decision version if requested
-                if run_decision:
-                    print(f"  Running {solver} (decision)...")
-                    decision_result = self.run_solver(solver, n, optimization=False)
-                    #solver_results.append(decision_result)
+                if symmetry_combinations:
+                    for s1 in [False,True]:
+                        for s2 in [False,True]:
+                            # Run decision version if requested
+                            if run_decision:
+                                print(f"  Running {solver} (decision) for {n} teams")
+                                decision_result = self.run_solver(solver, n, optimization=False, sym_t1=s1, sym_w1=s2)
                     
-                    status = "OK" if decision_result["optimal"] else "FAIL"
-                    reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
-                    print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
-                    
-                    merged_results[solver+"_dec"] = decision_result
+                                status = "OK" if decision_result["optimal"] else "FAIL"
+                                reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
+                                print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
+
+                                comb = "_dec"
+                                comb += "_st1" if s1 else ""
+                                comb += "_sw1" if s2 else ""
+
+                                merged_results[solver+comb] = decision_result
                 
-                # Run optimization version if requested
-                if run_optimization:
-                    print(f"  Running {solver} (optimization)...")
-                    optimization_result = self.run_solver(solver, n, optimization=True)
-                    #solver_results.append(optimization_result)
+                            # Run optimization version if requested
+                            if run_optimization:
+                                print(f"  Running {solver} (optimization) for {n} teams")
+                                optimization_result = self.run_solver(solver, n, optimization=True, sym_t1=s1, sym_w1=s2)
                     
-                    status = "OK" if optimization_result["optimal"] else "FAIL"
-                    obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
-                    reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
-                    print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+                                status = "OK" if optimization_result["optimal"] else "FAIL"
+                                obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
+                                reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
+                                print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+
+                                comb = "_opt"
+                                comb += "_st1" if s1 else ""
+                                comb += "_sw1" if s2 else ""
                 
-                    merged_results[solver+"_opt"] = optimization_result
+                                merged_results[solver+comb] = optimization_result
+                else:
+                    if run_decision:
+                        print(f"  Running {solver} (decision) for {n} teams")
+                        decision_result = self.run_solver(solver, n, optimization=False, sym_t1=True, sym_w1=True)
+                    
+                        status = "OK" if decision_result["optimal"] else "FAIL"
+                        reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
+                        print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
+
+                        merged_results[solver+"_dec"] = decision_result
+                
+                    # Run optimization version if requested
+                    if run_optimization:
+                        print(f"  Running {solver} (optimization) for {n} teams")
+                        optimization_result = self.run_solver(solver, n, optimization=True, sym_t1=True, sym_w1=True)
+                    
+                        status = "OK" if optimization_result["optimal"] else "FAIL"
+                        obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
+                        reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
+                        print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+                
+                        merged_results[solver+"_opt"] = optimization_result
             
+
             # Save combined results
             results_dir = (Path(__file__).parent.parent.parent / "res" / "MIP")
             results_dir.mkdir(parents=True, exist_ok=True)
-            
+
             filename = f"{n}.json"
             with open(results_dir / filename, "wb") as f:
                 f.write(orjson.dumps(merged_results, option=orjson.OPT_INDENT_2 | orjson.OPT_NON_STR_KEYS))
@@ -286,98 +331,93 @@ class STSMIPRunner:
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python sts_runner_copy.py <team_sizes> [options]")
-        print("Options:")
-        print("  --solvers <solver1,solver2,...>  Specify solvers to use (default: all available)")
-        print("                                   Available: cbc,highs,cplex,gurobi")
-        print("  --decision-only                  Run only decision version (feasibility)")
-        print("  --optimization-only              Run only optimization version")
-        print("  --time-limit <seconds>           Set time limit in seconds (default: 300)")
-        print("  --ampl-path <path>               Path to AMPL installation")
-        print()
-        print("Examples:")
-        print("  python sts_runner_copy.py 4 6 8 10")
-        print("  python sts_runner_copy.py 6 8 --solvers cbc,highs --time-limit 600")
-        print("  python sts_runner_copy.py 6 --decision-only")
-        print("  python sts_runner_copy.py 8 --optimization-only --solvers cplex")
-        sys.exit(1)
+        # Parse arguments
+        team_sizes = [2,4,6,8,10,12]
+        ampl_path = None
+        solvers = None
+        time_limit = 300
+        run_decision = True
+        run_optimization = True
+        symmetry_combinations = True
+    else:
+        # Parse arguments
+        team_sizes = []
+        ampl_path = None
+        solvers = None
+        time_limit = 300
+        run_decision = True
+        run_optimization = True
+        symmetry_combinations = True
     
-    # Parse arguments
-    team_sizes = []
-    ampl_path = None
-    solvers = None
-    time_limit = 300
-    run_decision = True
-    run_optimization = True
-    
-    i = 1
-    while i < len(sys.argv):
-        arg = sys.argv[i]
-        if arg == '--ampl-path':
-            if i + 1 < len(sys.argv):
-                ampl_path = sys.argv[i + 1]
-                i += 1
-            else:
-                print("Error: --ampl-path requires a path argument")
-                sys.exit(1)
-        elif arg == '--solvers':
-            if i + 1 < len(sys.argv):
-                solver_list = sys.argv[i + 1].split(',')
-                valid_solvers = ["cbc", "highs", "cplex", "gurobi"]
-                solvers = []
-                for solver in solver_list:
-                    solver = solver.strip()
-                    if solver in valid_solvers:
-                        solvers.append(solver)
-                    else:
-                        print(f"Error: {solver} is not a valid solver. Valid solvers: {', '.join(valid_solvers)}")
-                        sys.exit(1)
-                i += 1
-            else:
-                print("Error: --solvers requires a comma-separated list of solvers")
-                sys.exit(1)
-        elif arg == '--time-limit':
-            if i + 1 < len(sys.argv):
-                try:
-                    time_limit = int(sys.argv[i + 1])
-                    if time_limit <= 0:
-                        print("Error: time limit must be positive")
-                        sys.exit(1)
+        i = 1
+        while i < len(sys.argv):
+            arg = sys.argv[i]
+            if arg == '--ampl-path':
+                if i + 1 < len(sys.argv):
+                    ampl_path = sys.argv[i + 1]
                     i += 1
-                except ValueError:
-                    print("Error: time limit must be an integer")
+                else:
+                    print("Error: --ampl-path requires a path argument")
                     sys.exit(1)
+            elif arg == '--solvers':
+                if i + 1 < len(sys.argv):
+                    solver_list = sys.argv[i + 1].split(',')
+                    valid_solvers = ["cbc", "highs", "cplex", "gurobi"]
+                    solvers = []
+                    for solver in solver_list:
+                        solver = solver.strip()
+                        if solver in valid_solvers:
+                            solvers.append(solver)
+                        else:
+                            print(f"Error: {solver} is not a valid solver. Valid solvers: {', '.join(valid_solvers)}")
+                            sys.exit(1)
+                    i += 1
+                else:
+                    print("Error: --solvers requires a comma-separated list of solvers")
+                    sys.exit(1)
+            elif arg == '--time-limit':
+                if i + 1 < len(sys.argv):
+                    try:
+                        time_limit = int(sys.argv[i + 1])
+                        if time_limit <= 0:
+                            print("Error: time limit must be positive")
+                            sys.exit(1)
+                        i += 1
+                    except ValueError:
+                        print("Error: time limit must be an integer")
+                        sys.exit(1)
+                else:
+                    print("Error: --time-limit requires a time value in seconds")
+                    sys.exit(1)
+            elif arg == '--decision-only':
+                run_decision = True
+                run_optimization = False
+            elif arg == '--optimization-only':
+                run_decision = False
+                run_optimization = True
+            elif arg == '--no-combinations':
+                symmetry_combinations = False
             else:
-                print("Error: --time-limit requires a time value in seconds")
-                sys.exit(1)
-        elif arg == '--decision-only':
-            run_decision = True
-            run_optimization = False
-        elif arg == '--optimization-only':
-            run_decision = False
-            run_optimization = True
-        else:
-            try:
-                n = int(arg)
-                if n < 4 or n % 2 != 0:
-                    print(f"Error: {n} is not valid (must be even and >= 4)")
+                try:
+                    n = int(arg)
+                    if n < 2 or n % 2 != 0:
+                        print(f"Error: {n} is not valid (must be even and >= 2)")
+                        sys.exit(1)
+                    team_sizes.append(n)
+                except ValueError:
+                    print(f"Error: {arg} is not a valid team size or option")
                     sys.exit(1)
-                team_sizes.append(n)
-            except ValueError:
-                print(f"Error: {arg} is not a valid team size or option")
-                sys.exit(1)
-        i += 1
+            i += 1
     
-    if not team_sizes:
-        print("Error: No valid team sizes provided")
-        sys.exit(1)
+        if not team_sizes:
+            team_sizes = [2,4,6,8,10,12]
     
-    if not run_decision and not run_optimization:
-        print("Error: Cannot use both --decision-only and --optimization-only")
-        sys.exit(1)
+        if not run_decision and not run_optimization:
+            print("Error: Cannot use both --decision-only and --optimization-only")
+            sys.exit(1)
     
     runner = STSMIPRunner(ampl_path=ampl_path, time_limit=time_limit, solvers=solvers)
-    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization)
+    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization, symmetry_combinations=symmetry_combinations)
 
 if __name__ == "__main__":
     main()

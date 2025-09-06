@@ -1,0 +1,5 @@
+licenses/*.lic
+ampl.linux64.tgz
+CDMOenv/
+source/SMT/__pycache__/
+source/SAT/__pycache__/
