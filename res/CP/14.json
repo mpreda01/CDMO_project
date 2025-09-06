@@ -1,7 +1,17 @@
 {
   "1757027558.360125": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -10,11 +20,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757027858.3676217": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -23,11 +45,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757028158.3891087": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -36,11 +70,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757028458.4170475": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -49,11 +95,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757028758.4523468": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -62,11 +120,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757029058.494496": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -75,11 +145,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757029358.5042484": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -88,11 +170,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757029658.5721786": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -101,11 +195,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757029958.616122": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -114,11 +220,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757030258.6750286": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -127,11 +245,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757030558.7368176": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -140,11 +270,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757030858.928804": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -153,11 +295,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757031159.3610191": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -166,11 +320,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757031459.7916253": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -179,11 +345,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757031760.3295019": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -192,11 +370,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757032060.982168": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -205,11 +395,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757032361.734915": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -218,11 +420,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757032662.58278": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -231,11 +445,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757032963.4549007": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -244,11 +470,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757033264.3352878": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -257,11 +495,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757033565.2977905": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -270,11 +520,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757033866.291727": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -283,11 +545,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757034167.5761075": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -296,11 +570,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757034468.8627956": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -309,11 +595,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757034770.1222095": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -322,11 +620,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757035071.357654": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -335,11 +645,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757035372.7154005": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -348,11 +670,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757035674.2091575": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -361,11 +695,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757035975.7546377": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -374,11 +720,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757036277.2762406": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -387,11 +745,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757036578.8769147": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -400,11 +770,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757036880.2672584": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "use_int_search": false,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -413,11 +795,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757037181.769705": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -426,11 +820,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757037483.36184": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -439,11 +845,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757037785.1262872": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -452,11 +870,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757038086.724783": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -465,11 +895,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757038388.3371766": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -478,11 +920,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757038690.0021536": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -491,11 +945,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757038991.9075613": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -504,11 +970,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757039293.8132424": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": false,
+      "use_relax_and_reconstruct": false,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -517,11 +995,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757039596.107163": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": true
+    },
     "cp_success": false,
     "cp_time": 300,
     "cp_error": "Timeout after 300 seconds",
@@ -530,11 +1020,23 @@
     "optimizer_error": "",
     "time": 300,
     "timeout_reached": true,
-    "opt": false
+    "optimal": false,
+    "obj": "None",
+    "sol": []
   },
   "1757039889.3876565": {
     "n": 14,
-    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": false, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "use_int_search": false,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": false,
     "cp_time": 290.17,
     "cp_error": "",
@@ -543,59 +1045,23 @@
     "optimizer_error": "",
     "time": 290.1661124229431,
     "timeout_reached": false,
-    "opt": false
-  }
-  "1757164690.9413943": {
-    "n": 14,
-    "params": {"sb_weeks": false, "sb_periods": false, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
-    "cp_success": true,
-    "cp_time": 25.55,
-    "cp_error": "",
-    "optimizer_success": false,
-    "optimizer_time": 274,
-    "optimizer_error": "Timeout after 274 seconds",
-    "time": 299,
-    "timeout_reached": false,
-    "summary": ["Optimizer failed or timed out"],
-    "obj": null,
     "optimal": false,
-    "sol": [
-      [[7, 9], [5, 7], [2, 13], [9, 12], [6, 8], [4, 11], [3, 10], [5, 14], [11, 13], [1, 10], [1, 12], [4, 14], [2, 8]],
-      [[13, 14], [6, 12], [6, 11], [1, 3], [2, 11], [2, 12], [7, 13], [3, 7], [4, 5], [9, 14], [8, 9], [8, 10], [1, 5]],
-      [[10, 11], [3, 8], [9, 10], [2, 5], [3, 4], [6, 14], [12, 14], [1, 8], [1, 7], [5, 13], [2, 6], [12, 13], [4, 7]],
-      [[5, 12], [4, 10], [7, 14], [4, 6], [7, 12], [1, 13], [5, 8], [2, 10], [2, 9], [8, 11], [3, 14], [3, 11], [6, 9]],
-      [[4, 8], [9, 13], [3, 5], [8, 13], [1, 14], [3, 9], [1, 6], [11, 12], [6, 10], [4, 12], [7, 10], [2, 7], [11, 14]],
-      [[3, 6], [1, 11], [8, 12], [7, 11], [5, 9], [5, 10], [2, 4], [6, 13], [8, 14], [2, 3], [4, 13], [1, 9], [10, 12]],
-      [[1, 2], [2, 14], [1, 4], [10, 14], [10, 13], [7, 8], [9, 11], [4, 9], [3, 12], [6, 7], [5, 11], [5, 6], [3, 13]]
-    ]
-  },
-  "1757165695.0661721": {
-    "n": 14,
-    "params": {"sb_weeks": false, "sb_periods": false, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
-    "cp_success": true,
-    "cp_time": 24.89,
-    "cp_error": "",
-    "optimizer_success": true,
-    "optimizer_time": 0.5,
-    "optimizer_error": "",
-    "time": 25,
-    "timeout_reached": false,
-    "summary": ["Original Max Imbalance: 13", "Optimized Max Imbalance: 1", "Improvement: 12", "Total Swaps Made: 42"],
-    "obj": null,
-    "optimal": false,
-    "sol": [
-      [[9, 7], [7, 5], [13, 2], [9, 12], [8, 6], [11, 4], [10, 3], [14, 5], [13, 11], [10, 1], [12, 1], [14, 4], [8, 2]],
-      [[13, 14], [12, 6], [11, 6], [1, 3], [11, 2], [12, 2], [13, 7], [7, 3], [5, 4], [14, 9], [9, 8], [10, 8], [5, 1]],
-      [[11, 10], [3, 8], [10, 9], [2, 5], [4, 3], [6, 14], [12, 14], [8, 1], [7, 1], [5, 13], [2, 6], [12, 13], [4, 7]],
-      [[12, 5], [4, 10], [14, 7], [6, 4], [12, 7], [1, 13], [5, 8], [2, 10], [2, 9], [8, 11], [3, 14], [11, 3], [6, 9]],
-      [[8, 4], [13, 9], [3, 5], [13, 8], [1, 14], [3, 9], [6, 1], [11, 12], [6, 10], [4, 12], [7, 10], [7, 2], [11, 14]],
-      [[3, 6], [1, 11], [8, 12], [7, 11], [9, 5], [5, 10], [2, 4], [6, 13], [8, 14], [2, 3], [4, 13], [9, 1], [10, 12]],
-      [[1, 2], [14, 2], [1, 4], [14, 10], [10, 13], [7, 8], [9, 11], [4, 9], [3, 12], [6, 7], [5, 11], [5, 6], [3, 13]]
-    ]
+    "obj": "None",
+    "sol": []
   },
   "1757165961.9802787": {
     "n": 14,
-    "params": {"sb_weeks": false, "sb_periods": false, "sb_teams": false, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false},
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "use_int_search": true,
+      "use_restart_luby": true,
+      "use_relax_and_reconstruct": true,
+      "chuffed": false
+    },
     "cp_success": true,
     "cp_time": 24.66,
     "cp_error": "",
@@ -604,17 +1070,14 @@
     "optimizer_error": "",
     "time": 25,
     "timeout_reached": false,
-    "summary": ["Original Max Imbalance: 13", "Optimized Max Imbalance: 1", "Improvement: 12", "Total Swaps Made: 42"],
+    "summary": [
+      "Original Max Imbalance: 13",
+      "Optimized Max Imbalance: 1",
+      "Improvement: 12",
+      "Total Swaps Made: 42"
+    ],
     "obj": 1,
     "optimal": true,
-    "sol": [
-      [[9, 7], [7, 5], [13, 2], [9, 12], [8, 6], [11, 4], [10, 3], [14, 5], [13, 11], [10, 1], [12, 1], [14, 4], [8, 2]],
-      [[13, 14], [12, 6], [11, 6], [1, 3], [11, 2], [12, 2], [13, 7], [7, 3], [5, 4], [14, 9], [9, 8], [10, 8], [5, 1]],
-      [[11, 10], [3, 8], [10, 9], [2, 5], [4, 3], [6, 14], [12, 14], [8, 1], [7, 1], [5, 13], [2, 6], [12, 13], [4, 7]],
-      [[12, 5], [4, 10], [14, 7], [6, 4], [12, 7], [1, 13], [5, 8], [2, 10], [2, 9], [8, 11], [3, 14], [11, 3], [6, 9]],
-      [[8, 4], [13, 9], [3, 5], [13, 8], [1, 14], [3, 9], [6, 1], [11, 12], [6, 10], [4, 12], [7, 10], [7, 2], [11, 14]],
-      [[3, 6], [1, 11], [8, 12], [7, 11], [9, 5], [5, 10], [2, 4], [6, 13], [8, 14], [2, 3], [4, 13], [9, 1], [10, 12]],
-      [[1, 2], [14, 2], [1, 4], [14, 10], [10, 13], [7, 8], [9, 11], [4, 9], [3, 12], [6, 7], [5, 11], [5, 6], [3, 13]]
-    ]
+    "sol": [[[9, 7], [7, 5], [13, 2], [9, 12], [8, 6], [11, 4], [10, 3], [14, 5], [13, 11], [10, 1], [12, 1], [14, 4], [8, 2]], [[13, 14], [12, 6], [11, 6], [1, 3], [11, 2], [12, 2], [13, 7], [7, 3], [5, 4], [14, 9], [9, 8], [10, 8], [5, 1]], [[11, 10], [3, 8], [10, 9], [2, 5], [4, 3], [6, 14], [12, 14], [8, 1], [7, 1], [5, 13], [2, 6], [12, 13], [4, 7]], [[12, 5], [4, 10], [14, 7], [6, 4], [12, 7], [1, 13], [5, 8], [2, 10], [2, 9], [8, 11], [3, 14], [11, 3], [6, 9]], [[8, 4], [13, 9], [3, 5], [13, 8], [1, 14], [3, 9], [6, 1], [11, 12], [6, 10], [4, 12], [7, 10], [7, 2], [11, 14]], [[3, 6], [1, 11], [8, 12], [7, 11], [9, 5], [5, 10], [2, 4], [6, 13], [8, 14], [2, 3], [4, 13], [9, 1], [10, 12]], [[1, 2], [14, 2], [1, 4], [14, 10], [10, 13], [7, 8], [9, 11], [4, 9], [3, 12], [6, 7], [5, 11], [5, 6], [3, 13]]]
   }
 }
