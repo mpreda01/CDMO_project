@@ -154,5 +154,18 @@
     "time": 300,
     "timeout_reached": true,
     "opt": false
+  },
+  "1757178063.1926942": {
+    "n": 16,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": true,
+    "opt": false
   }
 }
