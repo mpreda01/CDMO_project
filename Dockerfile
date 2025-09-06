@@ -53,7 +53,7 @@ RUN cd /tmp && \
     chmod +x /opt/cvc5/bin/cvc5 && \
     rm -rf cvc5-Linux-x86_64-static.zip cvc5-Linux-x86_64-static
 
-# Install AMPL Community Edition
+# Load AMPL Community Edition for Academics
 WORKDIR /opt
 # Copy and extract AMPL
 COPY ampl.linux64.tgz /tmp/
@@ -79,28 +79,15 @@ ENV PYTHONPATH="/app"
 ENV PYTHONUNBUFFERED=1
 ENV CVC5_BIN="/opt/cvc5/bin/cvc5"
 
-# Install HiGHS
-#RUN cd /tmp && \
-#    wget -q https://github.com/ERGO-Code/HiGHS/releases/download/v1.7.2/highs-v1.7.2-x86_64-pc-linux-gnu.tar.gz && \
-#    tar -xzf highs-v1.7.2-x86_64-pc-linux-gnu.tar.gz && \
-#    mv highs-v1.7.2-x86_64-pc-linux-gnu/bin/* /opt/ampl/ && \
-#    rm -rf highs-v1.7.2-x86_64-pc-linux-gnu* && \
-#    chmod +x /opt/ampl/highs
-
-# Create directories for commercial solvers (Gurobi & CPLEX)
-#RUN mkdir -p /opt/solvers
-
-# Copy solver installers and licenses (you'll need to provide these)
-# Uncomment and modify these lines when you have the installers:
-
+# AMPL community edition for academics license
 COPY licenses/ampl.lic /opt/ampl/ampl.lic
 RUN chmod 644 /opt/ampl/ampl.lic
 
-# Allow the -v command to fail without stopping the build
+# Check AMPL installation
 RUN echo "AMPL installation complete" && \
     echo "Available solvers: cbc, highs, cplex, gurobi, and many more" && \
     ls -la /opt/ampl/ | grep -E "(cbc|highs|cplex|gurobi)" && \
-    /opt/ampl/ampl -v || echo "AMPL version check completed (license may need renewal)"
+    /opt/ampl/ampl -v || echo "AMPL version check completed"
 
 WORKDIR /app
 
@@ -109,7 +96,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copy project files (force rebuild of this layer)
+# Copy project files
 RUN echo "Cache bust: $(date)" > /tmp/cachebust
 COPY . .
 
