@@ -18,7 +18,7 @@ class STSModel:
         self.ic_matches_per_team = ic_matches_per_team
         self.ic_period_count = ic_period_count
 
-        # variabili booleane x[w][p][h][a]
+        # boolean var x[w][p][h][a]
         self.x = {}
         for w in range(self.n_weeks):
             self.x[w] = {}
@@ -30,7 +30,7 @@ class STSModel:
                         self.x[w][p][h][a] = Bool(f'x_{w}_{p}_{h}_{a}')
 
     def create_constraints(self, solver):
-        # Base constraints (round-robin)
+        # Base constraints 
         for w in range(self.n_weeks):
             for p in range(self.n_periods):
                 for t in range(self.n):
@@ -74,7 +74,7 @@ class STSModel:
                             period_games.append(self.x[w][p][h][t])
                 solver.add(PbLe([(game, 1) for game in period_games], 2))
 
-        # opzionali
+        
         if self.ic_matches_per_team:
             self.add_ic_matches_per_team(solver)
         if self.ic_period_count:
@@ -108,7 +108,7 @@ class STSModel:
             solver.add(self.x[0][0][0][1])
 
     def optimize_schedule(self, schedule):
-        """Inverti partite per minimizzare lo squilibrio massimo"""
+        """Reduce max imbalance between home and away games."""
         home_count = [0] * self.n
         away_count = [0] * self.n
 
@@ -130,7 +130,7 @@ class STSModel:
                     diff_h_before = abs(home_count[h-1] - away_count[h-1])
                     diff_a_before = abs(home_count[a-1] - away_count[a-1])
 
-                    # inverte temporaneamente
+                    # temp invertion
                     home_count[h-1] -= 1
                     away_count[a-1] -= 1
                     home_count[a-1] += 1
@@ -143,7 +143,7 @@ class STSModel:
                         period[i] = [a, h]
                         improved = True
                     else:
-                        # ripristina
+                        # revert
                         home_count[h-1] += 1
                         away_count[a-1] += 1
                         home_count[a-1] -= 1
@@ -196,7 +196,7 @@ class STSModel:
 
 
 # -------------------------
-# Funzioni di utilità I/O
+# Input/Output JSON
 # -------------------------
 def load_json_list(filename):
     if os.path.exists(filename):
@@ -241,12 +241,10 @@ def write_compact_json_list(filename, data):
         f.write(']\n')
 
 
-# -------------------------
-# MAIN: interazione utente
-# -------------------------
+
 if __name__ == "__main__":
     valid_teams = [2, 4, 6, 8, 10, 12, 14, 16, 18]
-    team_input = input(f"Inserisci numero squadre ({valid_teams}) oppure 'all': ").strip()
+    team_input = input(f"Insert number of teams ({valid_teams}) or 'all': ").strip()
 
     if team_input.lower() == "all":
         teams = valid_teams
@@ -262,17 +260,17 @@ if __name__ == "__main__":
                 pass
 
     if not teams:
-        print("Nessuna squadra valida selezionata. Esco.")
+        print("No valid number of teams provided. Terminating.")
         raise SystemExit(1)
 
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'SMT'))
     os.makedirs(output_dir, exist_ok=True)
 
-    mode = input("Scegli modalità (manual/all): ").strip().lower()
+    mode = input("Select mode (manual/all): ").strip().lower()
 
     if mode == "manual":
         for n in teams:
-            optimize = input("Ottimizzare la soluzione? (y/n): ").strip().lower().startswith("y")
+            optimize = input("Optimize solution? (y/n): ").strip().lower().startswith("y")
             flags = {
                 "sb_weeks": input("Symmetry break weeks? (y/n): ").strip().lower().startswith("y"),
                 "sb_periods": input("Symmetry break periods? (y/n): ").strip().lower().startswith("y"),
@@ -298,7 +296,7 @@ if __name__ == "__main__":
 
         for n in teams:
             for i, combo in enumerate(all_flag_combos, start=1):
-                print(f"Sto risolvendo team={n}, combo={i}/{total_combos}")
+                print(f"Solving team={n}, combo={i}/{total_combos}")
                 flags_combo = dict(zip(flag_names, combo))
                 model = STSModel(n,
                                  sb_weeks=flags_combo["sb_weeks"],
@@ -314,7 +312,7 @@ if __name__ == "__main__":
                 data.append(result)
                 write_compact_json_list(filename, data)
 
-            print(f"Tutte le combinazioni salvate in {n}.json")
+            print(f"All combination saved in {n}.json")
 
     else:
-        print("Modalità non riconosciuta. Usa 'manual' o 'all'.")
+        print("Unknown mode. Use 'manual' o 'all'.")

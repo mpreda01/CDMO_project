@@ -1,6 +1,4 @@
-% Sports Tournament Scheduling (STS) Problem
-% Hybrid solution combining CP_2.9.mzn structure with sts.mzn constraints
-% Optimized for large instances (n >= 14) with configurable features
+
 
 include "globals.mzn";
 
@@ -12,25 +10,25 @@ include "globals.mzn";
 int: n;
 constraint n mod 2 = 0;
 
-% Derived parameters
+
 int: n_weeks = n - 1;
 int: n_periods = n div 2;
 int: n_games = (n * (n - 1)) div 2;
 
-% Configuration flags (can be set in data file)
+% Configuration flags 
 % Symmetry breaking constraint
 bool: sb_weeks;
-bool: sb_periods;  % Usually not needed with other symmetry breaking
+bool: sb_periods;  
 bool: sb_teams;
 % Implied constraint
 bool: ic_matches_per_team;
 bool: ic_period_count;
 % Search strat
-bool: use_int_search;  % Let solver decide by default
+bool: use_int_search; 
 bool: use_restart_luby;
 bool: use_relax_and_reconstruct;
 % Solver
-bool: chuffed;  % Set to true if using Chuffed solver
+bool: chuffed;  
 
 % Sets for indexing
 set of int: Teams = 1..n;
@@ -38,15 +36,15 @@ set of int: Weeks = 1..n_weeks;
 set of int: Periods = 1..n_periods;
 
 % ==========================================
-% DECISION VARIABLES (CP_2.9 structure)
+% DECISION VARIABLES 
 % ==========================================
 
-% Main decision variables: [Periods, Weeks] structure from CP_2.9
+% Main decision variables: 
 array[Periods, Weeks] of var Teams: home;
 array[Periods, Weeks] of var Teams: away;
 
 % ==========================================
-% AUXILIARY VARIABLES (from sts.mzn)
+% AUXILIARY VARIABLES 
 % ==========================================
 
 % Period count variables
@@ -57,11 +55,11 @@ set of int: Count = 0..n-1;
 array[Teams] of var Count: home_count;
 array[Teams] of var Count: away_count;
 
-% Auxiliary variable for team period tracking (from CP_2.9)
+% Auxiliary variable for team period tracking 
 array[Teams, Weeks] of var 0..n_periods: team_period;
 
 % ==========================================
-% CORE CONSTRAINTS (adapted from sts.mzn)
+% CORE CONSTRAINTS 
 % ==========================================
 
 % CONSTRAINT 1: Each pair plays exactly once
@@ -72,13 +70,13 @@ constraint
     ) = 1
   );
 
-% CONSTRAINT 2: Each team plays once per week (all different constraint)
+% CONSTRAINT 2: Each team plays once per week 
 constraint
   forall(w in Weeks)(
     all_different([home[p,w] | p in Periods] ++ [away[p,w] | p in Periods])
   );
 
-% CONSTRAINT 3: Period limit using global_cardinality (from sts.mzn)
+% CONSTRAINT 3: Period limit using global_cardinality 
 constraint
   forall(p in Periods)(
     global_cardinality(
@@ -104,9 +102,6 @@ constraint
     [away_count[t] | t in Teams]
   );
 
-% ==========================================
-% STRUCTURAL CONSTRAINTS
-% ==========================================
 
 % No team plays against itself
 constraint forall(p in Periods, w in Weeks) (
@@ -114,7 +109,7 @@ constraint forall(p in Periods, w in Weeks) (
 );
 
 % ==========================================
-% CONDITIONAL IMPLIED CONSTRAINTS (from sts.mzn)
+% CONDITIONAL IMPLIED CONSTRAINTS 
 % ==========================================
 
 % Total matches per team
@@ -172,14 +167,14 @@ constraint
 % AUXILIARY VARIABLE LINKS
 % ==========================================
 
-% Link team_period variable (from CP_2.9)
+% Link team_period variable 
 constraint forall(t in Teams, w in Weeks) (
     team_period[t,w] = sum(p in Periods) (
         p * (bool2int(home[p,w] = t) + bool2int(away[p,w] = t))
     )
 );
 
-% Additional ordering for team 1 (from CP_2.9, but conditional)
+% Additional ordering for team 1 
 constraint
   sb_teams ->
   (team_period[1,1] = 1 /\
@@ -192,7 +187,7 @@ constraint
 % REDUNDANT CONSTRAINTS FOR PROPAGATION
 % ==========================================
 
-% Weekly sum constraint (from CP_2.9)
+% Weekly sum constraint 
 int: sumTeams = n*(n+1) div 2;
 constraint forall(w in Weeks) (
     sum(p in Periods) (home[p,w] + away[p,w]) = sumTeams
@@ -202,7 +197,7 @@ constraint forall(w in Weeks) (
 % OBJECTIVE AND SEARCH STRATEGY
 % ==========================================
 
-% Objective: minimize home/away imbalance (from sts.mzn)
+% Objective: minimize home/away imbalance 
 set of int: Count_diff = 0..n-1;
 var Count_diff: max_diff = max([abs(home_count[t] - away_count[t]) | t in Teams]);
 
