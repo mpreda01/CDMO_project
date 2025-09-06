@@ -17,12 +17,9 @@ The report provides an in-depth study of the Sports Tournament Scheduling (STS) 
 \paragraph{Input Parameters.}
 The STS problem is defined by the following parameters, which are common to all models:
 \begin{itemize}
-    \item $n$: Number of teams (even integer)
-    \item $w = n-1$: Number of weeks
-    \item $p = n/2$: Number of periods (matches per week)
-    \item Teams are indexed by $t \in \{1, 2, \ldots, n\}$
-    \item Weeks are indexed by $w \in \{1, 2, \ldots, n-1\}$
-    \item Periods are indexed by $p \in \{1, 2, \ldots, n/2\}$
+    \item $n$: Number of teams (even number). Teams are indexed by $t \in \{1, 2, \ldots, n\}$ 
+    \item $w = n-1$: Number of weeks. Weeks are indexed by $w \in \{1, 2, \ldots, n-1\}$
+    \item $p = n/2$: Number of periods (matches per week). Periods are indexed by $p \in \{1, 2, \ldots, n/2\}$
 \end{itemize}
 
 \paragraph{Objective Variable and its Bounds.}
@@ -52,7 +49,7 @@ To increase solver performance, preprocessing steps might have been included in 
 \end{itemize}
 
 \subsection{Code Availability}
-The project work can be found at \url{https://github.com/mpreda01/Combinatorial-and-decision-making-project}.
+The project work can be found at \url{https://github.com/mpreda01/CDMO_project}.
 
 
 \section{CP Model}
@@ -89,11 +86,112 @@ The project work can be found at \url{https://github.com/mpreda01/Combinatorial-
 
 \subsection{Decision variables}
 
+MIP model is based on binary decision variables that represent the occurrence of a match in a precise slot:
+
+\begin{align}
+x_{i,j,w,p} \in \{0,1\} \quad \forall i,j, w, p i \neq j
+\end{align}
+
+where $x_{i,j,w,p} = 1$ if team $i$ plays against team $j$ in week $w$, period $p$, with team $i$ playing at home and team $j$ playing away and $x_{i,j,w,p} = 0$ otherwise. The use of binary variables, instead of integer variables as in the CP model, has proven to be significantly less time consuming.
+
+Furthermore, auxiliary variables are defined to facilitate the linear formulation of the objective function:
+\begin{align}
+h_t &\in \{0, 1, \ldots, n-1\} \quad \forall t \\
+a_t &\in \{0, 1, \ldots, n-1\} \quad \forall t \\
+M &\in \{0, 1, \ldots, n-1\}
+\end{align}
+
+where $h_t$ represents the number of games played at home by team $t$, while $a_t$ represents the number of games played away by team $t$, and $M$ represents the maximum home/away imbalance.
+
+
 \subsection{Objective function}
+Since the absolute value, used in the other optimization techniques, is a non-linear function, a different approach had to be used in order to produce a linear objective function. 
+For this reason, the minimization has linked to two linearization constraints:
+
+\begin{align}
+\text{minimize} \quad M \\
+h_t - a_t &\leq M \quad \forall t \\
+a_t - h_t &\leq M \quad \forall t
+\end{align}
+
+Thanks to these two constraints, it has been possible to represent the absolute value in a linear format, where the minimization leads $M$ to be equal to $\max_{t} |h_t - a_t|$.
 
 \subsection{Constraints}
 
+The model formalization described in section 1.1 has been followed in the MIP model too. All the constraints described below are linear.
+
+\paragraph{General Constraints}
+
+\begin{itemize}
+    \item \textbf{Each slot has exactly one match:}
+    \begin{equation}
+        \sum_{i=1}^{n} \sum_{\substack{j=1 \\ j \neq i}}^{n} x_{i,j,w,p} = 1 \quad \forall w, p
+    \end{equation}
+
+    \item \textbf{Every team plays with every other team only once:}
+    \begin{equation}
+        \sum_{w=1}^{n-1} \sum_{p=1}^{n/2} (x_{w,p,i,j} + x_{w,p,j,i})  = 1 \quad \forall i,j, i < j
+    \end{equation}
+
+    \item \textbf{Every team plays once a week:}
+    \begin{equation}
+        \sum_{p=1}^{n/2} \sum_{\substack{j=1 \\ j \neq i}}^{n} (x_{t,j,w,p} + x_{j,t,w,p}) = 1 \quad \forall w, t
+    \end{equation}
+
+    \item \textbf{Every team plays at most twice in the same period over the tournament:}
+    \begin{equation}
+        \sum_{w=1}^{n-1} \sum_{\substack{j=1 \\ j \neq i}}^{n} (x_{t,j,w,p} + x_{j,t,w,p}) \leq 2 \quad \forall p, t
+    \end{equation}
+
+    \item \textbf{Given a time slot, at most one of the two possible home/away combination between each pair of teams may occur}
+    \begin{equation}
+        x_{i,j,w,p} + x_{j,i,w,p} \leq 1 \quad \forall w, p, i, j, i < j
+    \end{equation}
+\end{itemize}
+
+\paragraph{Symmetry Breaking Constraints}
+
+\begin{itemize}
+    \item \textbf{Team symmetry:} Fix the schedule of the first week to break team symmetries:
+    \begin{align}
+        x_{2p-1,2p,1,p} &= 1 \quad \forall p \\
+        x_{i,j,1,p} &= 0 \quad \forall p, (i,j) \neq (2p-1, 2p), i \neq j
+    \end{align}
+
+    \item \textbf{Team 1 opponent ordering constraint:}
+It implies the matchups of team 1, by fixing that in week $w$, team 1 plays against team $w+1$:
+\begin{equation}
+    \sum_{p=1}^{n/2} \left( x_{1,w+1,w,p} + x_{w+1,1,w,p} \right) = 1 \quad \forall w
+\end{equation}
+\end{itemize}
+
+\paragraph{Implied Constraints}
+\begin{itemize}
+    \item \textbf{Total matches per team:}
+    \begin{equation}
+        h_t + a_t = n - 1 \quad \forall t
+    \end{equation}
+\end{itemize}
+
+\paragraph{Auxiliary Variable - Objective function}
+
+The total number of games plays at home and plays away are defined using linear constraints:
+\begin{align}
+h_t &= \sum_{w=1}^{n-1} \sum_{p=1}^{n/2} \sum_{\substack{j=1 \\ j \neq i}}^{n} x_{t,j,w,p} \quad \forall t \\
+a_t &= \sum_{w=1}^{n-1} \sum_{p=1}^{n/2} \sum_{\substack{j=1 \\ j \neq i}}^{n} x_{j,t,w,p} \quad \forall t
+\end{align}
+
 \subsection{Validation}
+The MIP model was first built using AMPL, an algebraic modeling language for building and deploying optimization applications. AMPL has been chosen in order to exploit a solver-independent language which can be tested by multiple solvers without modifying the program design. In particular, four different solvers have been used:
+
+\begin{itemize}
+    \item CBC,
+    \item HIGHS,
+    \item CPLEX, 
+    \item GUROBI.
+\end{itemize}
+
+The solvers have been applied to the model in Python, thanks to the package amplpy, which allows to work with .mod AMPL files in Python.
 
 \section{Conclusions}
 
