@@ -16,13 +16,13 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
 2. **Run examples inside the container:**
    ```bash
    # CP solver
-   python test/CP/CP_runner.py -n 6
+   python test/CP/CP_runner.py                # then specify configuration
    
    # SAT Solver
-   python test/SAT/SAT_runner.py 6
+   python test/SAT/SAT_runner.py 4
 
    # SMT Solver
-   python test/SMT/SMT_runner.py 6
+   python test/SMT/SMT_runner.py              # then specify configuration
 
    # MIP solver  
    python test/MIP/MIP_runner.py 6
@@ -42,21 +42,12 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
 4. **Install AMPL** (for MIP): Download it from https://ampl.com/
 
 4. **Run Examples:**
-   ```bash
-   # CP solver
-   python test/CP/CP_runner.py -n 6
    
-   # SAT Solver
-   python test/SAT/SAT_runner.py 6
-
-   # SMT Solver
-   python test/SMT/SMT_runner.py 6
-
-   # MIP solver  
-   python test/MIP/MIP_runner.py 6
-   ```
+   Instructions are the same as in the Docker container
 
 ## Personalized executions:
+
+For **MIP**:
 
 - `--solvers cplex` &nbsp;&nbsp;&nbsp;&nbsp;Run only selected solvers.
 - `--teams 6 8 10` &nbsp;&nbsp;&nbsp;&nbsp;Specify exact team numbers.
@@ -65,17 +56,23 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
 - `--decision-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the decision version (no objective function).
 - `--optimization-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the optimization version (minimize home/away imbalance).
 
+For **SAT**:
+- `optimize` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver only for the optimization version (minimize home/away imbalance).
+- `basic` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver with only one symmetry breaking constraint.
+- `moderate` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver with two symmetry breaking constraints.
+- `full` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver with all symetry breaking constraints.
+
 #### Example:
 
 ```bash
 # CP solver
-python test/CP/CP_runner.py 6 --time-limit 300
+python test/SAT/SAT_runner.py 6 moderate
    
 # SAT Solver
-python test/SAT/SAT_runner.py 8 --decision-only
+python test/SAT/SAT_runner.py 8 optimize
 
 # SMT Solver
-python test/SMT/SMT_runner.py 12 --no-combination
+python test/MIP/MIP_runner.py 12 --no-combination
 
 # MIP solver  
 python test/MIP/MIP_runner.py 10 --solver gurobi
@@ -124,7 +121,7 @@ All solvers output JSON contains:
 The correctness of any JSON file can be verified by the provided solution checker:
 
 ```bash
-python test/solution_checker.py <path_to_json_directory>
+python solution_checker.py <path_to_json_directory>
 ```
 
 - `<path_to_json_directory>`: directory containing the `.json` files created by the solvers runner files.
