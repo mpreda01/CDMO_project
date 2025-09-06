@@ -128,5 +128,31 @@
     "time": 300,
     "timeout_reached": true,
     "opt": false
+  },
+  "1757177462.922903": {
+    "n": 16,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": true,
+    "opt": false
+  },
+  "1757177763.0585084": {
+    "n": 16,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "cp_error": "Timeout after 300 seconds",
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "optimizer_error": "",
+    "time": 300,
+    "timeout_reached": true,
+    "opt": false
   }
 }
