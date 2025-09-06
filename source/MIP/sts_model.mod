@@ -21,7 +21,7 @@ var x{t1 in TEAMS, t2 in TEAMS, w in WEEKS, p in PERIODS: t1 != t2} binary;
 # Optimization variables - count home/away games per team
 var home_games{t in TEAMS} >= 0;
 var away_games{t in TEAMS} >= 0;
-var max_imbalance >= 0;
+var max_imbalance >= 0, <= n-1;
 
 # Objective function for optimization version
 minimize MaxImbalance: 
