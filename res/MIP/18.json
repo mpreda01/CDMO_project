@@ -1,0 +1,38 @@
+{
+  "gurobi_dec": {
+    "time": 300,
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_sw1": {
+    "time": 300,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_st1": {
+    "time": 300,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_st1_sw1": {
+    "time": 300,
+    "version": "decision",
+    "symmetry_breaking": "all",
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  }
+}

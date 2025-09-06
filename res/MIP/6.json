@@ -2,13 +2,67 @@
   "cbc_dec": {
     "time": 0,
     "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 4], [3, 5], [5, 4], [1, 3], [2, 6]], [[5, 2], [2, 1], [1, 6], [5, 6], [4, 3]], [[3, 6], [4, 6], [3, 2], [2, 4], [5, 1]]]
+  },
+  "cbc_opt": {
+    "time": 300,
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_sw1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2], [6, 2], [1, 3], [4, 5], [6, 3]], [[3, 4], [5, 3], [5, 2], [1, 6], [2, 4]], [[5, 6], [4, 1], [6, 4], [2, 3], [1, 5]]]
+  },
+  "cbc_opt_sw1": {
+    "time": 9,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2], [6, 4], [4, 5], [6, 3], [3, 5]], [[3, 4], [5, 1], [2, 6], [2, 5], [6, 1]], [[5, 6], [3, 2], [1, 3], [4, 1], [4, 2]]]
+  },
+  "cbc_dec_st1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2], [2, 6], [5, 6], [1, 5], [3, 4]], [[6, 4], [3, 1], [4, 1], [3, 6], [5, 2]], [[3, 5], [5, 4], [2, 3], [2, 4], [1, 6]]]
+  },
+  "cbc_opt_st1": {
+    "time": 5,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[5, 4], [3, 1], [6, 2], [4, 6], [5, 2]], [[2, 1], [5, 6], [4, 1], [3, 2], [4, 3]], [[6, 3], [2, 4], [3, 5], [1, 5], [1, 6]]]
+  },
+  "cbc_dec_st1_sw1": {
+    "time": 0,
+    "version": "decision",
     "symmetry_breaking": "all",
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2], [1, 3], [2, 6], [6, 3], [5, 4]], [[3, 4], [5, 2], [3, 5], [2, 4], [6, 1]], [[5, 6], [4, 6], [4, 1], [1, 5], [2, 3]]]
   },
-  "cbc_opt": {
+  "cbc_opt_st1_sw1": {
     "time": 0,
     "version": "optimal",
     "symmetry_breaking": "all",
@@ -20,13 +74,67 @@
   "highs_dec": {
     "time": 0,
     "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3, 6], [3, 2], [5, 2], [6, 5], [4, 1]], [[5, 4], [5, 1], [4, 3], [3, 1], [6, 2]], [[2, 1], [6, 4], [6, 1], [4, 2], [5, 3]]]
+  },
+  "highs_opt": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[5, 3], [2, 4], [1, 5], [6, 1], [6, 3]], [[6, 4], [3, 1], [2, 6], [4, 5], [5, 2]], [[1, 2], [5, 6], [4, 3], [3, 2], [4, 1]]]
+  },
+  "highs_dec_sw1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2], [4, 6], [6, 2], [5, 3], [4, 1]], [[3, 4], [3, 2], [5, 4], [6, 1], [5, 2]], [[5, 6], [5, 1], [3, 1], [4, 2], [6, 3]]]
+  },
+  "highs_opt_sw1": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2], [5, 4], [2, 6], [1, 3], [6, 3]], [[3, 4], [6, 1], [3, 5], [2, 5], [2, 4]], [[5, 6], [3, 2], [4, 1], [4, 6], [5, 1]]]
+  },
+  "highs_dec_st1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[4, 3], [2, 5], [4, 1], [6, 3], [6, 1]], [[1, 2], [6, 4], [5, 3], [5, 1], [3, 2]], [[6, 5], [1, 3], [6, 2], [4, 2], [5, 4]]]
+  },
+  "highs_opt_st1": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2], [4, 5], [3, 6], [2, 3], [6, 1]], [[5, 6], [3, 1], [5, 2], [6, 4], [2, 4]], [[3, 4], [2, 6], [4, 1], [1, 5], [5, 3]]]
+  },
+  "highs_dec_st1_sw1": {
+    "time": 0,
+    "version": "decision",
     "symmetry_breaking": "all",
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2], [6, 4], [3, 5], [4, 2], [6, 1]], [[3, 4], [1, 3], [6, 2], [5, 1], [5, 4]], [[5, 6], [5, 2], [4, 1], [6, 3], [3, 2]]]
   },
-  "highs_opt": {
+  "highs_opt_st1_sw1": {
     "time": 0,
     "version": "optimal",
     "symmetry_breaking": "all",
@@ -38,13 +146,67 @@
   "cplex_dec": {
     "time": 0,
     "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3, 6], [2, 4], [3, 5], [5, 1], [6, 1]], [[1, 2], [6, 5], [1, 4], [3, 2], [3, 4]], [[4, 5], [3, 1], [2, 6], [6, 4], [5, 2]]]
+  },
+  "cplex_opt": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 6], [3, 1], [5, 4], [4, 6], [5, 2]], [[4, 1], [5, 6], [1, 2], [2, 3], [3, 4]], [[3, 5], [4, 2], [6, 3], [1, 5], [6, 1]]]
+  },
+  "cplex_dec_sw1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2], [5, 3], [4, 6], [2, 3], [5, 1]], [[3, 4], [4, 1], [2, 5], [1, 6], [6, 3]], [[5, 6], [6, 2], [1, 3], [4, 5], [4, 2]]]
+  },
+  "cplex_opt_sw1": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2], [4, 5], [3, 6], [5, 3], [4, 6]], [[3, 4], [6, 2], [2, 5], [6, 1], [1, 5]], [[5, 6], [1, 3], [4, 1], [2, 4], [2, 3]]]
+  },
+  "cplex_dec_st1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2, 1], [5, 6], [5, 3], [6, 4], [3, 4]], [[3, 6], [4, 2], [1, 4], [1, 5], [2, 5]], [[4, 5], [1, 3], [6, 2], [3, 2], [6, 1]]]
+  },
+  "cplex_opt_st1": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 6], [2, 5], [3, 4], [6, 1]], [[5, 3], [1, 3], [1, 4], [6, 2], [4, 5]], [[4, 6], [4, 2], [3, 6], [5, 1], [2, 3]]]
+  },
+  "cplex_dec_st1_sw1": {
+    "time": 0,
+    "version": "decision",
     "symmetry_breaking": "all",
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2], [1, 3], [2, 6], [3, 6], [5, 4]], [[3, 4], [2, 5], [3, 5], [4, 2], [1, 6]], [[5, 6], [6, 4], [1, 4], [1, 5], [3, 2]]]
   },
-  "cplex_opt": {
+  "cplex_opt_st1_sw1": {
     "time": 0,
     "version": "optimal",
     "symmetry_breaking": "all",
@@ -56,13 +218,67 @@
   "gurobi_dec": {
     "time": 0,
     "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 4], [5, 6], [1, 3], [2, 3], [2, 4]], [[5, 2], [4, 3], [2, 6], [1, 5], [1, 6]], [[3, 6], [1, 2], [5, 4], [6, 4], [5, 3]]]
+  },
+  "gurobi_opt": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[4, 5], [3, 1], [6, 5], [6, 2], [4, 2]], [[2, 3], [6, 4], [1, 2], [5, 3], [5, 1]], [[1, 6], [2, 5], [3, 4], [1, 4], [3, 6]]]
+  },
+  "gurobi_dec_sw1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2], [6, 3], [6, 2], [5, 4], [3, 1]], [[3, 4], [4, 2], [5, 3], [6, 1], [5, 2]], [[5, 6], [5, 1], [4, 1], [3, 2], [6, 4]]]
+  },
+  "gurobi_opt_sw1": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_week1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2], [6, 4], [2, 6], [4, 1], [5, 3]], [[3, 4], [2, 3], [4, 5], [2, 5], [1, 6]], [[5, 6], [1, 5], [3, 1], [6, 3], [4, 2]]]
+  },
+  "gurobi_dec_st1": {
+    "time": 0,
+    "version": "decision",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[4, 6], [4, 5], [2, 3], [1, 5], [1, 6]], [[1, 2], [1, 3], [5, 6], [2, 4], [4, 3]], [[3, 5], [2, 6], [4, 1], [3, 6], [2, 5]]]
+  },
+  "gurobi_opt_st1": {
+    "time": 0,
+    "version": "optimal",
+    "symmetry_breaking": "symmetry_team1",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[6, 3], [6, 4], [3, 2], [5, 1], [4, 2]], [[1, 2], [2, 5], [5, 6], [3, 4], [1, 6]], [[4, 5], [1, 3], [4, 1], [2, 6], [3, 5]]]
+  },
+  "gurobi_dec_st1_sw1": {
+    "time": 0,
+    "version": "decision",
     "symmetry_breaking": "all",
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2], [3, 1], [6, 2], [3, 6], [4, 5]], [[3, 4], [2, 5], [3, 5], [4, 2], [6, 1]], [[5, 6], [6, 4], [1, 4], [1, 5], [3, 2]]]
   },
-  "gurobi_opt": {
+  "gurobi_opt_st1_sw1": {
     "time": 0,
     "version": "optimal",
     "symmetry_breaking": "all",
