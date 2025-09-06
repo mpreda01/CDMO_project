@@ -30,10 +30,10 @@ class MinizincRunner:
     
     def _find_minizinc(self) -> str:
         """Trova il percorso di MiniZinc sul sistema"""
-        # Percorsi comuni per MiniZinc
+       
         common_paths = [
-            "minizinc",  # Se è nel PATH
-            "D:\\Program\\MiniZinc\\minizinc.exe",  # Il tuo percorso
+            "minizinc",  
+            "D:\\Program\\MiniZinc\\minizinc.exe",  
             "C:\\Program Files\\MiniZinc\\bin\\minizinc.exe",
             "/usr/bin/minizinc",
             "/usr/local/bin/minizinc"
@@ -49,7 +49,7 @@ class MinizincRunner:
             except:
                 continue
                 
-        print("❌ MiniZinc non trovato. Assicurati che sia installato e nel PATH.")
+        print("Error: MiniZinc non trovato. Assicurati che sia installato e nel PATH.")
         sys.exit(1)
     def convert_cp_output_to_matrix(self, cp_output: str, n_teams: int) -> Optional[List[List[List[int]]]]:
         """Convert CP_3.0 output to solution matrix format"""
@@ -63,7 +63,7 @@ class MinizincRunner:
                 if line.startswith('home0 ='):
                     # Extract array from "home0 = [1, 2, 3, ...];"
                     array_str = line.split('=')[1].strip().rstrip(';')
-                    home_array = eval(array_str)  # Convert string array to list
+                    home_array = eval(array_str)  
                 elif line.startswith('away0 ='):
                     array_str = line.split('=')[1].strip().rstrip(';')
                     away_array = eval(array_str)
@@ -88,7 +88,7 @@ class MinizincRunner:
             return solution
             
         except Exception as e:
-            print(f"❌ Error converting CP output to matrix: {e}")
+            print(f"Error converting CP output to matrix: {e}")
             return None
         
     def create_data_file(self, n: int, params: Dict[str, bool]) -> str:
@@ -124,14 +124,13 @@ class MinizincRunner:
                     return False, "", execution_time, stderr
                     
             except subprocess.TimeoutExpired:
-                print(f"🕐 Timeout reached, terminating process...")
+                print(f"Timeout reached, terminating process...")
                 process.terminate()
                 
-                # Wait a bit for graceful termination
                 try:
                     process.wait(timeout=2)
                 except subprocess.TimeoutExpired:
-                    print(f"🔪 Force killing process...")
+                    print(f"Force killing process...")
                     process.kill()
                     process.wait()
                 
@@ -167,9 +166,8 @@ class MinizincRunner:
         return None
 
     def parse_optimized_matrix_to_solution(self, optimizer_output: str, n_teams: int) -> Tuple[Optional[List[str]], Optional[List[List[List[int]]]]]:
-        """Converte la matrice ottimizzata nel formato richiesto per il JSON"""
+        """Convert optimizer_2.0 output to solution matrix format for json"""
         try:
-            # Trova la sezione della matrice ottimizzata
             start_marker = "=== OPTIMIZED TOURNAMENT MATRIX ==="
             lines = optimizer_output.split('\n')
             
@@ -177,7 +175,6 @@ class MinizincRunner:
             matrix_lines = []
             found_start = False
             
-            # Estrae le prime 4 linee per il summary
             if len(lines) >= 4:
                 summary.append(lines[0].strip())
                 summary.append(lines[1].strip())
@@ -197,19 +194,15 @@ class MinizincRunner:
             if not matrix_lines:
                 return summary if summary else None, None
             
-            # Parse ogni riga della matrice in formato compatto su una sola riga
             solution = []
             for line in matrix_lines:
-                # Esempio: [[1 , 2] , [1 , 3] , [2 , 6] , [6 , 3] , [4 , 5]]
-                # Rimuove le parentesi quadre esterne
-                clean_line = line.strip()[2:-2]  # Rimuove [[ e ]]
+           
+                clean_line = line.strip()[2:-2]  
                 
-                # Split per le coppie
                 pairs_str = clean_line.split('] , [')
                 period_matches = []
                 
                 for pair_str in pairs_str:
-                    # Estrae i due numeri dalla coppia
                     import re
                     numbers = re.findall(r'\d+', pair_str)
                     if len(numbers) >= 2:
@@ -221,7 +214,7 @@ class MinizincRunner:
             return summary if summary else None, solution if solution else None
             
         except Exception as e:
-            print(f"❌ Errore nel parsing della matrice ottimizzata: {e}")
+            print(f"Error while parsing optimized solution matrix: {e}")
             return None, None
     
     def run_pipeline(self, n: int, params: Dict[str, bool]) -> Dict:
@@ -236,7 +229,10 @@ class MinizincRunner:
             'optimizer_time': 0,
             'optimizer_error': '',
             'time': 0,
-            'timeout_reached': False
+            'timeout_reached': False,
+            'optimal': False,
+            'obj': 'None',
+            'sol': []
         }
         
         # Step 1: Run CP_3.0.mzn
@@ -245,7 +241,7 @@ class MinizincRunner:
         
         remaining_time = self.timeout_seconds
         cp_success, cp_output, cp_time, cp_error = self.run_minizinc(
-            'CP_3.0.mzn', data_content, remaining_time
+            '../../source/CP/CP_3.0.mzn', data_content, remaining_time
         )
         print(type(cp_output))
         if 'UNSATISFIABLE' in cp_output:
@@ -259,7 +255,6 @@ class MinizincRunner:
             'optimizer_success': False,
             'optimizer_time': 0,
             'optimal': False,
-            'sol' : '=====UNSATISFIABLE=====',
             'time': int(cp_time)
             })
 
@@ -304,7 +299,7 @@ class MinizincRunner:
         # Step 3: Run optimizer_2.0.mzn
         print(f"Running optimizer_2.0.mzn for n={n}...")
         opt_success, opt_output, opt_time, opt_error = self.run_minizinc(
-            'optimizer_2.0.mzn', optimizer_data, int(remaining_time)
+            '../../source/CP/optimizer_2.0.mzn', optimizer_data, int(remaining_time)
         )
         
         # Handle optimizer timeout or failure
@@ -462,11 +457,11 @@ class MinizincRunner:
             
             # Print summary
             if result['cp_success'] and result['optimizer_success']:
-                print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                print(f"SUCCESS - Total time: {result['time']:.2f}s")
             elif result['timeout_reached']:
-                print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                print(f"TIMEOUT - Reached {self.timeout_seconds}s limit")
             else:
-                print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
+                print(f"FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
                       f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
                       
             print("-" * 60)
@@ -477,24 +472,24 @@ class MinizincRunner:
         """Save results to JSON file with timestamp structure in res/CP relative to script"""
         print('saving...')
 
-        # Cartella di destinazione relativa alla posizione dello script
+        
         output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'CP'))
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
             print(f"Created directory: {output_dir}")
 
-        # Raggruppa i risultati per valore 'n'
+        # Group results by 'n' value
         grouped_results = defaultdict(list)
         for result in results:
             if 'n' in result:
                 n_value = result['n']
                 grouped_results[n_value].append(result)
 
-        # Salva ogni gruppo nel proprio file
+        # Save each group to its respective file
         for n_value, group_results in grouped_results.items():
             filename = os.path.join(output_dir, f"{n_value}.json")
 
-            # Carica dati esistenti se il file esiste
+            # Load existing data if file exists
             existing_data = {}
             if os.path.exists(filename):
                 try:
@@ -505,12 +500,12 @@ class MinizincRunner:
                     print(f"Warning: Could not load existing file {filename}: {e}")
                     existing_data = {}
 
-            # Aggiungi nuovi risultati con timestamp unico
+            # Add new results with current timestamp
             for result in group_results:
                 current_timestamp = str(time.time())
                 existing_data[current_timestamp] = result  # Direttamente l'oggetto, non un array
 
-            # Salvataggio con formattazione leggibile
+            # Save back to file with custom formatting
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write('{\n')
                 timestamps = list(existing_data.keys())
@@ -522,7 +517,7 @@ class MinizincRunner:
                     for j, (key, value) in enumerate(items):
                         f.write(f'    "{key}": ')
                         if key == 'sol' and isinstance(value, list):
-                            # Formattazione compatta per 'sol'
+                            
                             if value:
                                 f.write('[\n')
                                 for k, period in enumerate(value):
@@ -573,7 +568,7 @@ class MinizincRunner:
             avg_time = sum(r['time'] for r in results if r['cp_success'] and r['optimizer_success']) / successful_runs
             print(f"Average execution time (successful): {avg_time:.2f}s")
             
-        # Best performing configurations
+        
         successful_results = [r for r in results if r['cp_success'] and r['optimizer_success']]
         if successful_results:
             fastest = min(successful_results, key=lambda x: x['time'])
