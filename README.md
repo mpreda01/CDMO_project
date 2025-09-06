@@ -16,13 +16,13 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
 2. **Run examples inside the container:**
    ```bash
    # CP solver
-   python test/CP/run_CP.py -n 6
+   python test/CP/CP_runner.py -n 6
    
    # SAT Solver
-   python test/SAT/run_SAT.py 6
+   python test/SAT/SAT_runner.py 6
 
    # SMT Solver
-   python test/SMT/run_SAT.py 6
+   python test/SMT/SMT_runner.py 6
 
    # MIP solver  
    python test/MIP/MIP_runner.py 6
@@ -44,13 +44,13 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
 4. **Run Examples:**
    ```bash
    # CP solver
-   python test/CP/run_CP.py -n 6
+   python test/CP/CP_runner.py -n 6
    
    # SAT Solver
-   python test/SAT/run_SAT.py 6
+   python test/SAT/SAT_runner.py 6
 
    # SMT Solver
-   python test/SMT/run_SAT.py 6
+   python test/SMT/SMT_runner.py 6
 
    # MIP solver  
    python test/MIP/MIP_runner.py 6
@@ -73,10 +73,10 @@ source/
 └── SMT/         # Z3 SMT theory solver
 
 test/
-├── CP/run_CP.py         # CP solver runner
-├── MIP/MIP_runner.py    # MIP solver runner
-├── SAT/run_SAT.py       # SAT solver runner
-└── SMT/run_SMT.py       # SMT solver runner
+├── CP/CP_runner.py         # CP solver runner
+├── MIP/MIP_runner.py       # MIP solver runner
+├── SAT/SAT_runner.py       # SAT solver runner
+└── SMT/SMT_runner.py       # SMT solver runner
 ```
 
 ## Key Constraints
@@ -103,22 +103,6 @@ All solvers output JSON contains:
 - `--no-combination` &nbsp;&nbsp;&nbsp;&nbsp;Execute the solver runner only for configurations with all the symmetry breaking constraints.
 - `--decision-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the decision version (no objective function).
 - `--optimization-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the optimization version (minimize home/away imbalance).
-
-
-### Example usages:
-
-```bash
-# Run all models for n=6,8,10
-python test/run_all_models.py --n-values 6 8 10
-
-# Run only CP and MIP for n=4 to 10
-python test/run_all_models.py --models CP MIP --start 4 --end 10 --step 2
-
-# Run in test mode with longer timeout
-python test/run_all_models.py --mode test --timeout 600
-```
-
-The script will print a summary and save results to a JSON file. It also validates solutions using the checker.
 
 ## Solution Checker
 
