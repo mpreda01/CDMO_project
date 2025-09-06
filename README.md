@@ -10,7 +10,7 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
    ```bash
    docker build -t sts-image .
    docker-compose up -d
-   docker-compose exec sts bash
+   docker-compose exec cdmo-solver bash
    ```
 
 2. **Run examples inside the container:**
@@ -56,6 +56,30 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
    python test/MIP/MIP_runner.py 6
    ```
 
+## Personalized executions:
+
+- `--solvers cplex` &nbsp;&nbsp;&nbsp;&nbsp;Run only selected solvers.
+- `--teams 6 8 10` &nbsp;&nbsp;&nbsp;&nbsp;Specify exact team numbers.
+- `--time-limit 600` &nbsp;&nbsp;&nbsp;&nbsp;Personalized the time limit (in seconds) per run (default 300s).
+- `--no-combination` &nbsp;&nbsp;&nbsp;&nbsp;Execute the solver runner only for configurations with all the symmetry breaking constraints.
+- `--decision-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the decision version (no objective function).
+- `--optimization-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the optimization version (minimize home/away imbalance).
+
+#### Example:
+
+```bash
+# CP solver
+python test/CP/CP_runner.py 6 --time-limit 300
+   
+# SAT Solver
+python test/SAT/SAT_runner.py 8 --decision-only
+
+# SMT Solver
+python test/SMT/SMT_runner.py 12 --no-combination
+
+# MIP solver  
+python test/MIP/MIP_runner.py 10 --solver gurobi
+```
 
 ## Project Structure
 
@@ -94,15 +118,6 @@ All solvers output JSON contains:
 - Solution matrix (list of lists, containing matches in smaller list, grouped by lists by period)
 - Solution statistics (used solver, taken time, objective function)
 - Confirmation of correct solution found
-
-### Common options:
-
-- `--solvers cplex` &nbsp;&nbsp;&nbsp;&nbsp;Run only selected solvers.
-- `--teams 6 8 10` &nbsp;&nbsp;&nbsp;&nbsp;Specify exact team numbers.
-- `--time-limit 600` &nbsp;&nbsp;&nbsp;&nbsp;Personalized the time limit (in seconds) per run (default 300s).
-- `--no-combination` &nbsp;&nbsp;&nbsp;&nbsp;Execute the solver runner only for configurations with all the symmetry breaking constraints.
-- `--decision-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the decision version (no objective function).
-- `--optimization-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the optimization version (minimize home/away imbalance).
 
 ## Solution Checker
 
