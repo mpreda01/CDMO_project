@@ -1,0 +1,98 @@
+{
+  "z3_solver_basic": {
+    "sol": [
+      [[1,2]]
+    ],
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "constraints": [
+        "weekly_participation: each team plays exactly once per week",
+        "period_occupancy: each period has exactly one home and one away team",
+        "period_limit: each team plays at most twice in the same period",
+        "match_uniqueness: every pair of teams meets exactly once",
+        "symmetry_basic: fix first match (team 0 home in w0 p0, team1 away)"
+    ]
+  },
+  "z3_solver_full": {
+    "sol": [
+      [[1,2]]
+    ],
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "constraints": [
+        "weekly_participation: each team plays exactly once per week",
+        "period_occupancy: each period has exactly one home and one away team",
+        "period_limit: each team plays at most twice in the same period",
+        "match_uniqueness: every pair of teams meets exactly once",
+        "symmetry_basic: fix first match",
+        "symmetry_week: team 0 meets team i in week i-1 (for i)",
+        "symmetry_advanced: additional fixes (periods/home-away ordering/opponent order)"
+    ]
+  },
+  "z3_solver_moderate": {
+    "sol": [
+      [[1,2]]
+    ],
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "constraints": [
+        "weekly_participation: each team plays exactly once per week",
+        "period_occupancy: each period has exactly one home and one away team",
+        "period_limit: each team plays at most twice in the same period",
+        "match_uniqueness: every pair of teams meets exactly once",
+        "symmetry_basic: fix first match",
+        "symmetry_week: team 0 meets team i in week i-1 (for i)"
+    ]
+  },
+  "z3_solver_opt_basic": {
+    "sol": [
+      [[1,2]]
+    ],
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "constraints": [
+        "weekly_participation: each team plays exactly once per week",
+        "period_occupancy: each period has exactly one home and one away team",
+        "period_limit: each team plays at most twice in the same period",
+        "match_uniqueness: every pair of teams meets exactly once",
+        "symmetry_basic: fix first match (team 0 home in w0 p0, team1 away)"
+    ]
+  },
+  "z3_solver_opt_full": {
+    "sol": [
+      [[1,2]]
+    ],
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "constraints": [
+        "weekly_participation: each team plays exactly once per week",
+        "period_occupancy: each period has exactly one home and one away team",
+        "period_limit: each team plays at most twice in the same period",
+        "match_uniqueness: every pair of teams meets exactly once",
+        "symmetry_basic: fix first match",
+        "symmetry_week: team 0 meets team i in week i-1 (for i)",
+        "symmetry_advanced: additional fixes (periods/home-away ordering/opponent order)"
+    ]
+  },
+  "z3_solver_opt_moderate": {
+    "sol": [
+      [[1,2]]
+    ],
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "constraints": [
+        "weekly_participation: each team plays exactly once per week",
+        "period_occupancy: each period has exactly one home and one away team",
+        "period_limit: each team plays at most twice in the same period",
+        "match_uniqueness: every pair of teams meets exactly once",
+        "symmetry_basic: fix first match",
+        "symmetry_week: team 0 meets team i in week i-1 (for i)"
+    ]
+  }
+}
