@@ -56,7 +56,7 @@ RUN cd /tmp && \
 # Load AMPL Community Edition for Academics
 WORKDIR /opt
 # Copy and extract AMPL
-COPY ampl.linux64.tgz /tmp/
+COPY prg/ampl.linux64.tgz /tmp/
 RUN cd /tmp && \
     tar -xzf ampl.linux64.tgz && \
     echo "Contents after extraction:" && \
