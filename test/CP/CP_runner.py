@@ -229,7 +229,10 @@ class MinizincRunner:
             'optimizer_time': 0,
             'optimizer_error': '',
             'time': 0,
-            'timeout_reached': False
+            'timeout_reached': False,
+            'optimal': False,
+            'obj': 'None',
+            'sol': []
         }
         
         # Step 1: Run CP_3.0.mzn
@@ -238,7 +241,7 @@ class MinizincRunner:
         
         remaining_time = self.timeout_seconds
         cp_success, cp_output, cp_time, cp_error = self.run_minizinc(
-            'CP_3.0.mzn', data_content, remaining_time
+            '../../source/CP/CP_3.0.mzn', data_content, remaining_time
         )
         print(type(cp_output))
         if 'UNSATISFIABLE' in cp_output:
@@ -252,7 +255,6 @@ class MinizincRunner:
             'optimizer_success': False,
             'optimizer_time': 0,
             'optimal': False,
-            'sol' : '=====UNSATISFIABLE=====',
             'time': int(cp_time)
             })
 
@@ -297,7 +299,7 @@ class MinizincRunner:
         # Step 3: Run optimizer_2.0.mzn
         print(f"Running optimizer_2.0.mzn for n={n}...")
         opt_success, opt_output, opt_time, opt_error = self.run_minizinc(
-            'optimizer_2.0.mzn', optimizer_data, int(remaining_time)
+            '../../source/CP/optimizer_2.0.mzn', optimizer_data, int(remaining_time)
         )
         
         # Handle optimizer timeout or failure
