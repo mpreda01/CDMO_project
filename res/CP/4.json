@@ -21,7 +21,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019427.7781966": {
     "n": 4,
@@ -45,7 +46,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019428.254688": {
     "n": 4,
@@ -69,7 +71,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019428.7313685": {
     "n": 4,
@@ -93,7 +96,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019429.2239726": {
     "n": 4,
@@ -117,7 +121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019429.78143": {
     "n": 4,
@@ -141,7 +146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019430.2825735": {
     "n": 4,
@@ -165,7 +171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019430.7888856": {
     "n": 4,
@@ -189,7 +196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019431.2779474": {
     "n": 4,
@@ -213,7 +221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019431.8721724": {
     "n": 4,
@@ -237,7 +246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019432.3690886": {
     "n": 4,
@@ -261,7 +271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019432.845169": {
     "n": 4,
@@ -285,7 +296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019433.3135252": {
     "n": 4,
@@ -309,7 +321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019433.7807496": {
     "n": 4,
@@ -333,7 +346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019434.2156997": {
     "n": 4,
@@ -357,7 +371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019434.5490909": {
     "n": 4,
@@ -381,7 +396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019434.8726244": {
     "n": 4,
@@ -405,7 +421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019435.2586396": {
     "n": 4,
@@ -429,7 +446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019435.6061556": {
     "n": 4,
@@ -453,7 +471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019435.9707565": {
     "n": 4,
@@ -477,7 +496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019436.3844209": {
     "n": 4,
@@ -501,7 +521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019436.8131015": {
     "n": 4,
@@ -525,7 +546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019437.1573677": {
     "n": 4,
@@ -549,7 +571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019437.5779324": {
     "n": 4,
@@ -573,7 +596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019437.94597": {
     "n": 4,
@@ -597,7 +621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019438.2895126": {
     "n": 4,
@@ -621,7 +646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019438.6379743": {
     "n": 4,
@@ -645,7 +671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019439.0101545": {
     "n": 4,
@@ -669,7 +696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019439.3649833": {
     "n": 4,
@@ -693,7 +721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019439.7073944": {
     "n": 4,
@@ -717,7 +746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019440.024199": {
     "n": 4,
@@ -741,7 +771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019440.3479362": {
     "n": 4,
@@ -765,7 +796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019440.8500555": {
     "n": 4,
@@ -789,7 +821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019441.2292132": {
     "n": 4,
@@ -813,7 +846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019441.599829": {
     "n": 4,
@@ -837,7 +871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019442.0397737": {
     "n": 4,
@@ -861,7 +896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019442.3773882": {
     "n": 4,
@@ -885,7 +921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019442.7726157": {
     "n": 4,
@@ -909,7 +946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019443.1395748": {
     "n": 4,
@@ -933,7 +971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019443.6790707": {
     "n": 4,
@@ -957,7 +996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019444.0650501": {
     "n": 4,
@@ -981,7 +1021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019444.386356": {
     "n": 4,
@@ -1005,7 +1046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019444.7110243": {
     "n": 4,
@@ -1029,7 +1071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019445.0410151": {
     "n": 4,
@@ -1053,7 +1096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019445.5541708": {
     "n": 4,
@@ -1077,7 +1121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019445.889352": {
     "n": 4,
@@ -1101,7 +1146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019446.212768": {
     "n": 4,
@@ -1125,7 +1171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019446.5229468": {
     "n": 4,
@@ -1149,7 +1196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019446.8896115": {
     "n": 4,
@@ -1173,7 +1221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019447.2467391": {
     "n": 4,
@@ -1197,7 +1246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019447.5611732": {
     "n": 4,
@@ -1221,7 +1271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019447.885638": {
     "n": 4,
@@ -1245,7 +1296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019448.266422": {
     "n": 4,
@@ -1269,7 +1321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019448.6507237": {
     "n": 4,
@@ -1293,7 +1346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019449.0165656": {
     "n": 4,
@@ -1317,7 +1371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019449.3573146": {
     "n": 4,
@@ -1341,7 +1396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019449.7632003": {
     "n": 4,
@@ -1365,7 +1421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019450.0976765": {
     "n": 4,
@@ -1389,7 +1446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019450.4051085": {
     "n": 4,
@@ -1413,7 +1471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019450.731425": {
     "n": 4,
@@ -1437,7 +1496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019451.0595326": {
     "n": 4,
@@ -1461,7 +1521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019451.422614": {
     "n": 4,
@@ -1485,7 +1546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019451.7515268": {
     "n": 4,
@@ -1509,7 +1571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019452.117295": {
     "n": 4,
@@ -1533,7 +1596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019452.4271383": {
     "n": 4,
@@ -1557,7 +1621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019452.7717407": {
     "n": 4,
@@ -1581,7 +1646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019453.2325964": {
     "n": 4,
@@ -1605,7 +1671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019453.5901816": {
     "n": 4,
@@ -1629,7 +1696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019453.9514556": {
     "n": 4,
@@ -1653,7 +1721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019454.2975261": {
     "n": 4,
@@ -1677,7 +1746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019454.6478434": {
     "n": 4,
@@ -1701,7 +1771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019454.9860191": {
     "n": 4,
@@ -1725,7 +1796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019455.3765292": {
     "n": 4,
@@ -1749,7 +1821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019455.7293003": {
     "n": 4,
@@ -1773,7 +1846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019456.1445782": {
     "n": 4,
@@ -1797,7 +1871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019456.5497947": {
     "n": 4,
@@ -1821,7 +1896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019456.8954995": {
     "n": 4,
@@ -1845,7 +1921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019457.2402759": {
     "n": 4,
@@ -1869,7 +1946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019457.5534754": {
     "n": 4,
@@ -1893,7 +1971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019457.8814864": {
     "n": 4,
@@ -1917,7 +1996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019458.226479": {
     "n": 4,
@@ -1941,7 +2021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019458.560594": {
     "n": 4,
@@ -1965,7 +2046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019458.9688299": {
     "n": 4,
@@ -1989,7 +2071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019459.2620606": {
     "n": 4,
@@ -2013,7 +2096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019459.684875": {
     "n": 4,
@@ -2037,7 +2121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019460.1129158": {
     "n": 4,
@@ -2061,7 +2146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019460.46386": {
     "n": 4,
@@ -2085,7 +2171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019460.822973": {
     "n": 4,
@@ -2109,7 +2196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019461.2985628": {
     "n": 4,
@@ -2133,7 +2221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019461.6731865": {
     "n": 4,
@@ -2157,7 +2246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019462.0800261": {
     "n": 4,
@@ -2181,7 +2271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019462.4480467": {
     "n": 4,
@@ -2205,7 +2296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019462.798454": {
     "n": 4,
@@ -2229,7 +2321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019463.2155647": {
     "n": 4,
@@ -2253,7 +2346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019463.5837958": {
     "n": 4,
@@ -2277,7 +2371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019463.9549134": {
     "n": 4,
@@ -2301,7 +2396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019464.2784948": {
     "n": 4,
@@ -2325,7 +2421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019464.6368155": {
     "n": 4,
@@ -2349,7 +2446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019465.0966003": {
     "n": 4,
@@ -2373,7 +2471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019465.4678564": {
     "n": 4,
@@ -2397,7 +2496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019465.8777": {
     "n": 4,
@@ -2421,7 +2521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019466.23582": {
     "n": 4,
@@ -2445,7 +2546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019466.6318665": {
     "n": 4,
@@ -2469,7 +2571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019466.982922": {
     "n": 4,
@@ -2493,7 +2596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019467.3640707": {
     "n": 4,
@@ -2517,7 +2621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019467.73219": {
     "n": 4,
@@ -2541,7 +2646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019468.0650773": {
     "n": 4,
@@ -2565,7 +2671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019468.440163": {
     "n": 4,
@@ -2589,7 +2696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019468.779004": {
     "n": 4,
@@ -2613,7 +2721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019469.139779": {
     "n": 4,
@@ -2637,7 +2746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019469.524795": {
     "n": 4,
@@ -2661,7 +2771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019469.9001093": {
     "n": 4,
@@ -2685,7 +2796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019470.2649558": {
     "n": 4,
@@ -2709,7 +2821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019470.6119366": {
     "n": 4,
@@ -2733,7 +2846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019470.9829552": {
     "n": 4,
@@ -2757,7 +2871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019471.3502238": {
     "n": 4,
@@ -2781,7 +2896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019471.7631595": {
     "n": 4,
@@ -2805,7 +2921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019472.0899887": {
     "n": 4,
@@ -2829,7 +2946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019472.4045353": {
     "n": 4,
@@ -2853,7 +2971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019472.7377079": {
     "n": 4,
@@ -2877,7 +2996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019473.1032524": {
     "n": 4,
@@ -2901,7 +3021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019473.4508379": {
     "n": 4,
@@ -2925,7 +3046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019473.8716252": {
     "n": 4,
@@ -2949,7 +3071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019474.2104266": {
     "n": 4,
@@ -2973,7 +3096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019474.5792067": {
     "n": 4,
@@ -2997,7 +3121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019474.9281495": {
     "n": 4,
@@ -3021,7 +3146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019475.3001926": {
     "n": 4,
@@ -3045,7 +3171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019475.6816401": {
     "n": 4,
@@ -3069,7 +3196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019476.0436523": {
     "n": 4,
@@ -3093,7 +3221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019476.3872106": {
     "n": 4,
@@ -3117,7 +3246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019476.7271678": {
     "n": 4,
@@ -3141,7 +3271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019477.1565526": {
     "n": 4,
@@ -3165,7 +3296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019477.515663": {
     "n": 4,
@@ -3189,7 +3321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019477.9557369": {
     "n": 4,
@@ -3213,7 +3346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019478.411482": {
     "n": 4,
@@ -3237,7 +3371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019478.807859": {
     "n": 4,
@@ -3261,7 +3396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019479.191175": {
     "n": 4,
@@ -3285,7 +3421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019479.4958014": {
     "n": 4,
@@ -3309,7 +3446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019479.8479586": {
     "n": 4,
@@ -3333,7 +3471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019480.2025564": {
     "n": 4,
@@ -3357,7 +3496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019480.5431821": {
     "n": 4,
@@ -3381,7 +3521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019480.8755488": {
     "n": 4,
@@ -3405,7 +3546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019481.2423778": {
     "n": 4,
@@ -3429,7 +3571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019481.692737": {
     "n": 4,
@@ -3453,7 +3596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019482.0683095": {
     "n": 4,
@@ -3477,7 +3621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019482.516233": {
     "n": 4,
@@ -3501,7 +3646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019482.9044023": {
     "n": 4,
@@ -3525,7 +3671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019483.3902526": {
     "n": 4,
@@ -3549,7 +3696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019483.7872343": {
     "n": 4,
@@ -3573,7 +3721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019484.1531022": {
     "n": 4,
@@ -3597,7 +3746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019484.5066535": {
     "n": 4,
@@ -3621,7 +3771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019484.8689919": {
     "n": 4,
@@ -3645,7 +3796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019485.241341": {
     "n": 4,
@@ -3669,7 +3821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019485.5603392": {
     "n": 4,
@@ -3693,7 +3846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019485.9097362": {
     "n": 4,
@@ -3717,7 +3871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019486.3145409": {
     "n": 4,
@@ -3741,7 +3896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019486.6687734": {
     "n": 4,
@@ -3765,7 +3921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019487.0550919": {
     "n": 4,
@@ -3789,7 +3946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019487.4008057": {
     "n": 4,
@@ -3813,7 +3971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019487.738079": {
     "n": 4,
@@ -3837,7 +3996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019488.252939": {
     "n": 4,
@@ -3861,7 +4021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019488.5749292": {
     "n": 4,
@@ -3885,7 +4046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019488.99267": {
     "n": 4,
@@ -3909,7 +4071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019489.389697": {
     "n": 4,
@@ -3933,7 +4096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019489.7759376": {
     "n": 4,
@@ -3957,7 +4121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019490.1566918": {
     "n": 4,
@@ -3981,7 +4146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019490.5026453": {
     "n": 4,
@@ -4005,7 +4171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019490.8732724": {
     "n": 4,
@@ -4029,7 +4196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019491.2286103": {
     "n": 4,
@@ -4053,7 +4221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019491.541228": {
     "n": 4,
@@ -4077,7 +4246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019491.9048882": {
     "n": 4,
@@ -4101,7 +4271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019492.2662716": {
     "n": 4,
@@ -4125,7 +4296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019492.605967": {
     "n": 4,
@@ -4149,7 +4321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019492.9609728": {
     "n": 4,
@@ -4173,7 +4346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019493.3145301": {
     "n": 4,
@@ -4197,7 +4371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019493.6987512": {
     "n": 4,
@@ -4221,7 +4396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019494.0888565": {
     "n": 4,
@@ -4245,7 +4421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019494.4773965": {
     "n": 4,
@@ -4269,7 +4446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019494.833671": {
     "n": 4,
@@ -4293,7 +4471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019495.265429": {
     "n": 4,
@@ -4317,7 +4496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019495.5734675": {
     "n": 4,
@@ -4341,7 +4521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019495.9860468": {
     "n": 4,
@@ -4365,7 +4546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019496.3309839": {
     "n": 4,
@@ -4389,7 +4571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019496.7063973": {
     "n": 4,
@@ -4413,7 +4596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019497.0499914": {
     "n": 4,
@@ -4437,7 +4621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019497.4020302": {
     "n": 4,
@@ -4461,7 +4646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019497.7869437": {
     "n": 4,
@@ -4485,7 +4671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019498.1895325": {
     "n": 4,
@@ -4509,7 +4696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019498.5651793": {
     "n": 4,
@@ -4533,7 +4721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019499.0541294": {
     "n": 4,
@@ -4557,7 +4746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019499.469244": {
     "n": 4,
@@ -4581,7 +4771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019499.8490915": {
     "n": 4,
@@ -4605,7 +4796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019500.2456355": {
     "n": 4,
@@ -4629,7 +4821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019500.5769024": {
     "n": 4,
@@ -4653,7 +4846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019500.9276938": {
     "n": 4,
@@ -4677,7 +4871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019501.3624744": {
     "n": 4,
@@ -4701,7 +4896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019501.7371907": {
     "n": 4,
@@ -4725,7 +4921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019502.2971528": {
     "n": 4,
@@ -4749,7 +4946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019502.7626162": {
     "n": 4,
@@ -4773,7 +4971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019503.1679766": {
     "n": 4,
@@ -4797,7 +4996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019503.5465434": {
     "n": 4,
@@ -4821,7 +5021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019503.9028254": {
     "n": 4,
@@ -4845,7 +5046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019504.312352": {
     "n": 4,
@@ -4869,7 +5071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019504.7250056": {
     "n": 4,
@@ -4893,7 +5096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019505.0779433": {
     "n": 4,
@@ -4917,7 +5121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019505.4553692": {
     "n": 4,
@@ -4941,7 +5146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019505.9422944": {
     "n": 4,
@@ -4965,7 +5171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019506.3412917": {
     "n": 4,
@@ -4989,7 +5196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019506.7108264": {
     "n": 4,
@@ -5013,7 +5221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019507.086177": {
     "n": 4,
@@ -5037,7 +5246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019507.5103421": {
     "n": 4,
@@ -5061,7 +5271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019507.8323333": {
     "n": 4,
@@ -5085,7 +5296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019508.173774": {
     "n": 4,
@@ -5109,7 +5321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019508.6354177": {
     "n": 4,
@@ -5133,7 +5346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019509.1640816": {
     "n": 4,
@@ -5157,7 +5371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019509.545484": {
     "n": 4,
@@ -5181,7 +5396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019509.991104": {
     "n": 4,
@@ -5205,7 +5421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019510.4889169": {
     "n": 4,
@@ -5229,7 +5446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019510.9333782": {
     "n": 4,
@@ -5253,7 +5471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019511.376612": {
     "n": 4,
@@ -5277,7 +5496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019511.8299174": {
     "n": 4,
@@ -5301,7 +5521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019512.2063527": {
     "n": 4,
@@ -5325,7 +5546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019512.599373": {
     "n": 4,
@@ -5349,7 +5571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019513.0296233": {
     "n": 4,
@@ -5373,7 +5596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019513.453438": {
     "n": 4,
@@ -5397,7 +5621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019513.7585108": {
     "n": 4,
@@ -5421,7 +5646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019514.1137934": {
     "n": 4,
@@ -5445,7 +5671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019514.6150606": {
     "n": 4,
@@ -5469,7 +5696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019515.0076165": {
     "n": 4,
@@ -5493,7 +5721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019515.374453": {
     "n": 4,
@@ -5517,7 +5746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019515.7558837": {
     "n": 4,
@@ -5541,7 +5771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019516.0745246": {
     "n": 4,
@@ -5565,7 +5796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019516.4865234": {
     "n": 4,
@@ -5589,7 +5821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019516.885461": {
     "n": 4,
@@ -5613,7 +5846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019517.2567887": {
     "n": 4,
@@ -5637,7 +5871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019517.5902536": {
     "n": 4,
@@ -5661,7 +5896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019517.971666": {
     "n": 4,
@@ -5685,7 +5921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019518.3977866": {
     "n": 4,
@@ -5709,7 +5946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019518.760206": {
     "n": 4,
@@ -5733,7 +5971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019519.1391933": {
     "n": 4,
@@ -5757,7 +5996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019519.5987556": {
     "n": 4,
@@ -5781,7 +6021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019519.9739835": {
     "n": 4,
@@ -5805,7 +6046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019520.354887": {
     "n": 4,
@@ -5829,7 +6071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019520.7628202": {
     "n": 4,
@@ -5853,7 +6096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019521.1871586": {
     "n": 4,
@@ -5877,7 +6121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019521.6016936": {
     "n": 4,
@@ -5901,7 +6146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019521.9415324": {
     "n": 4,
@@ -5925,7 +6171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019522.266": {
     "n": 4,
@@ -5949,7 +6196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019522.674089": {
     "n": 4,
@@ -5973,7 +6221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019523.064832": {
     "n": 4,
@@ -5997,7 +6246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019523.4884057": {
     "n": 4,
@@ -6021,7 +6271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019523.8902788": {
     "n": 4,
@@ -6045,7 +6296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019524.2077172": {
     "n": 4,
@@ -6069,7 +6321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019524.517695": {
     "n": 4,
@@ -6093,7 +6346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019524.8330355": {
     "n": 4,
@@ -6117,7 +6371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019525.2410247": {
     "n": 4,
@@ -6141,7 +6396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019525.5662153": {
     "n": 4,
@@ -6165,7 +6421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019525.9301214": {
     "n": 4,
@@ -6189,7 +6446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019526.3743393": {
     "n": 4,
@@ -6213,7 +6471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019526.7810433": {
     "n": 4,
@@ -6237,7 +6496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019527.190294": {
     "n": 4,
@@ -6261,7 +6521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019527.5599947": {
     "n": 4,
@@ -6285,7 +6546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019527.9526742": {
     "n": 4,
@@ -6309,7 +6571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019528.300975": {
     "n": 4,
@@ -6333,7 +6596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019528.633269": {
     "n": 4,
@@ -6357,7 +6621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019529.1635492": {
     "n": 4,
@@ -6381,7 +6646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019529.6388755": {
     "n": 4,
@@ -6405,7 +6671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019530.1391506": {
     "n": 4,
@@ -6429,7 +6696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019530.565987": {
     "n": 4,
@@ -6453,7 +6721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019530.9684358": {
     "n": 4,
@@ -6477,7 +6746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019531.486431": {
     "n": 4,
@@ -6501,7 +6771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019531.8899465": {
     "n": 4,
@@ -6525,7 +6796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019532.2480264": {
     "n": 4,
@@ -6549,7 +6821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019532.6178896": {
     "n": 4,
@@ -6573,7 +6846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019533.0512478": {
     "n": 4,
@@ -6597,7 +6871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019533.524569": {
     "n": 4,
@@ -6621,7 +6896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019533.8887982": {
     "n": 4,
@@ -6645,7 +6921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019534.311039": {
     "n": 4,
@@ -6669,7 +6946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019534.738838": {
     "n": 4,
@@ -6693,7 +6971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019535.0700982": {
     "n": 4,
@@ -6717,7 +6996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019535.4181597": {
     "n": 4,
@@ -6741,7 +7021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019535.8022163": {
     "n": 4,
@@ -6765,7 +7046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019536.1969185": {
     "n": 4,
@@ -6789,7 +7071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019536.598542": {
     "n": 4,
@@ -6813,7 +7096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019537.0344026": {
     "n": 4,
@@ -6837,7 +7121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019537.4991899": {
     "n": 4,
@@ -6861,7 +7146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019537.8101757": {
     "n": 4,
@@ -6885,7 +7171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019538.1729116": {
     "n": 4,
@@ -6909,7 +7196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019538.5905247": {
     "n": 4,
@@ -6933,7 +7221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019539.021975": {
     "n": 4,
@@ -6957,7 +7246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019539.4026413": {
     "n": 4,
@@ -6981,7 +7271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019539.789542": {
     "n": 4,
@@ -7005,7 +7296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019540.1691036": {
     "n": 4,
@@ -7029,7 +7321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019540.4912133": {
     "n": 4,
@@ -7053,7 +7346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019540.8425434": {
     "n": 4,
@@ -7077,7 +7371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019541.2546225": {
     "n": 4,
@@ -7101,7 +7396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019541.584238": {
     "n": 4,
@@ -7125,7 +7421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019542.023556": {
     "n": 4,
@@ -7149,7 +7446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019542.4104474": {
     "n": 4,
@@ -7173,7 +7471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019542.782434": {
     "n": 4,
@@ -7197,7 +7496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019543.2092216": {
     "n": 4,
@@ -7221,7 +7521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019543.6148543": {
     "n": 4,
@@ -7245,7 +7546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019544.139922": {
     "n": 4,
@@ -7269,7 +7571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019544.4750073": {
     "n": 4,
@@ -7293,7 +7596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019544.8334334": {
     "n": 4,
@@ -7317,7 +7621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019545.2265651": {
     "n": 4,
@@ -7341,7 +7646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019545.5963774": {
     "n": 4,
@@ -7365,7 +7671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019545.9464395": {
     "n": 4,
@@ -7389,7 +7696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019546.3648107": {
     "n": 4,
@@ -7413,7 +7721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019546.7473314": {
     "n": 4,
@@ -7437,7 +7746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019547.222689": {
     "n": 4,
@@ -7461,7 +7771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019547.5839055": {
     "n": 4,
@@ -7485,7 +7796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019547.9454288": {
     "n": 4,
@@ -7509,7 +7821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019548.465134": {
     "n": 4,
@@ -7533,7 +7846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019548.850955": {
     "n": 4,
@@ -7557,7 +7871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019549.2615745": {
     "n": 4,
@@ -7581,7 +7896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019549.6587784": {
     "n": 4,
@@ -7605,7 +7921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019550.0065765": {
     "n": 4,
@@ -7629,7 +7946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019550.4052296": {
     "n": 4,
@@ -7653,7 +7971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019550.8144379": {
     "n": 4,
@@ -7677,7 +7996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019551.1883547": {
     "n": 4,
@@ -7701,7 +8021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019551.580839": {
     "n": 4,
@@ -7725,7 +8046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019551.9811401": {
     "n": 4,
@@ -7749,7 +8071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019552.4538655": {
     "n": 4,
@@ -7773,7 +8096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019552.8009112": {
     "n": 4,
@@ -7797,7 +8121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019553.2168052": {
     "n": 4,
@@ -7821,7 +8146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019553.6092274": {
     "n": 4,
@@ -7845,7 +8171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019554.0277169": {
     "n": 4,
@@ -7869,7 +8196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019554.3496928": {
     "n": 4,
@@ -7893,7 +8221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019554.7253191": {
     "n": 4,
@@ -7917,7 +8246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019555.0999227": {
     "n": 4,
@@ -7941,7 +8271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019555.511906": {
     "n": 4,
@@ -7965,7 +8296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019555.8716345": {
     "n": 4,
@@ -7989,7 +8321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019556.3111858": {
     "n": 4,
@@ -8013,7 +8346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019556.6820943": {
     "n": 4,
@@ -8037,7 +8371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019557.0351634": {
     "n": 4,
@@ -8061,7 +8396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019557.5120199": {
     "n": 4,
@@ -8085,7 +8421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019557.8985455": {
     "n": 4,
@@ -8109,7 +8446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019558.3741086": {
     "n": 4,
@@ -8133,7 +8471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019558.803041": {
     "n": 4,
@@ -8157,7 +8496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019559.165057": {
     "n": 4,
@@ -8181,7 +8521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019559.565116": {
     "n": 4,
@@ -8205,7 +8546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019559.9229994": {
     "n": 4,
@@ -8229,7 +8571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019560.376016": {
     "n": 4,
@@ -8253,7 +8596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019560.8200228": {
     "n": 4,
@@ -8277,7 +8621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019561.1935923": {
     "n": 4,
@@ -8301,7 +8646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019561.596422": {
     "n": 4,
@@ -8325,7 +8671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019561.9691036": {
     "n": 4,
@@ -8349,7 +8696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019562.3359983": {
     "n": 4,
@@ -8373,7 +8721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019562.7710905": {
     "n": 4,
@@ -8397,7 +8746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019563.2117095": {
     "n": 4,
@@ -8421,7 +8771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019563.608241": {
     "n": 4,
@@ -8445,7 +8796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019564.050589": {
     "n": 4,
@@ -8469,7 +8821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019564.5052726": {
     "n": 4,
@@ -8493,7 +8846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019564.9857328": {
     "n": 4,
@@ -8517,7 +8871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019565.3510916": {
     "n": 4,
@@ -8541,7 +8896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019565.6902983": {
     "n": 4,
@@ -8565,7 +8921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019566.0871704": {
     "n": 4,
@@ -8589,7 +8946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019566.4586422": {
     "n": 4,
@@ -8613,7 +8971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019566.8493001": {
     "n": 4,
@@ -8637,7 +8996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019567.402986": {
     "n": 4,
@@ -8661,7 +9021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019567.862436": {
     "n": 4,
@@ -8685,7 +9046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019568.3185463": {
     "n": 4,
@@ -8709,7 +9071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019568.7168748": {
     "n": 4,
@@ -8733,7 +9096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019569.142288": {
     "n": 4,
@@ -8757,7 +9121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019569.700159": {
     "n": 4,
@@ -8781,7 +9146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019570.094764": {
     "n": 4,
@@ -8805,7 +9171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019570.4937215": {
     "n": 4,
@@ -8829,7 +9196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019570.897787": {
     "n": 4,
@@ -8853,7 +9221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019571.222405": {
     "n": 4,
@@ -8877,7 +9246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019571.7281365": {
     "n": 4,
@@ -8901,7 +9271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019572.1987433": {
     "n": 4,
@@ -8925,7 +9296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019572.607095": {
     "n": 4,
@@ -8949,7 +9321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019573.0766535": {
     "n": 4,
@@ -8973,7 +9346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019573.501962": {
     "n": 4,
@@ -8997,7 +9371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019573.9058287": {
     "n": 4,
@@ -9021,7 +9396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019574.3187768": {
     "n": 4,
@@ -9045,7 +9421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019574.757786": {
     "n": 4,
@@ -9069,7 +9446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019575.1746268": {
     "n": 4,
@@ -9093,7 +9471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019575.6820505": {
     "n": 4,
@@ -9117,7 +9496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019576.0958433": {
     "n": 4,
@@ -9141,7 +9521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019576.4580188": {
     "n": 4,
@@ -9165,7 +9546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019576.8611188": {
     "n": 4,
@@ -9189,7 +9571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019577.2308526": {
     "n": 4,
@@ -9213,7 +9596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019577.6499712": {
     "n": 4,
@@ -9237,7 +9621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019578.0622761": {
     "n": 4,
@@ -9261,7 +9646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019578.4375167": {
     "n": 4,
@@ -9285,7 +9671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019578.8377075": {
     "n": 4,
@@ -9309,7 +9696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019579.3905537": {
     "n": 4,
@@ -9333,7 +9721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019579.7935402": {
     "n": 4,
@@ -9357,7 +9746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019580.1927474": {
     "n": 4,
@@ -9381,7 +9771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019580.649467": {
     "n": 4,
@@ -9405,7 +9796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019581.0440261": {
     "n": 4,
@@ -9429,7 +9821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019581.4452267": {
     "n": 4,
@@ -9453,7 +9846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019581.8686194": {
     "n": 4,
@@ -9477,7 +9871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019582.2627506": {
     "n": 4,
@@ -9501,7 +9896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019582.6661494": {
     "n": 4,
@@ -9525,7 +9921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019583.0934267": {
     "n": 4,
@@ -9549,7 +9946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019583.474436": {
     "n": 4,
@@ -9573,7 +9971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019583.882381": {
     "n": 4,
@@ -9597,7 +9996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019584.3848379": {
     "n": 4,
@@ -9621,7 +10021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019584.8366294": {
     "n": 4,
@@ -9645,7 +10046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019585.3039296": {
     "n": 4,
@@ -9669,7 +10071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019585.7388685": {
     "n": 4,
@@ -9693,7 +10096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019586.138633": {
     "n": 4,
@@ -9717,7 +10121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019586.5367079": {
     "n": 4,
@@ -9741,7 +10146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019587.0290363": {
     "n": 4,
@@ -9765,7 +10171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019587.434754": {
     "n": 4,
@@ -9789,7 +10196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019587.8499975": {
     "n": 4,
@@ -9813,7 +10221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019588.2250175": {
     "n": 4,
@@ -9837,7 +10246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019588.5997021": {
     "n": 4,
@@ -9861,7 +10271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019589.0319731": {
     "n": 4,
@@ -9885,7 +10296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019589.4271324": {
     "n": 4,
@@ -9909,7 +10321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019589.8738167": {
     "n": 4,
@@ -9933,7 +10346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019590.2687302": {
     "n": 4,
@@ -9957,7 +10371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019590.6681452": {
     "n": 4,
@@ -9981,7 +10396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019590.9984925": {
     "n": 4,
@@ -10005,7 +10421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019591.3839977": {
     "n": 4,
@@ -10029,7 +10446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019591.804714": {
     "n": 4,
@@ -10053,7 +10471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019592.1937788": {
     "n": 4,
@@ -10077,7 +10496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019592.5853963": {
     "n": 4,
@@ -10101,7 +10521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019593.1331236": {
     "n": 4,
@@ -10125,7 +10546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019593.6319606": {
     "n": 4,
@@ -10149,7 +10571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019594.1021557": {
     "n": 4,
@@ -10173,7 +10596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019594.5278199": {
     "n": 4,
@@ -10197,7 +10621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019594.8962514": {
     "n": 4,
@@ -10221,7 +10646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019595.3031905": {
     "n": 4,
@@ -10245,7 +10671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019595.7162724": {
     "n": 4,
@@ -10269,7 +10696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019596.1162667": {
     "n": 4,
@@ -10293,7 +10721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019596.4464962": {
     "n": 4,
@@ -10317,7 +10746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019596.9802737": {
     "n": 4,
@@ -10341,7 +10771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019597.444466": {
     "n": 4,
@@ -10365,7 +10796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019597.8244922": {
     "n": 4,
@@ -10389,7 +10821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019598.2105055": {
     "n": 4,
@@ -10413,7 +10846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019598.585055": {
     "n": 4,
@@ -10437,7 +10871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019599.027065": {
     "n": 4,
@@ -10461,7 +10896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019599.4018567": {
     "n": 4,
@@ -10485,7 +10921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019599.77927": {
     "n": 4,
@@ -10509,7 +10946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019600.1581743": {
     "n": 4,
@@ -10533,7 +10971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019600.6148415": {
     "n": 4,
@@ -10557,7 +10996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019600.9876316": {
     "n": 4,
@@ -10581,7 +11021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019601.4550664": {
     "n": 4,
@@ -10605,7 +11046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019601.855532": {
     "n": 4,
@@ -10629,7 +11071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019602.412261": {
     "n": 4,
@@ -10653,7 +11096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019602.8162003": {
     "n": 4,
@@ -10677,7 +11121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019603.217179": {
     "n": 4,
@@ -10701,7 +11146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019603.6304064": {
     "n": 4,
@@ -10725,7 +11171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019604.0168083": {
     "n": 4,
@@ -10749,7 +11196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019604.461949": {
     "n": 4,
@@ -10773,7 +11221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019604.9206085": {
     "n": 4,
@@ -10797,7 +11246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019605.3067942": {
     "n": 4,
@@ -10821,7 +11271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019605.754278": {
     "n": 4,
@@ -10845,7 +11296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019606.1977916": {
     "n": 4,
@@ -10869,7 +11321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019606.5871162": {
     "n": 4,
@@ -10893,7 +11346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019606.985453": {
     "n": 4,
@@ -10917,7 +11371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019607.3579934": {
     "n": 4,
@@ -10941,7 +11396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019607.738": {
     "n": 4,
@@ -10965,7 +11421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019608.0933275": {
     "n": 4,
@@ -10989,7 +11446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019608.5806837": {
     "n": 4,
@@ -11013,7 +11471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019609.0243082": {
     "n": 4,
@@ -11037,7 +11496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019609.3962421": {
     "n": 4,
@@ -11061,7 +11521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019609.8444743": {
     "n": 4,
@@ -11085,7 +11546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019610.2080524": {
     "n": 4,
@@ -11109,7 +11571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019610.6461413": {
     "n": 4,
@@ -11133,7 +11596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019611.041934": {
     "n": 4,
@@ -11157,7 +11621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019611.429786": {
     "n": 4,
@@ -11181,7 +11646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019611.8464732": {
     "n": 4,
@@ -11205,7 +11671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019612.267921": {
     "n": 4,
@@ -11229,7 +11696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019612.6449442": {
     "n": 4,
@@ -11253,7 +11721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019613.1849031": {
     "n": 4,
@@ -11277,7 +11746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019613.6573703": {
     "n": 4,
@@ -11301,7 +11771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019614.1487803": {
     "n": 4,
@@ -11325,7 +11796,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019614.5447404": {
     "n": 4,
@@ -11349,7 +11821,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019614.9390218": {
     "n": 4,
@@ -11373,7 +11846,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019615.347649": {
     "n": 4,
@@ -11397,7 +11871,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019615.7169867": {
     "n": 4,
@@ -11421,7 +11896,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019616.1352458": {
     "n": 4,
@@ -11445,7 +11921,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019616.5583785": {
     "n": 4,
@@ -11469,7 +11946,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019616.9116702": {
     "n": 4,
@@ -11493,7 +11971,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019617.2940733": {
     "n": 4,
@@ -11517,7 +11996,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019617.7371912": {
     "n": 4,
@@ -11541,7 +12021,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019618.131835": {
     "n": 4,
@@ -11565,7 +12046,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019618.5695379": {
     "n": 4,
@@ -11589,7 +12071,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019619.0040421": {
     "n": 4,
@@ -11613,7 +12096,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019619.4068785": {
     "n": 4,
@@ -11637,7 +12121,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019619.8006797": {
     "n": 4,
@@ -11661,7 +12146,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019620.2111173": {
     "n": 4,
@@ -11685,7 +12171,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019620.5991356": {
     "n": 4,
@@ -11709,7 +12196,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019621.0027955": {
     "n": 4,
@@ -11733,7 +12221,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019621.3753204": {
     "n": 4,
@@ -11757,7 +12246,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019621.7888427": {
     "n": 4,
@@ -11781,7 +12271,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019622.285163": {
     "n": 4,
@@ -11805,7 +12296,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019622.7833335": {
     "n": 4,
@@ -11829,7 +12321,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019623.1804118": {
     "n": 4,
@@ -11853,7 +12346,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019623.5736482": {
     "n": 4,
@@ -11877,7 +12371,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019623.945181": {
     "n": 4,
@@ -11901,7 +12396,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019624.338534": {
     "n": 4,
@@ -11925,7 +12421,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019624.726876": {
     "n": 4,
@@ -11949,7 +12446,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019625.1204684": {
     "n": 4,
@@ -11973,7 +12471,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019625.5263512": {
     "n": 4,
@@ -11997,7 +12496,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019625.9522524": {
     "n": 4,
@@ -12021,7 +12521,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019626.408352": {
     "n": 4,
@@ -12045,7 +12546,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019626.765396": {
     "n": 4,
@@ -12069,7 +12571,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019627.1549988": {
     "n": 4,
@@ -12093,7 +12596,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019627.5551863": {
     "n": 4,
@@ -12117,7 +12621,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019627.9819748": {
     "n": 4,
@@ -12141,7 +12646,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019628.4072187": {
     "n": 4,
@@ -12165,7 +12671,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019628.8053083": {
     "n": 4,
@@ -12189,7 +12696,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019629.2259214": {
     "n": 4,
@@ -12213,7 +12721,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019629.6457067": {
     "n": 4,
@@ -12237,7 +12746,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019630.0671782": {
     "n": 4,
@@ -12261,7 +12771,8 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   },
   "1757019630.4944162": {
     "n": 4,
@@ -12285,6 +12796,7 @@
     "time": 0,
     "timeout_reached": false,
     "optimal": false,
-    "sol": "=====UNSATISFIABLE====="
+    "obj": "None",
+    "sol": []
   }
 }
