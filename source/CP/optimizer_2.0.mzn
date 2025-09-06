@@ -46,8 +46,8 @@ array[Teams] of var 0..n_weeks: away_count;
 % Differenza assoluta tra partite in casa e trasferta per ogni squadra
 array[Teams] of var 0..n_weeks: imbalance;
 
-% Variabile obiettivo: somma totale degli sbilanciamenti
-var int: total_imbalance;
+% Variabile obiettivo: massimo sbilanciamento tra tutte le squadre
+var 0..n_weeks: max_imbalance;
 
 % ==========================================
 % VINCOLI
@@ -79,8 +79,8 @@ constraint forall(t in Teams) (
     imbalance[t] = abs(home_count[t] - away_count[t])
 );
 
-% Vincolo 6: Calcola lo sbilanciamento totale
-constraint total_imbalance = sum(t in Teams) (imbalance[t]);
+% Vincolo 6: Calcola lo sbilanciamento massimo
+constraint max_imbalance = max(t in Teams) (imbalance[t]);
 
 % Vincolo 7: Nessuna squadra gioca contro se stessa
 constraint forall(p in Periods, w in Weeks) (
@@ -92,16 +92,13 @@ constraint forall(w in Weeks) (
     alldifferent([home[p,w] | p in Periods] ++ [away[p,w] | p in Periods])
 );
 
-constraint total_imbalance >= 0;
-
-constraint total_imbalance <= n_teams;
-
 % ==========================================
 % FUNZIONE OBIETTIVO
 % ==========================================
 
-% Minimizza lo sbilanciamento totale
-solve minimize total_imbalance;
+% Minimizza lo sbilanciamento massimo
+constraint max_imbalance = 1;
+solve satisfy;
 
 % ==========================================
 % VARIABILI AUSILIARIE PER OUTPUT
@@ -111,7 +108,7 @@ solve minimize total_imbalance;
 array[Teams] of var 0..n_weeks: original_home_count;
 array[Teams] of var 0..n_weeks: original_away_count;
 array[Teams] of var 0..n_weeks: original_imbalance;
-var int: original_total_imbalance;
+var 0..n_weeks: original_max_imbalance;
 
 % Calcola i valori della soluzione originale
 constraint forall(t in Teams) (
@@ -126,57 +123,18 @@ constraint forall(t in Teams) (
     original_imbalance[t] = abs(original_home_count[t] - original_away_count[t])
 );
 
-constraint original_total_imbalance = sum(t in Teams) (original_imbalance[t]);
+constraint original_max_imbalance = max(t in Teams) (original_imbalance[t]);
 
 % ==========================================
 % OUTPUT
 % ==========================================
 
-% output [
-%     "=== TOURNAMENT HOME/AWAY OPTIMIZATION RESULTS ===\n\n"
-% ];
-
-% output [
-%     "Optimized Schedule (n=" ++ show(n_teams) ++ "):\n"
-% ] ++
-% [
-%     "W" ++ show(w) ++ ": " ++
-%     concat([
-%         show(home[p,w]) ++ "v" ++ show(away[p,w]) ++ 
-%         if p < n_periods then " " else "" endif
-%         | p in Periods
-%     ]) ++ "\n"
-%     | w in Weeks
-% ];
-
-% output [
-%     "\n=== COMPARISON TABLE ===\n",
-%     "Team | Original H/A | Optimized H/A | Original Imb | Optimized Imb | Swaps Made\n",
-%     "-----+-------------+--------------+-------------+--------------+-----------\n"
-% ] ++
-% [
-%     show(t) ++ "   | " ++
-%     show(original_home_count[t]) ++ "/" ++ show(original_away_count[t]) ++ "       | " ++
-%     show(home_count[t]) ++ "/" ++ show(away_count[t]) ++ "        | " ++
-%     show(original_imbalance[t]) ++ "       | " ++
-%     show(imbalance[t]) ++ "      | " ++
-%     show(sum(p in Periods, w in Weeks where home0_matrix[p,w] = t \/ away0_matrix[p,w] = t) (swap[p,w])) ++ "\n"
-%     | t in Teams
-% ];
-
 output [
-%     "\n=== SUMMARY ===\n",
-    "Original Total Imbalance: " ++ show(original_total_imbalance) ++ "\n",
-    "Optimized Total Imbalance: " ++ show(total_imbalance) ++ "\n",
-    "Improvement: " ++ show(original_total_imbalance - total_imbalance) ++ "\n",
+    "Original Max Imbalance: " ++ show(original_max_imbalance) ++ "\n",
+    "Optimized Max Imbalance: " ++ show(max_imbalance) ++ "\n",
+    "Improvement: " ++ show(original_max_imbalance - max_imbalance) ++ "\n",
     "Total Swaps Made: " ++ show(sum(p in Periods, w in Weeks)(swap[p,w])) ++ "\n\n"
 ];
-
-% output [
-%     "=== OPTIMIZED MATRICES ===\n",
-%     "home = ", show(home), "\n",
-%     "away = ", show(away), "\n\n"
-% ];
 
 output [
     "=== OPTIMIZED TOURNAMENT MATRIX ===\n"
@@ -192,8 +150,7 @@ output [
     | p in Periods
 ];
 
-% output [
-%     "\n=== SWAP DECISIONS ===\n",
-%     "swap = ", show(swap), "\n",
-%     "(1 = swapped home/away, 0 = kept original)\n"
-% ];
+output [
+    "----------\n",
+    "==========\n"
+];
