@@ -193,6 +193,31 @@ The MIP model was first built using AMPL, an algebraic modeling language for bui
 
 The solvers have been applied to the model in Python, thanks to the package amplpy, which allows to work with .mod AMPL files in Python.
 
+Solvers have been tested for the four different combinations of the two symmetry breaking constraints (both of them, none of them, only 1st team constraint or only 1st week constraint). Figure \ref{fig:MIP_dec} shows the solvers performance for the decision version, where each solver name is followed by:
+
+\begin{itemize}
+    \item \textbf{"None":} no symmetry breaking constraint has been used,
+    \item \textbf{"st1":} only 1st team symmetry breaking constraint has been used,
+    \item \textbf{"sw1":} only 1st week symmetry breaking constraint has been used, 
+    \item \textbf{"st1+sw1":} both symmetry breaking constraints have been used.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{MIP_decision.png}
+    \caption{Solving time for different constraint configurations with MIP solver in decision version.}
+    \label{fig:MIP_dec}
+\end{figure}
+
+Similarly, figure \ref{fig:MIP_opt} shows the performance in the optimization version.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{MIP_optimization.png}
+    \caption{Solving time for different constraint configurations with MIP solver in optimization version.}
+    \label{fig:MIP_opt}
+\end{figure}
+
 \section{Conclusions}
 
 \section{Authenticity and Author Contribution Statement}
