@@ -1,0 +1,22 @@
+# Docker ignore file to reduce build context size
+prg/ampl.linux64.tgz
+*.tgz
+*.tar.gz
+.git
+.gitignore
+.vscode
+*.md
+Dockerfile.alternative
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov/
+.tox/
+.env
+.venv
+venv/
+ENV/
+env/

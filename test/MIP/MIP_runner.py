@@ -332,7 +332,7 @@ class STSMIPRunner:
 def main():
     if len(sys.argv) < 2:
         # Parse arguments
-        team_sizes = [2,4,6,8,10,12]
+        team_sizes = [2,4,6]
         ampl_path = None
         solvers = None
         time_limit = 300
@@ -410,7 +410,7 @@ def main():
             i += 1
     
         if not team_sizes:
-            team_sizes = [2,4,6,8,10,12]
+            team_sizes = [2,4,6]
     
         if not run_decision and not run_optimization:
             print("Error: Cannot use both --decision-only and --optimization-only")

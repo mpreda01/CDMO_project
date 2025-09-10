@@ -143,102 +143,105 @@ def print_solution(solution: List[List[List[int]]], n_weeks: int, n_periods: int
 def main():
     """Main function to run the SAT solver."""
     if len(sys.argv) < 2:
-        print("Usage: python sat_run.py <n_teams> [level] [mode]")
-        print("  n_teams: Number of teams (must be even)")
-        print("  level: Symmetry breaking level (basic/moderate/full), default: full")
-        print("  mode: Solving mode (feasible/optimize), default: feasible")
-        print("\nExamples:")
-        print("  python sat_run.py 8                    # 8 teams, full symmetry, feasible")
-        print("  python sat_run.py 10 basic             # 10 teams, basic symmetry, feasible")
-        print("  python sat_run.py 12 moderate optimize # 12 teams, moderate symmetry, optimize")
-        sys.exit(1)
-    
-    n = int(sys.argv[1])
-    
-    # Parse arguments for symmetry level and mode
-    level = "full"
-    if len(sys.argv) > 2 and sys.argv[2].lower() in ['basic', 'moderate', 'full']:
-        level = sys.argv[2].lower()
-        mode_index = 3
+        team_sizes = [2,4,6]
+        level = "full"
+        mode = "feasible"
     else:
-        mode_index = 2
+        i = 1
+        level = "full"
+        mode = "feasible"
+        team_sizes = []
+        while i < len(sys.argv):
+            arg = sys.argv[i]
+            if arg.lower() in ['basic', 'moderate', 'full']:
+                level = arg.lower()
+            elif arg.lower() in ['feasible','optimize']:
+                mode = arg.lower()
+            else:
+                try:
+                    n = int(arg)
+                    if n < 2 or n % 2 != 0:
+                        print(f"Error: {n} is not valid (must be even and >= 2)")
+                        sys.exit(1)
+                    team_sizes.append(n)
+                except ValueError:
+                    print(f"Error: {arg} is not a valid team size or option")
+                    sys.exit(1)
+            i += 1
+
+    for n in team_sizes:
+        # Create solver instance
+        solver = STSSATSolver(n, timeout=300)
     
-    mode = "feasible"
-    if len(sys.argv) > mode_index:
-        mode = sys.argv[mode_index].lower()
+        print("\n" + "-" * 50)
+        print(f"Solving STS problem for {n} teams")
+        print(f"Symmetry breaking level: {level}")
+        print(f"Mode: {'Optimization' if mode == 'optimize' else 'Feasibility'}")
+        print("-" * 50)
     
-    # Create solver instance
-    solver = STSSATSolver(n, timeout=300)
-    
-    print("\n" + "-" * 50)
-    print(f"Solving STS problem for {n} teams")
-    print(f"Symmetry breaking level: {level}")
-    print(f"Mode: {'Optimization' if mode == 'optimize' else 'Feasibility'}")
-    print("-" * 50)
-    
-    if mode == 'optimize':
-        # Run optimization mode
-        result_dict = solver.solve_optimization_incremental(symmetry_level=level, output_dir="res/SAT")
-        # Don't include level in approach name - save_results will add it
-        approach_name = 'z3_solver_opt'
+        if mode == 'optimize':
+            # Run optimization mode
+            result_dict = solver.solve_optimization_incremental(symmetry_level=level, output_dir="res/SAT")
+            # Don't include level in approach name - save_results will add it
+            approach_name = 'z3_solver_opt'
         
-        if result_dict['satisfiable']:
-            print(f"\nSolution found in {int(round(result_dict['time']))} seconds")
-            print(f"Objective value (max imbalance): {result_dict['obj']}")
+            if result_dict['satisfiable']:
+                print(f"\nSolution found in {int(round(result_dict['time']))} seconds")
+                print(f"Objective value (max imbalance): {result_dict['obj']}")
             
-            if result_dict['optimal']:
-                print("Solution is OPTIMAL")
+                if result_dict['optimal']:
+                    print("Solution is OPTIMAL")
+                else:
+                    print("Solution may not be optimal (timeout or incomplete search)")
+            
+                print_solution(result_dict['solution'], solver.n_weeks, solver.n_periods)
+            
+                json_result = {
+                    'time': int(round(result_dict['time'])),
+                    'optimal': result_dict['optimal'],
+                    'obj': result_dict.get('obj'),
+                    'sol': result_dict['solution']
+                }
+                save_results(n, json_result, approach_name, symmetry_level=level, mode=mode)
             else:
-                print("Solution may not be optimal (timeout or incomplete search)")
-            
-            print_solution(result_dict['solution'], solver.n_weeks, solver.n_periods)
-            
-            json_result = {
-                'time': int(round(result_dict['time'])),
-                'optimal': result_dict['optimal'],
-                'obj': result_dict.get('obj'),
-                'sol': result_dict['solution']
-            }
-            save_results(n, json_result, approach_name, symmetry_level=level, mode=mode)
+                print("No feasible solution found to optimize.")
         else:
-            print("No feasible solution found to optimize.")
-    else:
-        # Run feasibility mode
-        success, solution, solve_time, model = solver.solve_feasibility(symmetry_level=level)
-        if success:
-            stats = solver.get_solution_stats(model)
-            objective_value = solver._calculate_objective(model)
+            # Run feasibility mode
+            success, solution, solve_time, model = solver.solve_feasibility(symmetry_level=level)
+            if success:
+                stats = solver.get_solution_stats(model)
+                objective_value = solver._calculate_objective(model)
             
-            print(f"\nSolution found in {int(round(solve_time))} seconds")
-            print(f"Objective value (max imbalance): {objective_value}")
+                print(f"\nSolution found in {int(round(solve_time))} seconds")
+                print(f"Objective value (max imbalance): {objective_value}")
             
-            print("\nHome/Away distribution:")
-            for team, info in stats['teams'].items():
-                print(f"  Team {team}: {info['home']} home, {info['away']} away (abs diff: {info['abs_diff']})")
+                print("\nHome/Away distribution:")
+                for team, info in stats['teams'].items():
+                    print(f"  Team {team}: {info['home']} home, {info['away']} away (abs diff: {info['abs_diff']})")
             
-            if stats['is_balanced']:
-                print("Solution is BALANCED (max abs diff <= 1)")
+                if stats['is_balanced']:
+                    print("Solution is BALANCED (max abs diff <= 1)")
+                else:
+                    print(f"Max abs diff: {stats['max_deviation']}")
+            
+                print_solution(solution, solver.n_weeks, solver.n_periods)
+            
+                json_result = {
+                    'time': int(round(solve_time)),
+                    'optimal': solve_time < 300,
+                    'obj': objective_value,
+                    'sol': solution
+                }
+                save_results(n, json_result, 'z3_solver', symmetry_level=level, mode=mode)
             else:
-                print(f"Max abs diff: {stats['max_deviation']}")
-            
-            print_solution(solution, solver.n_weeks, solver.n_periods)
-            
-            json_result = {
-                'time': int(round(solve_time)),
-                'optimal': solve_time < 300,
-                'obj': objective_value,
-                'sol': solution
-            }
-            save_results(n, json_result, 'z3_solver', symmetry_level=level, mode=mode)
-        else:
-            print(f"\nNo solution found within {int(round(solve_time))} seconds")
-            json_result = {
-                'time': 300,
-                'optimal': False,
-                'obj': None,
-                'sol': []
-            }
-            save_results(n, json_result, 'z3_solver', symmetry_level=level, mode=mode)
+                print(f"\nNo solution found within {int(round(solve_time))} seconds")
+                json_result = {
+                    'time': 300,
+                    'optimal': False,
+                    'obj': None,
+                    'sol': []
+                }
+                save_results(n, json_result, 'z3_solver', symmetry_level=level, mode=mode)
 
 
 if __name__ == "__main__":

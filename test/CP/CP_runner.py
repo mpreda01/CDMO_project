@@ -35,6 +35,7 @@ class MinizincRunner:
             "minizinc",  
             "D:\\Program\\MiniZinc\\minizinc.exe",  
             "C:\\Program Files\\MiniZinc\\bin\\minizinc.exe",
+            "C:\\Program Files\\MiniZinc\\minizinc.exe",
             "/usr/bin/minizinc",
             "/usr/local/bin/minizinc"
         ]
@@ -44,13 +45,13 @@ class MinizincRunner:
                 result = subprocess.run([path, "--version"], 
                                       capture_output=True, text=True, timeout=5)
                 if result.returncode == 0:
-                    print(f"✓ MiniZinc trovato: {path}")
                     return path
             except:
                 continue
                 
-        print("Error: MiniZinc non trovato. Assicurati che sia installato e nel PATH.")
+        print("Error: MiniZinc not found. Verify it is installed and in the PATH.")
         sys.exit(1)
+
     def convert_cp_output_to_matrix(self, cp_output: str, n_teams: int) -> Optional[List[List[List[int]]]]:
         """Convert CP_3.0 output to solution matrix format"""
         try:
@@ -216,10 +217,13 @@ class MinizincRunner:
         except Exception as e:
             print(f"Error while parsing optimized solution matrix: {e}")
             return None, None
-    
-    def run_pipeline(self, n: int, params: Dict[str, bool]) -> Dict:
-        """Run the complete pipeline: CP_3.0.mzn -> optimizer_2.0.mzn"""
-        result = {
+            
+    def run_pipeline(self, n: int, params: Dict[str, bool]) -> List[Dict]:
+        """Run the complete pipeline: CP_3.0.mzn -> optimizer_2.0.mzn
+        Returns a list with two results: [feasible_result, optimized_result]"""
+        
+        # Base result template
+        base_result = {
             'n': n,
             'params': params,
             'cp_success': False,
@@ -238,94 +242,172 @@ class MinizincRunner:
         # Step 1: Run CP_3.0.mzn
         print(f"Running CP_3.0.mzn for n={n}...")
         data_content = self.create_data_file(n, params)
-        
         remaining_time = self.timeout_seconds
+        source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
+        cp_path = os.path.join(source_path, "CP_3.0.mzn")
         cp_success, cp_output, cp_time, cp_error = self.run_minizinc(
-            '../../source/CP/CP_3.0.mzn', data_content, remaining_time
+            cp_path, data_content, remaining_time
         )
-        print(type(cp_output))
-        if 'UNSATISFIABLE' in cp_output:
-            result.update({
-            'cp_success': False,
-            'cp_time': round(cp_time, 2),
-            'cp_error': cp_error
-            })
-
-            result.update({
-            'optimizer_success': False,
-            'optimizer_time': 0,
-            'optimal': False,
-            'time': int(cp_time)
-            })
-
-            return result
         
-        if result['time'] >= self.timeout_seconds:
-            result['timeout_reached'] = True
-        else:
-            result.update({
-                'cp_success': cp_success,
+        # Create feasible result (from CP_3.0.mzn)
+        feasible_result = base_result.copy()
+        feasible_result['params'] = params.copy()
+        feasible_result['params']['phase'] = 'feasible'  # Mark as feasible phase
+        
+        if 'UNSATISFIABLE' in cp_output:
+            feasible_result.update({
+                'cp_success': False,
                 'cp_time': round(cp_time, 2),
-                'cp_error': cp_error
+                'cp_error': cp_error,
+                'time': int(cp_time),
+                'sol': []
             })
+            
+            # Create optimization result (failed because CP failed)
+            optimization_result = base_result.copy()
+            optimization_result['params'] = params.copy()
+            optimization_result['params']['phase'] = 'optimization'
+            optimization_result.update({
+                'cp_success': False,
+                'cp_time': round(cp_time, 2),
+                'cp_error': cp_error,
+                'optimizer_success': False,
+                'optimizer_time': 0,
+                'optimal': False,
+                'time': int(cp_time),
+                'sol': []
+            })
+
+            return [feasible_result, optimization_result]
+        
+        # Extract feasible solution from CP_3.0.mzn output
+        cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output, n)
+        
+        # Update feasible result
+        if cp_time >= self.timeout_seconds:
+            feasible_result['timeout_reached'] = True
+        
+        feasible_result.update({
+            'cp_success': cp_success,
+            'cp_time': round(cp_time, 2),
+            'cp_error': cp_error,
+            'time': int(cp_time),
+            'sol': cp_feasible_solution if cp_feasible_solution else []
+        })
         
         if not cp_success:
             print(f"CP_3.0.mzn failed: {cp_error}")
-            result['time'] = cp_time
-            result['opt'] = False
-            remaining_time -= cp_time
-            if remaining_time <= 0:
-                print(f"Timeout reached after CP_3.0.mzn")
-                result['timeout_reached'] = True
-                result['time'] = self.timeout_seconds
-            return result
+            
+            # Create optimization result (failed because CP failed)
+            optimization_result = base_result.copy()
+            optimization_result['params'] = params.copy()
+            optimization_result['params']['phase'] = 'optimization'
+            optimization_result.update({
+                'cp_success': False,
+                'cp_time': round(cp_time, 2),
+                'cp_error': cp_error,
+                'optimizer_success': False,
+                'optimizer_time': 0,
+                'optimal': False,
+                'time': int(cp_time),
+                'sol': []
+            })
+            
+            if cp_time >= self.timeout_seconds:
+                feasible_result['timeout_reached'] = True
+                optimization_result['timeout_reached'] = True
+                
+            return [feasible_result, optimization_result]
             
         # Check remaining time
         remaining_time -= cp_time
         if remaining_time <= 0:
             print(f"Timeout reached after CP_3.0.mzn")
-            result['timeout_reached'] = True
-            result['time'] = self.timeout_seconds
-            return result
+            feasible_result['timeout_reached'] = True
+            feasible_result['time'] = self.timeout_seconds
+            
+            # Create optimization result (failed due to timeout)
+            optimization_result = base_result.copy()
+            optimization_result['params'] = params.copy()
+            optimization_result['params']['phase'] = 'optimization'
+            optimization_result.update({
+                'cp_success': cp_success,
+                'cp_time': round(cp_time, 2),
+                'cp_error': cp_error,
+                'optimizer_success': False,
+                'optimizer_time': 0,
+                'optimizer_error': 'Timeout after CP phase',
+                'optimal': False,
+                'timeout_reached': True,
+                'time': self.timeout_seconds,
+                'sol': []
+            })
+            
+            return [feasible_result, optimization_result]
             
         # Step 2: Extract data for optimizer
         optimizer_data = self.extract_optimizer_data(cp_output)
+        
         if not optimizer_data:
             print("Failed to extract optimizer data from CP_3.0.mzn output")
-            result['optimizer_error'] = "Failed to extract optimizer data"
-            result['time'] = cp_time
-            return result
+            
+            # Create optimization result (failed to extract data)
+            optimization_result = base_result.copy()
+            optimization_result['params'] = params.copy()
+            optimization_result['params']['phase'] = 'optimization'
+            optimization_result.update({
+                'cp_success': cp_success,
+                'cp_time': round(cp_time, 2),
+                'cp_error': cp_error,
+                'optimizer_success': False,
+                'optimizer_time': 0,
+                'optimizer_error': "Failed to extract optimizer data",
+                'optimal': False,
+                'time': int(cp_time),
+                'sol': []
+            })
+            
+            return [feasible_result, optimization_result]
             
         # Step 3: Run optimizer_2.0.mzn
         print(f"Running optimizer_2.0.mzn for n={n}...")
+        source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
+        cp_opt_path = os.path.join(source_path,"optimizer_2.0.mzn")
         opt_success, opt_output, opt_time, opt_error = self.run_minizinc(
-            '../../source/CP/optimizer_2.0.mzn', optimizer_data, int(remaining_time)
+            cp_opt_path, optimizer_data, int(remaining_time)
         )
+        
+        # Create optimization result
+        optimization_result = base_result.copy()
+        optimization_result['params'] = params.copy()
+        optimization_result['params']['phase'] = 'optimization'
+        optimization_result.update({
+            'cp_success': cp_success,
+            'cp_time': round(cp_time, 2),
+            'cp_error': cp_error,
+            'optimizer_success': opt_success,
+            'optimizer_time': round(opt_time, 2),
+            'optimizer_error': opt_error,
+            'time': int(cp_time + opt_time)
+        })
         
         # Handle optimizer timeout or failure
         if not opt_success:
             print(f"Optimizer failed or timed out: {opt_error}")
-            # Convert CP output to solution matrix
-            cp_solution = self.convert_cp_output_to_matrix(cp_output, n)
             
-            result.update({
-                'optimizer_success': False,
-                'optimizer_time': round(opt_time, 2),
-                'summary': ["Optimizer failed or timed out"],
-                'obj': None,
+            optimization_result.update({
                 'optimal': False,
-                'sol': cp_solution if cp_solution else "Failed to parse CP output",
-                'optimizer_error': opt_error,
-                'time': int(cp_time + opt_time)
+                'obj': None,
+                'sol': []
             })
             
-            if result['time'] >= self.timeout_seconds:
-                result['timeout_reached'] = True
+            if optimization_result['time'] >= self.timeout_seconds:
+                optimization_result['timeout_reached'] = True
             
-            return result
+            return [feasible_result, optimization_result]
         
         # If optimizer succeeded, process its output
-        summary, sol = self.parse_optimized_matrix_to_solution(optimizer_output=opt_output, n_teams=n)
+        summary, optimized_sol = self.parse_optimized_matrix_to_solution(optimizer_output=opt_output, n_teams=n)
         
         value = None
         if summary:
@@ -334,149 +416,24 @@ class MinizincRunner:
                     value = int(item.split(": ")[1])
                     break
         
-        if value == 1:
-            result.update({
-                'optimizer_success': opt_success,
-                'optimizer_time': round(opt_time, 2),
-                'summary': summary,
-                'obj': value,
-                'optimal': True,
-                'sol': sol,
-                'optimizer_error': opt_error,
-                'time': int(cp_time + opt_time)
-            })
-        else:
-            result.update({
-                'optimizer_success': opt_success,
-                'optimizer_time': round(opt_time, 2),
-                'summary': summary,
-                'obj': value,
-                'optimal': False,
-                'sol': sol,
-                'optimizer_error': opt_error,
-                'time': int(cp_time + opt_time)
-            })
+        optimization_result.update({
+            'optimal': value == 1,
+            'obj': value,
+            'sol': optimized_sol if optimized_sol else []
+        })
         
-        if result['time'] >= self.timeout_seconds:
-            result['timeout_reached'] = True
-            result['optimal'] = False
+        if optimization_result['time'] >= self.timeout_seconds:
+            optimization_result['timeout_reached'] = True
+            optimization_result['optimal'] = False
             
-        return result
-        
-    def get_user_input(self) -> Tuple[List[int], Dict[str, bool]]:
-        """Get user input for parameters"""
-        print("=== MiniZinc Tournament Scheduler Runner ===\n")
-        
-        # Get n values
-        print("Available n values:", self.n_values)
-        n_input = input("Enter n values (comma-separated, or 'all' for all values): ").strip()
-        
-        if n_input.lower() == 'all':
-            selected_n = self.n_values
-        else:
-            try:
-                selected_n = [int(x.strip()) for x in n_input.split(',')]
-                selected_n = [n for n in selected_n if n in self.n_values]
-                if not selected_n:
-                    print("No valid n values selected, using all.")
-                    selected_n = self.n_values
-            except:
-                print("Invalid input, using all n values.")
-                selected_n = self.n_values
-                
-        # Get boolean parameters
-        print(f"\nBoolean parameters: {self.bool_params}")
-        mode = input("Enter 'manual' for manual input or 'all' for all combinations: ").strip().lower()
-        
-        if mode == 'manual':
-            params = {}
-            for param in self.bool_params:
-                while True:
-                    value = input(f"{param} (true/false): ").strip().lower()
-                    if value in ['true', 't', '1', 'yes', 'y']:
-                        params[param] = True
-                        break
-                    elif value in ['false', 'f', '0', 'no', 'n']:
-                        params[param] = False
-                        break
-                    else:
-                        print("Please enter true/false")
-            return selected_n, {'manual': params}
-        else:
-            return selected_n, {'all_combinations': True}
-            
-    def run_all_combinations(self, selected_n: List[int]) -> List[Dict]:
-        """Run all possible combinations of boolean parameters"""
-        results = []
-        
-        # Generate all combinations of boolean values
-        bool_combinations = list(itertools.product([True, False], repeat=len(self.bool_params)))
-        total_runs = len(selected_n) * len(bool_combinations)
-        
-        print(f"\nRunning {total_runs} total combinations...")
-        print(f"Timeout per combination: {self.timeout_seconds} seconds\n")
-        
-        run_count = 0
-        for n in selected_n:
-            for combo in bool_combinations:
-                run_count += 1
-                params = dict(zip(self.bool_params, combo))
-                
-                print(f"[{run_count}/{total_runs}] n={n}, params={params}")
-                
-                result = self.run_pipeline(n, params)
-                self.save_results([result])
-                #results.append(result)
-                
-                # Print summary
-                if result['cp_success'] and result['optimizer_success']:
-                    print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
-                elif result['timeout_reached']:
-                    print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
-                else:
-                    print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
-                          f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
-                
-                print("-" * 60)
-                
-        #return results
-        
-    def run_manual(self, selected_n: List[int], params: Dict[str, bool]) -> List[Dict]:
-        """Run with manually specified parameters"""
-        results = []
-        
-        print(f"\nRunning {len(selected_n)} configurations...")
-        print(f"Parameters: {params}")
-        print(f"Timeout per run: {self.timeout_seconds} seconds\n")
-        
-        for i, n in enumerate(selected_n, 1):
-            print(f"[{i}/{len(selected_n)}] Running n={n}")
-            
-            result = self.run_pipeline(n, params)
-            results.append(result)
-            
-            # Print summary
-            if result['cp_success'] and result['optimizer_success']:
-                print(f"SUCCESS - Total time: {result['time']:.2f}s")
-            elif result['timeout_reached']:
-                print(f"TIMEOUT - Reached {self.timeout_seconds}s limit")
-            else:
-                print(f"FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
-                      f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
-                      
-            print("-" * 60)
-            
-        return results
+        return [feasible_result, optimization_result]
 
     def save_results(self, results: List[Dict]):
         """Save results to JSON file with timestamp structure in res/CP relative to script"""
-        print('saving...')
-
         
         output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'CP'))
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
-            print(f"Created directory: {output_dir}")
 
         # Group results by 'n' value
         grouped_results = defaultdict(list)
@@ -491,31 +448,49 @@ class MinizincRunner:
 
             # Load existing data if file exists
             existing_data = {}
-            if os.path.exists(filename):
-                try:
-                    with open(filename, 'r', encoding='utf-8') as f:
-                        existing_data = json.load(f)
-                    print(f"Loaded existing data from {filename}")
-                except (json.JSONDecodeError, IOError) as e:
-                    print(f"Warning: Could not load existing file {filename}: {e}")
-                    existing_data = {}
-
             # Add new results with current timestamp
             for result in group_results:
-                current_timestamp = str(time.time())
-                existing_data[current_timestamp] = result  # Direttamente l'oggetto, non un array
-
+                # Create result name based on parameters and phase
+                res_name = ""
+                if result["params"]["chuffed"] == True:
+                    res_name += "chuffed"
+                else:
+                    res_name += "gecode"
+                phase = result["params"].get("phase", "unknown")
+                if phase == "feasible":
+                    res_name += "_dec"
+                else:
+                    res_name += "_opt"
+                if result["params"]["sb_weeks"] == True:
+                    res_name += "_sw1"
+                if result["params"]["sb_periods"] == True:
+                    res_name += "_sp1"
+                if result["params"]["sb_teams"] == True:
+                    res_name += "_st1"
+                if result["params"]["ic_matches_per_team"] == True:
+                    res_name += "_icm"
+                if result["params"]["ic_period_count"] == True:
+                    res_name += "_icp"
+                if result["params"]["use_int_search"] == True:
+                    res_name += "_usint"
+                if result["params"]["use_restart_luby"] == True:
+                    res_name += "_usrest"
+                if result["params"]["use_relax_and_reconstruct"] == True:
+                    res_name += "_usrelax"
+                                
+                existing_data[res_name] = result  # Direttamente l'oggetto, non un array
             # Save back to file with custom formatting
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write('{\n')
-                timestamps = list(existing_data.keys())
-                for i, timestamp in enumerate(timestamps):
-                    f.write(f'  "{timestamp}": {{\n')
+                results_key = list(existing_data.keys())
+                for i, res_key in enumerate(results_key):
+                    f.write(f'  "{res_key}": {{\n')
 
-                    result = existing_data[timestamp]
+                    result = existing_data[res_key]
                     items = list(result.items())
                     for j, (key, value) in enumerate(items):
                         f.write(f'    "{key}": ')
+                        # Handle 'sol' with custom formatting
                         if key == 'sol' and isinstance(value, list):
                             
                             if value:
@@ -541,17 +516,14 @@ class MinizincRunner:
                         f.write('\n')
 
                     f.write('  }')
-                    if i < len(timestamps) - 1:
+                    if i < len(results_key) - 1:
                         f.write(',')
                     f.write('\n')
 
                 f.write('}\n')
 
-            print(f"Results for n={n_value} saved to: {filename} (Total timestamps: {len(existing_data)})")
-
-
-            
-        
+            print(f"Results for n={n_value} saved to: {filename}")
+      
     def print_summary(self, results: List[Dict]):
         """Print summary statistics"""
         total_runs = len(results)
@@ -574,20 +546,72 @@ class MinizincRunner:
             fastest = min(successful_results, key=lambda x: x['time'])
             print(f"Fastest successful run: n={fastest['n']}, time={fastest['time']:.2f}s")
             
-    def run(self):
+    def run(self, selected_n, combination, params, summary=False):
         """Main execution method"""
         try:
-            selected_n, config = self.get_user_input()
+            if combination == False:
+                config = {'manual': params}
+                """Run with manually specified parameters"""
+                results = []
+        
+                for i, n in enumerate(selected_n, 1):
+                    print(f"[{i}/{len(selected_n)}] Running n={n}")
             
-            if 'manual' in config:
-                results = self.run_manual(selected_n, config['manual'])
+                    pipeline_results = self.run_pipeline(n, params)  # Returns [feasible_result, optimization_result]
+                    results.extend(pipeline_results)  # Add both results to the list
+            
+                    # Print summary for both results
+                    feasible_result, optimization_result = pipeline_results
+                    
+                    print(f"FEASIBLE - CP: {'OK' if feasible_result['cp_success'] else 'FAIL'}, Time: {feasible_result['time']:.2f}s")
+                    
+                    if optimization_result['optimizer_success']:
+                        print(f"OPTIMIZATION - SUCCESS, Total time: {optimization_result['time']:.2f}s, Optimal: {optimization_result['optimal']}")
+                    elif optimization_result['timeout_reached']:
+                        print(f"OPTIMIZATION - TIMEOUT, Reached {self.timeout_seconds}s limit")
+                    else:
+                        print(f"OPTIMIZATION - FAILED, Error: {optimization_result.get('optimizer_error', 'Unknown error')}")
+                      
+                    print("-" * 60)
+                if summary:
+                    self.print_summary(results)
+                # Save results
+                self.save_results(results)
             else:
-                results = self.run_all_combinations(selected_n)
+                config = {'all_combinations': True}
+                """Run all possible combinations of boolean parameters"""
+                results = []
+        
+                # Generate all combinations of boolean values
+                bool_combinations = list(itertools.product([True, False], repeat=len(self.bool_params)))
+                total_runs = len(selected_n) * len(bool_combinations)
+        
+                run_count = 0
+                for n in selected_n:
+                    for combo in bool_combinations:
+                        run_count += 1
+                        params = dict(zip(self.bool_params, combo))
                 
-            self.print_summary(results)
-            
-            # Save results
-            self.save_results(results)
+                        print(f"[{run_count}/{total_runs}] n={n}")
+                
+                        pipeline_results = self.run_pipeline(n, params)  # Returns [feasible_result, optimization_result]
+
+                        self.save_results(pipeline_results)  # Save both results
+                        #results.append(result)
+                
+                        # Print summary for both results
+                        feasible_result, optimization_result = pipeline_results
+                        
+                        print(f"FEASIBLE - CP: {'OK' if feasible_result['cp_success'] else 'FAIL'}, Time: {feasible_result['time']:.2f}s")
+                        
+                        if optimization_result['optimizer_success']:
+                            print(f"OPTIMIZATION - SUCCESS, Total time: {optimization_result['time']:.2f}s, Optimal: {optimization_result['optimal']}")
+                        elif optimization_result['timeout_reached']:
+                            print(f"OPTIMIZATION - TIMEOUT, Reached {self.timeout_seconds}s limit")
+                        else:
+                            print(f"OPTIMIZATION - FAILED, Error: {optimization_result.get('optimizer_error', 'Unknown error')}")
+                
+                        print("-" * 60)
                 
         except KeyboardInterrupt:
             print("\n\nExecution interrupted by user.")
@@ -596,6 +620,114 @@ class MinizincRunner:
             print(f"\nError: {e}")
             sys.exit(1)
 
-if __name__ == "__main__":
+def main():
+    print("=== MiniZinc Tournament Scheduler Runner ===\n")
+    if len(sys.argv) < 2:
+        selected_n = [2, 4, 6]
+        optimize = True
+        combinations = "all"
+        summary = False
+        params = {
+                "sb_weeks": True,
+                "sb_periods": True,
+                "sb_teams": True,
+                "ic_matches_per_team": True,
+                "ic_period_count": True,
+                "use_int_search": True,
+                "use_restart_luby": True,
+                "use_relax_and_reconstruct": True,
+                "chuffed": True
+                }
+    else:
+        # Parse arguments
+        selected_n = []
+        params = {
+                "sb_weeks": False,
+                "sb_periods": False,
+                "sb_teams": False,
+                "ic_matches_per_team": False,
+                "ic_period_count": False,
+                "use_int_search": False,
+                "use_restart_luby": False,
+                "use_relax_and_reconstruct": False,
+                "chuffed": False
+                }
+        optimize = True
+        combinations = True
+        summary = False
+        i = 1
+        while i < len(sys.argv):
+            arg = sys.argv[i]
+            if arg.lower() == "decision":
+                optimize = False
+            elif arg.lower() == "all-optional":
+                params = {
+                "sb_weeks": True,
+                "sb_periods": True,
+                "sb_teams": True,
+                "ic_matches_per_team": True,
+                "ic_period_count": True,
+                "use_int_search": True,
+                "use_restart_luby": True,
+                "use_relax_and_reconstruct": True,
+                "chuffed": True
+                }
+                combinations = False
+            elif arg.lower() == "no-optional":
+                params = {
+                "sb_weeks": False,
+                "sb_periods": False,
+                "sb_teams": False,
+                "ic_matches_per_team": False,
+                "ic_period_count": False,
+                "use_int_search": False,
+                "use_restart_luby": False,
+                "use_relax_and_reconstruct": False,
+                "chuffed": False
+                }
+                combinations = False
+            elif arg.lower() == "sb_weeks":
+                params["sb_weeks"] = True
+                combinations = False
+            elif arg.lower() == "sb_periods":
+                params["sb_periods"] = True
+                combinations = False
+            elif arg.lower() == "sb_teams":
+                params["sb_teams"] = True
+                combinations = False
+            elif arg.lower() == "ic_matches_per_team":
+                params["ic_matches_per_team"] = True
+                combinations = False
+            elif arg.lower() == "ic_period_count":
+                params["ic_period_count"] = True
+                combinations = False
+            elif arg.lower() == "use_int_search":
+                params["use_int_search"] = True
+                combinations = False
+            elif arg.lower() == "use_relax_and_reconstruct":
+                params["use_relax_and_reconstruct"] = True
+                combinations = False
+            elif arg.lower() == "chuffed":
+                params["chuffed"] = True
+                combinations = False
+            elif arg.lower() == "summary":
+                summary = True
+            else:
+                try:
+                    n = int(arg)
+                    if n < 2 or n % 2 != 0:
+                        print(f"Error: {n} is not valid (must be even and >= 2)")
+                        sys.exit(1)
+                    selected_n.append(n)
+                except ValueError:
+                    print(f"Error: {arg} is not a valid team size or option")
+                    sys.exit(1)
+            i += 1
+        if not selected_n:
+            selected_n = [2,4,6]
+    
     runner = MinizincRunner(timeout_seconds=300)
-    runner.run()
+    runner.run(selected_n, combinations, params, summary)
+
+if __name__ == "__main__":
+    main()
