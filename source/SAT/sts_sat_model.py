@@ -116,27 +116,34 @@ class STSSATSolver:
                 # Exactly one match between each pair
                 self.solver.add(PbEq([(m, 1) for m in matches], 1))
     
-    def add_symmetry_breaking_constraints(self, level: str = "full"):
+    def add_symmetry_breaking_constraints(self, level = ["full"]):
         """
         Add symmetry breaking constraints to reduce search space.
         
         Args:
             level: Symmetry breaking level:
-                - "basic": Only fix first match
-                - "moderate": Fix first week structure  
-                - "full": All symmetry breaking constraints
+                - "sb_match": Only fix first match - basic
+                - "sb_team": Fix first week structure - moderate  
+                - "sb_period": All symmetry breaking constraints - full
         """
-        if level in ["basic", "moderate", "full"]:
-            self._add_basic_symmetry_breaking()
-        
-        if level in ["moderate", "full"]:
-            self._add_week_symmetry_breaking()
-        
-        if level == "full":
-            self._add_advanced_symmetry_breaking()
     
-    def _add_basic_symmetry_breaking(self):
-        """Basic symmetry breaking: Fix first match."""
+
+        for l in level:
+            if l == "sb_match":
+                self._add_match_symmetry_breaking()
+        
+            elif l == "sb_team":
+                self._add_team_symmetry_breaking()
+        
+            elif l == "sb_period":
+                self._add_period_symmetry_breaking()
+            else:
+                self._add_match_symmetry_breaking()
+                self._add_team_symmetry_breaking()
+                self._add_period_symmetry_breaking()
+
+    def _add_match_symmetry_breaking(self):
+        """Match symmetry breaking: Fix first match."""
         # Team 0 plays at home in period 0 of week 0
         self.solver.add(self.game[0][0][0][0])
         
@@ -144,8 +151,8 @@ class STSSATSolver:
         if self.n > 1:
             self.solver.add(self.game[1][0][0][1])
     
-    def _add_week_symmetry_breaking(self):
-        """Week symmetry: Team 0 meets team i in week i-1."""
+    def _add_team_symmetry_breaking(self):
+        """Team symmetry: Team 0 meets team i in week i-1."""
         if self.n >= 4:
             for i in range(1, min(self.n // 2 + 1, self.n)):
                 week_idx = i - 1
@@ -163,8 +170,8 @@ class STSSATSolver:
                         )
                     self.solver.add(Or(match_constraint))
     
-    def _add_advanced_symmetry_breaking(self):
-        """Advanced symmetry breaking for larger instances."""
+    def _add_period_symmetry_breaking(self):
+        """Period symmetry breaking for larger instances."""
         # Fix second period for n >= 6
         if self.n >= 6:
             self.solver.add(self.game[2][0][1][0])  # Team 2 home in period 1
@@ -205,7 +212,7 @@ class STSSATSolver:
                 
                 self.solver.add(Implies(Or(plays_2_in_w1), Not(Or(plays_1_in_w2))))
     
-    def solve_feasibility(self, symmetry_level: str = "full") -> Tuple[bool, Optional[List], float, Optional[Any]]:
+    def solve_feasibility(self, symmetry_level = ["full"]) -> Tuple[bool, Optional[List], float, Optional[Any]]:
         """
         Solve the STS problem for feasibility.
         
@@ -280,7 +287,7 @@ class STSSATSolver:
         
         return None, None
     
-    def solve_optimization_incremental(self, symmetry_level: str = "full", output_dir: str = "res/SAT") -> Dict[str, Any]:
+    def solve_optimization_incremental(self, symmetry_level = ["full"], output_dir: str = "res/SAT") -> Dict[str, Any]:
         """
         Solve optimization by iteratively improving from an initial solution.
         Uses binary search on the objective value.
@@ -298,8 +305,6 @@ class STSSATSolver:
                 'model': None
             }
         
-        print(f"Found initial solution. Starting optimization...")
-        print(f"Initial objective value (max imbalance): {initial_obj}")
         
         # Soluzione di partenza (sempre valida e completa)
         best_solution = initial_solution  # Inizializza con la soluzione iniziale
@@ -321,7 +326,6 @@ class STSSATSolver:
                 break
             
             mid = (lower_bound + upper_bound) // 2
-            print(f"Trying objective <= {mid}...")
             
             self.solver = Solver()
             self.solver.set("timeout", int(remaining_time * 1000))
@@ -340,7 +344,6 @@ class STSSATSolver:
                 solution = self._extract_solution(model)
                 obj_value = self._calculate_objective(model)
                 
-                print(f"  Found solution with objective (max imbalance) = {obj_value}")
                 
                 # Aggiorna solo se troviamo una soluzione migliore
                 if obj_value < best_obj:
@@ -351,11 +354,9 @@ class STSSATSolver:
                 upper_bound = obj_value - 1
                 
             elif result == unsat:
-                print(f"  No solution found with objective <= {mid}")
                 lower_bound = mid + 1
                 
             else:  # result == unknown (timeout durante il check)
-                print(f"  Solver timeout during check with objective <= {mid}")
                 timeout_reached = True
                 break
             
@@ -370,15 +371,7 @@ class STSSATSolver:
         # Determina se la soluzione è ottimale
         is_optimal = (best_model is not None and 
                     lower_bound > upper_bound and 
-                    not timeout_reached)
-        
-        if is_optimal:
-            print(f"Optimal solution found with objective = {best_obj}")
-        elif timeout_reached:
-            print(f"Timeout reached. Returning best solution found with objective = {best_obj}")
-        else:
-            print(f"Search completed. Best solution has objective = {best_obj}")
-        
+                    not timeout_reached)        
         return {
             'satisfiable': True,
             'solution': best_solution,  # Sempre popolato (almeno con initial_solution)
