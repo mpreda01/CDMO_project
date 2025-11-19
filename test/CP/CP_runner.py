@@ -621,12 +621,10 @@ class MinizincRunner:
             sys.exit(1)
 
 def main():
-    print("=== MiniZinc Tournament Scheduler Runner ===\n")
+    """Main function to run the CP solver."""
     if len(sys.argv) < 2:
-        selected_n = [2, 4, 6]
-        optimize = True
-        combinations = "all"
-        summary = False
+        team_sizes = [2, 4, 6]
+        symmetry_combinations = "all" ## CAPIRE
         params = {
                 "sb_weeks": True,
                 "sb_periods": True,
@@ -638,9 +636,14 @@ def main():
                 "use_relax_and_reconstruct": True,
                 "chuffed": True
                 }
+        run_decision = True
+        run_optimization = True
+        symmetry_combinations = True
+        time_limit = 300
+        summary = False
     else:
         # Parse arguments
-        selected_n = []
+        team_sizes = []
         params = {
                 "sb_weeks": False,
                 "sb_periods": False,
@@ -652,15 +655,21 @@ def main():
                 "use_relax_and_reconstruct": False,
                 "chuffed": False
                 }
-        optimize = True
-        combinations = True
+        run_decision = True
+        run_optimization = True
+        symmetry_combinations = True
+        time_limit = 300
         summary = False
         i = 1
+        args_input = []
         while i < len(sys.argv):
             arg = sys.argv[i]
-            if arg.lower() == "decision":
-                optimize = False
-            elif arg.lower() == "all-optional":
+            args_input.append(arg.lower())
+            if arg.lower() == "--decision-only":
+                run_optimization = False
+            elif arg.lower() == '--optimization-only':
+                run_decision = False
+            elif arg.lower() == "--all-optional":
                 params = {
                 "sb_weeks": True,
                 "sb_periods": True,
@@ -672,62 +681,112 @@ def main():
                 "use_relax_and_reconstruct": True,
                 "chuffed": True
                 }
-                combinations = False
-            elif arg.lower() == "no-optional":
+                symmetry_combinations = False
+            elif arg.lower() == "--no-optional":
                 params = {
-                "sb_weeks": False,
-                "sb_periods": False,
-                "sb_teams": False,
-                "ic_matches_per_team": False,
-                "ic_period_count": False,
-                "use_int_search": False,
-                "use_restart_luby": False,
-                "use_relax_and_reconstruct": False,
-                "chuffed": False
-                }
-                combinations = False
-            elif arg.lower() == "sb_weeks":
-                params["sb_weeks"] = True
-                combinations = False
-            elif arg.lower() == "sb_periods":
-                params["sb_periods"] = True
-                combinations = False
-            elif arg.lower() == "sb_teams":
-                params["sb_teams"] = True
-                combinations = False
-            elif arg.lower() == "ic_matches_per_team":
-                params["ic_matches_per_team"] = True
-                combinations = False
-            elif arg.lower() == "ic_period_count":
-                params["ic_period_count"] = True
-                combinations = False
-            elif arg.lower() == "use_int_search":
-                params["use_int_search"] = True
-                combinations = False
-            elif arg.lower() == "use_relax_and_reconstruct":
-                params["use_relax_and_reconstruct"] = True
-                combinations = False
-            elif arg.lower() == "chuffed":
-                params["chuffed"] = True
-                combinations = False
+                    "sb_weeks": False,
+                    "sb_periods": False,
+                    "sb_teams": False,
+                    "ic_matches_per_team": False,
+                    "ic_period_count": False,
+                    "use_int_search": False,
+                    "use_restart_luby": False,
+                    "use_relax_and_reconstruct": False,
+                    "chuffed": False
+                    }
+                symmetry_combinations = False
+            elif arg.lower() == "--no-combinations":
+                symmetry_combinations = False
+                params = {
+                    "sb_weeks":False,
+                    "sb_periods": False,
+                    "sb_teams": False,
+                    "ic_matches_per_team": False,
+                    "ic_period_count": False,
+                    "use_int_search": False,
+                    "use_restart_luby": False,
+                    "use_relax_and_reconstruct": False,
+                    "chuffed": False
+                    }
+                k = i+1
+                for j in range(k, len(sys.argv)):
+                    i = j
+                    symmetry = sys.argv[j]
+                    valid_symmetry = ["sb_weeks", "sb_periods", "sb_teams", "ic_matches_per_team", "ic_period_count", "use_int_search", "use_restart_luby", "use_relax_and_reconstruct", "chuffed"]
+                    if symmetry.lower() in ["--decision-only","--optimization-only","--time-limit","--no-combinations","--no-optional","--all-optional"]:
+                        i -= 1
+                        break
+                    else:
+                        if symmetry.lower() not in valid_symmetry:
+                            print(f"Error: {symmetry} is not a valid symmetry breaking. Valid symmetry breaking: {', '.join(valid_symmetry)}")
+                            sys.exit(1)
+                        else:
+                            if symmetry.lower() == "sb_weeks":
+                                params["sb_weeks"] = True
+                            elif symmetry.lower() == "sb_periods":
+                                params["sb_periods"] = True
+                            elif symmetry.lower() == "sb_teams":
+                                params["sb_teams"] = True
+                            elif symmetry.lower() == "ic_matches_per_team":
+                                params["ic_matches_per_team"] = True
+                            elif symmetry.lower() == "ic_period_count":
+                                params["ic_period_count"] = True
+                            elif symmetry.lower() == "use_int_search":
+                                params["use_int_search"] = True
+                            elif symmetry.lower() == "use_restart_luby":
+                                params["use_restart_luby"] = True
+                            elif symmetry.lower() == "use_relax_and_reconstruct":
+                                params["use_relax_and_reconstruct"] = True
+                            else:
+                                params["chuffed"] = True
             elif arg.lower() == "summary":
                 summary = True
+            elif arg.lower() == "--time-limit":
+                if i + 1 < len(sys.argv) and sys.argv[i + 1] not in ["--optimization-only","--decision-only","--no-combinations"]:
+                    try:
+                        time_limit = int(sys.argv[i + 1])
+                        if time_limit <= 0:
+                            print("Error: time limit must be positive")
+                            sys.exit(1)
+                        i += 1
+                    except ValueError:
+                        print("Error: time limit must be an integer")
+                        sys.exit(1)
+                else:
+                    print("Error: --time-limit requires a time value in seconds")
+                    sys.exit(1)
             else:
                 try:
                     n = int(arg)
                     if n < 2 or n % 2 != 0:
                         print(f"Error: {n} is not valid (must be even and >= 2)")
                         sys.exit(1)
-                    selected_n.append(n)
+                    team_sizes.append(n)
                 except ValueError:
                     print(f"Error: {arg} is not a valid team size or option")
                     sys.exit(1)
             i += 1
-        if not selected_n:
-            selected_n = [2,4,6]
+        if not params:
+            params = {
+                    "sb_match":True,
+                    "sb_teams":True,
+                    "sb_periods":True
+                    }
+
+        if not team_sizes:
+            team_sizes = [2,4,6]
+
+        if not run_decision and not run_optimization:
+            print("Error: Cannot use both --decision-only and --optimization-only")
+            sys.exit(1)
+
+        uncomp = ["--no-optional", "--all-optional", "--no-combinations"]
+        if sum(s in uncomp for s in args_input) >= 2:
+            print("Error: Cannot use both \"--no-optional\", \"--all-optional\" or \"--no-combinations\"")
+            sys.exit(1)
     
     runner = MinizincRunner(timeout_seconds=300)
-    runner.run(selected_n, combinations, params, summary)
+    runner.run(team_sizes, symmetry_combinations, params, summary)
 
 if __name__ == "__main__":
     main()

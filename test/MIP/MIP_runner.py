@@ -24,7 +24,7 @@ class STSMIPRunner:
         self.results = {}
         self.ampl_path = ampl_path
         
-    def load_model(self, ampl, optimization=True, sym_t1=True, sym_w1=True):
+    def load_model(self, ampl, optimization=True, sb_teams=True, sb_weeks=True):
         """Load unified AMPL model and configure for decision/optimization"""
         try:
             # Load the unified model
@@ -33,10 +33,10 @@ class STSMIPRunner:
             # Set optimization parameter
             optimize_param = 1 if optimization else 0
             ampl.getParameter("optimize_balance").set(optimize_param)
-            sym_t1_param = 1 if sym_t1 else 0
-            ampl.getParameter("sym_t1").set(sym_t1_param)
-            sym_w1_param = 1 if sym_w1 else 0
-            ampl.getParameter("sym_w1").set(sym_w1_param)
+            sb_teams_param = 1 if sb_teams else 0
+            ampl.getParameter("sb_teams").set(sb_teams_param)
+            sb_weeks_param = 1 if sb_weeks else 0
+            ampl.getParameter("sb_weeks").set(sb_weeks_param)
             
             return True
             
@@ -85,7 +85,7 @@ class STSMIPRunner:
             print(f"Error extracting solution: {e}")
             return None
     
-    def run_solver(self, solver, n, optimization=True, sym_t1=True, sym_w1=True):
+    def run_solver(self, solver, n, optimization=True, sb_teams=True, sb_weeks=True):
         """Run AMPL with specific solver using AMPLpy"""
         
         try:
@@ -98,7 +98,7 @@ class STSMIPRunner:
             start_time = time.time()
             
             # Load model from file
-            if not self.load_model(ampl, optimization, sym_t1, sym_w1):
+            if not self.load_model(ampl, optimization, sb_teams, sb_weeks):
                                 
                 return {
                     "time": self.time_limit,
@@ -138,11 +138,11 @@ class STSMIPRunner:
             else:
                 stop_reason = "unknown"  # Default for other failure cases
             
-            if sym_t1 and sym_w1:
+            if sb_teams and sb_weeks:
                     symmbreak = "all"
-            elif sym_t1:
+            elif sb_teams:
                     symmbreak = "symmetry_team1"
-            elif sym_w1:
+            elif sb_weeks:
                     symmbreak = "symmetry_week1"
             else:
                     symmbreak = "None"
@@ -215,7 +215,7 @@ class STSMIPRunner:
             print(f"Solver {solver} not available: {e}")
             return False
     
-    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True, symmetry_combinations=True):
+    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True, symmetry_combinations=True, sb_teams = True, sb_weeks = True):
         """Run experiments for different team sizes"""
         mode_str = []
         if run_decision:
@@ -253,7 +253,7 @@ class STSMIPRunner:
                             # Run decision version if requested
                             if run_decision:
                                 print(f"  Running {solver} (decision) for {n} teams")
-                                decision_result = self.run_solver(solver, n, optimization=False, sym_t1=s1, sym_w1=s2)
+                                decision_result = self.run_solver(solver, n, optimization=False, sb_teams=s1, sb_weeks=s2)
                     
                                 status = "OK" if decision_result["optimal"] else "FAIL"
                                 reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
@@ -268,7 +268,7 @@ class STSMIPRunner:
                             # Run optimization version if requested
                             if run_optimization:
                                 print(f"  Running {solver} (optimization) for {n} teams")
-                                optimization_result = self.run_solver(solver, n, optimization=True, sym_t1=s1, sym_w1=s2)
+                                optimization_result = self.run_solver(solver, n, optimization=True, sb_teams=s1, sb_weeks=s2)
                     
                                 status = "OK" if optimization_result["optimal"] else "FAIL"
                                 obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
@@ -283,7 +283,7 @@ class STSMIPRunner:
                 else:
                     if run_decision:
                         print(f"  Running {solver} (decision) for {n} teams")
-                        decision_result = self.run_solver(solver, n, optimization=False, sym_t1=True, sym_w1=True)
+                        decision_result = self.run_solver(solver, n, optimization=False, sb_teams=sb_teams, sb_weeks=sb_weeks)
                     
                         status = "OK" if decision_result["optimal"] else "FAIL"
                         reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
@@ -294,7 +294,7 @@ class STSMIPRunner:
                     # Run optimization version if requested
                     if run_optimization:
                         print(f"  Running {solver} (optimization) for {n} teams")
-                        optimization_result = self.run_solver(solver, n, optimization=True, sym_t1=True, sym_w1=True)
+                        optimization_result = self.run_solver(solver, n, optimization=True, sb_teams=sb_teams, sb_weeks=sb_weeks)
                     
                         status = "OK" if optimization_result["optimal"] else "FAIL"
                         obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
@@ -330,52 +330,80 @@ class STSMIPRunner:
             print(f"Results saved to {filename}")
 
 def main():
+    """Main function to run the MIP solver."""
     if len(sys.argv) < 2:
-        # Parse arguments
         team_sizes = [2,4,6]
-        ampl_path = None
-        solvers = None
-        time_limit = 300
+        params = {
+                "sb_weeks":True,
+                "sb_teams":True
+                }
         run_decision = True
         run_optimization = True
         symmetry_combinations = True
+        time_limit = 300
+        ampl_path = None
+        solvers = None
     else:
         # Parse arguments
         team_sizes = []
-        ampl_path = None
-        solvers = None
-        time_limit = 300
+        params = {
+                "sb_weeks":True,
+                "sb_teams":True
+                }
         run_decision = True
         run_optimization = True
         symmetry_combinations = True
-    
+        time_limit = 300
+        ampl_path = None
+        solvers = None
         i = 1
+        args_input = []
         while i < len(sys.argv):
             arg = sys.argv[i]
-            if arg == '--ampl-path':
+            args_input.append(arg.lower())
+            if arg.lower() == '--decision-only':
+                run_optimization = False
+            elif arg.lower() == '--optimization-only':
+                run_decision = False
+            elif arg.lower() == '--all-optional':
+                params = {
+                        "sb_weeks":True,
+                        "sb_teams":True
+                        }
+                symmetry_combinations = False
+            elif arg.lower() == '--no-optional':
+                params = {
+                        "sb_weeks":False,
+                        "sb_teams":False
+                        }
+                symmetry_combinations = False
+            elif arg.lower() == '--no-combinations':
+                symmetry_combinations = False
                 if i + 1 < len(sys.argv):
-                    ampl_path = sys.argv[i + 1]
-                    i += 1
-                else:
-                    print("Error: --ampl-path requires a path argument")
-                    sys.exit(1)
-            elif arg == '--solvers':
-                if i + 1 < len(sys.argv):
-                    solver_list = sys.argv[i + 1].split(',')
-                    valid_solvers = ["cbc", "highs", "cplex", "gurobi"]
-                    solvers = []
-                    for solver in solver_list:
-                        solver = solver.strip()
-                        if solver in valid_solvers:
-                            solvers.append(solver)
-                        else:
-                            print(f"Error: {solver} is not a valid solver. Valid solvers: {', '.join(valid_solvers)}")
+                    symmetry = sys.argv[i + 1]
+                    valid_symmetry = ["sb_weeks", "sb_teams"]
+                    if symmetry.lower() in ["--decision-only","--optimization-only","--all-optional", "--no-optional", "--no-combinations", "--time-limit","--solvers","--ample-path"]:
+                        params = {
+                                "sb_weeks":True,
+                                "sb_teams":True
+                                }
+                    else:
+                        if symmetry not in valid_symmetry:
+                            print(f"Error: {symmetry} is not a valid symmetry breaking. Valid symmetry breaking: {', '.join(valid_symmetry)}")
                             sys.exit(1)
-                    i += 1
-                else:
-                    print("Error: --solvers requires a comma-separated list of solvers")
-                    sys.exit(1)
-            elif arg == '--time-limit':
+                        else:
+                            if symmetry == "sb_teams":
+                                params = {
+                                        "sb_weeks":False,
+                                        "sb_teams":True
+                                        }
+                            else:
+                                params = {
+                                        "sb_weeks":True,
+                                        "sb_teams":False
+                                        }
+                            i += 1
+            elif arg.lower() == '--time-limit':
                 if i + 1 < len(sys.argv):
                     try:
                         time_limit = int(sys.argv[i + 1])
@@ -389,14 +417,43 @@ def main():
                 else:
                     print("Error: --time-limit requires a time value in seconds")
                     sys.exit(1)
-            elif arg == '--decision-only':
-                run_decision = True
-                run_optimization = False
-            elif arg == '--optimization-only':
-                run_decision = False
-                run_optimization = True
-            elif arg == '--no-combinations':
-                symmetry_combinations = False
+            elif arg.lower() == '--ampl-path':
+                if i + 1 < len(sys.argv):
+                    ampl_path = sys.argv[i + 1]
+                    i += 1
+                else:
+                    print("Error: --ampl-path requires a path argument")
+                    sys.exit(1)
+            elif arg.lower() == '--solvers':
+                if i + 1 < len(sys.argv):
+                    solver_list = sys.argv[i + 1].split(',')
+                    valid_solvers = ["cbc", "highs", "cplex", "gurobi"]
+                    solvers = []
+                    for solver in solver_list:
+                        solver = solver.strip()
+                        if solver.lower() in valid_solvers:
+                            solvers.append(solver.lower())
+                        else:
+                            print(f"Error: {solver.lower()} is not a valid solver. Valid solvers: {', '.join(valid_solvers)}")
+                            sys.exit(1)
+                    i += 1
+                else:
+                    print("Error: --solvers requires a comma-separated list of solvers")
+                    sys.exit(1)
+            elif arg.lower() == '--time-limit':
+                if i + 1 < len(sys.argv):
+                    try:
+                        time_limit = int(sys.argv[i + 1])
+                        if time_limit <= 0:
+                            print("Error: time limit must be positive")
+                            sys.exit(1)
+                        i += 1
+                    except ValueError:
+                        print("Error: time limit must be an integer")
+                        sys.exit(1)
+                else:
+                    print("Error: --time-limit requires a time value in seconds")
+                    sys.exit(1)
             else:
                 try:
                     n = int(arg)
@@ -408,16 +465,27 @@ def main():
                     print(f"Error: {arg} is not a valid team size or option")
                     sys.exit(1)
             i += 1
-    
+        if not params:
+            params = {
+                    "sb_match":True,
+                    "sb_teams":True,
+                    "sb_periods":True
+                    }
+
         if not team_sizes:
             team_sizes = [2,4,6]
     
         if not run_decision and not run_optimization:
             print("Error: Cannot use both --decision-only and --optimization-only")
             sys.exit(1)
+
+        uncomp = ["--no-optional", "--all-optional", "--no-combinations"]
+        if sum(s in uncomp for s in args_input) >= 2:
+            print("Error: Cannot use both \"--no-optional\", \"--all-optional\" or \"--no-combinations\"")
+            sys.exit(1)        
     
     runner = STSMIPRunner(ampl_path=ampl_path, time_limit=time_limit, solvers=solvers)
-    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization, symmetry_combinations=symmetry_combinations)
+    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization, symmetry_combinations=symmetry_combinations, sb_teams=params["sb_teams"], sb_weeks=params["sb_weeks"])
 
 if __name__ == "__main__":
     main()

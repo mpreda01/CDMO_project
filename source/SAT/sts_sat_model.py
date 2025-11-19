@@ -116,7 +116,7 @@ class STSSATSolver:
                 # Exactly one match between each pair
                 self.solver.add(PbEq([(m, 1) for m in matches], 1))
     
-    def add_symmetry_breaking_constraints(self, level = ["full"]):
+    def add_symmetry_breaking_constraints(self, level = None):
         """
         Add symmetry breaking constraints to reduce search space.
         
@@ -127,20 +127,21 @@ class STSSATSolver:
                 - "sb_period": All symmetry breaking constraints - full
         """
     
+        if level is None:
+        level = {
+            "sb_match": True,
+            "sb_teams": True,
+            "sb_periods": True
+        }
 
-        for l in level:
-            if l == "sb_match":
-                self._add_match_symmetry_breaking()
-        
-            elif l == "sb_team":
-                self._add_team_symmetry_breaking()
-        
-            elif l == "sb_period":
-                self._add_period_symmetry_breaking()
-            else:
-                self._add_match_symmetry_breaking()
-                self._add_team_symmetry_breaking()
-                self._add_period_symmetry_breaking()
+        if level.get("sb_match", False):
+            self._add_match_symmetry_breaking()
+
+        if level.get("sb_teams", False):
+            self._add_team_symmetry_breaking()
+
+        if level.get("sb_periods", False):
+            self._add_period_symmetry_breaking()    
 
     def _add_match_symmetry_breaking(self):
         """Match symmetry breaking: Fix first match."""
@@ -212,7 +213,7 @@ class STSSATSolver:
                 
                 self.solver.add(Implies(Or(plays_2_in_w1), Not(Or(plays_1_in_w2))))
     
-    def solve_feasibility(self, symmetry_level = ["full"]) -> Tuple[bool, Optional[List], float, Optional[Any]]:
+    def solve_feasibility(self, symmetry_level = None) -> Tuple[bool, Optional[List], float, Optional[Any]]:
         """
         Solve the STS problem for feasibility.
         
@@ -287,7 +288,7 @@ class STSSATSolver:
         
         return None, None
     
-    def solve_optimization_incremental(self, symmetry_level = ["full"], output_dir: str = "res/SAT") -> Dict[str, Any]:
+    def solve_optimization_incremental(self, symmetry_level = None, output_dir: str = "res/SAT") -> Dict[str, Any]:
         """
         Solve optimization by iteratively improving from an initial solution.
         Uses binary search on the objective value.

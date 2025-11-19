@@ -7,8 +7,8 @@ check: n mod 2 = 0;
 
 # Parameter to control optimization - default: decision version
 param optimize_balance default 0 binary;
-param sym_t1 default 0 binary;
-param sym_w1 default 0 binary;
+param sb_teams default 0 binary;
+param sb_weeks default 0 binary;
 
 # Sets
 set TEAMS := 1..n;
@@ -65,8 +65,8 @@ subject to Imbalance2{t in TEAMS: optimize_balance = 1}:
 # Symmetry breaking constraints
 # Fix team 1 to play against team w+1 in week w
 subject to SymBreak_team1{w in WEEKS: w+1 <= n}:
-    sym_t1 * (sum{p in PERIODS} (x[1,w+1,w,p] + x[w+1,1,w,p])) = sym_t1;
+    sb_teams * (sum{p in PERIODS} (x[1,w+1,w,p] + x[w+1,1,w,p])) = sb_teams;
 
 # Fix team (2p-1) to play at home against team 2p in week 1, period p
 subject to SymBreak_week1{p in PERIODS: 2*p <= n}:
-    sym_w1 * x[2*p-1, 2*p, 1, p] = sym_w1;
+    sb_weeks * x[2*p-1, 2*p, 1, p] = sb_weeks;

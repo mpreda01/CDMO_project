@@ -16,7 +16,7 @@ from sts_sat_model import STSSATSolver
 
 
 def save_results(n: int, result: Dict[str, Any], 
-                 output_dir: str = "res/SAT", symmetry_level: str = "full", 
+                 output_dir: str = "res/SAT", symmetry_level: None, 
                  mode: str = "feasible", result_with_meta: dict = {}) -> None:
     """
     Save results to JSON file.
@@ -43,7 +43,7 @@ def save_results(n: int, result: Dict[str, Any],
     
     result_with_meta = {}
     res_name = "z3"
-    symmetry_constraints = {"sb_team": False, "sb_match": False, "sb_period": False}
+    symmetry_constraints = {"sb_teams": False, "sb_match": False, "sb_periods": False}
     if mode == "optimize":
         res_name += "_opt"
     else:
@@ -51,18 +51,17 @@ def save_results(n: int, result: Dict[str, Any],
     if not symmetry_level:
         pass
     else:
-        for level in symmetry_level:
-            if level == "sb_match":
-                symmetry_constraints["sb_match"] = True
-                res_name += "_sm1"
-            elif level == "sb_team":
-                symmetry_constraints["sb_team"] = True
-                res_name += "_st1"
-            elif level == "sb_period":
-                symmetry_constraints["sb_period"] = True
-                res_name += "_sp1"
-            else:
-                pass
+        if symmetry_level.get("sb_match", False):
+            symmetry_constraints["sb_match"] = True
+            res_name += "_sm1"
+        if symmetry_level.get("sb_teams", False):
+            symmetry_constraints["sb_teams"] = True
+            res_name += "_st1"
+        if symmetry_level.get("sb_periods", False):
+            symmetry_constraints["sb_periods"] = True
+            res_name += "_sp1"
+        else:
+            pass
 
     if 'sol' in result:
         sol = result['sol']
@@ -124,25 +123,90 @@ def main():
     """Main function to run the SAT solver."""
     if len(sys.argv) < 2:
         team_sizes = [2,4,6]
-        level = ["sb_match","sb_team","sb_period"]
-        mode = "all"
+        params = {
+                "sb_match":True,
+                "sb_teams":True,
+                "sb_periods":True
+                }
+        run_decision = True
+        run_optimization = True
+        symmetry_combinations = True
+        time_limit = 300
     else:
-        i = 1
-        level = []
-        mode = "all"
+        # Parse arguments
         team_sizes = []
+        params = {
+                "sb_match":False,
+                "sb_teams":False,
+                "sb_periods":False
+                }
+        run_decision = True
+        run_optimization = True
+        symmetry_combinations = True
+        time_limit = 300
+        i = 1
+        args_input = []
         while i < len(sys.argv):
             arg = sys.argv[i]
-            if arg.lower() == "sb_match":
-                level.append(arg.lower())
-            elif arg.lower() == "sb_team":
-                level.append(arg.lower())
-            elif arg.lower() == "sb_period":
-                level.append(arg.lower())
-            elif arg.lower() == "optimization-only":
-                mode = "optimization"
-            elif arg.lower() == "decision-only":
-                mode = "feasible"
+            args_input.append(arg.lower())
+            if arg.lower() == "--decision-only":
+                run_optimization = False
+            elif arg.lower() == "--optimization-only":
+                run_decision = False
+            elif arg.lower() == '--all-optional':
+                params = {
+                        "sb_match":True,
+                        "sb_teams":True,
+                        "sb_periods":True
+                        }
+                symmetry_combinations = False
+            elif arg.lower() == '--no-optional':
+                params = {
+                        "sb_match":False,
+                        "sb_teams":False,
+                        "sb_periods":False
+                        }
+                symmetry_combinations = False
+            elif arg.lower() == "--no-combinations":
+                symmetry_combinations = False
+                params = {
+                    "sb_weeks":False,
+                    "sb_periods": False,
+                    "sb_teams": False,
+                    }
+                k = i+1
+                for j in range(k, len(sys.argv)):
+                    i = j
+                    symmetry = sys.argv[j]
+                    valid_symmetry = ["sb_weeks", "sb_periods", "sb_teams"]
+                    if symmetry.lower() in ["--decision-only","--optimization-only","--time-limit","--no-combinations","--no-optional","--all-optional"]:
+                        i -= 1
+                        break
+                    else:
+                        if symmetry.lower() not in valid_symmetry:
+                            print(f"Error: {symmetry} is not a valid symmetry breaking. Valid symmetry breaking: {', '.join(valid_symmetry)}")
+                            sys.exit(1)
+                        else:
+                            if symmetry.lower() == "sb_weeks":
+                                params["sb_weeks"] = True
+                            elif symmetry.lower() == "sb_periods":
+                                params["sb_periods"] = True
+                            else:
+                                params["sb_teams"] = True  
+            elif arg.lower() == "--time-limit":
+                if i + 1 < len(sys.argv) and sys.argv[i + 1] not in ["--optimization-only","--decision-only","--no-combinations"]:
+                    try:
+                        time_limit = int(sys.argv[i + 1])
+                        if time_limit <= 0:
+                            print("Error: time limit must be positive")
+                            sys.exit(1)
+                        i += 1
+                    except ValueError:
+                        print("Error: time limit must be an integer")
+                        sys.exit(1)
+                else:
+                    print("Error: --time-limit requires a time value in seconds")
+                    sys.exit(1)
             else:
                 try:
                     n = int(arg)
@@ -154,110 +218,107 @@ def main():
                     print(f"Error: {arg} is not a valid team size or option")
                     sys.exit(1)
             i += 1
-        if not level:
-            level = ["sb_match","sb_team","sb_period"]
+        if not params:
+            params = {
+                    "sb_match":True,
+                    "sb_teams":True,
+                    "sb_periods":True
+                    }
+        
+        if not team_sizes:
+            team_sizes = [2,4,6]
+    
+        if not run_decision and not run_optimization:
+            print("Error: Cannot use both --decision-only and --optimization-only")
+            sys.exit(1)
+        
+        uncomp = ["--no-optional", "--all-optional", "--no-combinations"]
+        if sum(s in uncomp for s in args_input) >= 2:
+            print("Error: Cannot use both \"--no-optional\", \"--all-optional\" or \"--no-combinations\"")
+            sys.exit(1)
 
     for n in team_sizes:
         # Create solver instance
-        solver = STSSATSolver(n, timeout=300)
+        solver = STSSATSolver(n, timeout=time_limit)
     
         print("\n" + "-" * 50)
         print(f"Solving STS problem for {n} teams")
         print("-" * 50)
-    
-        if mode == 'optimization':
-            # Run optimization mode
-            result_dict = solver.solve_optimization_incremental(symmetry_level=level, output_dir="res/SAT")
-            # Don't include level in approach name - save_results will add it
-        
-            if result_dict['satisfiable']:
-            
-                json_result = {
-                    'time': int(round(result_dict['time'])),
-                    'optimal': result_dict['optimal'],
-                    'obj': result_dict.get('obj'),
-                    'sol': result_dict['solution']
-                }
 
-                result_with_meta = {}
-                save_results(n, json_result, symmetry_level=level, mode=mode, result_with_meta=result_with_meta)
-            else:
-                print("No feasible solution found to optimize.")
-        elif mode == "feasible":
-            # Run feasibility mode
-            success, solution, solve_time, model = solver.solve_feasibility(symmetry_level=level)
-            if success:
-                stats = solver.get_solution_stats(model)
-                objective_value = solver._calculate_objective(model)
-                        
-                json_result = {
-                    'time': int(round(solve_time)),
-                    'optimal': solve_time < 300,
-                    'obj': objective_value,
-                    'sol': solution
-                }
-                result_with_meta = {}
-                save_results(n, json_result, symmetry_level=level, mode=mode, result_with_meta=result_with_meta)
-            else:
-                json_result = {
-                    'time': 300,
-                    'optimal': False,
-                    'obj': None,
-                    'sol': []
-                }
-                result_with_meta = {}
-                save_results(n, json_result, symmetry_level=level, mode=mode, result_with_meta=result_with_meta)
+        if not symmetry_combinations:
+            result_with_meta = {}
+            if run_decision:
+                # Run feasibility mode
+                success, solution, solve_time, model = solver.solve_feasibility(symmetry_level=params)
+                if success:
+                    stats = solver.get_solution_stats(model)
+                    objective_value = solver._calculate_objective(model)   
+                    json_result = {
+                        'time': int(round(solve_time)),
+                        'optimal': solve_time < 300,
+                        'obj': objective_value,
+                        'sol': solution
+                    }
+                    save_results(n, json_result, symmetry_level=params, mode="feasible", result_with_meta=result_with_meta)
+                else:
+                    json_result = {
+                        'time': 300,
+                        'optimal': False,
+                        'obj': None,
+                        'sol': []
+                    }
+                    save_results(n, json_result, symmetry_level=params, mode="feasible", result_with_meta=result_with_meta)
+            if run_optimization:
+                # Run optimization mode
+                result_dict = solver.solve_optimization_incremental(symmetry_level=params, output_dir="res/SAT")
+                if result_dict['satisfiable']:
+                    json_result = {
+                        'time': int(round(result_dict['time'])),
+                        'optimal': result_dict['optimal'],
+                        'obj': result_dict.get('obj'),
+                        'sol': result_dict['solution']
+                    }
+                    save_results(n, json_result, symmetry_level=params, mode="optimize", result_with_meta=result_with_meta)
+                else:
+                    json_result = {
+                        'time': 300,
+                        'optimal': False,
+                        'obj': None,
+                        'sol': []
+                    }
+                    save_results(n, json_result, symmetry_level=params, mode="optimize", result_with_meta=result_with_meta)
         else:
-            flag_names = ["sb_team", "sb_match", "sb_period", "optimize"]
+            flag_names = ["sb_teams", "sb_match", "sb_periods"]
             all_flag_combos = list(itertools.product([False, True], repeat=len(flag_names)))
             total_combos = len(all_flag_combos)
-
+            
             result_with_meta = {}
             for i, combo in enumerate(all_flag_combos, start=1):
                 print(f"Solving team={n}, combo={i}/{total_combos}")
                 flags_combo = dict(zip(flag_names, combo))
-                level = []
-                if flags_combo["sb_team"]:
-                    level.append("sb_team")
+                params = {
+                        "sb_match":False,
+                        "sb_teams":False,
+                        "sb_periods":False
+                        }
+                if flags_combo["sb_teams"]:
+                    params["sb_teams"] = True
                 if flags_combo["sb_match"]:
-                    level.append("sb_match")
-                if flags_combo["sb_period"]:
-                    level.append("sb_period")
-                if flags_combo["optimize"]:
-                    result_dict = solver.solve_optimization_incremental(symmetry_level=level, output_dir="res/SAT")
-                    # Don't include level in approach name - save_results will add it
-        
-                    if result_dict['satisfiable']:
-                                    
-                        json_result = {
-                            'time': int(round(result_dict['time'])),
-                            'optimal': result_dict['optimal'],
-                            'obj': result_dict.get('obj'),
-                            'sol': result_dict['solution']
-                        }
-                        save_results(n, json_result, symmetry_level=level, mode="optimize", result_with_meta=result_with_meta)
-                    else:
-                        json_result = {
-                            'time': 300,
-                            'optimal': False,
-                            'obj': None,
-                            'sol': []
-                        }
-                        result_with_meta = {}
-                        save_results(n, json_result, symmetry_level=level, mode=mode, result_with_meta=result_with_meta)
-                else:
-                    success, solution, solve_time, model = solver.solve_feasibility(symmetry_level=level)
+                    params["sb_match"] = True
+                if flags_combo["sb_periods"]:
+                    params["sb_periods"] = True
+                if run_decision:
+                    success, solution, solve_time, model = solver.solve_feasibility(symmetry_level=params)
                     if success:
                         stats = solver.get_solution_stats(model)
                         objective_value = solver._calculate_objective(model)
-                        
                         json_result = {
                             'time': int(round(solve_time)),
                             'optimal': solve_time < 300,
                             'obj': objective_value,
                             'sol': solution
                         }
-                        save_results(n, json_result, symmetry_level=level, mode="decision", result_with_meta=result_with_meta)
+                        save_results(n, json_result, symmetry_level=params, mode="feasible", result_with_meta=result_with_meta)
                     else:
                         json_result = {
                             'time': 300,
@@ -265,7 +326,25 @@ def main():
                             'obj': None,
                             'sol': []
                         }
-                        save_results(n, json_result, symmetry_level=level, mode=mode, result_with_meta=result_with_meta)
+                        save_results(n, json_result, symmetry_level=params, mode="feasible", result_with_meta=result_with_meta)
+                if run_optimization:
+                    result_dict = solver.solve_optimization_incremental(symmetry_level=params, output_dir="res/SAT")
+                    if result_dict['satisfiable']:            
+                        json_result = {
+                            'time': int(round(result_dict['time'])),
+                            'optimal': result_dict['optimal'],
+                            'obj': result_dict.get('obj'),
+                            'sol': result_dict['solution']
+                        }
+                        save_results(n, json_result, symmetry_level=params, mode="optimize", result_with_meta=result_with_meta)
+                    else:
+                        json_result = {
+                            'time': 300,
+                            'optimal': False,
+                            'obj': None,
+                            'sol': []
+                        }
+                        save_results(n, json_result, symmetry_level=params, mode="optimize", result_with_meta=result_with_meta)
 
 
 if __name__ == "__main__":
