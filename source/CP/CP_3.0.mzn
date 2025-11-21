@@ -20,6 +20,7 @@ int: n_games = (n * (n - 1)) div 2;
 bool: sb_weeks;
 bool: sb_periods;  
 bool: sb_teams;
+bool: sb_week1_fixed;
 % Implied constraint
 bool: ic_matches_per_team;
 bool: ic_period_count;
@@ -135,7 +136,7 @@ constraint forall(p in Periods, w in Weeks) (
     home[p,w] < away[p,w]
 );
 
-% Week ordering symmetry breaking (conditional)
+% Week lex ordering symmetry breaking (conditional)
 constraint 
   sb_weeks ->
   forall(w in 1..n_weeks-1)(
@@ -145,7 +146,7 @@ constraint
     )
   );
 
-% Period ordering symmetry breaking (conditional)
+% Period lex ordering symmetry breaking (conditional)
 constraint 
   sb_periods ->
   forall(p in 1..n_periods-1)(
@@ -157,7 +158,7 @@ constraint
 
 % Team ordering in first week (conditional)
 constraint
-  sb_teams ->
+  sb_week1_fixed ->
   forall(p in Periods) (
     home[p,1] = p /\ 
     away[p,1] = n - p + 1
@@ -194,14 +195,9 @@ constraint forall(w in Weeks) (
 );
 
 % ==========================================
-% OBJECTIVE AND SEARCH STRATEGY
+% SEARCH STRATEGY
 % ==========================================
 
-% Objective: minimize home/away imbalance 
-set of int: Count_diff = 0..n-1;
-var Count_diff: max_diff = max([abs(home_count[t] - away_count[t]) | t in Teams]);
-
-% Search strategy (conditional)
 solve 
 :: if use_int_search then
     if chuffed then
@@ -224,7 +220,8 @@ solve
 :: if use_relax_and_reconstruct then 
      relax_and_reconstruct([home[p,w] | p in Periods, w in Weeks] ++ [away[p,w] | p in Periods, w in Weeks], 85)
    endif
-   minimize max_diff;
+%   minimize max_diff;
+satisfy;
 
 % ==========================================
 % OUTPUT
