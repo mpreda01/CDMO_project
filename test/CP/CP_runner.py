@@ -218,7 +218,7 @@ class MinizincRunner:
             print(f"Error while parsing optimized solution matrix: {e}")
             return None, None
             
-    def run_pipeline(self, n: int, params: Dict[str, bool]) -> List[Dict]:
+    def run_pipeline(self, n: int, params: Dict[str, bool], run_decision: bool, run_optimization: bool) -> List[Dict]:
         """Run the complete pipeline: CP_3.0.mzn -> optimizer_2.0.mzn
         Returns a list with two results: [feasible_result, optimized_result]"""
         
@@ -239,7 +239,7 @@ class MinizincRunner:
             'sol': []
         }
         
-        # Step 1: Run CP_3.0.mzn
+        # Run CP_3.0.mzn
         print(f"Running CP_3.0.mzn for n={n}...")
         data_content = self.create_data_file(n, params)
         remaining_time = self.timeout_seconds
@@ -253,180 +253,171 @@ class MinizincRunner:
         feasible_result = base_result.copy()
         feasible_result['params'] = params.copy()
         feasible_result['params']['phase'] = 'feasible'  # Mark as feasible phase
-        
-        if 'UNSATISFIABLE' in cp_output:
-            feasible_result.update({
-                'cp_success': False,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error,
-                'time': int(cp_time),
-                'sol': []
-            })
-            
-            # Create optimization result (failed because CP failed)
-            optimization_result = base_result.copy()
-            optimization_result['params'] = params.copy()
-            optimization_result['params']['phase'] = 'optimization'
-            optimization_result.update({
-                'cp_success': False,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error,
-                'optimizer_success': False,
-                'optimizer_time': 0,
-                'optimal': False,
-                'time': int(cp_time),
-                'sol': []
-            })
 
-            return [feasible_result, optimization_result]
-        
-        # Extract feasible solution from CP_3.0.mzn output
-        cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output, n)
-        
-        # Update feasible result
-        if cp_time >= self.timeout_seconds:
-            feasible_result['timeout_reached'] = True
-        
-        feasible_result.update({
-            'cp_success': cp_success,
-            'cp_time': round(cp_time, 2),
-            'cp_error': cp_error,
-            'time': int(cp_time),
-            'sol': cp_feasible_solution if cp_feasible_solution else []
-        })
-        
-        if not cp_success:
-            print(f"CP_3.0.mzn failed: {cp_error}")
-            
-            # Create optimization result (failed because CP failed)
-            optimization_result = base_result.copy()
-            optimization_result['params'] = params.copy()
-            optimization_result['params']['phase'] = 'optimization'
-            optimization_result.update({
-                'cp_success': False,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error,
-                'optimizer_success': False,
-                'optimizer_time': 0,
-                'optimal': False,
-                'time': int(cp_time),
-                'sol': []
-            })
-            
-            if cp_time >= self.timeout_seconds:
-                feasible_result['timeout_reached'] = True
-                optimization_result['timeout_reached'] = True
-                
-            return [feasible_result, optimization_result]
-            
-        # Check remaining time
-        remaining_time -= cp_time
-        if remaining_time <= 0:
-            print(f"Timeout reached after CP_3.0.mzn")
-            feasible_result['timeout_reached'] = True
-            feasible_result['time'] = self.timeout_seconds
-            
-            # Create optimization result (failed due to timeout)
-            optimization_result = base_result.copy()
-            optimization_result['params'] = params.copy()
-            optimization_result['params']['phase'] = 'optimization'
-            optimization_result.update({
-                'cp_success': cp_success,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error,
-                'optimizer_success': False,
-                'optimizer_time': 0,
-                'optimizer_error': 'Timeout after CP phase',
-                'optimal': False,
-                'timeout_reached': True,
-                'time': self.timeout_seconds,
-                'sol': []
-            })
-            
-            return [feasible_result, optimization_result]
-            
-        # Step 2: Extract data for optimizer
-        optimizer_data = self.extract_optimizer_data(cp_output)
-        
-        if not optimizer_data:
-            print("Failed to extract optimizer data from CP_3.0.mzn output")
-            
-            # Create optimization result (failed to extract data)
-            optimization_result = base_result.copy()
-            optimization_result['params'] = params.copy()
-            optimization_result['params']['phase'] = 'optimization'
-            optimization_result.update({
-                'cp_success': cp_success,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error,
-                'optimizer_success': False,
-                'optimizer_time': 0,
-                'optimizer_error': "Failed to extract optimizer data",
-                'optimal': False,
-                'time': int(cp_time),
-                'sol': []
-            })
-            
-            return [feasible_result, optimization_result]
-            
-        # Step 3: Run optimizer_2.0.mzn
-        print(f"Running optimizer_2.0.mzn for n={n}...")
-        source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
-        cp_opt_path = os.path.join(source_path,"optimizer_2.0.mzn")
-        opt_success, opt_output, opt_time, opt_error = self.run_minizinc(
-            cp_opt_path, optimizer_data, int(remaining_time)
-        )
-        
-        # Create optimization result
         optimization_result = base_result.copy()
         optimization_result['params'] = params.copy()
         optimization_result['params']['phase'] = 'optimization'
-        optimization_result.update({
-            'cp_success': cp_success,
-            'cp_time': round(cp_time, 2),
-            'cp_error': cp_error,
-            'optimizer_success': opt_success,
-            'optimizer_time': round(opt_time, 2),
-            'optimizer_error': opt_error,
-            'time': int(cp_time + opt_time)
-        })
         
-        # Handle optimizer timeout or failure
-        if not opt_success:
-            print(f"Optimizer failed or timed out: {opt_error}")
-            
-            optimization_result.update({
-                'optimal': False,
-                'obj': None,
-                'sol': []
+        res = []
+        if 'UNSATISFIABLE' in cp_output:
+            if run_decision:
+                feasible_result.update({
+                    'cp_success': False,
+                    'cp_time': round(cp_time, 2),
+                    'cp_error': cp_error,
+                    'time': int(cp_time),
+                    'sol': []
+                })
+                res.append(feasible_result)
+            if run_optimization:
+                optimization_result.update({
+                    'cp_success': False,
+                    'cp_time': round(cp_time, 2),
+                    'cp_error': cp_error,
+                    'optimizer_success': False,
+                    'optimizer_time': 0,
+                    'optimal': False,
+                    'time': int(cp_time),
+                    'sol': []
+                })
+                res.append(optimization_result)
+            return res
+
+        if not run_optimization:        
+            # Extract feasible solution from CP_3.0.mzn output
+            cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output, n)
+        
+            # Update feasible result
+            if cp_time >= self.timeout_seconds:
+                feasible_result['timeout_reached'] = True
+        
+            feasible_result.update({
+                'cp_success': cp_success,
+                'cp_time': round(cp_time, 2),
+                'cp_error': cp_error,
+                'time': int(cp_time),
+                'sol': cp_feasible_solution if cp_feasible_solution else []
             })
+        
+            if not cp_success:
+                print(f"CP_3.0.mzn failed: {cp_error}")                
             
+            res.append(feasible_result)
+            
+            # Check remaining time
+            remaining_time -= cp_time
+            if remaining_time <= 0:
+                print(f"Timeout reached after CP_3.0.mzn")
+                feasible_result['timeout_reached'] = True
+                feasible_result['time'] = self.timeout_seconds
+                res[0] = feasible_result
+            
+            return res
+        else:
+            if run_decision:
+                # Extract feasible solution from CP_3.0.mzn output
+                cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output, n)
+        
+                # Update feasible result
+                if cp_time >= self.timeout_seconds:
+                    feasible_result['timeout_reached'] = True
+        
+                feasible_result.update({
+                    'cp_success': cp_success,
+                    'cp_time': round(cp_time, 2),
+                    'cp_error': cp_error,
+                    'time': int(cp_time),
+                    'sol': cp_feasible_solution if cp_feasible_solution else []
+                })
+        
+                if not cp_success:
+                    print(f"CP_3.0.mzn failed: {cp_error}")                
+                
+                res.append(feasible_result)
+            
+                # Check remaining time
+                remaining_time -= cp_time
+                if remaining_time <= 0:
+                    print(f"Timeout reached after CP_3.0.mzn")
+                    feasible_result['timeout_reached'] = True
+                    feasible_result['time'] = self.timeout_seconds
+                    res[0] = feasible_result
+
+            # Extract data for optimizer
+            optimizer_data = self.extract_optimizer_data(cp_output)
+            if not optimizer_data:
+                print("Failed to extract optimizer data from CP_3.0.mzn output")
+            
+                # Update optimization result (failed to extract data)
+                optimization_result.update({
+                    'cp_success': cp_success,
+                    'cp_time': round(cp_time, 2),
+                    'cp_error': cp_error,
+                    'optimizer_success': False,
+                    'optimizer_time': 0,
+                    'optimizer_error': "Failed to extract optimizer data",
+                    'optimal': False,
+                    'time': int(cp_time),
+                    'sol': []
+                })
+                res.append(optimization_result)
+                return res
+            
+            # Run optimizer_2.0.mzn
+            print(f"Running optimizer_2.0.mzn for n={n}...")
+            source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
+            cp_opt_path = os.path.join(source_path,"optimizer_2.0.mzn")
+            opt_success, opt_output, opt_time, opt_error = self.run_minizinc(
+                cp_opt_path, optimizer_data, int(remaining_time)
+            )
+            optimization_result.update({
+                'cp_success': cp_success,
+                'cp_time': round(cp_time, 2),
+                'cp_error': cp_error,
+                'optimizer_success': opt_success,
+                'optimizer_time': round(opt_time, 2),
+                'optimizer_error': opt_error,
+                'time': int(cp_time + opt_time)
+            })
+        
+            # Handle optimizer timeout or failure
+            if not opt_success:
+                print(f"Optimizer failed or timed out: {opt_error}")
+            
+                optimization_result.update({
+                    'optimal': False,
+                    'obj': None,
+                    'sol': []
+                })
+            
+                if optimization_result['time'] >= self.timeout_seconds:
+                    optimization_result['timeout_reached'] = True
+                res.append(optimization_result)
+                return res
+        
+            # If optimizer succeeded, process its output
+            summary, optimized_sol = self.parse_optimized_matrix_to_solution(optimizer_output=opt_output, n_teams=n)
+        
+            value = None
+            if summary:
+                for item in summary:
+                    if "Optimized Max Imbalance:" in item:
+                        value = int(item.split(": ")[1])
+                        break
+        
+            optimization_result.update({
+                'optimal': value == 1,
+                'obj': value,
+                'sol': optimized_sol if optimized_sol else []
+            })
+        
             if optimization_result['time'] >= self.timeout_seconds:
                 optimization_result['timeout_reached'] = True
+                optimization_result['optimal'] = False
             
-            return [feasible_result, optimization_result]
-        
-        # If optimizer succeeded, process its output
-        summary, optimized_sol = self.parse_optimized_matrix_to_solution(optimizer_output=opt_output, n_teams=n)
-        
-        value = None
-        if summary:
-            for item in summary:
-                if "Optimized Max Imbalance:" in item:
-                    value = int(item.split(": ")[1])
-                    break
-        
-        optimization_result.update({
-            'optimal': value == 1,
-            'obj': value,
-            'sol': optimized_sol if optimized_sol else []
-        })
-        
-        if optimization_result['time'] >= self.timeout_seconds:
-            optimization_result['timeout_reached'] = True
-            optimization_result['optimal'] = False
-            
-        return [feasible_result, optimization_result]
+            res.append(optimization_result)
+            return res
+
 
     def save_results(self, results: List[Dict]):
         """Save results to JSON file with timestamp structure in res/CP relative to script"""
@@ -546,10 +537,10 @@ class MinizincRunner:
             fastest = min(successful_results, key=lambda x: x['time'])
             print(f"Fastest successful run: n={fastest['n']}, time={fastest['time']:.2f}s")
             
-    def run(self, selected_n, combination, params, summary=False):
+    def run(self, selected_n, combinations, params, summary=False, run_decision=True, run_optimization=True):
         """Main execution method"""
         try:
-            if combination == False:
+            if not combinations:
                 config = {'manual': params}
                 """Run with manually specified parameters"""
                 results = []
@@ -557,22 +548,9 @@ class MinizincRunner:
                 for i, n in enumerate(selected_n, 1):
                     print(f"[{i}/{len(selected_n)}] Running n={n}")
             
-                    pipeline_results = self.run_pipeline(n, params)  # Returns [feasible_result, optimization_result]
-                    results.extend(pipeline_results)  # Add both results to the list
-            
-                    # Print summary for both results
-                    feasible_result, optimization_result = pipeline_results
+                    pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization)
+                    results.extend(pipeline_results)  # Add results to the list
                     
-                    print(f"FEASIBLE - CP: {'OK' if feasible_result['cp_success'] else 'FAIL'}, Time: {feasible_result['time']:.2f}s")
-                    
-                    if optimization_result['optimizer_success']:
-                        print(f"OPTIMIZATION - SUCCESS, Total time: {optimization_result['time']:.2f}s, Optimal: {optimization_result['optimal']}")
-                    elif optimization_result['timeout_reached']:
-                        print(f"OPTIMIZATION - TIMEOUT, Reached {self.timeout_seconds}s limit")
-                    else:
-                        print(f"OPTIMIZATION - FAILED, Error: {optimization_result.get('optimizer_error', 'Unknown error')}")
-                      
-                    print("-" * 60)
                 if summary:
                     self.print_summary(results)
                 # Save results
@@ -594,24 +572,9 @@ class MinizincRunner:
                 
                         print(f"[{run_count}/{total_runs}] n={n}")
                 
-                        pipeline_results = self.run_pipeline(n, params)  # Returns [feasible_result, optimization_result]
+                        pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization)
 
-                        self.save_results(pipeline_results)  # Save both results
-                        #results.append(result)
-                
-                        # Print summary for both results
-                        feasible_result, optimization_result = pipeline_results
-                        
-                        print(f"FEASIBLE - CP: {'OK' if feasible_result['cp_success'] else 'FAIL'}, Time: {feasible_result['time']:.2f}s")
-                        
-                        if optimization_result['optimizer_success']:
-                            print(f"OPTIMIZATION - SUCCESS, Total time: {optimization_result['time']:.2f}s, Optimal: {optimization_result['optimal']}")
-                        elif optimization_result['timeout_reached']:
-                            print(f"OPTIMIZATION - TIMEOUT, Reached {self.timeout_seconds}s limit")
-                        else:
-                            print(f"OPTIMIZATION - FAILED, Error: {optimization_result.get('optimizer_error', 'Unknown error')}")
-                
-                        print("-" * 60)
+                        self.save_results(pipeline_results)  # Save results
                 
         except KeyboardInterrupt:
             print("\n\nExecution interrupted by user.")
@@ -624,7 +587,7 @@ def main():
     """Main function to run the CP solver."""
     if len(sys.argv) < 2:
         team_sizes = [2, 4, 6]
-        symmetry_combinations = "all" ## CAPIRE
+        #symmetry_combinations = "all" ## CAPIRE
         params = {
                 "sb_weeks": True,
                 "sb_periods": True,
@@ -785,8 +748,8 @@ def main():
             print("Error: Cannot use both \"--no-optional\", \"--all-optional\" or \"--no-combinations\"")
             sys.exit(1)
     
-    runner = MinizincRunner(timeout_seconds=300)
-    runner.run(team_sizes, symmetry_combinations, params, summary)
+    runner = MinizincRunner(timeout_seconds=time_limit)
+    runner.run(team_sizes, symmetry_combinations, params, summary, run_decision, run_optimization)
 
 if __name__ == "__main__":
     main()
