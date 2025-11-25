@@ -13,6 +13,43 @@ import pandas as pd
 from pathlib import Path
 from amplpy import AMPL, Environment
 
+class CircleMethodScheduler:
+    """Generate round-robin pairings (circle method) WITHOUT assigning periods."""
+
+    @staticmethod
+    def generate_pairings(n):
+        weeks = n - 1
+        rot = list(range(1, n))  # teams 1..n-1
+        fixed = n
+
+        pairings_per_week = []
+
+        for w in range(weeks):
+            week_pairs = []
+
+            # Fixed team pairing
+            week_pairs.append((rot[w], fixed))
+
+            # Remaining pairs
+            # for i, j ∈ N\{w, n}: team i plays team j if i + j ≡ 2r mod (n − 1).
+            teams_assigned = [n]
+            for k in range(1, n):
+                if k not in teams_assigned:
+                    for j in range(1, n):
+                        if k == rot[w] or j == rot[w] or k == j:
+                            continue
+                        if j not in teams_assigned:
+                            r = (k+j) % weeks
+                            div = 2*(w+1) % weeks
+                            if r == div:
+                                week_pairs.append((k, j))
+                                teams_assigned.append(k)
+                                teams_assigned.append(j)
+
+            pairings_per_week.append(week_pairs)
+
+        return pairings_per_week
+
 class STSMIPRunner:
     def __init__(self, ampl_path=None, model_file=None, time_limit=300, solvers=None):
         if model_file is None:
@@ -84,8 +121,8 @@ class STSMIPRunner:
         except Exception as e:
             print(f"Error extracting solution: {e}")
             return None
-    
-    def run_solver(self, solver, n, optimization=True, sb_teams=True, sb_weeks=True):
+
+    def run_solver(self, solver, n, optimization=True, sb_teams=True, sb_weeks=True, circle_method=True):
         """Run AMPL with specific solver using AMPLpy"""
         
         try:
@@ -97,21 +134,35 @@ class STSMIPRunner:
             
             start_time = time.time()
             
-            # Load model from file
-            if not self.load_model(ampl, optimization, sb_teams, sb_weeks):
+            if not circle_method:
+                # Load model from file
+                if not self.load_model(ampl, optimization, sb_teams, sb_weeks):
                                 
-                return {
-                    "time": self.time_limit,
-                    "version": "optimal" if optimization else "decision",
-                    "symmetry_breaking": None, 
-                    "optimal": False,
-                    "stop_reason": None,
-                    "obj": None,
-                    "sol": None
-                }
-            
-            # Set parameter
-            ampl.getParameter("n").set(n)
+                    return {
+                        "time": self.time_limit,
+                        "version": "optimal" if optimization else "decision",
+                        "symmetry_breaking": None, 
+                        "optimal": False,
+                        "stop_reason": None,
+                        "obj": None,
+                        "sol": None
+                    }
+            if circle_method:
+                pairings_per_week = CircleMethodScheduler.generate_pairings(n)
+                circle_model_file = Path(__file__).parent.parent.parent / "source" / "MIP" / "circle_model.mod"
+                ampl.read(circle_model_file)
+                ampl.getParameter("n").set(n)
+                ampl.getParameter("optimize_balance").set(1 if optimization else 0)
+                # Fix matches per week, but let AMPL assign periods
+                for w, week_pairs in enumerate(pairings_per_week, start=1):
+                    for t1, t2 in week_pairs:
+                        ampl.eval(f"""
+                            subject to FixMatch_{t1}_{t2}_{w}: 
+                                sum {{p in PERIODS}} (x[{t1},{t2},{w},p] + x[{t2},{t1},{w},p]) = 1;
+                        """)
+            else:
+                # Set parameter
+                ampl.getParameter("n").set(n)
             
             # Configure solver
             ampl.setOption("solver", solver)
@@ -138,25 +189,38 @@ class STSMIPRunner:
             else:
                 stop_reason = "unknown"  # Default for other failure cases
             
-            if sb_teams and sb_weeks:
-                    symmbreak = "all"
-            elif sb_teams:
-                    symmbreak = "symmetry_team1"
-            elif sb_weeks:
-                    symmbreak = "symmetry_week1"
-            else:
-                    symmbreak = "None"
+            if not circle_method:
+                if sb_teams and sb_weeks:
+                        symmbreak = "all"
+                elif sb_teams:
+                        symmbreak = "symmetry_team1"
+                elif sb_weeks:
+                        symmbreak = "symmetry_week1"
+                else:
+                        symmbreak = "None"
 
-            result = {
-                "time": min(runtime, self.time_limit),
-                "version": "optimal" if optimization else "decision",
-                "symmetry_breaking": symmbreak,
-                "optimal": is_optimal,
-                "stop_reason": stop_reason,
-                "obj": "None",
-                "sol": []
-            }
-            
+                result = {
+                    "time": min(runtime, self.time_limit),
+                    "method": "classic",
+                    "version": "optimal" if optimization else "decision",
+                    "symmetry_breaking": symmbreak,
+                    "optimal": is_optimal,
+                    "stop_reason": stop_reason,
+                    "obj": "None",
+                    "sol": []
+                }
+            else:
+                result = {
+                    "time": min(runtime, self.time_limit),
+                    "method": "circle",
+                    "version": "optimal" if optimization else "decision",
+                    "symmetry_breaking": "None",
+                    "optimal": is_optimal,
+                    "stop_reason": stop_reason,
+                    "obj": "None",
+                    "sol": []
+                }
+
             # Get objective value if optimization version and solution found
             if optimization and is_optimal:
                 try:
@@ -215,7 +279,7 @@ class STSMIPRunner:
             print(f"Solver {solver} not available: {e}")
             return False
     
-    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True, symmetry_combinations=True, sb_teams = True, sb_weeks = True):
+    def run_experiments(self, team_sizes, run_decision=True, run_optimization=True, symmetry_combinations=True, sb_teams = True, sb_weeks = True, circle_method = True):
         """Run experiments for different team sizes"""
         mode_str = []
         if run_decision:
@@ -223,7 +287,8 @@ class STSMIPRunner:
         if run_optimization:
             mode_str.append("optimization")
         
-        print(f"\n=== Running experiments for {' and '.join(mode_str)} ===")
+        print(f"\n=== Running experiments for {"circle method" if circle_method else "classic method"} ===")
+        print(f"Running for {' and '.join(mode_str)}")
         print(f"Time limit: {self.time_limit}s")
         print(f"Solvers to use: {', '.join(self.solvers)}\n")
         
@@ -240,50 +305,104 @@ class STSMIPRunner:
             print("Error: No solvers available!")
             return
         
-        for n in team_sizes:
-            print(f"\n=== Running experiments for {n} teams ===")
+        if not circle_method:
+            for n in team_sizes:
+                print(f"\n=== Running experiments for {n} teams ===")
             
-            # Combined results structure
-            merged_results = {}
+                # Combined results structure
+                merged_results = {}
             
-            for solver in available_solvers:
-                if symmetry_combinations:
-                    for s1 in [False,True]:
-                        for s2 in [False,True]:
-                            # Run decision version if requested
-                            if run_decision:
-                                print(f"  Running {solver} (decision) for {n} teams")
-                                decision_result = self.run_solver(solver, n, optimization=False, sb_teams=s1, sb_weeks=s2)
+                for solver in available_solvers:
+                    if symmetry_combinations:
+                        for s1 in [False,True]:
+                            for s2 in [False,True]:
+                                # Run decision version if requested
+                                if run_decision:
+                                    print(f"  Running {solver} (decision) for {n} teams")
+                                    decision_result = self.run_solver(solver, n, optimization=False, sb_teams=s1, sb_weeks=s2)
                     
-                                status = "OK" if decision_result["optimal"] else "FAIL"
-                                reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
-                                print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
+                                    status = "OK" if decision_result["optimal"] else "FAIL"
+                                    reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
+                                    print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
 
-                                comb = "_dec"
-                                comb += "_st1" if s1 else ""
-                                comb += "_sw1" if s2 else ""
+                                    comb = "_dec"
+                                    comb += "_st1" if s1 else ""
+                                    comb += "_sw1" if s2 else ""
 
-                                merged_results[solver+comb] = decision_result
+                                    merged_results[solver+comb] = decision_result
                 
                             # Run optimization version if requested
-                            if run_optimization:
-                                print(f"  Running {solver} (optimization) for {n} teams")
-                                optimization_result = self.run_solver(solver, n, optimization=True, sb_teams=s1, sb_weeks=s2)
+                                if run_optimization:
+                                    print(f"  Running {solver} (optimization) for {n} teams")
+                                    optimization_result = self.run_solver(solver, n, optimization=True, sb_teams=s1, sb_weeks=s2)
                     
-                                status = "OK" if optimization_result["optimal"] else "FAIL"
-                                obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
-                                reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
-                                print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+                                    status = "OK" if optimization_result["optimal"] else "FAIL"
+                                    obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
+                                    reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
+                                    print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
 
-                                comb = "_opt"
-                                comb += "_st1" if s1 else ""
-                                comb += "_sw1" if s2 else ""
+                                    comb = "_opt"
+                                    comb += "_st1" if s1 else ""
+                                    comb += "_sw1" if s2 else ""
                 
-                                merged_results[solver+comb] = optimization_result
-                else:
+                                    merged_results[solver+comb] = optimization_result
+                    else:
+                        if run_decision:
+                            print(f"  Running {solver} (decision) for {n} teams")
+                            decision_result = self.run_solver(solver, n, optimization=False, sb_teams=sb_teams, sb_weeks=sb_weeks)
+                    
+                            status = "OK" if decision_result["optimal"] else "FAIL"
+                            reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
+                            print(f"    {status} {solver} (decision): {decision_result['time']}s{reason_str}")
+
+                            merged_results[solver+"_dec"] = decision_result
+                
+                        # Run optimization version if requested
+                        if run_optimization:
+                            print(f"  Running {solver} (optimization) for {n} teams")
+                            optimization_result = self.run_solver(solver, n, optimization=True, sb_teams=sb_teams, sb_weeks=sb_weeks)
+                    
+                            status = "OK" if optimization_result["optimal"] else "FAIL"
+                            obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
+                            reason_str = f" ({optimization_result['stop_reason']})" if optimization_result['stop_reason'] else ""
+                            print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
+                
+                            merged_results[solver+"_opt"] = optimization_result
+            
+                # Save combined results
+                results_dir = (Path(__file__).parent.parent.parent / "res" / "MIP")
+                results_dir.mkdir(parents=True, exist_ok=True)
+
+                filename = f"{n}.json"
+                with open(results_dir / filename, "wb") as f:
+                    f.write(orjson.dumps(merged_results, option=orjson.OPT_INDENT_2 | orjson.OPT_NON_STR_KEYS))
+            
+                with open(results_dir / filename, "r") as f:
+                    lines = f.readlines()
+
+                with open(results_dir / filename, "w") as f:
+                    for line in lines:
+                        if '"sol": "' in line and "unsat" not in line and "timeout" not in line:
+                            # Remove surrounding quotes
+                            line = line.replace('\\"', '"') 
+                            line = line.replace('"sol": "', '"sol": ').rstrip()
+                            if line.endswith('"'):
+                                line = line[:-1]  # remove closing quote
+                            f.write(line + "\n")
+                        else:
+                            f.write(line)
+            
+                print(f"Results saved to {filename}")
+        else:
+            for n in team_sizes:
+                print(f"\n=== Running experiments for {n} teams ===")
+                # Combined results structure
+                merged_results = {}
+                for solver in available_solvers:
+                    # Run decision version if requested
                     if run_decision:
                         print(f"  Running {solver} (decision) for {n} teams")
-                        decision_result = self.run_solver(solver, n, optimization=False, sb_teams=sb_teams, sb_weeks=sb_weeks)
+                        decision_result = self.run_solver(solver, n, optimization=False, sb_teams=None, sb_weeks=None, circle_method=True)
                     
                         status = "OK" if decision_result["optimal"] else "FAIL"
                         reason_str = f" ({decision_result['stop_reason']})" if decision_result['stop_reason'] else ""
@@ -294,7 +413,7 @@ class STSMIPRunner:
                     # Run optimization version if requested
                     if run_optimization:
                         print(f"  Running {solver} (optimization) for {n} teams")
-                        optimization_result = self.run_solver(solver, n, optimization=True, sb_teams=sb_teams, sb_weeks=sb_weeks)
+                        optimization_result = self.run_solver(solver, n, optimization=True, sb_teams=None, sb_weeks=None, circle_method=True)
                     
                         status = "OK" if optimization_result["optimal"] else "FAIL"
                         obj_str = f", obj: {optimization_result['obj']}" if optimization_result["obj"] is not None else ""
@@ -302,32 +421,31 @@ class STSMIPRunner:
                         print(f"    {status} {solver} (optimization): {optimization_result['time']}s{obj_str}{reason_str}")
                 
                         merged_results[solver+"_opt"] = optimization_result
-            
+                        
+                # Save combined results
+                results_dir = (Path(__file__).parent.parent.parent / "res" / "MIP" / "circle")
+                results_dir.mkdir(parents=True, exist_ok=True)
 
-            # Save combined results
-            results_dir = (Path(__file__).parent.parent.parent / "res" / "MIP")
-            results_dir.mkdir(parents=True, exist_ok=True)
-
-            filename = f"{n}.json"
-            with open(results_dir / filename, "wb") as f:
-                f.write(orjson.dumps(merged_results, option=orjson.OPT_INDENT_2 | orjson.OPT_NON_STR_KEYS))
+                filename = f"{n}.json"
+                with open(results_dir / filename, "wb") as f:
+                    f.write(orjson.dumps(merged_results, option=orjson.OPT_INDENT_2 | orjson.OPT_NON_STR_KEYS))
             
-            with open(results_dir / filename, "r") as f:
-                lines = f.readlines()
+                with open(results_dir / filename, "r") as f:
+                    lines = f.readlines()
 
-            with open(results_dir / filename, "w") as f:
-                for line in lines:
-                    if '"sol": "' in line and "unsat" not in line and "timeout" not in line:
-                        # Remove surrounding quotes
-                        line = line.replace('\\"', '"') 
-                        line = line.replace('"sol": "', '"sol": ').rstrip()
-                        if line.endswith('"'):
-                            line = line[:-1]  # remove closing quote
-                        f.write(line + "\n")
-                    else:
-                        f.write(line)
+                with open(results_dir / filename, "w") as f:
+                    for line in lines:
+                        if '"sol": "' in line and "unsat" not in line and "timeout" not in line:
+                            # Remove surrounding quotes
+                            line = line.replace('\\"', '"') 
+                            line = line.replace('"sol": "', '"sol": ').rstrip()
+                            if line.endswith('"'):
+                                line = line[:-1]  # remove closing quote
+                            f.write(line + "\n")
+                        else:
+                            f.write(line)
             
-            print(f"Results saved to {filename}")
+                print(f"Results saved to {filename}")
 
 def main():
     """Main function to run the MIP solver."""
@@ -340,6 +458,7 @@ def main():
         run_decision = True
         run_optimization = True
         symmetry_combinations = True
+        circle_method = True
         time_limit = 300
         ampl_path = None
         solvers = None
@@ -353,6 +472,7 @@ def main():
         run_decision = True
         run_optimization = True
         symmetry_combinations = True
+        circle_method = True
         time_limit = 300
         ampl_path = None
         solvers = None
@@ -403,6 +523,8 @@ def main():
                                         "sb_teams":False
                                         }
                             i += 1
+            elif arg.lower() == "--no-circle":
+                circle_method = False
             elif arg.lower() == '--time-limit':
                 if i + 1 < len(sys.argv):
                     try:
@@ -485,7 +607,7 @@ def main():
             sys.exit(1)        
     
     runner = STSMIPRunner(ampl_path=ampl_path, time_limit=time_limit, solvers=solvers)
-    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization, symmetry_combinations=symmetry_combinations, sb_teams=params["sb_teams"], sb_weeks=params["sb_weeks"])
+    runner.run_experiments(team_sizes, run_decision=run_decision, run_optimization=run_optimization, symmetry_combinations=symmetry_combinations, sb_teams=params["sb_teams"], sb_weeks=params["sb_weeks"], circle_method = circle_method)
 
 if __name__ == "__main__":
     main()

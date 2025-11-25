@@ -218,7 +218,7 @@ class MinizincRunner:
             print(f"Error while parsing optimized solution matrix: {e}")
             return None, None
             
-    def run_pipeline(self, n: int, params: Dict[str, bool], run_decision: bool, run_optimization: bool, cyrcle_method: bool) -> List[Dict]:
+    def run_pipeline(self, n: int, params: Dict[str, bool], run_decision: bool, run_optimization: bool, circle_method: bool) -> List[Dict]:
         """Run the complete pipeline: CP_3.0.mzn -> optimizer_2.0.mzn
         Returns a list with two results: [feasible_result, optimized_result]"""
         
@@ -244,7 +244,7 @@ class MinizincRunner:
         data_content = self.create_data_file(n, params)
         remaining_time = self.timeout_seconds
         source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
-        if not cyrcle_method:
+        if not circle_method:
             cp_path = os.path.join(source_path, "CP_3.0.mzn")
         else:
             cp_path = os.path.join(source_path, "n20_cyrcle_method.mzn")
@@ -540,7 +540,7 @@ class MinizincRunner:
             fastest = min(successful_results, key=lambda x: x['time'])
             print(f"Fastest successful run: n={fastest['n']}, time={fastest['time']:.2f}s")
             
-    def run(self, selected_n, combinations, params, summary=False, run_decision=True, run_optimization=True, cyrcle_method=True):
+    def run(self, selected_n, combinations, params, summary=False, run_decision=True, run_optimization=True, circle_method=True):
         """Main execution method"""
         try:
             if not combinations:
@@ -551,7 +551,7 @@ class MinizincRunner:
                 for i, n in enumerate(selected_n, 1):
                     print(f"[{i}/{len(selected_n)}] Running n={n}")
             
-                    pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization, cyrcle_method)
+                    pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization, circle_method)
                     results.extend(pipeline_results)  # Add results to the list
                     
                 if summary:
@@ -575,7 +575,7 @@ class MinizincRunner:
                 
                         print(f"[{run_count}/{total_runs}] n={n}")
                 
-                        pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization, cyrcle_method)
+                        pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization, circle_method)
 
                         self.save_results(pipeline_results)  # Save results
                 
@@ -604,7 +604,7 @@ def main():
         run_decision = True
         run_optimization = True
         symmetry_combinations = True
-        cyrcle_method = True
+        circle_method = True
         time_limit = 300
         summary = False
     else:
@@ -624,7 +624,7 @@ def main():
         run_decision = True
         run_optimization = True
         symmetry_combinations = True
-        cyrcle_method = True
+        circle_method = True
         time_limit = 300
         summary = False
         i = 1
@@ -708,8 +708,8 @@ def main():
                                 params["chuffed"] = True
             elif arg.lower() == "--summary":
                 summary = True
-            elif arg.lower() == "--no-cyrcle":
-                cyrcle_method = False
+            elif arg.lower() == "--no-circle":
+                circle_method = False
             elif arg.lower() == "--time-limit":
                 if i + 1 < len(sys.argv) and sys.argv[i + 1] not in ["--optimization-only","--decision-only","--no-combinations"]:
                     try:
@@ -755,7 +755,7 @@ def main():
             sys.exit(1)
     
     runner = MinizincRunner(timeout_seconds=time_limit)
-    runner.run(team_sizes, symmetry_combinations, params, summary, run_decision, run_optimization, cyrcle_method)
+    runner.run(team_sizes, symmetry_combinations, params, summary, run_decision, run_optimization, circle_method)
 
 if __name__ == "__main__":
     main()
