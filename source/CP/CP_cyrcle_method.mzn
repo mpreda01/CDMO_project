@@ -69,3 +69,7 @@ output [
 "home0 = ", show(home), ";\n", 
 "away0 = ", show(away), ";\n",
 ];
+% output [
+% "array[Periods, Weeks] of Teams: home = ", show(home), ";\n",
+% "array[Periods, Weeks] of Teams: away = ", show(away), ";\n"
+% ];
