@@ -1,0 +1,22 @@
+{
+  "z3_solver_full": {
+    "sol": [
+      [[1,2],[8,2],[6,3],[1,5],[8,4],[7,5],[4,7]],
+      [[3,4],[5,4],[7,2],[6,8],[7,1],[3,2],[1,6]],
+      [[6,5],[7,6],[4,1],[4,2],[3,5],[1,8],[8,3]],
+      [[7,8],[3,1],[8,5],[7,3],[2,6],[6,4],[2,5]]
+    ],
+    "time": 0,
+    "optimal": true,
+    "obj": 5,
+    "constraints": [
+        "weekly_participation: each team plays exactly once per week",
+        "period_occupancy: each period has exactly one home and one away team",
+        "period_limit: each team plays at most twice in the same period",
+        "match_uniqueness: every pair of teams meets exactly once",
+        "symmetry_basic: fix first match",
+        "symmetry_week: team 0 meets team i in week i-1 (for i)",
+        "symmetry_advanced: additional fixes (periods/home-away ordering/opponent order)"
+    ]
+  }
+}
