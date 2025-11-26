@@ -112,6 +112,7 @@ constraint
         % squadra n-1 nel periodo successivo
         (w < n_weeks - 1 ->( home0[assign[p_next, w]] == n_teams - 1 \/
           away0[assign[p_next, w]] == n_teams - 1 ))
+<<<<<<< HEAD
        )
   ));
 % constraint
@@ -121,6 +122,11 @@ constraint
 %       [assign[p+1, w] | w in 1..n_weeks]
 %     )
 %   );
+=======
+      )
+  ));
+
+>>>>>>> b3a04f69d8962e9b09fb1992fe00465c8cd600a8
 
 
 
