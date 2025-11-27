@@ -10,11 +10,9 @@ include "globals.mzn";
 int: n;
 constraint n mod 2 = 0;
 
-
 int: n_weeks = n - 1;
 int: n_periods = n div 2;
 
-% Sets for indexing
 set of int: Teams = 1..n;
 set of int: Weeks = 1..n_weeks;
 set of int: Periods = 1..n_periods;
@@ -23,23 +21,6 @@ set of int: Periods = 1..n_periods;
 % Main decision variables: 
 array[Periods, Weeks] of var Teams: home;
 array[Periods, Weeks] of var Teams: away;
-
-
-% Period count variables
-array[Teams, Periods] of var 0..2: period_count;
-
-% Home/away count variables for optimization
-set of int: Count = 0..n-1;
-array[Teams] of var Count: home_count;
-array[Teams] of var Count: away_count;
-
-% Auxiliary variable for team period tracking 
-array[Teams, Weeks] of var 0..n_periods: team_period;
-
-
-  
-
-
 
 constraint
   (
@@ -69,7 +50,3 @@ output [
 "home0 = ", show(home), ";\n", 
 "away0 = ", show(away), ";\n",
 ];
-% output [
-% "array[Periods, Weeks] of Teams: home = ", show(home), ";\n",
-% "array[Periods, Weeks] of Teams: away = ", show(away), ";\n"
-% ];

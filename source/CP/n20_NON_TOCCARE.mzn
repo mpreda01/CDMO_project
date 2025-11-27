@@ -1,5 +1,5 @@
 include "globals.mzn";
-% sta merda fa n20 con use_int_search=true, use_restart_luby=true, use_relax_and_reconstruct=true, chuffed=true
+
 % Search strat
 bool: use_int_search; 
 bool: use_restart_luby;
@@ -10,6 +10,7 @@ bool: chuffed;
 bool: symm_brake;
 % Implied constraint
 bool: ic_diff_match_in_week;
+bool: ic_diff_match_in_period;
 
 % ================================================================
 % INPUT
@@ -22,12 +23,6 @@ int: m = length(home0);
 int: n_teams;
 int: n_weeks = n_teams - 1;
 int: n_periods = n_teams div 2;
-
-% ================================================================
-% WEEK MAPPING (circle method standard)
-% Each block of n_weeks games corresponds to one period
-% game i belongs to week (i-1 mod n_weeks)+1
-% ================================================================
 
 function int: week_of(int: i) = ((i - 1) mod n_weeks) + 1;
 
@@ -46,8 +41,8 @@ array[1..n_periods, 1..n_weeks] of var 1..m: assign;
 % ================================================================
 
 % ---------------------------------------------------------------
-% 1) Le partite di una settimana non possono cambiare settimana,
-%    solo essere RIORDINATE tra i periodi della stessa settimana
+% 1) matches can't be changed but only swapped between periods
+%    in the same week
 % ---------------------------------------------------------------
 constraint
   forall(w in 1..n_weeks)(
@@ -57,7 +52,7 @@ constraint
 
 
 % ---------------------------------------------------------------
-% 2) Vincolo: ogni squadra può giocare AL MASSIMO 2 volte per periodo
+% 2) Every team must play max 2 times per period 
 % ---------------------------------------------------------------
 constraint
   forall(p in 1..n_periods, t in 1..n_teams)(
@@ -73,19 +68,25 @@ constraint
 %  IMPLIED CONSTRAINT 
 % ================================================================
   
-% Assicura anche che ogni periodo contenga una partita diversa (questo è implied)
+% Different matches in every week
 constraint
 ic_diff_match_in_week ->
   forall(w in 1..n_weeks)(
     alldifferent([assign[p,w] | p in 1..n_periods])
   );
-  
+
+% Different matches in every period 
+constraint
+ic_diff_match_in_period ->
+  forall(p in 1..n_periods)(
+    alldifferent([assign[p,w] | w in 1..n_weeks])
+  );
   
 % ================================================================
 %  SYMMETRY BREAKING
 % ================================================================
 
-% 1) Ordine lessicografico tra periodi (righe) ho modificat questo come ultima cosa, se non va una sega togli
+% 1a) lex ordering of periods 
 constraint
 symm_brake -> (
 n_teams < 8 ->
@@ -97,6 +98,7 @@ n_teams < 8 ->
   )
 );
 
+% 1b) impose fixed period for the matches containing team = n_teams 
 constraint
 symm_brake -> (
 n_teams >= 8 ->
@@ -111,6 +113,7 @@ n_teams >= 8 ->
   )
 );
 
+% 1c) impose fixed period for the matches containing team = n_teams - 1 
 constraint
 symm_brake -> (
 n_teams >= 14 ->
