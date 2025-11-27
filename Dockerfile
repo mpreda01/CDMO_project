@@ -29,10 +29,6 @@ RUN apt-get update && apt-get install -y \
     libxtst6 \
     libglib2.0-0 \
     libgtk-3-0 \
-    glpk-utils \
-    libglpk-dev \
-    coinor-cbc \
-    coinor-clp \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -53,41 +49,25 @@ RUN cd /tmp && \
     chmod +x /opt/cvc5/bin/cvc5 && \
     rm -rf cvc5-Linux-x86_64-static.zip cvc5-Linux-x86_64-static
 
-# Load AMPL Community Edition for Academics
-WORKDIR /opt
-# Copy and extract AMPL
-COPY prg/ampl.linux64.tgz /tmp/
-RUN cd /tmp && \
-    tar -xzf ampl.linux64.tgz && \
-    echo "Contents after extraction:" && \
-    ls -la && \
-    # Find the actual directory name
-    AMPL_DIR=$(find . -maxdepth 1 -type d -name "*ampl*" | head -1) && \
-    echo "Found AMPL directory: $AMPL_DIR" && \
-    mv "$AMPL_DIR" /opt/ampl && \
-    chmod +x /opt/ampl/* && \
-    rm -f ampl.linux64.tgz
-
 # Create symbolic links for python and pip
 RUN ln -sf /usr/bin/python3 /usr/bin/python && \
     ln -sf /usr/bin/pip3 /usr/bin/pip
 
+#FROM python:3.9-slim-bullseye
+RUN python -m pip install amplpy # Install amplpy
+RUN python -m amplpy.modules install highs gurobi cplex cbc
+
+# Copy AMPL academic license
+COPY licenses/ampl.lic /opt/ampl/ampl.lic
+
+# Set AMPL to use the license
+ENV AMPL_LICENSE_FILE=/opt/ampl/ampl.lic
+
 # Set environment variables
 ENV PATH="/opt/ampl:/opt/minizinc/bin:/opt/cvc5/bin:${PATH}"
-ENV AMPL_LICENSE_FILE="/opt/ampl/ampl.lic"
 ENV PYTHONPATH="/app"
 ENV PYTHONUNBUFFERED=1
 ENV CVC5_BIN="/opt/cvc5/bin/cvc5"
-
-# AMPL community edition for academics license
-COPY licenses/ampl.lic /opt/ampl/ampl.lic
-RUN chmod 644 /opt/ampl/ampl.lic
-
-# Check AMPL installation
-RUN echo "AMPL installation complete" && \
-    echo "Available solvers: cbc, highs, cplex, gurobi, and many more" && \
-    ls -la /opt/ampl/ | grep -E "(cbc|highs|cplex|gurobi)" && \
-    /opt/ampl/ampl -v || echo "AMPL version check completed"
 
 WORKDIR /app
 
@@ -104,7 +84,9 @@ COPY . .
 RUN find . -type f \( -name "*.mzn" -o -name "*.dzn" \) -exec dos2unix {} \;
 
 # Create results directory
-RUN mkdir -p res/CP res/SAT res/SMT res/MIP
+RUN mkdir -p res/CP res/SAT res/SMT res/MIP \
+    res/MIP/circle \ 
+    res/MIP/personalized
 
 # Verify installations
 RUN python --version && \
