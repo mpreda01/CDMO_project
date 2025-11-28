@@ -343,99 +343,267 @@ def z3_permutation_constraint(original_schedule,
 
 
 
-def optimization(home, away, n_teams, timeout=300_000):
+# def optimization(home, away, n_teams, timeout=300_000):
 
+#     periods = len(home)
+#     weeks = len(home[0])
+
+#     opt = Optimize()
+#     opt.set("timeout", timeout) 
+
+#     # flip[p][w] = Bool: se True scambia home/away in quel match
+#     flip = [[ Bool(f"flip_{p}_{w}") for w in range(weeks)] 
+#             for p in range(periods) ]
+
+#     # nuove variabili per home/away dopo lo swap
+#     new_home = [[ Int(f"new_home_{p}_{w}") for w in range(weeks) ] 
+#                 for p in range(periods) ]
+#     new_away = [[ Int(f"new_away_{p}_{w}") for w in range(weeks) ] 
+#                 for p in range(periods) ]
+
+#     # keep home/away fixed for the first week
+#     for w in range(int(weeks / 2)):
+#         for p in range(periods):
+#             opt.add(flip[p][w] == False)
+
+
+#     for p in range(periods):
+#         for w in range(weeks):
+#             opt.add(new_home[p][w] >= 1, new_home[p][w] <= n_teams)
+#             opt.add(new_away[p][w] >= 1, new_away[p][w] <= n_teams)
+
+
+#     # vincoli di swap
+#     for p in range(periods):
+#         for w in range(weeks):
+#             opt.add(Implies(flip[p][w], new_home[p][w] == away[p][w]))
+#             opt.add(Implies(flip[p][w], new_away[p][w] == home[p][w]))
+
+#             opt.add(Implies(Not(flip[p][w]), new_home[p][w] == home[p][w]))
+#             opt.add(Implies(Not(flip[p][w]), new_away[p][w] == away[p][w]))
+
+#     # Conteggio partite
+#     home_count = [ Int(f"home_count_{t}") for t in range(n_teams) ]
+#     away_count = [ Int(f"away_count_{t}") for t in range(n_teams) ]
+
+#     for t in range(n_teams):
+
+#         # ricomincia ogni volta!
+#         home_games = []
+#         away_games = []
+
+#         for p in range(periods):
+#             for w in range(weeks):
+#                 home_games.append(If(new_home[p][w] == (t+1), 1, 0))
+#                 away_games.append(If(new_away[p][w] == (t+1), 1, 0))
+
+#         opt.add(home_count[t] == Sum(home_games))
+#         opt.add(away_count[t] == Sum(away_games))
+
+#     # Minimizzare l'imbalance massimo
+#     max_diff = Int("max_diff")
+#     # optimization lower bound
+#     opt.add(max_diff >= 0)
+
+#     for t in range(n_teams):
+#         diff = Int(f"diff_{t}")
+#         opt.add(diff >= home_count[t] - away_count[t])
+#         opt.add(diff >= away_count[t] - home_count[t])
+#         opt.add(max_diff >= diff)
+
+#     # optimize upper bound
+#     opt.add(max_diff <= 1)
+
+#     opt.minimize(max_diff)
+#     res = opt.check()
+
+#     if res == sat:
+#         m = opt.model()
+
+#         new_home_out = [[0]*weeks for _ in range(periods)]
+#         new_away_out = [[0]*weeks for _ in range(periods)]
+
+#         for p in range(periods):
+#             for w in range(weeks):
+#                 h = m.evaluate(new_home[p][w], model_completion=True).as_long()
+#                 a = m.evaluate(new_away[p][w], model_completion=True).as_long()
+
+#                 new_home_out[p][w] = h
+#                 new_away_out[p][w] = a
+
+
+
+#         return res, new_home_out, new_away_out, max_diff, opt
+    
+#     return res, None, None, None, opt
+
+from z3 import *
+import time
+
+def optimization(home, away, n_teams, timeout=300_000):
+    """
+    Z3 optimization that reproduces the MiniZinc optimizer logic in optimizer.txt.
+
+    Args:
+      home, away: Python lists [periods][weeks] with initial schedule (home0_matrix / away0_matrix)
+      n_teams: number of teams (int)
+      timeout: solver timeout in milliseconds
+
+    Returns:
+      (opt, model_result, home_out, away_out, max_imb_val, elapsed_seconds)
+      - opt: the Optimize() object (after check())
+      - model_result: the CheckSatResult (sat/unsat/unknown)
+      - home_out, away_out: Python lists (periods x weeks) with optimized orientation (or None if not sat)
+      - max_imb_val: integer value of optimized max imbalance (or None)
+      - elapsed_seconds: float time spent building+solving
+    """
+
+    start_time = time.time()
+
+    # basic dims & checks
     periods = len(home)
+    if periods == 0:
+        raise ValueError("home matrix empty")
     weeks = len(home[0])
 
+    # convert original schedule to Python int matrices (ensure ints)
+    home0 = [[int(home[p][w]) for w in range(weeks)] for p in range(periods)]
+    away0 = [[int(away[p][w]) for w in range(weeks)] for p in range(periods)]
+
+    # Create solver
     opt = Optimize()
-    opt.set("timeout", timeout) 
+    opt.set("timeout", int(timeout))  # timeout in ms
 
-    # flip[p][w] = Bool: se True scambia home/away in quel match
-    flip = [[ Bool(f"flip_{p}_{w}") for w in range(weeks)] 
-            for p in range(periods) ]
+    # -------------------------
+    # Variables
+    # -------------------------
+    swap = [[ Bool(f"swap_{p}_{w}") for w in range(weeks)] for p in range(periods)]
+    new_home = [[ Int(f"new_home_{p}_{w}") for w in range(weeks)] for p in range(periods)]
+    new_away = [[ Int(f"new_away_{p}_{w}") for w in range(weeks)] for p in range(periods)]
 
-    # nuove variabili per home/away dopo lo swap
-    new_home = [[ Int(f"new_home_{p}_{w}") for w in range(weeks) ] 
-                for p in range(periods) ]
-    new_away = [[ Int(f"new_away_{p}_{w}") for w in range(weeks) ] 
-                for p in range(periods) ]
+    # counts per team
+    home_count = [ Int(f"home_count_{t}") for t in range(1, n_teams+1) ]
+    away_count = [ Int(f"away_count_{t}") for t in range(1, n_teams+1) ]
 
-    # keep home/away fixed for the first week
-    for w in range(int(weeks / 2)):
-        for p in range(periods):
-            opt.add(flip[p][w] == False)
+    # imbalance and diffs
+    diff = [ Int(f"diff_{t}") for t in range(1, n_teams+1) ]
+    imbalance = [ Int(f"imbalance_{t}") for t in range(1, n_teams+1) ]
+    max_imb = Int("max_imbalance")
 
-
+    # -------------------------
+    # Link new_home/new_away to original using swap
+    # new_home[p][w] = If(swap[p][w], away0[p][w], home0[p][w]) etc.
+    # -------------------------
     for p in range(periods):
         for w in range(weeks):
+            opt.add(new_home[p][w] == If(swap[p][w], IntVal(away0[p][w]), IntVal(home0[p][w])))
+            opt.add(new_away[p][w] == If(swap[p][w], IntVal(home0[p][w]), IntVal(away0[p][w])))
+
+            # additional safety: domain (teams numbered 1..n_teams)
             opt.add(new_home[p][w] >= 1, new_home[p][w] <= n_teams)
             opt.add(new_away[p][w] >= 1, new_away[p][w] <= n_teams)
 
+            # no self-play
+            opt.add(new_home[p][w] != new_away[p][w])
 
-    # vincoli di swap
+    # -------------------------
+    # Each team plays exactly once per week
+    # For each week w and team t: sum_p If(new_home==t or new_away==t,1,0) == 1
+    # -------------------------
+    for w in range(weeks):
+        for t in range(1, n_teams+1):
+            occ_terms = []
+            for p in range(periods):
+                occ_terms.append( If(Or(new_home[p][w] == t, new_away[p][w] == t), IntVal(1), IntVal(0)) )
+            opt.add(Sum(occ_terms) == 1)
+
+    # -------------------------
+    # home_count and away_count (sums over all slots)
+    # home_count[t] = sum_{p,w} bool2int(new_home[p][w] == t)
+    # -------------------------
+    for t in range(1, n_teams+1):
+        h_terms = []
+        a_terms = []
+        for p in range(periods):
+            for w in range(weeks):
+                h_terms.append( If(new_home[p][w] == t, IntVal(1), IntVal(0)) )
+                a_terms.append( If(new_away[p][w] == t, IntVal(1), IntVal(0)) )
+        opt.add(home_count[t-1] == Sum(h_terms))
+        opt.add(away_count[t-1] == Sum(a_terms))
+
+        # each team plays weeks matches total (home_count + away_count == weeks)
+        opt.add(home_count[t-1] + away_count[t-1] == weeks)
+
+    # -------------------------
+    # Compute imbalance (absolute) per team and max_imb
+    # Use linearization for Abs
+    # -------------------------
+    for t in range(1, n_teams+1):
+        # diff[t-1] >= home_count - away_count and >= opposite
+        opt.add(diff[t-1] >= home_count[t-1] - away_count[t-1])
+        opt.add(diff[t-1] >= away_count[t-1] - home_count[t-1])
+        # bound diff
+        opt.add(diff[t-1] >= 0, diff[t-1] <= weeks)
+        # define imbalance = diff (keeps naming like MiniZinc)
+        opt.add(imbalance[t-1] == diff[t-1])
+        # max_imb bounds
+        opt.add(max_imb >= imbalance[t-1])
+
+    # optionally set some lower-bound on max_imb (not required)
+    opt.add(max_imb >= 0, max_imb <= weeks)
+
+    # -------------------------
+    # Constraint "Each team appears at most twice per period" in original SMT model:
+    # Here MiniZinc used "Each team appears at most twice per period (over all weeks)"
+    # It means for each period p and team t: Sum_w If(new_home[p][w]==t or new_away[p][w]==t,1,0) <= 2
+    # -------------------------
     for p in range(periods):
+        for t in range(1, n_teams+1):
+            occ_terms = [ If(Or(new_home[p][w] == t, new_away[p][w] == t), IntVal(1), IntVal(0)) for w in range(weeks) ]
+            opt.add(Sum(occ_terms) <= 2)
+
+    # -------------------------
+    # Symmetry-breaking "fix period" (team N in p_target = w%periods and optionally N-1 in p_next)
+    # -------------------------
+    if n_teams >= 8:
         for w in range(weeks):
-            opt.add(Implies(flip[p][w], new_home[p][w] == away[p][w]))
-            opt.add(Implies(flip[p][w], new_away[p][w] == home[p][w]))
+            p_target = w % periods
+            # find index in original week where team n_teams plays (we must ensure such match exists)
+            # But since we don't have match indices here, simply impose that in slot p_target team N must play
+            opt.add( Or(new_home[p_target][w] == n_teams, new_away[p_target][w] == n_teams) )
+            if n_teams >= 14 and w < weeks - 2:
+                p_next = (p_target + 1) % periods
+                opt.add( Or(new_home[p_next][w] == n_teams - 1, new_away[p_next][w] == n_teams - 1) )
 
-            opt.add(Implies(Not(flip[p][w]), new_home[p][w] == home[p][w]))
-            opt.add(Implies(Not(flip[p][w]), new_away[p][w] == away[p][w]))
+    # -------------------------
+    # Objective: minimize max_imb
+    # -------------------------
+    opt.minimize(max_imb)
 
-    # Conteggio partite
-    home_count = [ Int(f"home_count_{t}") for t in range(n_teams) ]
-    away_count = [ Int(f"away_count_{t}") for t in range(n_teams) ]
-
-    for t in range(n_teams):
-
-        # ricomincia ogni volta!
-        home_games = []
-        away_games = []
-
-        for p in range(periods):
-            for w in range(weeks):
-                home_games.append(If(new_home[p][w] == (t+1), 1, 0))
-                away_games.append(If(new_away[p][w] == (t+1), 1, 0))
-
-        opt.add(home_count[t] == Sum(home_games))
-        opt.add(away_count[t] == Sum(away_games))
-
-    # Minimizzare l'imbalance massimo
-    max_diff = Int("max_diff")
-    # optimization lower bound
-    opt.add(max_diff >= 0)
-
-    for t in range(n_teams):
-        diff = Int(f"diff_{t}")
-        opt.add(diff >= home_count[t] - away_count[t])
-        opt.add(diff >= away_count[t] - home_count[t])
-        opt.add(max_diff >= diff)
-
-    # optimize upper bound
-    opt.add(max_diff <= 1)
-
-    opt.minimize(max_diff)
+    # Solve
     res = opt.check()
+    elapsed = time.time() - start_time
 
-    if res == sat:
+    home_out = None
+    away_out = None
+    max_imb_val = None
+    if res == sat or res == sat:  # check for sat (opt.check() returns sat/unknown/...)
         m = opt.model()
-
-        new_home_out = [[0]*weeks for _ in range(periods)]
-        new_away_out = [[0]*weeks for _ in range(periods)]
-
+        # build Python lists of ints
+        home_out = [[0 for _ in range(weeks)] for _ in range(periods)]
+        away_out = [[0 for _ in range(weeks)] for _ in range(periods)]
         for p in range(periods):
             for w in range(weeks):
-                h = m.evaluate(new_home[p][w], model_completion=True).as_long()
-                a = m.evaluate(new_away[p][w], model_completion=True).as_long()
+                # evaluate (model_completion ensures a value if something left)
+                hv = m.evaluate(new_home[p][w], model_completion=True)
+                av = m.evaluate(new_away[p][w], model_completion=True)
+                home_out[p][w] = int(hv.as_long())
+                away_out[p][w] = int(av.as_long())
 
-                new_home_out[p][w] = h
-                new_away_out[p][w] = a
+        max_imb_val = int(m.evaluate(max_imb, model_completion=True).as_long())
 
+    return  res, home_out, away_out, max_imb_val, opt
 
-
-        return res, new_home_out, new_away_out, max_diff, opt
-    
-    return res, None, None, None, opt
 
 
 
