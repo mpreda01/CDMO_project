@@ -22,8 +22,8 @@ class MinizincRunner:
         self.timeout_seconds = timeout_seconds
         self.n_values = [2, 4, 6, 8, 10, 12, 14, 16, 18]
         self.bool_params = [
-            'sb_weeks', 'sb_periods', 'sb_teams', 
-            'ic_matches_per_team', 'ic_period_count',
+            'sb_weeks', 'sb_periods', 'sb_teams', 'sb_week1_fixed', 'symm_brake', 
+            'ic_matches_per_team', 'ic_period_count', 'ic_diff_match_in_week', 'ic_diff_match_in_period',
             'use_int_search', 'use_restart_luby', 
             'use_relax_and_reconstruct', 'chuffed'
         ]
@@ -92,13 +92,25 @@ class MinizincRunner:
             print(f"Error converting CP output to matrix: {e}")
             return None
         
-    def create_data_file(self, n: int, params: Dict[str, bool]) -> str:
+    def create_data_file(self, n: int = None, params: Dict[str, bool] = None) -> str:
+        """Create a .dzn data file with the given parameters"""
+        content = ""
+        if n:
+            content = f"n = {n};\n"
+        if params:
+            for param, value in params.items():
+                content += f"{param} = {'true' if value else 'false'};\n"
+        return content
+
+    def create_circle_file(self, n: int, params: Dict[str, bool], home0: list[int], away0: list[int]) -> str:
         """Create a .dzn data file with the given parameters"""
         content = f"n = {n};\n"
         for param, value in params.items():
             content += f"{param} = {'true' if value else 'false'};\n"
+        content += f"home0 = [{', '.join(map(str, home0))}];\n"
+        content += f"away0 = [{', '.join(map(str, away0))}];\n"
         return content
-        
+
     def run_minizinc(self, model_file: str, data_content: str, timeout: int) -> Tuple[bool, str, float, str]:
         """Run a MiniZinc model with given data with robust timeout handling"""
         with tempfile.NamedTemporaryFile(mode='w', suffix='.dzn', delete=False) as f:
@@ -161,7 +173,7 @@ class MinizincRunner:
             line = line.strip()
             if line.startswith('n_teams =') or line.startswith('home0 =') or line.startswith('away0 ='):
                 optimizer_data.append(line)
-                
+        #print(optimizer_data)  ## DEBUG       
         if len(optimizer_data) >= 3:
             return '\n'.join(optimizer_data) + '\n'
         return None
@@ -221,67 +233,51 @@ class MinizincRunner:
     def run_pipeline(self, n: int, params: Dict[str, bool], run_decision: bool, run_optimization: bool, circle_method: bool) -> List[Dict]:
         """Run the complete pipeline: CP_3.0.mzn -> optimizer_2.0.mzn
         Returns a list with two results: [feasible_result, optimized_result]"""
-        
         # Base result template
         base_result = {
-            'n': n,
-            'params': params,
-            'cp_success': False,
-            'cp_time': 0,
-            'cp_error': '',
-            'optimizer_success': False,
-            'optimizer_time': 0,
-            'optimizer_error': '',
             'time': 0,
-            'timeout_reached': False,
+            'method':'classic',
+            'version':'decision',
+            'params': params,
             'optimal': False,
-            'obj': 'None',
-            'sol': []
+            'stop_reason': "None",
+            'obj': [],
         }
         
         # Run CP_3.0.mzn
         print(f"Running CP_3.0.mzn for n={n}...")
-        data_content = self.create_data_file(n, params)
+        classic_keys = ["sb_weeks", "sb_periods", "sb_teams", "sb_week1_fixed", "ic_matches_per_team", "ic_period_count", "use_int_search", "use_restart_luby", "use_relax_and_reconstruct", "chuffed"]
+        classic_params = {k: params[k] for k in classic_keys}
+        data_content = self.create_data_file(n, classic_params)
         remaining_time = self.timeout_seconds
-        source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
-        if not circle_method:
-            cp_path = os.path.join(source_path, "CP_3.0.mzn")
-        else:
-            cp_path = os.path.join(source_path, "n20_cyrcle_method.mzn")
+        source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')    
+        cp_path = os.path.join(source_path, "CP_3.0.mzn")
         cp_success, cp_output, cp_time, cp_error = self.run_minizinc(
             cp_path, data_content, remaining_time
         )
-        
+        #print(data_content) ## DEBUG
+        #print("\n") ## DEBUG
+        #print(cp_output) ## DEBUG
         # Create feasible result (from CP_3.0.mzn)
         feasible_result = base_result.copy()
-        feasible_result['params'] = params.copy()
-        feasible_result['params']['phase'] = 'feasible'  # Mark as feasible phase
-
         optimization_result = base_result.copy()
-        optimization_result['params'] = params.copy()
-        optimization_result['params']['phase'] = 'optimization'
-        
+        feasible_result["params"] = classic_params
+        optimization_result["params"] = classic_params
         res = []
         if 'UNSATISFIABLE' in cp_output:
             if run_decision:
                 feasible_result.update({
-                    'cp_success': False,
-                    'cp_time': round(cp_time, 2),
-                    'cp_error': cp_error,
-                    'time': int(cp_time),
-                    'sol': []
+                    'optimal': True,
+                    'stop_reason': 'infeasible',
+                    'time': self.timeout_seconds
                 })
                 res.append(feasible_result)
             if run_optimization:
                 optimization_result.update({
-                    'cp_success': False,
-                    'cp_time': round(cp_time, 2),
-                    'cp_error': cp_error,
-                    'optimizer_success': False,
-                    'optimizer_time': 0,
-                    'optimal': False,
-                    'time': int(cp_time),
-                    'sol': []
+                    'version': 'optimal',
+                    'optimal': True,
+                    'stop_reason': 'infeasible',
+                    'time': self.timeout_seconds
                 })
                 res.append(optimization_result)
             return res
@@ -291,14 +287,13 @@ class MinizincRunner:
             cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output, n)
         
             # Update feasible result
-            if cp_time >= self.timeout_seconds:
-                feasible_result['timeout_reached'] = True
+            #if cp_time >= self.timeout_seconds:
+            #    feasible_result['timeout_reached'] = True
         
             feasible_result.update({
-                'cp_success': cp_success,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error,
                 'time': int(cp_time),
+                'optimal': True if cp_feasible_solution else False,
+                'stop_reason': 'None' if cp_feasible_solution else 'unknown',
                 'sol': cp_feasible_solution if cp_feasible_solution else []
             })
         
@@ -311,60 +306,54 @@ class MinizincRunner:
             remaining_time -= cp_time
             if remaining_time <= 0:
                 print(f"Timeout reached after CP_3.0.mzn")
-                feasible_result['timeout_reached'] = True
+                #feasible_result['timeout_reached'] = True
                 feasible_result['time'] = self.timeout_seconds
+                feasible_result['stop_reason'] = 'time_limit'
                 res[0] = feasible_result
             
-            return res
         else:
             if run_decision:
                 # Extract feasible solution from CP_3.0.mzn output
                 cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output, n)
         
                 # Update feasible result
-                if cp_time >= self.timeout_seconds:
-                    feasible_result['timeout_reached'] = True
+                #if cp_time >= self.timeout_seconds:
+                #    feasible_result['timeout_reached'] = True
         
                 feasible_result.update({
-                    'cp_success': cp_success,
-                    'cp_time': round(cp_time, 2),
-                    'cp_error': cp_error,
                     'time': int(cp_time),
+                    'optimal': True if cp_feasible_solution else False,
+                    'stop_reason': 'None' if cp_feasible_solution else 'unknown',
                     'sol': cp_feasible_solution if cp_feasible_solution else []
                 })
         
-                if not cp_success:
-                    print(f"CP_3.0.mzn failed: {cp_error}")                
-                
-                res.append(feasible_result)
+                #if not cp_success:
+                #    print(f"CP_3.0.mzn failed: {cp_error}")                
             
                 # Check remaining time
                 remaining_time -= cp_time
                 if remaining_time <= 0:
                     print(f"Timeout reached after CP_3.0.mzn")
-                    feasible_result['timeout_reached'] = True
                     feasible_result['time'] = self.timeout_seconds
-                    res[0] = feasible_result
+                    feasible_result['stop_reason'] = 'time_limit'
+
+                res.append(feasible_result)
 
             # Extract data for optimizer
+            #print(cp_output) ## DEBUG
             optimizer_data = self.extract_optimizer_data(cp_output)
+            #print(optimizer_data) ## DEBUG
             if not optimizer_data:
                 print("Failed to extract optimizer data from CP_3.0.mzn output")
             
                 # Update optimization result (failed to extract data)
                 optimization_result.update({
-                    'cp_success': cp_success,
-                    'cp_time': round(cp_time, 2),
-                    'cp_error': cp_error,
-                    'optimizer_success': False,
-                    'optimizer_time': 0,
-                    'optimizer_error': "Failed to extract optimizer data",
+                    'version': 'optimal',
                     'optimal': False,
-                    'time': int(cp_time),
-                    'sol': []
+                    'time': self.timeout_seconds,
+                    'stop_reason': 'unknown'
                 })
                 res.append(optimization_result)
-                return res
             
             # Run optimizer_2.0.mzn
             print(f"Running optimizer_2.0.mzn for n={n}...")
@@ -373,30 +362,23 @@ class MinizincRunner:
             opt_success, opt_output, opt_time, opt_error = self.run_minizinc(
                 cp_opt_path, optimizer_data, int(remaining_time)
             )
+            #print(optimizer_data) ## DEBUG
+            #print("\n") ## DEBUG
+            #print(opt_output) ## DEBUG
             optimization_result.update({
-                'cp_success': cp_success,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error,
-                'optimizer_success': opt_success,
-                'optimizer_time': round(opt_time, 2),
-                'optimizer_error': opt_error,
+                'version': 'optimal',
                 'time': int(cp_time + opt_time)
             })
-        
             # Handle optimizer timeout or failure
             if not opt_success:
                 print(f"Optimizer failed or timed out: {opt_error}")
             
-                optimization_result.update({
-                    'optimal': False,
-                    'obj': None,
-                    'sol': []
-                })
-            
                 if optimization_result['time'] >= self.timeout_seconds:
-                    optimization_result['timeout_reached'] = True
+                    optimization_result['time'] = self.timeout_seconds
+                    optimization_result['stop_reason'] = 'time_limit'
+                else:
+                    optimization_result['stop_reason'] = 'unknown'
                 res.append(optimization_result)
-                return res
         
             # If optimizer succeeded, process its output
             summary, optimized_sol = self.parse_optimized_matrix_to_solution(optimizer_output=opt_output, n_teams=n)
@@ -409,35 +391,227 @@ class MinizincRunner:
                         break
         
             optimization_result.update({
-                'optimal': value == 1,
+                'optimal': True,
                 'obj': value,
                 'sol': optimized_sol if optimized_sol else []
             })
         
             if optimization_result['time'] >= self.timeout_seconds:
-                optimization_result['timeout_reached'] = True
+                optimization_result['time'] = self.timeout_seconds
                 optimization_result['optimal'] = False
             
             res.append(optimization_result)
+        
+        if not circle_method:
             return res
 
+        # Run CP_cyrcle_method.mzn
+        if circle_method:
+            print(f"Running CP_circle_method.mzn for n={n}...")
+            circle_keys = ["symm_brake", "ic_diff_match_in_week", "ic_diff_match_in_period", "use_int_search", "use_restart_luby", "use_relax_and_reconstruct", "chuffed"]
+            circle_params = {k: params[k] for k in circle_keys}
+            data_content = self.create_data_file(n)
+            #print(data_content) ## DEBUG
+            remaining_time = self.timeout_seconds
+            source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
+            cp_path = os.path.join(source_path, "CP_cyrcle_method.mzn")
+            cp_success, cp_output, cp_time, cp_error = self.run_minizinc(
+                cp_path, data_content, remaining_time
+            )
+            #print(cp_output) ## DEBUG
+            # Create feasible result (from CP_circle_method.mzn)
+            feasible_result = base_result.copy()
+            optimization_result = base_result.copy()
+            feasible_result["params"] = circle_params
+            optimization_result["params"] = circle_params
 
-    def save_results(self, results: List[Dict]):
+            circle_data = self.extract_optimizer_data(cp_output)
+            #print(circle_data) ## DEBUG
+            circle_params["to_optimize"] = False
+            bool_data = self.create_data_file(params=circle_params)
+            final_data = bool_data + (circle_data or "")
+            #print(final_data) ## DEBUG
+            source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
+            cp_path2 = os.path.join(source_path, "n20_NON_TOCCARE.mzn")
+            cp_success, cp_output2, circle_time, cp_error = self.run_minizinc(
+                cp_path2, final_data, int(remaining_time - cp_time)
+            )
+            #print(cp_success)
+            #print(circle_time)
+            #print(cp_error)
+            #print(cp_output2) ## DEBUG
+            if run_optimization:
+                circle_params["to_optimize"] = True
+                bool_data = self.create_data_file(params=circle_params)
+                final_data = bool_data + (circle_data or "")
+                #print(final_data) ## DEBUG
+                opt_success, opt_output2, circle_time_opt, opt_error = self.run_minizinc(
+                cp_path2, final_data, int(remaining_time - cp_time)
+                )
+            #print("=== RAW OPTIMIZER OUTPUT ===")
+            #print(repr(opt_output2))
+            #print(opt_success)
+            #print(circle_time_opt)
+            #print(opt_error)
+            #print(opt_output) ## DEBUG
+            feasible_result['method'] = 'circle'
+            optimization_result['method'] = 'circle'
+
+            if 'UNSATISFIABLE' in cp_output2:
+                if run_decision:
+                    feasible_result.update({
+                        'optimal': True,
+                        'stop_reason': 'infeasible',
+                        'time': self.timeout_seconds
+                    })
+                    res.append(feasible_result)
+                if run_optimization:
+                    optimization_result.update({
+                        'version': 'optimal',
+                        'optimal': True,
+                        'stop_reason': 'infeasible',
+                        'time': self.timeout_seconds
+                    })
+                    res.append(optimization_result)
+                return res
+
+            if not run_optimization:        
+                # Extract feasible solution from CP_3.0.mzn output
+                cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output2, n)
+            
+                # Update feasible result
+                #if cp_time >= self.timeout_seconds:
+                #    feasible_result['timeout_reached'] = True
+            
+                feasible_result.update({
+                    'time': int(circle_time),
+                    'optimal': True if cp_feasible_solution else False,
+                    'stop_reason': 'None' if cp_feasible_solution else 'unknown',
+                    'sol': cp_feasible_solution if cp_feasible_solution else []
+                })
+            
+                if not cp_success:
+                    print(f"n20_NON_TOCCARE.mzn failed: {cp_error}")                
+                
+                
+                # Check remaining time
+                remaining_time -= circle_time
+                if remaining_time <= 0:
+                    print(f"Timeout reached after n20_NON_TOCCARE.mzn")
+                    #feasible_result['timeout_reached'] = True
+                    feasible_result['time'] = self.timeout_seconds
+                    feasible_result['stop_reason'] = 'time_limit'
+                
+                res.append(feasible_result)
+                
+            else:
+                if run_decision:
+                    # Extract feasible solution from CP_3.0.mzn output
+                    cp_feasible_solution = self.convert_cp_output_to_matrix(cp_output, n)
+            
+                    # Update feasible result
+                    #if cp_time >= self.timeout_seconds:
+                    #    feasible_result['timeout_reached'] = True
+            
+                    feasible_result.update({
+                        'time': int(circle_time),
+                        'optimal': True if cp_feasible_solution else False,
+                        'stop_reason': 'None' if cp_feasible_solution else 'unknown',
+                        'sol': cp_feasible_solution if cp_feasible_solution else []
+                    })
+            
+                    #if not cp_success:
+                    #    print(f"CP_3.0.mzn failed: {cp_error}")                
+                    
+                    # Check remaining time
+                    remaining_time -= circle_time
+                    if remaining_time <= 0:
+                        print(f"Timeout reached after CP_3.0.mzn")
+                        feasible_result['time'] = self.timeout_seconds
+                        feasible_result['stop_reason'] = 'time_limit'
+
+                    res.append(feasible_result)
+                # Extract data for optimizer
+                optimizer_data = self.extract_optimizer_data(opt_output2)
+                if not optimizer_data:
+                    print("Failed to extract optimizer data from optimizer_2.0.mzn output")
+                
+                    # Update optimization result (failed to extract data)
+                    optimization_result.update({
+                        'version': 'optimal',
+                        'optimal': False,
+                        'time': self.timeout_seconds,
+                        'stop_reason': 'unknown'
+                    })
+                    res.append(optimization_result)
+                    
+                
+                # Run optimizer_2.0.mzn
+                print(f"Running optimizer_2.0.mzn for n={n}...")
+                source_path = os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'CP')
+                cp_opt_path = os.path.join(source_path,"optimizer_2.0.mzn")
+                opt_success, opt_output3, opt_time, opt_error = self.run_minizinc(
+                    cp_opt_path, optimizer_data, int(remaining_time)
+                )
+                optimization_result.update({
+                    'version': 'optimal',
+                    'time': int(circle_time + opt_time)
+                })
+            
+                # Handle optimizer timeout or failure
+                if not opt_success:
+                    print(f"Optimizer failed or timed out: {opt_error}")
+                
+                    if optimization_result['time'] >= self.timeout_seconds:
+                        optimization_result['time'] = self.timeout_seconds
+                        optimization_result['stop_reason'] = 'time_limit'
+                    else:
+                        optimization_result['stop_reason'] = 'unknown'
+                    res.append(optimization_result)
+            
+                # If optimizer succeeded, process its output
+                summary, optimized_sol = self.parse_optimized_matrix_to_solution(optimizer_output=opt_output3, n_teams=n)
+            
+                value = None
+                if summary:
+                    for item in summary:
+                        if "Optimized Max Imbalance:" in item:
+                            value = int(item.split(": ")[1])
+                            break
+            
+                optimization_result.update({
+                    'optimal': True,
+                    'obj': value,
+                    'sol': optimized_sol if optimized_sol else []
+                })
+            
+                if optimization_result['time'] >= self.timeout_seconds:
+                    optimization_result['time'] = self.timeout_seconds
+                    optimization_result['optimal'] = False
+                
+                res.append(optimization_result)
+        return res
+
+
+    def save_results(self, results: List[Dict], combinations: bool, run_decision: bool, run_optimization: bool, circle_method: bool):
         """Save results to JSON file with timestamp structure in res/CP relative to script"""
         
-        output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'CP'))
+        if combinations and run_decision and run_optimization and circle_method:
+            output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'CP'))
+        else:
+            output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'personalized_res', 'CP'))
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
         # Group results by 'n' value
-        grouped_results = defaultdict(list)
-        for result in results:
-            if 'n' in result:
-                n_value = result['n']
-                grouped_results[n_value].append(result)
+        #grouped_results = defaultdict(list)
+        #for result in results:
+        #    if 'n' in result:
+        #        n_value = result['n']
+        #        grouped_results[n_value].append(result)
 
         # Save each group to its respective file
-        for n_value, group_results in grouped_results.items():
+        for n_value, group_results in results.items():
             filename = os.path.join(output_dir, f"{n_value}.json")
 
             # Load existing data if file exists
@@ -445,34 +619,36 @@ class MinizincRunner:
             # Add new results with current timestamp
             for result in group_results:
                 # Create result name based on parameters and phase
+                params = result["params"]
                 res_name = ""
-                if result["params"]["chuffed"] == True:
-                    res_name += "chuffed"
-                else:
-                    res_name += "gecode"
-                phase = result["params"].get("phase", "unknown")
-                if phase == "feasible":
-                    res_name += "_dec"
-                else:
-                    res_name += "_opt"
-                if result["params"]["sb_weeks"] == True:
-                    res_name += "_sw1"
-                if result["params"]["sb_periods"] == True:
-                    res_name += "_sp1"
-                if result["params"]["sb_teams"] == True:
-                    res_name += "_st1"
-                if result["params"]["ic_matches_per_team"] == True:
-                    res_name += "_icm"
-                if result["params"]["ic_period_count"] == True:
-                    res_name += "_icp"
-                if result["params"]["use_int_search"] == True:
-                    res_name += "_usint"
-                if result["params"]["use_restart_luby"] == True:
-                    res_name += "_usrest"
-                if result["params"]["use_relax_and_reconstruct"] == True:
-                    res_name += "_usrelax"
+
+                res_name += "chuffed" if params.get("chuffed") else "gecode"
+
+                #phase = params.get("phase", "unknown")
+                res_name += "_dec" if result["version"] == "decision" else "_opt"
+                res_name += "_cir" if result["method"] == "circle" else "_cla"
+
+                suffix_map = {
+                    "sb_weeks": "_sw",
+                    "sb_periods": "_sp",
+                    "sb_teams": "_st",
+                    "sb_week1_fixed": "_sw1f",
+                    "symm_brake": "_sb",
+                    "ic_matches_per_team": "_icm",
+                    "ic_period_count": "_icp",
+                    "ic_diff_match_in_week": "_icdw",
+                    "ic_diff_match_in_period": "_icdp",
+                    "use_int_search": "_usint",
+                    "use_restart_luby": "_usrest",
+                    "use_relax_and_reconstruct": "_usrelax",
+                }
+
+                for key, suffix in suffix_map.items():
+                    if params.get(key):
+                        res_name += suffix
+
                                 
-                existing_data[res_name] = result  # Direttamente l'oggetto, non un array
+                existing_data[res_name] = result
             # Save back to file with custom formatting
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write('{\n')
@@ -517,51 +693,31 @@ class MinizincRunner:
                 f.write('}\n')
 
             print(f"Results for n={n_value} saved to: {filename}")
-      
-    def print_summary(self, results: List[Dict]):
-        """Print summary statistics"""
-        total_runs = len(results)
-        successful_runs = sum(1 for r in results if r['cp_success'] and r['optimizer_success'])
-        timeout_runs = sum(1 for r in results if r['timeout_reached'])
-        
-        print(f"\n=== SUMMARY ===")
-        print(f"Total runs: {total_runs}")
-        print(f"Successful runs: {successful_runs}")
-        print(f"Timeout runs: {timeout_runs}")
-        print(f"Failed runs: {total_runs - successful_runs}")
-        
-        if successful_runs > 0:
-            avg_time = sum(r['time'] for r in results if r['cp_success'] and r['optimizer_success']) / successful_runs
-            print(f"Average execution time (successful): {avg_time:.2f}s")
             
-        
-        successful_results = [r for r in results if r['cp_success'] and r['optimizer_success']]
-        if successful_results:
-            fastest = min(successful_results, key=lambda x: x['time'])
-            print(f"Fastest successful run: n={fastest['n']}, time={fastest['time']:.2f}s")
-            
-    def run(self, selected_n, combinations, params, summary=False, run_decision=True, run_optimization=True, circle_method=True):
+    def run(self, selected_n, combinations, params, run_decision=True, run_optimization=True, circle_method=True):
         """Main execution method"""
         try:
             if not combinations:
                 config = {'manual': params}
                 """Run with manually specified parameters"""
-                results = []
+                results = {}
         
                 for i, n in enumerate(selected_n, 1):
                     print(f"[{i}/{len(selected_n)}] Running n={n}")
             
                     pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization, circle_method)
-                    results.extend(pipeline_results)  # Add results to the list
-                    
-                if summary:
-                    self.print_summary(results)
+                    #print(pipeline_results) ## DEBUG
+                    if n not in results:
+                        results[n] = []
+
+                    results[n].extend(pipeline_results)  # Add results to the list
+                print(results)
                 # Save results
-                self.save_results(results)
+                self.save_results(results, combinations, run_decision, run_optimization, circle_method)
             else:
                 config = {'all_combinations': True}
                 """Run all possible combinations of boolean parameters"""
-                results = []
+                results = {}
         
                 # Generate all combinations of boolean values
                 bool_combinations = list(itertools.product([True, False], repeat=len(self.bool_params)))
@@ -576,8 +732,10 @@ class MinizincRunner:
                         print(f"[{run_count}/{total_runs}] n={n}")
                 
                         pipeline_results = self.run_pipeline(n, params, run_decision, run_optimization, circle_method)
-
-                        self.save_results(pipeline_results)  # Save results
+                        #if n not in results:
+                        #    results[n] = []
+                        #print(pipeline_results)
+                        self.save_results(pipeline_results, combinations, run_decision, run_optimization, circle_method)  # Save results ## VERIFICARE
                 
         except KeyboardInterrupt:
             print("\n\nExecution interrupted by user.")
@@ -594,8 +752,12 @@ def main():
                 "sb_weeks": True,
                 "sb_periods": True,
                 "sb_teams": True,
+                "sb_week1_fixed": True,
+                "symm_brake":True,
                 "ic_matches_per_team": True,
                 "ic_period_count": True,
+                "ic_diff_match_in_week": True,
+                "ic_diff_match_in_period": True,
                 "use_int_search": True,
                 "use_restart_luby": True,
                 "use_relax_and_reconstruct": True,
@@ -606,7 +768,6 @@ def main():
         symmetry_combinations = True
         circle_method = True
         time_limit = 300
-        summary = False
     else:
         # Parse arguments
         team_sizes = []
@@ -614,8 +775,12 @@ def main():
                 "sb_weeks": False,
                 "sb_periods": False,
                 "sb_teams": False,
+                "sb_week1_fixed": False,
+                "symm_brake":False,
                 "ic_matches_per_team": False,
                 "ic_period_count": False,
+                "ic_diff_match_in_week": False,
+                "ic_diff_match_in_period": False,
                 "use_int_search": False,
                 "use_restart_luby": False,
                 "use_relax_and_reconstruct": False,
@@ -626,7 +791,6 @@ def main():
         symmetry_combinations = True
         circle_method = True
         time_limit = 300
-        summary = False
         i = 1
         args_input = []
         while i < len(sys.argv):
@@ -641,8 +805,12 @@ def main():
                 "sb_weeks": True,
                 "sb_periods": True,
                 "sb_teams": True,
+                "sb_week1_fixed": True,
+                "symm_brake": True,
                 "ic_matches_per_team": True,
                 "ic_period_count": True,
+                "ic_diff_match_in_week": True,
+                "ic_diff_match_in_period": True,
                 "use_int_search": True,
                 "use_restart_luby": True,
                 "use_relax_and_reconstruct": True,
@@ -654,8 +822,12 @@ def main():
                     "sb_weeks": False,
                     "sb_periods": False,
                     "sb_teams": False,
+                    "sb_week1_fixed": False,
+                    "symm_brake": False,
                     "ic_matches_per_team": False,
                     "ic_period_count": False,
+                    "ic_diff_match_in_week": False,
+                    "ic_diff_match_in_period": False,
                     "use_int_search": False,
                     "use_restart_luby": False,
                     "use_relax_and_reconstruct": False,
@@ -668,8 +840,12 @@ def main():
                     "sb_weeks":False,
                     "sb_periods": False,
                     "sb_teams": False,
+                    "sb_week1_fixed": False,
+                    "symm_brake": False,
                     "ic_matches_per_team": False,
                     "ic_period_count": False,
+                    "ic_diff_match_in_week": False,
+                    "ic_diff_match_in_period": False,
                     "use_int_search": False,
                     "use_restart_luby": False,
                     "use_relax_and_reconstruct": False,
@@ -679,7 +855,7 @@ def main():
                 for j in range(k, len(sys.argv)):
                     i = j
                     symmetry = sys.argv[j]
-                    valid_symmetry = ["sb_weeks", "sb_periods", "sb_teams", "ic_matches_per_team", "ic_period_count", "use_int_search", "use_restart_luby", "use_relax_and_reconstruct", "chuffed"]
+                    valid_symmetry = ["sb_weeks", "sb_periods", "sb_teams", "sb_week1_fixed", "symm_brake", "ic_matches_per_team", "ic_period_count", "ic_diff_match_in_week", "ic_diff_match_in_period", "use_int_search", "use_restart_luby", "use_relax_and_reconstruct", "chuffed"]
                     if symmetry.lower() in ["--decision-only","--optimization-only","--time-limit","--no-combinations","--no-optional","--all-optional"]:
                         i -= 1
                         break
@@ -694,10 +870,18 @@ def main():
                                 params["sb_periods"] = True
                             elif symmetry.lower() == "sb_teams":
                                 params["sb_teams"] = True
+                            elif symmetry.lower() == "sb_week1_fixed":
+                                params["sb_week1_fixed"] = True
+                            elif symmetry.lower() == "symm_brake":
+                                params["symm_brake"] = True
                             elif symmetry.lower() == "ic_matches_per_team":
                                 params["ic_matches_per_team"] = True
                             elif symmetry.lower() == "ic_period_count":
                                 params["ic_period_count"] = True
+                            elif symmetry.lower() == "ic_diff_match_in_week":
+                                params["ic_diff_match_in_week"] = True
+                            elif symmetry.lower() == "ic_diff_match_in_period":
+                                params["ic_diff_match_in_period"] = True
                             elif symmetry.lower() == "use_int_search":
                                 params["use_int_search"] = True
                             elif symmetry.lower() == "use_restart_luby":
@@ -706,8 +890,6 @@ def main():
                                 params["use_relax_and_reconstruct"] = True
                             else:
                                 params["chuffed"] = True
-            elif arg.lower() == "--summary":
-                summary = True
             elif arg.lower() == "--no-circle":
                 circle_method = False
             elif arg.lower() == "--time-limit":
@@ -737,10 +919,20 @@ def main():
             i += 1
         if not params:
             params = {
-                    "sb_match":True,
-                    "sb_teams":True,
-                    "sb_periods":True
-                    }
+                "sb_weeks": True,
+                "sb_periods": True,
+                "sb_teams": True,
+                "sb_week1_fixed": True,
+                "symm_brake": True,
+                "ic_matches_per_team": True,
+                "ic_period_count": True,
+                "ic_diff_match_in_week": True,
+                "ic_diff_match_in_period": True,
+                "use_int_search": True,
+                "use_restart_luby": True,
+                "use_relax_and_reconstruct": True,
+                "chuffed": True
+                }
 
         if not team_sizes:
             team_sizes = [2,4,6]
@@ -755,7 +947,7 @@ def main():
             sys.exit(1)
     
     runner = MinizincRunner(timeout_seconds=time_limit)
-    runner.run(team_sizes, symmetry_combinations, params, summary, run_decision, run_optimization, circle_method)
+    runner.run(team_sizes, symmetry_combinations, params, run_decision, run_optimization, circle_method)
 
 if __name__ == "__main__":
     main()
