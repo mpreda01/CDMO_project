@@ -17,8 +17,11 @@ Run:
 """
 
 import sys
-from z3 import Solver, IntVal, Int, Bool, If, Sum, And, Or, sat, unknown, Distinct, Implies, BoolVal, Optimize, Not
+from z3 import Solver, IntVal, Int, Bool, If, Sum, And, Or, sat, unknown, Distinct, Implies, BoolVal, Optimize, Not, Tactic, Then, PbLe
 import time
+import subprocess
+import os
+import random
 
 
 
@@ -71,112 +74,65 @@ def pretty_print_schedule(schedule):
     print("]")
 
 
-# def z3_permutation_constraint(original_schedule, n_teams, seed=42, timeout_ms=300_000):
-#     """
-#     Costruisce variabili home/away (Int) per ogni slot (period,week)
-#     e vincola:
-#      - ogni slot è una delle coppie originali (unordered) ma SOLO tra le coppie
-#        previste per quella stessa settimana (non si spostano tra settimane)
-#      - ogni coppia originale è usata esattamente una volta (permutazione) nella
-#        sua settimana originale
-#     Restituisce (solver, home_vars, away_vars, check_result).
-#     """
-#     start_time = time.time()
-
-#     periods = len(original_schedule)
-#     weeks = len(original_schedule[0])
-#     s = Solver()
-#     s.set("random_seed", seed)
-#     s.set("timeout", timeout_ms)
-   
-
-#     # variabili Int per ogni slot
-#     home = [[ Int(f"home_{p}_{w}") for w in range(weeks)] for p in range(periods)]
-#     away = [[ Int(f"away_{p}_{w}") for w in range(weeks)] for p in range(periods)]
-
-
-#     # lista delle coppie originali raggruppate per settimana
-#     orig_pairs_by_week = { w: [] for w in range(weeks) }
-#     for p in range(periods):
-#         for w in range(weeks):
-#             h, a = original_schedule[p][w]
-#             orig_pairs_by_week[w].append((h, a))
-
-#     # per ogni slot: deve essere uguale ad almeno una coppia originale della STESSA settimana (unordered)
-#     slot_is_pair = {}  # mappa (p,w) -> lista di Bool corrispondenti a ciascuna orig_pair della settimana w
-#     for p in range(periods):
-#         for w in range(weeks):
-#             pair_bools = []
-#             for (a, b) in orig_pairs_by_week[w]:
-#                 pair_bools.append(Or(And(home[p][w] == a, away[p][w] == b),
-#                                      And(home[p][w] == b, away[p][w] == a)))
-#             s.add(Or(*pair_bools))
-#             slot_is_pair[(p, w)] = pair_bools
-
-#     # ogni coppia originale deve essere assegnata ad esattamente uno slot nella sua stessa settimana
-#     for w in range(weeks):
-#         pairs = orig_pairs_by_week[w]
-#         for idx, (a, b) in enumerate(pairs):
-#             occ_terms = []
-#             for p in range(periods):
-#                 occ_terms.append(If(slot_is_pair[(p, w)][idx], IntVal(1), IntVal(0)))
-#             s.add(Sum(occ_terms) == 1)
-
-
-#     # 3) Each team appears at most twice per period (over all weeks)
-#     for p in range(periods):
-#         for t in range(1, n_teams+1):
-#             occur_exprs = []
-#             for w in range(weeks):
-#                 # usa le variabili Z3 home[p][w] e away[p][w]
-#                 is_play = If(Or(home[p][w] == t, away[p][w] == t), IntVal(1), IntVal(0))
-#                 occur_exprs.append(is_play)
-#             s.add(Sum(occur_exprs) <= 2)
-
+def find_good_seed(original_schedule, n_teams, num_trials=10, timeout_per_trial=15000,
+                   sb_fix_period=True, sb_lex_periods=False, 
+                   implied_constraints=True):
+    """
+    Try multiple seeds and return the best one based on solve time.
     
-#     # matches in the same week must be different
-#     for w in range(weeks):
-#         for p1 in range(periods):
-#             for p2 in range(p1 + 1, periods):
-#                 s.add(Or(
-#                     home[p1][w] != home[p2][w],
-#                     away[p1][w] != away[p2][w]
-#                 ))
-
-#     # Optional: enforce "fix period" constraint (adapted from MiniZinc n_fix_period)
-#     # MiniZinc (1-based): p_target = ((w - 1) mod n_periods) + 1
-#     # In this 0-based Python code we want: p_target = w % periods
-#     # and p_next = (p_target + 1) % periods
-#     # If fix_period=True then for each week w:
-#     #   - require team `n_teams` to play in (p_target, w)
-#     #   - if w < weeks-1 require team `n_teams-1` to play in (p_next, w)
+    Args:
+        original_schedule: schedule to solve
+        n_teams: number of teams
+        num_trials: number of seeds to try
+        timeout_per_trial: timeout in ms for each trial
+        
+    Returns:
+        best_seed: the seed that produced the fastest SAT result
+    """
+    best_seed = 42
+    best_time = float('inf')
     
-#     if n_teams >= 8:
-#         for w in range(weeks):
-#             p_target = w % periods
-#             p_next = (p_target + 1) % periods
-#             cond_target = Or(home[p_target][w] == n_teams, away[p_target][w] == n_teams)
-#             s.add(cond_target)
-#             if n_teams >= 14:
-#                 if w < weeks - 2:
-#                     cond_next = Or(home[p_next][w] == n_teams - 1, away[p_next][w] == n_teams - 1)
-#                     # both must hold for this week when fix_period is active
-#                     s.add(cond_next)
-
-#     results = s.check()
-
-#     end_time = time.time()
-#     tot_time = end_time - start_time
-
-#     return s, home, away, results, tot_time
-
+    # Try default seed + random seeds
+    seeds_to_try = [42, 123, 456, 789, 1337] + [random.randint(1, 100000) for _ in range(num_trials-5)]
+    
+    print(f"\n{'='*60}")
+    print(f"SEED SEARCH: Trying {num_trials} different seeds")
+    print(f"{'='*60}")
+    
+    for seed in seeds_to_try:
+        print(f"Seed {seed:6d}... ", end="", flush=True)
+        _, _, _, _, res, t = z3_permutation_constraint(
+            original_schedule, n_teams, 
+            seed=seed, 
+            timeout_ms=timeout_per_trial,
+            sb_fix_period=sb_fix_period,
+            sb_lex_periods=sb_lex_periods,
+            implied_constraints=implied_constraints
+        )
+        
+        if res == sat:
+            print(f"SAT in {t:6.2f}s {'✓ NEW BEST' if t < best_time else ''}")
+            if t < best_time:
+                best_time = t
+                best_seed = seed
+                if t < 2:  # Good enough, stop early
+                    print(f"Found excellent seed ({t:.2f}s < 2s), stopping search")
+                    break
+        else:
+            print(f"{'TIMEOUT' if res == unknown else 'UNSAT':>8}")
+    
+    print(f"{'='*60}")
+    print(f"Best seed: {best_seed} (solved in {best_time:.2f}s)")
+    print(f"{'='*60}\n")
+    return best_seed
 
 def z3_permutation_constraint(original_schedule,
                               n_teams,
                               seed=42,
                               timeout_ms=300_000,
-                              ic_fix_period=True,
-                              ic_lex_periods=False):
+                              sb_fix_period=True,
+                              sb_lex_periods=False,
+                              implied_constraints=True,):
     """
     Encoding basato su `assign[p][w]` (int index della partita della settimana w
     assegnata al periodo p). Le coppie originali rimangono costanti (original_schedule).
@@ -188,6 +144,7 @@ def z3_permutation_constraint(original_schedule,
     - timeout_ms: timeout in millisecondi per il solver
     - ic_fix_period: applica il vincolo fix_period per n_teams / n_teams-1
     - ic_lex_periods: applica vincolo lessicografico fra vettori assign dei periodi
+    questa viene da git e fa n18
     """
 
     start_time = time.time()
@@ -263,23 +220,24 @@ def z3_permutation_constraint(original_schedule,
     # ------------------------
     # IMPLIED CONSTRAINTS / BOUNDS / GLOBAL INVARIANTS
     # ------------------------
-    total_matches = periods * weeks  # numero di match totali
-    # count appearances per team across periods
-    home_count = { (t, p): Int(f"count_{t}_{p}") for t in range(1, n_teams+1) for p in range(periods) }
-    for t in range(1, n_teams+1):
-        for p in range(periods):
-            expr = Sum([ If(pos[(t, w)] == p, IntVal(1), IntVal(0)) for w in range(weeks) ])
-            s.add(home_count[(t, p)] == expr)
-            s.add(home_count[(t, p)] >= 0, home_count[(t, p)] <= weeks)
+    if implied_constraints:
+        total_matches = periods * weeks  # numero di match totali
+        # count appearances per team across periods
+        home_count = { (t, p): Int(f"count_{t}_{p}") for t in range(1, n_teams+1) for p in range(periods) }
+        for t in range(1, n_teams+1):
+            for p in range(periods):
+                expr = Sum([ If(pos[(t, w)] == p, IntVal(1), IntVal(0)) for w in range(weeks) ])
+                s.add(home_count[(t, p)] == expr)
+                s.add(home_count[(t, p)] >= 0, home_count[(t, p)] <= weeks)
 
-    # per team: somma su p dei count deve essere settimane (ogni team gioca una partita per settimana)
-    for t in range(1, n_teams+1):
-        s.add(Sum([ home_count[(t, p)] for p in range(periods) ]) == weeks)
+        # per team: somma su p dei count deve essere settimane (ogni team gioca una partita per settimana)
+        for t in range(1, n_teams+1):
+            s.add(Sum([ home_count[(t, p)] for p in range(periods) ]) == weeks)
 
-    # totale apparizioni (controllo)
-    sum_all = Sum([ home_count[(t, p)] for t in range(1, n_teams+1) for p in range(periods) ])
-    # ogni match conta due apparizioni di team, quindi total team appearances = 2 * total_matches
-    s.add(sum_all == 2 * total_matches)
+        # totale apparizioni (controllo)
+        sum_all = Sum([ home_count[(t, p)] for t in range(1, n_teams+1) for p in range(periods) ])
+        # ogni match conta due apparizioni di team, quindi total team appearances = 2 * total_matches
+        s.add(sum_all == 2 * total_matches)
 
     # ------------------------
     # SYMMETRY-BREAKING
@@ -288,7 +246,7 @@ def z3_permutation_constraint(original_schedule,
     # s.add(assign[0][0] == 0)
 
     # B) fix_period style (team N in p_target, optionally team N-1 in p_next)
-    if ic_fix_period and n_teams >= 8:
+    if sb_fix_period and n_teams >= 8:
         for w in range(weeks):
             p_target = w % periods
             idx_n = m_t_w.get((n_teams, w), None)
@@ -303,7 +261,7 @@ def z3_permutation_constraint(original_schedule,
 
     # C) lexicographic order among period-vectors (assign[p] treated as vector over weeks)
     #    This breaks permutations of entire period labels.
-    if ic_lex_periods and periods > 1:
+    if sb_lex_periods and periods > 1:
         def lex_leq(vec1, vec2):
             # vec1,vec2 are lists of Int expr length weeks
             ors = []
@@ -343,102 +301,189 @@ def z3_permutation_constraint(original_schedule,
 
 
 
-# def optimization(home, away, n_teams, timeout=300_000):
+def z3_permutation_constraint_cvc5(original_schedule,
+                                    n_teams,
+                                    seed=42,
+                                    timeout_ms=300_000,
+                                    sb_fix_period=True,
+                                    sb_lex_periods=False,
+                                    implied_constraints=True,
+                                    ):
+    """
+    Same as z3_permutation_constraint but exports to SMT-LIB2 and uses cvc5 solver.
+    Returns: (solver, assign, home_out, away_out, result, elapsed_seconds)
+    """
+    start_time = time.time()
 
-#     periods = len(home)
-#     weeks = len(home[0])
+    periods = len(original_schedule)
+    weeks = len(original_schedule[0])
 
-#     opt = Optimize()
-#     opt.set("timeout", timeout) 
+    s = Solver()
+    s.set("random_seed", seed)
 
-#     # flip[p][w] = Bool: se True scambia home/away in quel match
-#     flip = [[ Bool(f"flip_{p}_{w}") for w in range(weeks)] 
-#             for p in range(periods) ]
+    # ------------------------
+    # PRECOMPUTE: orig_pairs_by_week e m_t_w
+    # ------------------------
+    orig_pairs_by_week = { w: [ original_schedule[p][w] for p in range(periods) ]
+                           for w in range(weeks) }
 
-#     # nuove variabili per home/away dopo lo swap
-#     new_home = [[ Int(f"new_home_{p}_{w}") for w in range(weeks) ] 
-#                 for p in range(periods) ]
-#     new_away = [[ Int(f"new_away_{p}_{w}") for w in range(weeks) ] 
-#                 for p in range(periods) ]
+    m_t_w = {}
+    for w in range(weeks):
+        for k, (h, a) in enumerate(orig_pairs_by_week[w]):
+            m_t_w[(h, w)] = k
+            m_t_w[(a, w)] = k
 
-#     # keep home/away fixed for the first week
-#     for w in range(int(weeks / 2)):
-#         for p in range(periods):
-#             opt.add(flip[p][w] == False)
+    # ------------------------
+    # VARIABLES
+    # ------------------------
+    assign = [[ Int(f"assign_{p}_{w}") for w in range(weeks) ] for p in range(periods)]
+    pos = { (t, w): Int(f"pos_{t}_{w}") for t in range(1, n_teams+1) for w in range(weeks) }
 
+    # ------------------------
+    # DOMAIN + PERMUTATION PER SETTIMANA
+    # ------------------------
+    for w in range(weeks):
+        for p in range(periods):
+            s.add(assign[p][w] >= 0, assign[p][w] < periods)
+        s.add(Distinct(*[ assign[p][w] for p in range(periods) ]))
 
-#     for p in range(periods):
-#         for w in range(weeks):
-#             opt.add(new_home[p][w] >= 1, new_home[p][w] <= n_teams)
-#             opt.add(new_away[p][w] >= 1, new_away[p][w] <= n_teams)
+    # ------------------------
+    # CHANNEL pos <-> assign
+    # ------------------------
+    for t in range(1, n_teams+1):
+        for w in range(weeks):
+            s.add(pos[(t, w)] >= 0, pos[(t, w)] < periods)
+            m_idx = m_t_w[(t, w)]
+            for p in range(periods):
+                s.add(Implies(assign[p][w] == m_idx, pos[(t, w)] == p))
+            for p in range(periods):
+                s.add(Implies(pos[(t, w)] == p, assign[p][w] == m_idx))
 
+    # ------------------------
+    # CAPACITY
+    # ------------------------
+    for p in range(periods):
+        for t in range(1, n_teams+1):
+            occ_terms = [ If(pos[(t, w)] == p, IntVal(1), IntVal(0)) for w in range(weeks) ]
+            s.add(Sum(occ_terms) <= 2)
 
-#     # vincoli di swap
-#     for p in range(periods):
-#         for w in range(weeks):
-#             opt.add(Implies(flip[p][w], new_home[p][w] == away[p][w]))
-#             opt.add(Implies(flip[p][w], new_away[p][w] == home[p][w]))
+    # ------------------------
+    # IMPLIED CONSTRAINTS
+    # ------------------------
+    if implied_constraints:
+        total_matches = periods * weeks
+        home_count = { (t, p): Int(f"count_{t}_{p}") for t in range(1, n_teams+1) for p in range(periods) }
+        for t in range(1, n_teams+1):
+            for p in range(periods):
+                expr = Sum([ If(pos[(t, w)] == p, IntVal(1), IntVal(0)) for w in range(weeks) ])
+                s.add(home_count[(t, p)] == expr)
+                s.add(home_count[(t, p)] >= 0, home_count[(t, p)] <= weeks)
 
-#             opt.add(Implies(Not(flip[p][w]), new_home[p][w] == home[p][w]))
-#             opt.add(Implies(Not(flip[p][w]), new_away[p][w] == away[p][w]))
+        for t in range(1, n_teams+1):
+            s.add(Sum([ home_count[(t, p)] for p in range(periods) ]) == weeks)
 
-#     # Conteggio partite
-#     home_count = [ Int(f"home_count_{t}") for t in range(n_teams) ]
-#     away_count = [ Int(f"away_count_{t}") for t in range(n_teams) ]
-
-#     for t in range(n_teams):
-
-#         # ricomincia ogni volta!
-#         home_games = []
-#         away_games = []
-
-#         for p in range(periods):
-#             for w in range(weeks):
-#                 home_games.append(If(new_home[p][w] == (t+1), 1, 0))
-#                 away_games.append(If(new_away[p][w] == (t+1), 1, 0))
-
-#         opt.add(home_count[t] == Sum(home_games))
-#         opt.add(away_count[t] == Sum(away_games))
-
-#     # Minimizzare l'imbalance massimo
-#     max_diff = Int("max_diff")
-#     # optimization lower bound
-#     opt.add(max_diff >= 0)
-
-#     for t in range(n_teams):
-#         diff = Int(f"diff_{t}")
-#         opt.add(diff >= home_count[t] - away_count[t])
-#         opt.add(diff >= away_count[t] - home_count[t])
-#         opt.add(max_diff >= diff)
-
-#     # optimize upper bound
-#     opt.add(max_diff <= 1)
-
-#     opt.minimize(max_diff)
-#     res = opt.check()
-
-#     if res == sat:
-#         m = opt.model()
-
-#         new_home_out = [[0]*weeks for _ in range(periods)]
-#         new_away_out = [[0]*weeks for _ in range(periods)]
-
-#         for p in range(periods):
-#             for w in range(weeks):
-#                 h = m.evaluate(new_home[p][w], model_completion=True).as_long()
-#                 a = m.evaluate(new_away[p][w], model_completion=True).as_long()
-
-#                 new_home_out[p][w] = h
-#                 new_away_out[p][w] = a
-
-
-
-#         return res, new_home_out, new_away_out, max_diff, opt
+        sum_all = Sum([ home_count[(t, p)] for t in range(1, n_teams+1) for p in range(periods) ])
+        s.add(sum_all == 2 * total_matches)
     
-#     return res, None, None, None, opt
 
-from z3 import *
-import time
+
+    # ------------------------
+    # SYMMETRY-BREAKING
+    # ------------------------
+    if sb_fix_period and n_teams >= 8:
+        for w in range(weeks):
+            p_target = w % periods
+            idx_n = m_t_w.get((n_teams, w), None)
+            if idx_n is not None:
+                s.add(assign[p_target][w] == idx_n)
+            if n_teams >= 14:
+                p_next = (p_target + 1) % periods
+                idx_n1 = m_t_w.get((n_teams - 1, w), None)
+                if idx_n1 is not None and w < weeks - 2:
+                    s.add(assign[p_next][w] == idx_n1)
+
+    if sb_lex_periods and periods > 1:
+        def lex_leq(vec1, vec2):
+            ors = []
+            for i in range(weeks):
+                if i == 0:
+                    prefix_eq = BoolVal(True)
+                else:
+                    prefix_eq = And(*[ vec1[j] == vec2[j] for j in range(i) ])
+                ors.append( And(prefix_eq, vec1[i] <= vec2[i]) )
+            return Or(*ors)
+        for p in range(periods - 1):
+            s.add( lex_leq([ assign[p][w] for w in range(weeks) ],
+                           [ assign[p+1][w] for w in range(weeks) ]) )
+
+    # ------------------------
+    # Export to SMT-LIB2 and solve with cvc5
+    # ------------------------
+    smt2_string = s.to_smt2()
+    smt2_lines = smt2_string.splitlines()
+    smt2_lines[0] = "(set-logic QF_LIA)"
+    smt2_lines.append("(get-model)")
+    smt2_string = "\n".join(smt2_lines)
+
+    smt2_path = "./sts_smt.smt2"
+    with open(smt2_path, 'w') as f:
+        f.write(smt2_string)
+
+    cvc5_bin = os.environ.get("CVC5_BIN", "./cvc5/bin/cvc5")
+    cmd = [cvc5_bin, "--lang", "smt2", "--produce-models", smt2_path]
+
+    timeout_sec = timeout_ms / 1000.0
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout_sec)
+    except subprocess.TimeoutExpired:
+        tot_time = time.time() - start_time
+        # Clean up temporary file
+        if os.path.exists(smt2_path):
+            os.remove(smt2_path)
+        return s, assign, None, None, unknown, tot_time
+
+    tot_time = time.time() - start_time
+    stdout = result.stdout.strip()
+
+    if "unsat" in stdout:
+        # Clean up temporary file
+        if os.path.exists(smt2_path):
+            os.remove(smt2_path)
+        return s, assign, None, None, "unsat", tot_time
+    if "sat" not in stdout:
+        # Clean up temporary file
+        if os.path.exists(smt2_path):
+            os.remove(smt2_path)
+        return s, assign, None, None, unknown, tot_time
+
+    # Parse model from cvc5 output
+    model = {}
+    for line in stdout.splitlines():
+        line = line.strip()
+        if line.startswith("(define-fun"):
+            line = line[:-1]
+            parts = line.split()
+            if len(parts) >= 5:
+                var = parts[1]
+                value = int(parts[-1])
+                model[var] = value
+
+    home_out = [[ None for _ in range(weeks) ] for _ in range(periods)]
+    away_out = [[ None for _ in range(weeks) ] for _ in range(periods)]
+    for p in range(periods):
+        for w in range(weeks):
+            k = model.get(f"assign_{p}_{w}", None)
+            if k is not None:
+                h, a = orig_pairs_by_week[w][k]
+                home_out[p][w] = h
+                away_out[p][w] = a
+
+    # Clean up temporary file
+    if os.path.exists(smt2_path):
+        os.remove(smt2_path)
+
+    return s, assign, home_out, away_out, sat, tot_time
+
 
 def optimization(home, away, n_teams, timeout=300_000):
     """
@@ -550,7 +595,7 @@ def optimization(home, away, n_teams, timeout=300_000):
         opt.add(max_imb >= imbalance[t-1])
 
     # optionally set some lower-bound on max_imb (not required)
-    opt.add(max_imb >= 0, max_imb <= weeks)
+    opt.add(max_imb >= 0, max_imb <= 1)
 
     # -------------------------
     # Constraint "Each team appears at most twice per period" in original SMT model:
@@ -605,14 +650,6 @@ def optimization(home, away, n_teams, timeout=300_000):
     return  res, home_out, away_out, max_imb_val, opt
 
 
-
-
-
-
-
-
-
-
 def flatten_to_home_away_vectors(schedule):
     """
     Produce the typical home0/away0 vectors used in many models:
@@ -631,44 +668,6 @@ def flatten_to_home_away_vectors(schedule):
             away0.append(a)
     return home0, away0
 
-
-# def print_solution_matrix(sol_or_model, home, away):
-#     """
-#     Stampa la matrice soluzione (periods x weeks) letta dal model Z3.
-#     sol_or_model: Solver (dopo check()) oppure Model
-#     home, away: matrici home[p][w], away[p][w] (Z3 Int expressions)
-#     """
-#     # ottieni il Model se è stato passato il Solver
-#     m = sol_or_model.model() if hasattr(sol_or_model, "model") else sol_or_model
-
-#     periods = len(home)
-#     weeks = len(home[0])
-#     print("Solution matrix (periods x weeks):")
-#     print("[")
-#     for p in range(periods):
-#         row_elems = []
-#         for w in range(weeks):
-#             # valutazione sicura del valore (fallback a str se non possibile as_long)
-#             h_eval = m.evaluate(home[p][w])
-#             a_eval = m.evaluate(away[p][w])
-#             try:
-#                 h_val = h_eval.as_long()
-#             except Exception:
-#                 h_val = str(h_eval)
-#             try:
-#                 a_val = a_eval.as_long()
-#             except Exception:
-#                 a_val = str(a_eval)
-#             row_elems.append(f"[{h_val} , {a_val}]")
-#         print("  [" + ", ".join(row_elems) + "]" + ("," if p < periods-1 else ""))
-#     print("]")
-#     # opzionale: ritorna la struttura come lista di tuple
-#     schedule = [[ None for _ in range(weeks) ] for _ in range(periods)]
-#     for p in range(periods):
-#         for w in range(weeks):
-#             schedule[p][w] = (int(m.evaluate(home[p][w]).as_long()),
-#                               int(m.evaluate(away[p][w]).as_long()))
-#     return schedule
 def print_solution_matrix(home, away):
 
     periods = len(home)
@@ -691,52 +690,6 @@ def print_solution_matrix(home, away):
     print("]")
 
 
-
-# if __name__ == "__main__":
-#     # read n from argv or default 8
-#     if len(sys.argv) >= 2:
-#         n = int(sys.argv[1])
-#     else:
-#         n = 8
-    
-#     # read from argv 'opt'or 'sat' to choose optimization or simple satisfiability check
-
-#     schedule, periods, weeks = circle_method_schedule(n)
-
-#     print("Generated schedule (periods x weeks):")
-#     pretty_print_schedule(schedule)
-
-#     # Flatten to home0/away0 format if needed
-#     # home0_vec, away0_vec = flatten_to_home_away_vectors(schedule)
-#     # print("\nFlattened home0 (length m=%d):" % len(home0_vec))
-#     # print(home0_vec)
-#     # print("Flattened away0:")
-#     # print(away0_vec)
-
-#     # Check with Z3
-#     print("\nRunning Z3 checks on the generated schedule...")
-#     s, home, away, res = z3_permutation_constraint(schedule, n)
-#     print("Z3 result:", res)
-#     if res == sat:
-#         print("Schedule satisfies STS constraints.")
-#         print_solution_matrix(s, home, away)
-#         print(home, away)
-#         opt, new_home, new_away, flip, max_imb = optimization(home, away, n)
-
-#         if opt.check() == sat:
-#             m = opt.model()
-#             print("Maximum imbalance =", m[max_imb])
-#             print("Optimized schedule:")
-#             print_solution_matrix(opt, new_home, new_away)
-
-#     elif res == unknown:
-#         print("Z3 TIMEOUT: solver exceeded time limit and could not find solution.")
-#     else:
-#         print("Z3 reports UNSAT: schedule violates declared constraints.")
-
-# import sys
-# from z3 import *
-
 if __name__ == "__main__":
 
     # --- 1) Leggi n_teams dal comando ---
@@ -745,43 +698,184 @@ if __name__ == "__main__":
     else:
         n_teams = 8
 
-    # --- 2) Leggi la modalità: 'sat' oppure 'opt' ---
+    # --- 2) Leggi la modalità: 'sat' oppure 'opt' oppure 'test' oppure 'seed' ---
     if len(sys.argv) >= 3:
         mode = sys.argv[2].lower()
     else:
         mode = "sat"   # default
 
-    if mode not in ["sat", "opt"]:
-        print("ERRORE: il secondo argomento deve essere 'sat' oppure 'opt'")
+    if mode not in ["sat", "opt", "test", "seed"]:
+        print("ERRORE: il secondo argomento deve essere 'sat', 'opt', 'test' oppure 'seed'")
         sys.exit(1)
 
-    # --- 3) Genera il calendario con il circle method ---
+    # --- 3) Leggi il solver: 'z3' oppure 'cvc5' ---
+    if len(sys.argv) >= 4:
+        solver_choice = sys.argv[3].lower()
+    else:
+        solver_choice = "z3"   # default
+
+    if solver_choice not in ["z3", "cvc5"]:
+        print("ERRORE: il terzo argomento deve essere 'z3' oppure 'cvc5'")
+        sys.exit(1)
+
+    if solver_choice == "cvc5" and mode == "opt":
+        print("ERRORE: la modalità 'opt' non è supportata con il solver CVC5")
+        sys.exit(1)
+
+    # --- 4) Parse optional parameters (if provided) ---
+    # Default parameters
+    params = {
+        'sb_fix_period': True,
+        'sb_lex_periods': False,
+        'implied_constraints': True
+    }
+    
+    # Check if parameters are specified (argv[4])
+    if len(sys.argv) >= 5:
+        params_str = sys.argv[4]
+        # Remove brackets if present
+        params_str = params_str.strip('[]')
+        
+        # Parse parameter assignments
+        try:
+            for param_pair in params_str.split(','):
+                param_pair = param_pair.strip()
+                if '=' in param_pair:
+                    key, value = param_pair.split('=')
+                    key = key.strip()
+                    value = value.strip()
+                    
+                    # Convert string to boolean
+                    if value.lower() == 'true':
+                        params[key] = True
+                    elif value.lower() == 'false':
+                        params[key] = False
+                    else:
+                        print(f"ERRORE: valore non valido per {key}: {value} (usa True o False)")
+                        sys.exit(1)
+            
+            print(f"\nUsing custom parameters: {params}")
+        except Exception as e:
+            print(f"ERRORE: formato parametri non valido: {e}")
+            print("Formato corretto: [sb_fix_period=True,sb_lex_periods=False,implied_constraints=True]")
+            print("oppure: sb_fix_period=True,sb_lex_periods=False,implied_constraints=True")
+            sys.exit(1)
+    else:
+        print(f"\nUsing default parameters: {params}")
+
+    # --- 5) Genera il calendario con il circle method ---
     schedule, periods, weeks = circle_method_schedule(n_teams)
 
-    print("Generated schedule (periods x weeks):")
-    pretty_print_schedule(schedule)
 
-    # --- 4) Check di soddisfacibilità ---
-    print("\nRunning Z3 checks on the generated schedule...")
-    s, _, home, away, res, sat_time = z3_permutation_constraint(schedule, n_teams)
+    # Select the solver function
+    if solver_choice == "z3":
+        solve_func = z3_permutation_constraint
+        print(f"\nUsing Z3 solver")
+    else:
+        solve_func = z3_permutation_constraint_cvc5
+        print(f"\nUsing CVC5 solver")
 
-    print("Z3 result:", res)
+    # --- 6) Modalità SEED: cerca il miglior seed ---
+    if mode == "seed":
+        if solver_choice != "z3":
+            print("ERRORE: la modalità 'seed' è supportata solo con il solver Z3")
+            sys.exit(1)
+        
+        print(f"\n{'='*80}")
+        print(f"SEED SEARCH MODE for {n_teams} teams")
+        print(f"{'='*80}")
+        
+        best_seed = find_good_seed(
+            schedule, n_teams, 
+            num_trials=60, 
+            timeout_per_trial=300_000,
+            sb_fix_period=params['sb_fix_period'],
+            sb_lex_periods=params['sb_lex_periods'],
+            implied_constraints=params['implied_constraints']
+        )
+        
+        print(f"\nRunning final solve with best seed {best_seed}...")
+        s, _, home, away, res, sat_time = z3_permutation_constraint(
+            schedule, n_teams, seed=best_seed,
+            sb_fix_period=params['sb_fix_period'],
+            sb_lex_periods=params['sb_lex_periods'],
+            implied_constraints=params['implied_constraints']
+        )
+        
+        if res == sat:
+            print(f"FINAL RESULT: SAT in {sat_time:.2f}s")
+            print_solution_matrix(home, away)
+        else:
+            print(f"FINAL RESULT: {res}")
+        
+        sys.exit(0)
+
+    # --- 7) Modalità TEST: prova tutte le combinazioni ---
+    if mode == "test":
+        import itertools
+        
+        sb_fix_options = [True, False]
+        sb_lex_options = [True, False]
+        ic_option = [True, False]
+
+        
+        print("\n" + "="*80)
+        print(f"TEST MODE: Running all combinations of constraints with {solver_choice.upper()}")
+        print("="*80)
+        
+        results = []
+        for sb_fix, sb_lex, implied_constraints_val in itertools.product(sb_fix_options, sb_lex_options, ic_option):
+            print(f"\n--- Testing combination: sb_fix_period={sb_fix}, sb_lex_periods={sb_lex}, implied_constraints={implied_constraints_val} ---")
+            
+            test_start = time.time()
+            s, _, home, away, res, sat_time = solve_func(
+                schedule, n_teams,
+                sb_fix_period=sb_fix,
+                sb_lex_periods=sb_lex,
+                implied_constraints=implied_constraints_val
+            )
+            test_end = time.time()
+            
+            result_entry = {
+                'sb_fix_period': sb_fix,
+                'sb_lex_periods': sb_lex,
+                'implied_constraints': implied_constraints_val,
+                'result': str(res),
+                'time': sat_time
+            }
+            results.append(result_entry)
+            
+            print(f"Result: {res}, Time: {sat_time:.2f} seconds")
+        
+        print("\n" + "="*80)
+        print("TEST SUMMARY")
+        print("="*80)
+        for r in results:
+            print(f"sb_fix={r['sb_fix_period']}, sb_lex={r['sb_lex_periods']}, implied_constraints={r['implied_constraints']} {r['result']} ({r['time']:.2f}s)")
+        
+        sys.exit(0)
+
+    # --- 8) Check di soddisfacibilità ---
+    print(f"\nRunning {solver_choice.upper()} checks on the generated schedule...")
+    s, _, home, away, res, sat_time = solve_func(
+        schedule, n_teams,
+        sb_fix_period=params['sb_fix_period'],
+        sb_lex_periods=params['sb_lex_periods'],
+        implied_constraints=params['implied_constraints']
+    )
+
+    print(f"{solver_choice.upper()} result:", res)
 
     if res == sat:
         print("Schedule satisfies STS constraints.\n")
-        print("Satisfiability check time: %.2f seconds\n" % sat_time)
+        print("Satisfiability check time: %.2f seconds\n" % int(sat_time))
+        print("sol:")
         print_solution_matrix(home, away)
 
-        # --- 5) Se richiesto, esegui la fase di ottimizzazione ---
+        # --- 9) Se richiesto, esegui la fase di ottimizzazione ---
         if mode == "opt":
             print("\nRunning optimization...")
 
-            # m = s.model()
-            # home = [[ m[home[p][w]].as_long() for w in range(weeks) ] 
-            # for p in range(periods) ]
-
-            # away = [[ m[away[p][w]].as_long() for w in range(weeks) ] 
-            #             for p in range(periods) ]
 
             opt_stime = time.time()
             result, new_home, new_away, max_imb, opt = optimization(home, away, n_teams, timeout=int(300_000-sat_time))                              
@@ -790,16 +884,35 @@ if __name__ == "__main__":
             if result == sat:
                 m = opt.model()
                 print("Optimization result: SAT")
-                print("Maximum imbalance =", m[max_imb])
+                print("obj:", max_imb)
                 print("Optimization time: %.2f seconds\n" % (opt_etime - opt_stime))
+                print("Total time: %.2f seconds\n" % int((opt_etime - opt_stime) + sat_time))
+                print("optimal: True")
                 print("Optimized schedule:")
+                print("sol:")
                 print_solution_matrix(new_home, new_away)
             elif result == unknown:
                 print("Optimization TIMEOUT: solver exceeded time limit.")
+                print("Total time: 300 seconds\n")
+                print("optimal: False")
+                print("obj:", n_teams - 1)
+                print("sol:")
+                print_solution_matrix(home, away)
             else:
                 print("Optimization UNSAT.")
-
+        
+        else:
+            print("Total time: %.2f seconds\n" % int(sat_time))
+            print("optimal: True")
+            print("obj: None")  
     elif res == unknown:
         print("Z3 TIMEOUT: solver exceeded time limit.")
+        print("Total time: 300 seconds\n")
+        print("optimal: False")
+        print("obj: None") 
     else:
         print("Z3 reports UNSAT: schedule violates constraints.")
+        print("optimal: True")
+        print("Total time: %.2f seconds\n" % int(sat_time))
+        print("obj: None")
+

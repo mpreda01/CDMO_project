@@ -11,6 +11,8 @@ bool: symm_brake;
 % Implied constraint
 bool: ic_diff_match_in_week;
 bool: ic_diff_match_in_period;
+% Output type
+bool: output_matrix;
 
 % ================================================================
 % INPUT
@@ -181,19 +183,52 @@ satisfy;
 
 
 % OUTPUT per matrice della soluzione corretta in formato JSON
-output [
-  "[\n"
-] ++
-[
-  "  [" ++
-  concat([
-    "[" ++ show(home0[assign[p,w]]) ++ " , " ++ show(away0[assign[p,w]]) ++ "]" ++
-    (if w < n_weeks then " , " else "" endif)
-    | w in 1..n_weeks
-  ]) ++
-  "]" ++ (if p < n_periods then ",\n" else "\n" endif)
-  | p in 1..n_periods
-] ++
-[
-  "]\n"
-];
+
+% output [
+%   "[\n"
+% ] ++
+% [
+%   "  [" ++
+%   concat([
+%     "[" ++ show(home0[assign[p,w]]) ++ " , " ++ show(away0[assign[p,w]]) ++ "]" ++
+%     (if w < n_weeks then " , " else "" endif)
+%     | w in 1..n_weeks
+%   ]) ++
+%   "]" ++ (if p < n_periods then ",\n" else "\n" endif)
+%   | p in 1..n_periods
+% ] ++
+% [
+%   "]\n"
+% ]
+output
+  if output_matrix then
+      % --- OUTPUT 1: Matrice JSON ---
+      [
+        "[\n"
+      ] ++
+      [
+        "  [" ++
+        concat([
+          "[" ++ show(home0[assign[p,w]]) ++ " , " ++ show(away0[assign[p,w]]) ++ "]" ++
+          (if w < n_weeks then " , " else "" endif)
+          | w in 1..n_weeks
+        ]) ++
+        "]" ++ (if p < n_periods then ",\n" else "\n" endif)
+        | p in 1..n_periods
+      ] ++
+      [
+        "]\n"
+      ]
+
+  else
+      [
+        "home = [", 
+        concat([show(home0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
+                | p in 1..n_periods, w in 1..n_weeks]),
+        "]\n",
+        "away = [",
+        concat([show(away0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
+                | p in 1..n_periods, w in 1..n_weeks]),
+        "]\n"
+      ]
+  endif;
