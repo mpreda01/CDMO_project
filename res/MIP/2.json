@@ -1,0 +1,242 @@
+{
+  "cbc_dec": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "cbc_dec_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "cbc_dec_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "cbc_dec_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "highs_dec": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "highs_opt": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "highs_dec_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "highs_opt_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "highs_dec_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "highs_opt_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "highs_dec_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "highs_opt_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_dec": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_dec_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_dec_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_dec_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  }
+}

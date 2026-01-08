@@ -1,0 +1,898 @@
+{
+  "cvc5_dec": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 5], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 5], [2, 3], [4, 1], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[3, 2], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 3], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [3, 4], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [4, 3], [5, 1], [6, 2], [5, 6]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [4, 3], [5, 1], [6, 2], [6, 5]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [6, 5]], [[6, 4], [2, 3], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [1, 4], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [5, 6]], [[4, 6], [3, 2], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [4, 1], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 5], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 5], [2, 3], [4, 1], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[3, 2], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 3], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [3, 4], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [4, 3], [5, 1], [6, 2], [5, 6]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [4, 3], [5, 1], [6, 2], [6, 5]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sp1_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [6, 5]], [[6, 4], [2, 3], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [1, 4], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sp1_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [5, 6]], [[4, 6], [3, 2], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [4, 1], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 5], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 5], [2, 3], [4, 1], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[3, 2], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 3], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [3, 4], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [4, 3], [5, 1], [6, 2], [5, 6]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [4, 3], [5, 1], [6, 2], [6, 5]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [6, 5]], [[6, 4], [2, 3], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [1, 4], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [5, 6]], [[4, 6], [3, 2], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [4, 1], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 5], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 5], [2, 3], [4, 1], [6, 4], [5, 6]], [[4, 2], [6, 1], [5, 3], [2, 5], [3, 4]], [[3, 6], [5, 4], [6, 2], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[5, 1], [3, 2], [1, 4], [6, 4], [5, 6]], [[4, 2], [1, 6], [5, 3], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[5, 1], [2, 3], [4, 1], [6, 4], [6, 5]], [[4, 2], [1, 6], [3, 5], [5, 2], [3, 4]], [[3, 6], [5, 4], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[3, 2], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 3], [1, 5], [4, 1], [6, 4], [5, 6]], [[6, 1], [4, 2], [3, 5], [5, 2], [3, 4]], [[5, 4], [6, 3], [2, 6], [1, 3], [1, 2]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1_st1": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [3, 5]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [5, 2], [4, 3], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1_st1_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [5, 2], [3, 4], [5, 6], [6, 1]], [[6, 3], [4, 6], [1, 5], [3, 2], [2, 4]], [[4, 5], [1, 3], [2, 6], [1, 4], [5, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [4, 3], [5, 1], [6, 2], [5, 6]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1_st1_icm": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2, 1], [4, 3], [5, 1], [6, 2], [6, 5]], [[3, 5], [1, 6], [2, 4], [4, 5], [2, 3]], [[4, 6], [5, 2], [3, 6], [1, 3], [1, 4]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true
+    }
+  },
+  "cvc5_dec_sw1_sp1_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": null,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [6, 5]], [[6, 4], [2, 3], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [1, 4], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false
+    }
+  },
+  "cvc5_opt_sw1_sp1_st1_icm_icp": {
+    "time": 0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1, 2], [1, 6], [2, 5], [3, 4], [5, 6]], [[4, 6], [3, 2], [6, 3], [5, 1], [2, 4]], [[5, 3], [4, 5], [4, 1], [6, 2], [1, 3]]],
+    "flags": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true
+    }
+  }
+}

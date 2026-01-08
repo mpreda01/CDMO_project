@@ -1,0 +1,242 @@
+{
+  "cbc_dec": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_st1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_st1_sw1": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "symmetry_breaking": "None",
+    "optimal": false,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  }
+}

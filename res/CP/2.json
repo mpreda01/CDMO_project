@@ -1,0 +1,20 @@
+{
+  "chuffed_sw1_sp1_st1_icm_icp_usint_usrest_usrelax": {
+    "n": 2,
+    "params": {"sb_weeks": true, "sb_periods": true, "sb_teams": true, "ic_matches_per_team": true, "ic_period_count": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true},
+    "cp_success": true,
+    "cp_time": 1.13,
+    "cp_error": "",
+    "optimizer_success": true,
+    "optimizer_time": 0.51,
+    "optimizer_error": "",
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ],
+    "summary": ["Original Max Imbalance: 1", "Optimized Max Imbalance: 1", "Improvement: 0", "Total Swaps Made: 1"]
+  }
+}
