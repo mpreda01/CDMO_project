@@ -58,13 +58,19 @@ constraint
 % ---------------------------------------------------------------
 % 2) Constraint: each team can play AT MOST twice per period
 % ---------------------------------------------------------------
+% constraint
+%   forall(p in 1..n_periods, t in 1..n_teams)(
+%     sum(w in 1..n_weeks)(
+%       bool2int(
+%         home0[assign[p,w]] == t \/
+%         away0[assign[p,w]] == t
+%       )
+%     ) <= 2
+%   );
 constraint
   forall(p in 1..n_periods, t in 1..n_teams)(
-    sum(w in 1..n_weeks)(
-      bool2int(
-        home0[assign[p,w]] == t \/
-        away0[assign[p,w]] == t
-      )
+    count(w in 1..n_weeks)(
+      home0[assign[p,w]] == t \/ away0[assign[p,w]] == t
     ) <= 2
   );
   
