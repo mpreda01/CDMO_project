@@ -1,5 +1,4 @@
 include "globals.mzn";
-
 % Search strat
 bool: use_int_search; 
 bool: use_restart_luby;
@@ -10,9 +9,6 @@ bool: chuffed;
 bool: symm_brake;
 % Implied constraint
 bool: ic_diff_match_in_week;
-bool: ic_diff_match_in_period;
-% Output type
-bool: output_matrix;
 
 % ================================================================
 % INPUT
@@ -25,6 +21,12 @@ int: m = length(home0);
 int: n_teams;
 int: n_weeks = n_teams - 1;
 int: n_periods = n_teams div 2;
+
+% ================================================================
+% WEEK MAPPING (circle method standard)
+% Each block of n_weeks games corresponds to one period
+% game i belongs to week (i-1 mod n_weeks)+1
+% ================================================================
 
 function int: week_of(int: i) = ((i - 1) mod n_weeks) + 1;
 
@@ -43,8 +45,8 @@ array[1..n_periods, 1..n_weeks] of var 1..m: assign;
 % ================================================================
 
 % ---------------------------------------------------------------
-% 1) matches can't be changed but only swapped between periods
-%    in the same week
+% 1) Games in a week cannot change week,
+%    they can only be REORDERED among the periods of the same week
 % ---------------------------------------------------------------
 constraint
   forall(w in 1..n_weeks)(
@@ -54,7 +56,7 @@ constraint
 
 
 % ---------------------------------------------------------------
-% 2) Every team must play max 2 times per period 
+% 2) Constraint: each team can play AT MOST twice per period
 % ---------------------------------------------------------------
 constraint
   forall(p in 1..n_periods, t in 1..n_teams)(
@@ -70,25 +72,19 @@ constraint
 %  IMPLIED CONSTRAINT 
 % ================================================================
   
-% Different matches in every week
+% Also ensures that each period contains a different match (this is implied)
 constraint
 ic_diff_match_in_week ->
   forall(w in 1..n_weeks)(
     alldifferent([assign[p,w] | p in 1..n_periods])
   );
-
-% Different matches in every period 
-constraint
-ic_diff_match_in_period ->
-  forall(p in 1..n_periods)(
-    alldifferent([assign[p,w] | w in 1..n_weeks])
-  );
+  
   
 % ================================================================
 %  SYMMETRY BREAKING
 % ================================================================
 
-% 1a) lex ordering of periods 
+% 1) Lexicographic order between periods (rows) - I modified this as the last thing, if it doesn't work remove it
 constraint
 symm_brake -> (
 n_teams < 8 ->
@@ -100,7 +96,6 @@ n_teams < 8 ->
   )
 );
 
-% 1b) impose fixed period for the matches containing team = n_teams 
 constraint
 symm_brake -> (
 n_teams >= 8 ->
@@ -108,14 +103,13 @@ n_teams >= 8 ->
     let {
       int: p_target = ((w - 1) mod n_periods) + 1,
     } in     
-        % squadra n nel periodo target
+        % team n in target period
         (( home0[assign[p_target, w]] == n_teams \/
           away0[assign[p_target, w]] == n_teams ))
              
   )
 );
 
-% 1c) impose fixed period for the matches containing team = n_teams - 1 
 constraint
 symm_brake -> (
 n_teams >= 14 ->
@@ -124,7 +118,7 @@ n_teams >= 14 ->
       int: p_target = ((w - 1) mod n_periods) + 1,
       int: p_next   = (p_target mod n_periods) + 1
     } in
-        % squadra n-1 nel periodo successivo
+        % team n-1 in next period
         (w < n_weeks - 1 ->( home0[assign[p_next, w]] == n_teams - 1 \/
           away0[assign[p_next, w]] == n_teams - 1 ))
   )
@@ -169,21 +163,20 @@ satisfy;
 % ================================================================
 % OUTPUT
 % ================================================================
-% OUTPUT per vettori home away
-% output [
-%   "home = [", 
-%   concat([show(home0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
-%           | p in 1..n_periods, w in 1..n_weeks]),
-%   "]\n",
-%   "away = [",
-%   concat([show(away0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
-%           | p in 1..n_periods, w in 1..n_weeks]),
-%   "]\n"
-% ];
+% OUTPUT for home away vectors
+output [
+  "home = [", 
+  concat([show(home0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
+          | p in 1..n_periods, w in 1..n_weeks]),
+  "]\n",
+  "away = [",
+  concat([show(away0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
+          | p in 1..n_periods, w in 1..n_weeks]),
+  "]\n"
+];
 
 
-% OUTPUT per matrice della soluzione corretta in formato JSON
-
+% OUTPUT for correct solution matrix in JSON format
 % output [
 %   "[\n"
 % ] ++
@@ -199,36 +192,4 @@ satisfy;
 % ] ++
 % [
 %   "]\n"
-% ]
-output
-  if output_matrix then
-      % --- OUTPUT 1: Matrice JSON ---
-      [
-        "[\n"
-      ] ++
-      [
-        "  [" ++
-        concat([
-          "[" ++ show(home0[assign[p,w]]) ++ " , " ++ show(away0[assign[p,w]]) ++ "]" ++
-          (if w < n_weeks then " , " else "" endif)
-          | w in 1..n_weeks
-        ]) ++
-        "]" ++ (if p < n_periods then ",\n" else "\n" endif)
-        | p in 1..n_periods
-      ] ++
-      [
-        "]\n"
-      ]
-
-  else
-      [
-        "home = [", 
-        concat([show(home0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
-                | p in 1..n_periods, w in 1..n_weeks]),
-        "]\n",
-        "away = [",
-        concat([show(away0[assign[p,w]]) ++ (if (p-1)*n_weeks + w < n_periods*n_weeks then ", " else "" endif)
-                | p in 1..n_periods, w in 1..n_weeks]),
-        "]\n"
-      ]
-  endif;
+% ];

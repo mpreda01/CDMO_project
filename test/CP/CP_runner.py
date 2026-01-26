@@ -10,6 +10,7 @@ import time
 import tempfile
 import os
 import itertools
+import random
 from pathlib import Path
 import json
 import sys
@@ -22,7 +23,7 @@ class MinizincRunner:
         self.timeout_seconds = timeout_seconds
         self.n_values = [2, 4, 6, 8, 10, 12, 14, 16, 18]
         self.bool_params = [
-            'sb_weeks', 'sb_periods', 'sb_teams', 
+            'sb_weeks', 'sb_periods', 'sb_teams', 'sb_week1_fixed',
             'ic_matches_per_team', 'ic_period_count',
             'use_int_search', 'use_restart_luby', 
             'use_relax_and_reconstruct', 'chuffed'
@@ -108,7 +109,7 @@ class MinizincRunner:
         try:
             start_time = time.time()
             process = subprocess.Popen(
-                [self.minizinc_path, '--solver', 'Gecode', model_file, data_file],
+                [self.minizinc_path, '--solver', 'Gecode', '-r', '42', model_file, data_file],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True
@@ -217,17 +218,20 @@ class MinizincRunner:
             print(f"Error while parsing optimized solution matrix: {e}")
             return None, None
     
-    def run_pipeline(self, n: int, params: Dict[str, bool]) -> Dict:
-        """Run the complete pipeline: CP_3.0.mzn -> optimizer_2.0.mzn"""
+    def run_pipeline(self, n: int, params: Dict[str, bool], use_optimizer: bool = True) -> Dict:
+        """Run the complete pipeline: CP_3.0.mzn with optional optimizer_2.0.mzn"""
+        # Add circle and optimized parameters (always False and use_optimizer for CP_runner.py)
+        params_with_circle = params.copy()
+        params_with_circle['circle'] = False
+        params_with_circle['optimized'] = use_optimizer
+        
         result = {
             'n': n,
-            'params': params,
+            'params': params_with_circle,
             'cp_success': False,
             'cp_time': 0,
-            'cp_error': '',
             'optimizer_success': False,
             'optimizer_time': 0,
-            'optimizer_error': '',
             'time': 0,
             'timeout_reached': False,
             'optimal': False,
@@ -247,14 +251,13 @@ class MinizincRunner:
         if 'UNSATISFIABLE' in cp_output:
             result.update({
             'cp_success': False,
-            'cp_time': round(cp_time, 2),
-            'cp_error': cp_error
+            'cp_time': round(cp_time, 2)
             })
 
             result.update({
             'optimizer_success': False,
             'optimizer_time': 0,
-            'optimal': False,
+            'optimal': True if not use_optimizer else False,
             'time': int(cp_time)
             })
 
@@ -265,14 +268,13 @@ class MinizincRunner:
         else:
             result.update({
                 'cp_success': cp_success,
-                'cp_time': round(cp_time, 2),
-                'cp_error': cp_error
+                'cp_time': round(cp_time, 2)
             })
         
         if not cp_success:
             print(f"CP_3.0.mzn failed: {cp_error}")
             result['time'] = cp_time
-            result['opt'] = False
+            result['optimal'] = True if not use_optimizer else False
             remaining_time -= cp_time
             if remaining_time <= 0:
                 print(f"Timeout reached after CP_3.0.mzn")
@@ -286,13 +288,32 @@ class MinizincRunner:
             print(f"Timeout reached after CP_3.0.mzn")
             result['timeout_reached'] = True
             result['time'] = self.timeout_seconds
+            # If not using optimizer, CP solution is still valid
+            if not use_optimizer:
+                cp_solution = self.convert_cp_output_to_matrix(cp_output, n)
+                result['optimal'] = True
+                result['obj'] = "None"
+                result['sol'] = cp_solution if cp_solution else []
+            return result
+        
+        # If not using optimizer, convert CP output to solution and return
+        if not use_optimizer:
+            print("Optimizer disabled, converting CP solution to matrix format...")
+            cp_solution = self.convert_cp_output_to_matrix(cp_output, n)
+            result.update({
+                'optimizer_success': False,
+                'optimizer_time': 0,
+                'obj': "None",
+                'optimal': True,
+                'sol': cp_solution if cp_solution else [],
+                'time': int(cp_time)
+            })
             return result
             
         # Step 2: Extract data for optimizer
         optimizer_data = self.extract_optimizer_data(cp_output)
         if not optimizer_data:
             print("Failed to extract optimizer data from CP_3.0.mzn output")
-            result['optimizer_error'] = "Failed to extract optimizer data"
             result['time'] = cp_time
             return result
             
@@ -311,11 +332,9 @@ class MinizincRunner:
             result.update({
                 'optimizer_success': False,
                 'optimizer_time': round(opt_time, 2),
-                'summary': ["Optimizer failed or timed out"],
                 'obj': None,
                 'optimal': False,
                 'sol': cp_solution if cp_solution else "Failed to parse CP output",
-                'optimizer_error': opt_error,
                 'time': int(cp_time + opt_time)
             })
             
@@ -338,22 +357,18 @@ class MinizincRunner:
             result.update({
                 'optimizer_success': opt_success,
                 'optimizer_time': round(opt_time, 2),
-                'summary': summary,
                 'obj': value,
                 'optimal': True,
                 'sol': sol,
-                'optimizer_error': opt_error,
                 'time': int(cp_time + opt_time)
             })
         else:
             result.update({
                 'optimizer_success': opt_success,
                 'optimizer_time': round(opt_time, 2),
-                'summary': summary,
                 'obj': value,
                 'optimal': False,
                 'sol': sol,
-                'optimizer_error': opt_error,
                 'time': int(cp_time + opt_time)
             })
         
@@ -366,6 +381,18 @@ class MinizincRunner:
     def get_user_input(self) -> Tuple[List[int], Dict[str, bool]]:
         """Get user input for parameters"""
         print("=== MiniZinc Tournament Scheduler Runner ===\n")
+        
+        # Ask about optimization
+        use_opt_input = input("Use optimizer_2.0.mzn for optimization? (yes/no/both, default: yes): ").strip().lower()
+        if use_opt_input in ['both', 'b', 'all']:
+            optimizer_modes = [True, False]  # Both with and without optimization
+            print(f"Optimizer modes: both with and without optimization\n")
+        elif use_opt_input in ['no', 'n', 'false', 'f', '0', 'without']:
+            optimizer_modes = [False]  # Only without optimization
+            print(f"Optimizer modes: without optimization\n")
+        else:
+            optimizer_modes = [True]  # Only with optimization (default)
+            print(f"Optimizer modes: with optimization\n")
         
         # Get n values
         print("Available n values:", self.n_values)
@@ -401,70 +428,159 @@ class MinizincRunner:
                         break
                     else:
                         print("Please enter true/false")
-            return selected_n, {'manual': params}
+            return selected_n, {'manual': params, 'optimizer_modes': optimizer_modes}
         else:
-            return selected_n, {'all_combinations': True}
+            return selected_n, {'all_combinations': True, 'optimizer_modes': optimizer_modes}
+    
+    def config_exists_in_json(self, n: int, params: Dict[str, bool]) -> bool:
+        """Check if a parameter configuration already exists in the JSON file for given n"""
+        output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'CP'))
+        filename = os.path.join(output_dir, f"{n}.json")
+        
+        if not os.path.exists(filename):
+            return False
+        
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
             
-    def run_all_combinations(self, selected_n: List[int]) -> List[Dict]:
+            # Check each existing result
+            for timestamp, result in existing_data.items():
+                if 'params' in result:
+                    existing_params = result['params']
+                    # Compare only the boolean strategy parameters (exclude 'circle' and 'optimized')
+                    match = True
+                    for key, value in params.items():
+                        if key not in ['circle', 'optimized']:
+                            if existing_params.get(key) != value:
+                                match = False
+                                break
+                    
+                    # Also check that 'circle' and 'optimized' match if they exist
+                    if match:
+                        if existing_params.get('circle') != params.get('circle'):
+                            match = False
+                        if existing_params.get('optimized') != params.get('optimized'):
+                            match = False
+                    
+                    if match:
+                        return True
+            
+            return False
+            
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"Warning: Could not read {filename}: {e}")
+            return False
+            
+    def run_all_combinations(self, selected_n: List[int], optimizer_modes: List[bool] = None) -> List[Dict]:
         """Run all possible combinations of boolean parameters"""
         results = []
         
+        if optimizer_modes is None:
+            optimizer_modes = [True]  # Default for backward compatibility
+        
         # Generate all combinations of boolean values
         bool_combinations = list(itertools.product([True, False], repeat=len(self.bool_params)))
-        total_runs = len(selected_n) * len(bool_combinations)
+        total_runs = len(selected_n) * len(bool_combinations) * len(optimizer_modes)
         
         print(f"\nRunning {total_runs} total combinations...")
+        print(f"Optimizer modes: {['with optimization' if m else 'without optimization' for m in optimizer_modes]}")
         print(f"Timeout per combination: {self.timeout_seconds} seconds\n")
         
         run_count = 0
+        skipped_count = 0
         for n in selected_n:
-            for combo in bool_combinations:
-                run_count += 1
-                params = dict(zip(self.bool_params, combo))
-                
-                print(f"[{run_count}/{total_runs}] n={n}, params={params}")
-                
-                result = self.run_pipeline(n, params)
-                self.save_results([result])
-                #results.append(result)
-                
-                # Print summary
-                if result['cp_success'] and result['optimizer_success']:
-                    print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
-                elif result['timeout_reached']:
-                    print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
-                else:
-                    print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
-                          f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
-                
-                print("-" * 60)
+            for use_optimizer in optimizer_modes:
+                for combo in bool_combinations:
+                    run_count += 1
+                    params = dict(zip(self.bool_params, combo))
+                    
+                    # Add circle and optimized to params for comparison
+                    params_with_meta = params.copy()
+                    params_with_meta['circle'] = False
+                    params_with_meta['optimized'] = use_optimizer
+                    
+                    # Check if this configuration already exists
+                    if self.config_exists_in_json(n, params_with_meta):
+                        skipped_count += 1
+                        print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer}, params={params} - SKIPPED (already exists)")
+                        print("-" * 60)
+                        continue
+                    
+                    print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer}, params={params}")
+                    
+                    result = self.run_pipeline(n, params, use_optimizer)
+                    self.save_results([result])
+                    #results.append(result)
+                    
+                    # Print summary based on optimizer usage
+                    if use_optimizer:
+                        # Check both CP and optimizer success
+                        if result['cp_success'] and result['optimizer_success']:
+                            print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                        elif result['timeout_reached']:
+                            print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                        else:
+                            print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
+                                  f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
+                    else:
+                        # Only check CP success when not using optimizer
+                        if result['cp_success']:
+                            print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                        elif result['timeout_reached']:
+                            print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                        else:
+                            print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
+                    
+                    print("-" * 60)
+        
+        if skipped_count > 0:
+            print(f"\n⚠ Skipped {skipped_count} configurations that already exist in JSON files")
                 
         #return results
         
-    def run_manual(self, selected_n: List[int], params: Dict[str, bool]) -> List[Dict]:
+    def run_manual(self, selected_n: List[int], params: Dict[str, bool], optimizer_modes: List[bool] = None) -> List[Dict]:
         """Run with manually specified parameters"""
         results = []
         
-        print(f"\nRunning {len(selected_n)} configurations...")
+        if optimizer_modes is None:
+            optimizer_modes = [True]
+        
+        total_runs = len(selected_n) * len(optimizer_modes)
+        print(f"\nRunning {total_runs} configurations...")
         print(f"Parameters: {params}")
+        print(f"Optimizer modes: {['with optimization' if m else 'without optimization' for m in optimizer_modes]}")
         print(f"Timeout per run: {self.timeout_seconds} seconds\n")
         
-        for i, n in enumerate(selected_n, 1):
-            print(f"[{i}/{len(selected_n)}] Running n={n}")
-            
-            result = self.run_pipeline(n, params)
-            results.append(result)
-            
-            # Print summary
-            if result['cp_success'] and result['optimizer_success']:
-                print(f"SUCCESS - Total time: {result['time']:.2f}s")
-            elif result['timeout_reached']:
-                print(f"TIMEOUT - Reached {self.timeout_seconds}s limit")
-            else:
-                print(f"FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
-                      f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
-                      
-            print("-" * 60)
+        run_count = 0
+        for n in selected_n:
+            for use_optimizer in optimizer_modes:
+                run_count += 1
+                print(f"[{run_count}/{total_runs}] Running n={n}, opt={use_optimizer}")
+                
+                result = self.run_pipeline(n, params, use_optimizer)
+                results.append(result)
+                
+                # Print summary based on optimizer usage
+                if use_optimizer:
+                    # Check both CP and optimizer success
+                    if result['cp_success'] and result['optimizer_success']:
+                        print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                    elif result['timeout_reached']:
+                        print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                    else:
+                        print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
+                              f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
+                else:
+                    # Only check CP success when not using optimizer
+                    if result['cp_success']:
+                        print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                    elif result['timeout_reached']:
+                        print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                    else:
+                        print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
+                          
+                print("-" * 60)
             
         return results
 
@@ -580,9 +696,11 @@ class MinizincRunner:
             selected_n, config = self.get_user_input()
             
             if 'manual' in config:
-                results = self.run_manual(selected_n, config['manual'])
+                optimizer_modes = config.get('optimizer_modes', [True])
+                results = self.run_manual(selected_n, config['manual'], optimizer_modes)
             else:
-                results = self.run_all_combinations(selected_n)
+                optimizer_modes = config.get('optimizer_modes', [True])
+                results = self.run_all_combinations(selected_n, optimizer_modes)
                 
             self.print_summary(results)
             
@@ -597,5 +715,8 @@ class MinizincRunner:
             sys.exit(1)
 
 if __name__ == "__main__":
+    # Set random seed for reproducibility
+    random.seed(42)
+    
     runner = MinizincRunner(timeout_seconds=300)
     runner.run()
