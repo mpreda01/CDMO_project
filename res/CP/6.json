@@ -1,0 +1,2178 @@
+{
+  "1769471672.9837263": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471673.7161431": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": true,
+    "optimizer_time": 0.33,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471674.5106785": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471675.294931": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471676.1029792": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": true,
+    "optimizer_time": 0.42,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471676.8513672": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471677.6492562": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471678.5861583": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.49,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471679.431725": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.42,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471680.2558725": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471681.162251": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.48,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471681.8921788": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471682.7898967": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.46,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471683.559433": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471684.368774": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471685.1988626": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471686.0141149": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471686.934934": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.46,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471687.720456": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471688.7334466": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.41,
+    "optimizer_success": true,
+    "optimizer_time": 0.55,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471689.5644765": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471690.3859708": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471691.60554": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.72,
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471692.429237": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471693.3112657": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471694.1369457": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471695.0706627": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.5,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471695.8845558": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471696.7827487": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471697.718442": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.52,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471698.6064568": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.44,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471699.4407647": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471700.3028576": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.43,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471701.0383644": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": true,
+    "optimizer_time": 0.33,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471701.8555322": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471702.673869": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471703.4812458": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471704.4087112": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.43,
+    "optimizer_success": true,
+    "optimizer_time": 0.44,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471705.2916927": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.44,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471706.1432264": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471707.1155043": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.53,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471708.0060399": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.42,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471708.8121362": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471709.5979435": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471710.5005631": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.46,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471711.320876": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471712.0839295": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471712.8925395": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471713.6233144": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471714.4086435": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471715.198074": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471716.1704848": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.55,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471716.9936304": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471717.7582965": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.33,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471718.6373105": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471719.4223197": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471720.243859": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471721.082547": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [6, 3], [2, 1], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [4, 6], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471721.8124": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471722.590841": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [1, 2], [3, 2]],
+      [[4, 3], [2, 6], [5, 1], [3, 5], [4, 1]],
+      [[2, 5], [3, 1], [2, 4], [6, 4], [5, 6]]
+    ]
+  },
+  "1769471723.3890529": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471724.1759775": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [5, 4], [3, 6], [2, 1], [3, 2]],
+      [[2, 5], [1, 3], [4, 2], [6, 4], [6, 5]],
+      [[4, 3], [6, 2], [5, 1], [5, 3], [4, 1]]
+    ]
+  },
+  "1769471724.946912": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471725.7486818": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [4, 5], [6, 3], [2, 1], [3, 2]],
+      [[3, 4], [2, 6], [5, 1], [5, 3], [4, 1]],
+      [[5, 2], [1, 3], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471726.263439": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.45,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471726.6891003": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471727.1449025": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471727.5668943": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471728.0240564": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471728.4448824": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471728.8489506": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471729.25112": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.33,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471729.7334323": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.42,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471730.1292048": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471730.5328035": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471730.9495423": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471731.3549314": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471731.7885318": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471732.2028208": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471732.6002948": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471732.9826953": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471733.3893812": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471733.8364863": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471734.2400525": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471734.672642": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471735.0607517": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471735.462287": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471735.9012268": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471736.3566198": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471736.8425548": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.42,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471737.2568235": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471737.7049782": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471738.1039007": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471738.5488613": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471739.00533": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471739.4568598": {
+    "n": 6,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471739.8741183": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471740.2946312": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471740.68242": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.33,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471741.097909": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471741.5102234": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471741.8903496": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471742.3204603": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471742.7527516": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471743.1604533": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471743.6193535": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471744.0175529": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471744.4319978": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471744.857098": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471745.318568": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471745.7484608": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471746.1722362": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471746.5935776": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471746.9928217": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.33,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471747.3620234": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471747.781716": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471748.248448": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471748.7909353": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.47,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471749.240947": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471749.7210877": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.41,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471750.1412537": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.35,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471750.531272": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471750.9822643": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471751.380275": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471751.8076777": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471752.1994169": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]]
+    ]
+  },
+  "1769471752.6020296": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.33,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  },
+  "1769471753.0612407": {
+    "n": 6,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[6, 1], [4, 5], [6, 3], [1, 2], [2, 3]],
+      [[3, 4], [6, 2], [5, 1], [5, 3], [1, 4]],
+      [[2, 5], [3, 1], [4, 2], [6, 4], [6, 5]]
+    ]
+  }
+}

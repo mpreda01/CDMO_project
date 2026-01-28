@@ -16,6 +16,42 @@ import itertools
 import json
 import time
 from collections import defaultdict
+import psutil
+
+
+def kill_process_tree(process):
+    """Kill a process and all its child processes (like fzn-gecode.exe)"""
+    try:
+        parent = psutil.Process(process.pid)
+        children = parent.children(recursive=True)
+        
+        # Terminate children first
+        for child in children:
+            try:
+                child.terminate()
+            except psutil.NoSuchProcess:
+                pass
+        
+        # Terminate parent
+        try:
+            parent.terminate()
+        except psutil.NoSuchProcess:
+            pass
+        
+        # Wait for termination
+        gone, alive = psutil.wait_procs(children + [parent], timeout=3)
+        
+        # Force kill if still alive
+        for p in alive:
+            try:
+                p.kill()
+            except psutil.NoSuchProcess:
+                pass
+                
+    except psutil.NoSuchProcess:
+        pass
+    except Exception as e:
+        print(f"Warning: Error killing process tree: {e}")
 
 
 def circle_method(n: int) -> Tuple[List[int], List[int]]:
@@ -201,6 +237,9 @@ def run_n20_optimizer(n: int,
                 n20_time = time.time() - start_time
                 n20_output = stdout
                 
+                # Kill any remaining child processes
+                kill_process_tree(process)
+                
                 if stdout:
                     print(stdout)
                 
@@ -213,7 +252,7 @@ def run_n20_optimizer(n: int,
                 
             except subprocess.TimeoutExpired:
                 print(f"⚠ Timeout reached ({timeout}s), terminating n20 process...")
-                process.terminate()
+                kill_process_tree(process)
                 
                 try:
                     process.wait(timeout=5)
@@ -388,6 +427,9 @@ def run_n20_optimizer(n: int,
                 stdout, stderr = opt_process.communicate(timeout=int(remaining_time))
                 opt_time = time.time() - start_time - n20_time
                 
+                # Kill any remaining child processes
+                kill_process_tree(opt_process)
+                
                 if stdout:
                     print(stdout)
                 
@@ -400,7 +442,7 @@ def run_n20_optimizer(n: int,
                 
             except subprocess.TimeoutExpired:
                 print(f"⚠ Optimizer timeout reached, terminating process...")
-                opt_process.terminate()
+                kill_process_tree(opt_process)
                 
                 try:
                     opt_process.wait(timeout=5)
@@ -461,6 +503,9 @@ def run_n20_optimizer(n: int,
                 return parse_output_to_result(n, params, n20_output, total_time, n20_time, opt_time, True, False, use_optimizer=use_optimizer)
             return True, n20_output
         finally:
+            # Ensure process tree is killed
+            if opt_process is not None:
+                kill_process_tree(opt_process)
             try:
                 os.unlink(opt_dzn_file)
             except:
@@ -494,6 +539,9 @@ def run_n20_optimizer(n: int,
             }
         return False, str(e)
     finally:
+        # Ensure process tree is killed
+        if process is not None:
+            kill_process_tree(process)
         os.unlink(dzn_file)
 
 

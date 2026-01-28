@@ -1,0 +1,1922 @@
+{
+  "1769471554.999033": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.42,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471555.6928134": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.31,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471556.3849423": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471557.0968564": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471557.8419108": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.41,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471558.668665": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.41,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471559.3466735": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.33,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471560.0835228": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471560.849932": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471561.5269513": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471562.1857052": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.31,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471562.880701": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471563.663588": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471564.42277": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471565.1796787": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471565.8881688": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471566.5301468": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471567.1473503": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471567.8376732": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471568.5296278": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471569.3192055": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471570.06696": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471570.7938836": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471571.4291737": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471572.0901487": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471572.7207634": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471573.3544257": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471573.9883049": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471574.6863077": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471575.4494207": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.42,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471576.0670567": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471576.7066996": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471577.3375697": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471578.1170924": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471578.8416617": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471579.541176": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.33,
+    "optimizer_success": true,
+    "optimizer_time": 0.31,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471580.1718352": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471580.9341722": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471581.753625": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471582.4875195": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471583.2397363": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.33,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471583.9112794": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471584.530833": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471585.1854074": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.33,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471585.9401298": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471586.6759746": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471587.3061385": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471588.000086": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471588.7145824": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471589.3907273": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471590.0336678": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471590.7009506": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471591.34594": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471592.1477196": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.34,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471592.8298638": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471593.5162585": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.33,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471594.1453686": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471594.827984": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471595.446481": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471596.1194756": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471596.8237221": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471597.629433": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471598.294514": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.34,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471598.9779716": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": true},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471599.311073": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471599.6368084": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471599.972663": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471600.3038075": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471600.645424": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471601.0035813": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471601.3599818": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471601.6834774": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471602.0056438": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471602.3322399": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471602.6641984": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471602.9831853": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471603.3819609": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.33,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471603.7372024": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471604.0631378": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471604.4095452": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471604.7540665": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471605.1220682": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471605.470866": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471605.8355608": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471606.1841795": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471606.5208538": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471606.8663156": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471607.2146637": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471607.54776": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471607.904487": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471608.2382917": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471608.5939615": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471608.989959": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471609.3175666": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471609.639615": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471610.096857": {
+    "n": 2,
+    "params": {"use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471610.4565468": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471610.8987415": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471611.2541528": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471611.7167928": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.4,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471612.0450602": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471612.403543": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471612.838932": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471613.1767192": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471613.5151637": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471613.8845851": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471614.247943": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.3,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471614.56801": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471614.9056098": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471615.3091397": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471615.6443899": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471615.9807637": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471616.339704": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471616.659189": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471617.0069366": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471617.4439468": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471617.7985165": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471618.1522636": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471618.4604647": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471618.8044572": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471619.115013": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471619.433886": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471619.7652688": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471620.11407": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471620.4543638": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471620.8492155": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": true, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471621.1897762": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": true, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769471621.5421515": {
+    "n": 2,
+    "params": {"use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "symm_brake": false, "ic_diff_match_in_week": false, "circle": true, "optimized": false},
+    "n20_success": true,
+    "n20_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[2, 1]]
+    ]
+  }
+}
