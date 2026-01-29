@@ -365,7 +365,11 @@ def z3_permutation_constraint_cvc5(original_schedule,
     for p in range(periods):
         for t in range(1, n_teams+1):
             occ_terms = [ If(pos[(t, w)] == p, IntVal(1), IntVal(0)) for w in range(weeks) ]
-            s.add(Sum(occ_terms) <= 2)
+            # Avoid Sum with single element for SMT-LIB2 compatibility
+            if len(occ_terms) == 1:
+                s.add(occ_terms[0] <= 2)
+            else:
+                s.add(Sum(occ_terms) <= 2)
 
     # ------------------------
     # IMPLIED CONSTRAINTS
@@ -375,15 +379,27 @@ def z3_permutation_constraint_cvc5(original_schedule,
         home_count = { (t, p): Int(f"count_{t}_{p}") for t in range(1, n_teams+1) for p in range(periods) }
         for t in range(1, n_teams+1):
             for p in range(periods):
-                expr = Sum([ If(pos[(t, w)] == p, IntVal(1), IntVal(0)) for w in range(weeks) ])
+                terms = [ If(pos[(t, w)] == p, IntVal(1), IntVal(0)) for w in range(weeks) ]
+                # Avoid Sum with single element for SMT-LIB2 compatibility
+                if len(terms) == 1:
+                    expr = terms[0]
+                else:
+                    expr = Sum(terms)
                 s.add(home_count[(t, p)] == expr)
                 s.add(home_count[(t, p)] >= 0, home_count[(t, p)] <= weeks)
 
         for t in range(1, n_teams+1):
-            s.add(Sum([ home_count[(t, p)] for p in range(periods) ]) == weeks)
+            terms = [ home_count[(t, p)] for p in range(periods) ]
+            if len(terms) == 1:
+                s.add(terms[0] == weeks)
+            else:
+                s.add(Sum(terms) == weeks)
 
-        sum_all = Sum([ home_count[(t, p)] for t in range(1, n_teams+1) for p in range(periods) ])
-        s.add(sum_all == 2 * total_matches)
+        all_terms = [ home_count[(t, p)] for t in range(1, n_teams+1) for p in range(periods) ]
+        if len(all_terms) == 1:
+            s.add(all_terms[0] == 2 * total_matches)
+        else:
+            s.add(Sum(all_terms) == 2 * total_matches)
     
 
 
@@ -429,7 +445,14 @@ def z3_permutation_constraint_cvc5(original_schedule,
     with open(smt2_path, 'w') as f:
         f.write(smt2_string)
 
-    cvc5_bin = os.environ.get("CVC5_BIN", "./cvc5/bin/cvc5")
+    # Determine cvc5 binary path based on OS
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    if os.name == 'nt':  # Windows
+        cvc5_default = os.path.join(script_dir, "cvc5", "bin", "cvc5.exe")
+    else:  # Linux/Mac
+        cvc5_default = os.path.join(script_dir, "cvc5", "bin", "cvc5")
+    
+    cvc5_bin = os.environ.get("CVC5_BIN", cvc5_default)
     cmd = [cvc5_bin, "--lang", "smt2", "--produce-models", smt2_path]
 
     timeout_sec = timeout_ms / 1000.0
@@ -866,12 +889,16 @@ if __name__ == "__main__":
 
     print(f"{solver_choice.upper()} result:", res)
 
-    if res == sat:
+    # Handle both Z3 constants (sat, unknown) and cvc5 strings ("sat", "unsat", unknown)
+    is_sat = (res == sat) or (res == "sat")
+    is_unknown = (res == unknown) or (res == "unknown")
+    is_unsat = (res == "unsat") or (hasattr(res, '__name__') and res.__name__ == 'unsat')
+
+    if is_sat:
         print("Schedule satisfies STS constraints.\n")
         print("Satisfiability check time: %.2f seconds\n" % int(sat_time))
-        print("sol:")
-        print_solution_matrix(home, away)
-
+        print("solve_time:", round(sat_time, 2))
+        
         # --- 9) Se richiesto, esegui la fase di ottimizzazione ---
         if mode == "opt":
             print("\nRunning optimization...")
@@ -880,19 +907,22 @@ if __name__ == "__main__":
             opt_stime = time.time()
             result, new_home, new_away, max_imb, opt = optimization(home, away, n_teams, timeout=int(300_000-sat_time))                              
             opt_etime = time.time()
+            opt_time = round(opt_etime - opt_stime, 2)
 
             if result == sat:
                 m = opt.model()
                 print("Optimization result: SAT")
                 print("obj:", max_imb)
-                print("Optimization time: %.2f seconds\n" % (opt_etime - opt_stime))
-                print("Total time: %.2f seconds\n" % int((opt_etime - opt_stime) + sat_time))
+                print("Optimization time: %.2f seconds\n" % opt_time)
+                print("optimize_time:", opt_time)
+                print("Total time: %.2f seconds\n" % int(opt_time + sat_time))
                 print("optimal: True")
                 print("Optimized schedule:")
                 print("sol:")
                 print_solution_matrix(new_home, new_away)
             elif result == unknown:
                 print("Optimization TIMEOUT: solver exceeded time limit.")
+                print("optimize_time:", opt_time)
                 print("Total time: 300 seconds\n")
                 print("optimal: False")
                 print("obj:", n_teams - 1)
@@ -900,19 +930,29 @@ if __name__ == "__main__":
                 print_solution_matrix(home, away)
             else:
                 print("Optimization UNSAT.")
+                print("optimize_time:", opt_time)
         
         else:
+            print("optimize_time: 0")
             print("Total time: %.2f seconds\n" % int(sat_time))
             print("optimal: True")
-            print("obj: None")  
-    elif res == unknown:
-        print("Z3 TIMEOUT: solver exceeded time limit.")
+            print("obj: None")
+            print("sol:")
+            print_solution_matrix(home, away)  
+    elif is_unknown:
+        print("SOLVER TIMEOUT: solver exceeded time limit.")
+        print("solve_time:", 300.0)
+        print("optimize_time: 0")
         print("Total time: 300 seconds\n")
         print("optimal: False")
-        print("obj: None") 
+        print("obj: None")
+        print("sol: []")
     else:
-        print("Z3 reports UNSAT: schedule violates constraints.")
+        print("SOLVER reports UNSAT: schedule violates constraints.")
+        print("solve_time:", round(sat_time, 2))
+        print("optimize_time: 0")
         print("optimal: True")
         print("Total time: %.2f seconds\n" % int(sat_time))
         print("obj: None")
+        print("sol: []")
 

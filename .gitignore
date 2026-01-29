@@ -5,3 +5,5 @@ source/SMT/__pycache__/
 source/SAT/__pycache__/
 source/SMT/smt/
 source/SMT/cvc5/
+test/SMT/__pycache__/
+test/SMT/sts_stsmodel.smt2

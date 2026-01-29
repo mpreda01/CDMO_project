@@ -1,4 +1,6 @@
-
+% Sports Tournament Scheduling (STS) Problem
+% Hybrid solution combining CP_2.9.mzn structure with sts.mzn constraints
+% Optimized for large instances (n >= 14) with configurable features
 
 include "globals.mzn";
 
@@ -10,26 +12,22 @@ include "globals.mzn";
 int: n;
 constraint n mod 2 = 0;
 
-
+% Derived parameters
 int: n_weeks = n - 1;
 int: n_periods = n div 2;
 int: n_games = (n * (n - 1)) div 2;
 
-% Configuration flags 
+% Configuration flags (can be set in data file)
 % Symmetry breaking constraint
-bool: sb_weeks;
-bool: sb_periods;  
-bool: sb_teams;
-bool: sb_week1_fixed;
+bool: symmetry_break;
 % Implied constraint
-bool: ic_matches_per_team;
-bool: ic_period_count;
+bool: implied_constraint;
 % Search strat
-bool: use_int_search; 
+bool: use_int_search;  % Let solver decide by default
 bool: use_restart_luby;
 bool: use_relax_and_reconstruct;
 % Solver
-bool: chuffed;  
+bool: chuffed;  % Set to true if using Chuffed solver
 
 % Sets for indexing
 set of int: Teams = 1..n;
@@ -37,15 +35,15 @@ set of int: Weeks = 1..n_weeks;
 set of int: Periods = 1..n_periods;
 
 % ==========================================
-% DECISION VARIABLES 
+% DECISION VARIABLES (CP_2.9 structure)
 % ==========================================
 
-% Main decision variables: 
+% Main decision variables: [Periods, Weeks] structure from CP_2.9
 array[Periods, Weeks] of var Teams: home;
 array[Periods, Weeks] of var Teams: away;
 
 % ==========================================
-% AUXILIARY VARIABLES 
+% AUXILIARY VARIABLES (from sts.mzn)
 % ==========================================
 
 % Period count variables
@@ -56,28 +54,27 @@ set of int: Count = 0..n-1;
 array[Teams] of var Count: home_count;
 array[Teams] of var Count: away_count;
 
-% Auxiliary variable for team period tracking 
+% Auxiliary variable for team period tracking (from CP_2.9)
 array[Teams, Weeks] of var 0..n_periods: team_period;
 
 % ==========================================
-% CORE CONSTRAINTS 
+% CORE CONSTRAINTS (adapted from sts.mzn)
 % ==========================================
 
-% CONSTRAINT 1: Each pair plays exactly once
+% CONSTRAINT 1: Each pair plays exactly once using count
 constraint
   forall(i, j in Teams where i < j)(
-    sum(p in Periods, w in Weeks) (
-      bool2int((home[p,w] = i /\ away[p,w] = j) \/ (home[p,w] = j /\ away[p,w] = i))
-    ) = 1
+    count([bool2int(home[p,w] = i /\ away[p,w] = j) | p in Periods, w in Weeks], 1) +
+    count([bool2int(home[p,w] = j /\ away[p,w] = i) | p in Periods, w in Weeks], 1) = 1
   );
 
-% CONSTRAINT 2: Each team plays once per week 
+% CONSTRAINT 2: Each team plays once per week (all different constraint)
 constraint
   forall(w in Weeks)(
     all_different([home[p,w] | p in Periods] ++ [away[p,w] | p in Periods])
   );
 
-% CONSTRAINT 3: Period limit using global_cardinality 
+% CONSTRAINT 3: Period limit using global_cardinality (from sts.mzn)
 constraint
   forall(p in Periods)(
     global_cardinality(
@@ -103,28 +100,31 @@ constraint
     [away_count[t] | t in Teams]
   );
 
+% ==========================================
+% STRUCTURAL CONSTRAINTS
+% ==========================================
 
-% No team plays against itself
+% No team plays against itself - use alldifferent_except_0 pattern
 constraint forall(p in Periods, w in Weeks) (
     home[p,w] != away[p,w]
 );
 
 % ==========================================
-% CONDITIONAL IMPLIED CONSTRAINTS 
+% CONDITIONAL IMPLIED CONSTRAINTS (from sts.mzn)
 % ==========================================
 
 % Total matches per team
 constraint
-  ic_matches_per_team ->
+  implied_constraint ->
   forall(t in Teams)(
     home_count[t] + away_count[t] = n - 1
   );
 
-% Total period appearances per team
+% Total period appearances per team using count
 constraint 
-  ic_period_count ->
+  implied_constraint ->
   forall(t in Teams) (
-    sum(p in Periods) (period_count[t,p]) = n - 1
+    count([period_count[t,p] | p in Periods], 0) <= 1
   );
 
 % ==========================================
@@ -136,9 +136,9 @@ constraint forall(p in Periods, w in Weeks) (
     home[p,w] < away[p,w]
 );
 
-% Week lex ordering symmetry breaking (conditional)
+% Week ordering symmetry breaking (conditional)
 constraint 
-  sb_weeks ->
+  symmetry_break ->
   forall(w in 1..n_weeks-1)(
     lex_lesseq(
       [home[p,w] | p in Periods],
@@ -146,9 +146,9 @@ constraint
     )
   );
 
-% Period lex ordering symmetry breaking (conditional)
+% Period ordering symmetry breaking (conditional)
 constraint 
-  sb_periods ->
+  symmetry_break ->
   forall(p in 1..n_periods-1)(
     lex_lesseq(
       [home[p,w] | w in Weeks] ++ [away[p,w] | w in Weeks],
@@ -158,7 +158,7 @@ constraint
 
 % Team ordering in first week (conditional)
 constraint
-  sb_week1_fixed ->
+  symmetry_break ->
   forall(p in Periods) (
     home[p,1] = p /\ 
     away[p,1] = n - p + 1
@@ -168,16 +168,16 @@ constraint
 % AUXILIARY VARIABLE LINKS
 % ==========================================
 
-% Link team_period variable 
+% Link team_period variable using element constraint pattern
 constraint forall(t in Teams, w in Weeks) (
     team_period[t,w] = sum(p in Periods) (
         p * (bool2int(home[p,w] = t) + bool2int(away[p,w] = t))
     )
 );
 
-% Additional ordering for team 1 
+% Additional ordering for team 1 (from CP_2.9, but conditional)
 constraint
-  sb_teams ->
+  symmetry_break ->
   (team_period[1,1] = 1 /\
    forall(w in 1..n_weeks-1) (
      team_period[1,w] <= team_period[1,w+1]
@@ -188,16 +188,18 @@ constraint
 % REDUNDANT CONSTRAINTS FOR PROPAGATION
 % ==========================================
 
-% Weekly sum constraint 
+% Weekly sum constraint (from CP_2.9)
 int: sumTeams = n*(n+1) div 2;
 constraint forall(w in Weeks) (
     sum(p in Periods) (home[p,w] + away[p,w]) = sumTeams
 );
 
 % ==========================================
-% SEARCH STRATEGY
+% OBJECTIVE AND SEARCH STRATEGY
 % ==========================================
 
+
+% Search strategy (conditional)
 solve 
 :: if use_int_search then
     if chuffed then
@@ -220,8 +222,7 @@ solve
 :: if use_relax_and_reconstruct then 
      relax_and_reconstruct([home[p,w] | p in Periods, w in Weeks] ++ [away[p,w] | p in Periods, w in Weeks], 85)
    endif
-%   minimize max_diff;
-satisfy;
+   satisfy;
 
 % ==========================================
 % OUTPUT

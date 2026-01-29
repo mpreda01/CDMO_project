@@ -2430,5 +2430,2245 @@
       [[5, 6], [6, 7], [5, 1], [10, 4], [8, 2], [9, 3], [2, 3], [9, 7], [1, 8]],
       [[2, 9], [3, 1], [4, 2], [5, 3], [6, 4], [7, 5], [8, 6], [10, 8], [10, 9]]
     ]
+  },
+  "1769683640.9370077": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 10.68,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 11,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769683744.246305": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 102.88,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 103,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769683755.3339486": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 10.69,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 11,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769683862.0839007": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 106.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.42,
+    "time": 106,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769683865.7026548": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 3.2,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769683969.7847703": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 103.66,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 104,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769683973.3595123": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 3.17,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769684077.8291812": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 104.03,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 104,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769684377.8942375": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769684383.7291021": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.4,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769684683.7999012": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769684689.6827447": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.46,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769684695.7475703": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.62,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 6,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769684701.8600464": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.69,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 6,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769684707.7091923": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769684713.958731": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.72,
+    "optimizer_success": true,
+    "optimizer_time": 0.47,
+    "time": 6,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769684726.0246267": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 11.62,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 12,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769684831.2098448": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 104.76,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 105,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769684842.5815406": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 10.94,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 11,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769684945.2110834": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 102.2,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 102,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769684948.903192": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 3.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769685053.2548509": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 103.93,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 104,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769685056.8351793": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 3.16,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 5], [3, 2], [5, 3], [10, 4], [9, 4], [7, 6], [8, 6], [8, 7]],
+      [[2, 9], [9, 6], [1, 7], [4, 6], [8, 5], [7, 5], [8, 2], [10, 3], [4, 3]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [6, 1], [6, 3], [9, 10], [7, 9], [5, 10]],
+      [[7, 4], [10, 8], [5, 9], [10, 7], [3, 9], [8, 1], [3, 1], [5, 2], [6, 2]],
+      [[6, 5], [7, 3], [6, 10], [9, 8], [2, 7], [2, 10], [4, 5], [4, 1], [9, 1]]
+    ]
+  },
+  "1769685159.7699516": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 102.49,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 102,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 2], [4, 3], [6, 4], [8, 5], [9, 5], [9, 6], [10, 7], [8, 7]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [4, 2], [10, 6], [7, 3], [9, 3], [5, 4]],
+      [[3, 8], [9, 4], [8, 9], [5, 7], [6, 1], [7, 2], [4, 10], [5, 2], [6, 3]],
+      [[7, 4], [3, 5], [2, 6], [10, 9], [7, 9], [3, 1], [5, 1], [6, 8], [10, 2]],
+      [[6, 5], [7, 6], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [4, 1], [9, 1]]
+    ]
+  },
+  "1769685459.8362365": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769685465.5430405": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769685765.6231287": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769685771.4314215": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769685777.217859": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769685783.0355759": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.39,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769685788.782858": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.33,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769685794.5341597": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.4,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 10], [1, 4], [10, 2], [2, 8], [9, 3], [6, 3], [6, 4], [8, 5], [7, 5]],
+      [[9, 2], [3, 5], [1, 8], [1, 7], [7, 6], [8, 10], [5, 2], [9, 4], [10, 4]],
+      [[8, 3], [2, 6], [4, 5], [5, 9], [2, 1], [7, 9], [7, 10], [10, 3], [6, 8]],
+      [[4, 7], [10, 9], [9, 6], [10, 6], [4, 8], [5, 1], [3, 1], [7, 2], [3, 2]],
+      [[5, 6], [8, 7], [3, 7], [4, 3], [5, 10], [2, 4], [8, 9], [6, 1], [9, 1]]
+    ]
+  },
+  "1769685795.8303168": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.84,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769685797.1543145": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.89,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769685798.3620899": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.78,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769685799.7249305": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.93,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769685800.937016": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.79,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769685802.254323": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.89,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769685803.4171464": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.75,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769685804.7452044": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.9,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769685810.4000876": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.22,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [3, 4], [10, 5], [10, 2], [7, 3], [4, 1], [5, 2], [9, 6], [6, 1]],
+      [[2, 3], [1, 2], [9, 4], [6, 7], [6, 8], [5, 3], [8, 1], [10, 4], [7, 5]],
+      [[6, 10], [8, 7], [1, 7], [4, 5], [2, 4], [8, 10], [3, 9], [3, 1], [2, 9]],
+      [[4, 7], [5, 6], [8, 2], [1, 9], [10, 1], [7, 9], [4, 6], [5, 8], [3, 10]],
+      [[1, 5], [9, 10], [3, 6], [8, 3], [5, 9], [2, 6], [7, 10], [2, 7], [4, 8]]
+    ]
+  },
+  "1769686110.4794414": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769686116.2128537": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 5.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [3, 4], [10, 5], [10, 2], [7, 3], [4, 1], [5, 2], [9, 6], [6, 1]],
+      [[2, 3], [1, 2], [9, 4], [6, 7], [6, 8], [5, 3], [8, 1], [10, 4], [7, 5]],
+      [[6, 10], [8, 7], [1, 7], [4, 5], [2, 4], [8, 10], [3, 9], [3, 1], [2, 9]],
+      [[4, 7], [5, 6], [8, 2], [1, 9], [10, 1], [7, 9], [4, 6], [5, 8], [3, 10]],
+      [[1, 5], [9, 10], [3, 6], [8, 3], [5, 9], [2, 6], [7, 10], [2, 7], [4, 8]]
+    ]
+  },
+  "1769686416.2935846": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769686716.3791935": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769687016.4504046": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769687316.5311034": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769687616.622356": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769687617.945907": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.88,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769687619.2726548": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.9,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769687620.5697098": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.79,
+    "optimizer_success": true,
+    "optimizer_time": 0.45,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769687621.8859563": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.89,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769687623.1992235": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.86,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769687624.5364516": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.9,
+    "optimizer_success": true,
+    "optimizer_time": 0.38,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769687625.7593005": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.77,
+    "optimizer_success": true,
+    "optimizer_time": 0.39,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[1, 6], [1, 3], [3, 2], [2, 5], [4, 5], [6, 4], [8, 7], [10, 7], [9, 8]],
+      [[7, 2], [5, 6], [1, 9], [9, 10], [8, 1], [8, 2], [10, 4], [5, 3], [4, 3]],
+      [[3, 8], [9, 7], [7, 4], [1, 4], [2, 10], [3, 10], [5, 1], [6, 9], [6, 2]],
+      [[9, 4], [8, 10], [8, 5], [7, 3], [6, 7], [5, 9], [3, 6], [2, 1], [10, 1]],
+      [[10, 5], [4, 2], [10, 6], [6, 8], [3, 9], [7, 1], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769687627.1593292": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.97,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 8], [8, 5], [10, 4], [7, 5], [9, 4], [10, 3], [2, 1], [7, 6], [3, 2]],
+      [[6, 5], [7, 9], [5, 3], [8, 2], [6, 10], [9, 1], [4, 8], [10, 2], [7, 1]],
+      [[10, 7], [2, 6], [1, 6], [1, 4], [8, 3], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [8, 1], [4, 6]],
+      [[4, 2], [1, 10], [9, 2], [3, 6], [5, 1], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769687632.4607842": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 4.88,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 5], [2, 4], [1, 7], [8, 9], [10, 6], [4, 1], [10, 5], [6, 2], [8, 3]],
+      [[3, 10], [10, 9], [4, 5], [1, 6], [8, 4], [5, 7], [8, 2], [7, 3], [9, 2]],
+      [[1, 8], [7, 8], [9, 6], [7, 10], [5, 3], [2, 10], [3, 6], [4, 9], [5, 1]],
+      [[6, 4], [1, 3], [10, 8], [5, 2], [2, 1], [3, 9], [4, 7], [5, 8], [6, 7]],
+      [[2, 7], [6, 5], [3, 2], [3, 4], [7, 9], [6, 8], [9, 1], [10, 1], [4, 10]]
+    ]
+  },
+  "1769687932.5373702": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769687937.6871562": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 4.72,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[9, 5], [2, 4], [1, 7], [8, 9], [10, 6], [4, 1], [10, 5], [6, 2], [8, 3]],
+      [[3, 10], [10, 9], [4, 5], [1, 6], [8, 4], [5, 7], [8, 2], [7, 3], [9, 2]],
+      [[1, 8], [7, 8], [9, 6], [7, 10], [5, 3], [2, 10], [3, 6], [4, 9], [5, 1]],
+      [[6, 4], [1, 3], [10, 8], [5, 2], [2, 1], [3, 9], [4, 7], [5, 8], [6, 7]],
+      [[2, 7], [6, 5], [3, 2], [3, 4], [7, 9], [6, 8], [9, 1], [10, 1], [4, 10]]
+    ]
+  },
+  "1769688237.7713845": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769688537.8472505": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769688837.9423544": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769689138.0705874": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769689438.150367": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": false,
+    "obj": "None",
+    "sol": []
+  },
+  "1769689448.8270857": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 10.62,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 10,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769689550.555811": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.67,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769689561.2843983": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 10.67,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 10,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769689662.6570609": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769689665.8632383": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 3.14,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769689767.289342": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769689770.4804814": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 3.13,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769689871.783396": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.24,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690171.8721597": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769690177.279228": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769690477.3599112": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769690482.749045": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769690488.1341383": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769690493.63038": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.44,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769690499.0195456": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.33,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769690504.3951933": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769690515.0791948": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 10.62,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 10,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690616.6834865": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.54,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690627.3648677": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 10.62,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 10,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690728.9732933": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.54,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690732.170488": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 3.13,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690834.1762376": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.93,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690837.5192165": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 3.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 3,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 5], [2, 3], [3, 5], [4, 10], [4, 9], [6, 7], [6, 8], [7, 8]],
+      [[2, 9], [6, 9], [1, 7], [4, 6], [5, 8], [5, 7], [2, 8], [3, 10], [3, 4]],
+      [[3, 8], [2, 4], [4, 8], [1, 2], [1, 6], [3, 6], [9, 10], [7, 9], [5, 10]],
+      [[4, 7], [8, 10], [5, 9], [7, 10], [3, 9], [1, 8], [1, 3], [2, 5], [2, 6]],
+      [[5, 6], [3, 7], [6, 10], [8, 9], [2, 7], [2, 10], [4, 5], [1, 4], [1, 9]]
+    ]
+  },
+  "1769690939.2002032": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 101.62,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 101,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 2], [3, 4], [4, 6], [5, 8], [5, 9], [6, 9], [7, 10], [7, 8]],
+      [[2, 9], [8, 10], [1, 7], [1, 8], [2, 4], [6, 10], [3, 7], [3, 9], [4, 5]],
+      [[3, 8], [4, 9], [8, 9], [5, 7], [1, 6], [2, 7], [4, 10], [2, 5], [3, 6]],
+      [[4, 7], [3, 5], [2, 6], [9, 10], [7, 9], [1, 3], [1, 5], [6, 8], [2, 10]],
+      [[5, 6], [6, 7], [5, 10], [2, 3], [3, 10], [4, 8], [2, 8], [1, 4], [1, 9]]
+    ]
+  },
+  "1769691239.2949698": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769691244.5696084": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.21,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769691544.663158": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769691549.9281926": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.2,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769691555.2204115": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.23,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769691560.490857": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.2,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769691565.762318": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.21,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769691571.3076904": {
+    "n": 10,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.48,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 10], [1, 4], [2, 10], [2, 8], [3, 9], [3, 6], [4, 6], [5, 8], [5, 7]],
+      [[2, 9], [3, 5], [1, 8], [1, 7], [6, 7], [8, 10], [2, 5], [4, 9], [4, 10]],
+      [[3, 8], [2, 6], [4, 5], [5, 9], [1, 2], [7, 9], [7, 10], [3, 10], [6, 8]],
+      [[4, 7], [9, 10], [6, 9], [6, 10], [4, 8], [1, 5], [1, 3], [2, 7], [2, 3]],
+      [[5, 6], [7, 8], [3, 7], [3, 4], [5, 10], [2, 4], [8, 9], [1, 6], [1, 9]]
+    ]
+  },
+  "1769691572.2281263": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.85,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769691573.3300986": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 1.03,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 1,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769691574.2699294": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.86,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769691575.324438": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.96,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769691576.2582104": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.84,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769691577.319389": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.99,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769691578.2373216": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.83,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769691579.298042": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.98,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769691584.9085495": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.51,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [3, 4], [5, 10], [2, 10], [3, 7], [1, 4], [2, 5], [6, 9], [1, 6]],
+      [[2, 3], [1, 2], [4, 9], [6, 7], [6, 8], [3, 5], [1, 8], [4, 10], [5, 7]],
+      [[6, 10], [7, 8], [1, 7], [4, 5], [2, 4], [8, 10], [3, 9], [1, 3], [2, 9]],
+      [[4, 7], [5, 6], [2, 8], [1, 9], [1, 10], [7, 9], [4, 6], [5, 8], [3, 10]],
+      [[1, 5], [9, 10], [3, 6], [3, 8], [5, 9], [2, 6], [7, 10], [2, 7], [4, 8]]
+    ]
+  },
+  "1769691885.0121284": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769691890.237612": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 5.16,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 5,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [3, 4], [5, 10], [2, 10], [3, 7], [1, 4], [2, 5], [6, 9], [1, 6]],
+      [[2, 3], [1, 2], [4, 9], [6, 7], [6, 8], [3, 5], [1, 8], [4, 10], [5, 7]],
+      [[6, 10], [7, 8], [1, 7], [4, 5], [2, 4], [8, 10], [3, 9], [1, 3], [2, 9]],
+      [[4, 7], [5, 6], [2, 8], [1, 9], [1, 10], [7, 9], [4, 6], [5, 8], [3, 10]],
+      [[1, 5], [9, 10], [3, 6], [3, 8], [5, 9], [2, 6], [7, 10], [2, 7], [4, 8]]
+    ]
+  },
+  "1769692190.3339534": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769692490.4273052": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769692790.522732": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769693090.6110215": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769693390.7139618": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769693391.554345": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.77,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769693392.5021062": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.88,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769693393.3317719": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.76,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769693394.3869061": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.98,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769693395.2259936": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.77,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769693396.1952703": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.9,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769693397.01626": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.75,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 6], [1, 3], [2, 3], [2, 5], [4, 5], [4, 6], [7, 8], [7, 10], [8, 9]],
+      [[2, 7], [5, 6], [1, 9], [9, 10], [1, 8], [2, 8], [4, 10], [3, 5], [3, 4]],
+      [[3, 8], [7, 9], [4, 7], [1, 4], [2, 10], [3, 10], [1, 5], [6, 9], [2, 6]],
+      [[4, 9], [8, 10], [5, 8], [3, 7], [6, 7], [5, 9], [3, 6], [1, 2], [1, 10]],
+      [[5, 10], [2, 4], [6, 10], [6, 8], [3, 9], [1, 7], [2, 9], [4, 8], [5, 7]]
+    ]
+  },
+  "1769693397.9750717": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.89,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[8, 9], [5, 8], [4, 10], [5, 7], [4, 9], [3, 10], [1, 2], [6, 7], [2, 3]],
+      [[5, 6], [7, 9], [3, 5], [2, 8], [6, 10], [1, 9], [4, 8], [2, 10], [1, 7]],
+      [[7, 10], [2, 6], [1, 6], [1, 4], [3, 8], [4, 7], [5, 10], [3, 9], [5, 9]],
+      [[1, 3], [3, 4], [7, 8], [9, 10], [2, 7], [2, 5], [6, 9], [1, 8], [4, 6]],
+      [[2, 4], [1, 10], [2, 9], [3, 6], [1, 5], [6, 8], [3, 7], [4, 5], [8, 10]]
+    ]
+  },
+  "1769693402.759036": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 4.71,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 4,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[5, 9], [2, 4], [1, 7], [8, 9], [6, 10], [1, 4], [5, 10], [2, 6], [3, 8]],
+      [[3, 10], [9, 10], [4, 5], [1, 6], [4, 8], [5, 7], [2, 8], [3, 7], [2, 9]],
+      [[1, 8], [7, 8], [6, 9], [7, 10], [3, 5], [2, 10], [3, 6], [4, 9], [1, 5]],
+      [[4, 6], [1, 3], [8, 10], [2, 5], [1, 2], [3, 9], [4, 7], [5, 8], [6, 7]],
+      [[2, 7], [5, 6], [2, 3], [3, 4], [7, 9], [6, 8], [1, 9], [1, 10], [4, 10]]
+    ]
+  },
+  "1769693702.8636136": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769693707.640001": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 4.7,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 4,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[5, 9], [2, 4], [1, 7], [8, 9], [6, 10], [1, 4], [5, 10], [2, 6], [3, 8]],
+      [[3, 10], [9, 10], [4, 5], [1, 6], [4, 8], [5, 7], [2, 8], [3, 7], [2, 9]],
+      [[1, 8], [7, 8], [6, 9], [7, 10], [3, 5], [2, 10], [3, 6], [4, 9], [1, 5]],
+      [[4, 6], [1, 3], [8, 10], [2, 5], [1, 2], [3, 9], [4, 7], [5, 8], [6, 7]],
+      [[2, 7], [5, 6], [2, 3], [3, 4], [7, 9], [6, 8], [1, 9], [1, 10], [4, 10]]
+    ]
+  },
+  "1769694007.7381833": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769694307.8368468": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769694607.936091": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769694908.0389385": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
+  },
+  "1769695208.1452503": {
+    "n": 10,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": false,
+    "cp_time": 300,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 300,
+    "timeout_reached": true,
+    "optimal": true,
+    "obj": "None",
+    "sol": []
   }
 }

@@ -16,15 +16,52 @@ import json
 import sys
 from typing import Dict, List, Tuple, Optional
 from collections import defaultdict
+import psutil
+import psutil
+
+
+def kill_process_tree(process):
+    """Kill a process and all its child processes (like fzn-gecode.exe)"""
+    try:
+        parent = psutil.Process(process.pid)
+        children = parent.children(recursive=True)
+        
+        # Terminate children first
+        for child in children:
+            try:
+                child.terminate()
+            except psutil.NoSuchProcess:
+                pass
+        
+        # Terminate parent
+        try:
+            parent.terminate()
+        except psutil.NoSuchProcess:
+            pass
+        
+        # Wait for termination
+        gone, alive = psutil.wait_procs(children + [parent], timeout=3)
+        
+        # Force kill if still alive
+        for p in alive:
+            try:
+                p.kill()
+            except psutil.NoSuchProcess:
+                pass
+                
+    except psutil.NoSuchProcess:
+        pass
+    except Exception as e:
+        print(f"Warning: Error killing process tree: {e}")
+
 
 class MinizincRunner:
     def __init__(self, timeout_seconds: int = 300):
         self.minizinc_path = self._find_minizinc()
         self.timeout_seconds = timeout_seconds
-        self.n_values = [2, 4, 6, 8, 10, 12, 14, 16, 18]
+        self.n_values = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
         self.bool_params = [
-            'sb_weeks', 'sb_periods', 'sb_teams', 'sb_week1_fixed',
-            'ic_matches_per_team', 'ic_period_count',
+            'symmetry_break', 'implied_constraint',
             'use_int_search', 'use_restart_luby', 
             'use_relax_and_reconstruct', 'chuffed'
         ]
@@ -119,6 +156,9 @@ class MinizincRunner:
                 stdout, stderr = process.communicate(timeout=timeout)
                 execution_time = time.time() - start_time
                 
+                # Kill any remaining child processes
+                kill_process_tree(process)
+                
                 if process.returncode == 0:
                     return True, stdout, execution_time, ""
                 else:
@@ -126,7 +166,7 @@ class MinizincRunner:
                     
             except subprocess.TimeoutExpired:
                 print(f"Timeout reached, terminating process...")
-                process.terminate()
+                kill_process_tree(process)
                 
                 try:
                     process.wait(timeout=2)
@@ -142,11 +182,14 @@ class MinizincRunner:
             execution_time = time.time() - start_time
             if process:
                 try:
-                    process.kill()
+                    kill_process_tree(process)
                 except:
                     pass
             return False, "", execution_time, str(e)
         finally:
+            # Ensure process tree is killed
+            if process is not None:
+                kill_process_tree(process)
             try:
                 os.unlink(data_file)
             except:
@@ -471,6 +514,69 @@ class MinizincRunner:
         except (json.JSONDecodeError, IOError) as e:
             print(f"Warning: Could not read {filename}: {e}")
             return False
+    
+    def load_previous_timeouts(self, selected_n: List[int], optimizer_modes: List[bool]) -> Dict:
+        """Load previous timeout configurations from JSON files for selected n values and all smaller n values"""
+        output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'CP'))
+        timed_out_configs = {}
+        
+        if not os.path.exists(output_dir):
+            return timed_out_configs
+        
+        print("Loading previous timeout data from JSON files...")
+        
+        # Determine which n values to check (selected n values + all smaller n values for context)
+        max_n = max(selected_n) if selected_n else 0
+        all_n_to_check = sorted(set([n for n in self.n_values if n <= max_n]))
+        
+        # Check each n value's JSON file
+        for n in all_n_to_check:
+            filename = os.path.join(output_dir, f"{n}.json")
+            
+            if not os.path.exists(filename):
+                continue
+                
+            try:
+                with open(filename, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+                
+                # Check each result for timeouts
+                for timestamp, result in existing_data.items():
+                    if result.get('timeout_reached', False) and 'params' in result:
+                        params = result['params']
+                        use_optimizer = params.get('optimized', True)
+                        
+                        # Only track if this optimizer mode is in our current run
+                        if use_optimizer not in optimizer_modes:
+                            continue
+                        
+                        # Create params dict without metadata
+                        param_dict = {k: v for k, v in params.items() if k not in ['circle', 'optimized']}
+                        params_tuple = tuple(sorted(param_dict.items()))
+                        config_key = (use_optimizer, params_tuple)
+                        
+                        # Store the smallest n that timed out for this config
+                        if config_key not in timed_out_configs or n < timed_out_configs[config_key]:
+                            timed_out_configs[config_key] = n
+                            
+            except (json.JSONDecodeError, IOError) as e:
+                print(f"Warning: Could not read {filename}: {e}")
+                continue
+        
+        if timed_out_configs:
+            print(f"Found {len(timed_out_configs)} configurations that previously timed out")
+        else:
+            print("No previous timeout data found")
+            
+        return timed_out_configs
+                
+        
+        if timed_out_configs:
+            print(f"Found {len(timed_out_configs)} configurations that previously timed out")
+        else:
+            print("No previous timeout data found")
+            
+        return timed_out_configs
             
     def run_all_combinations(self, selected_n: List[int], optimizer_modes: List[bool] = None) -> List[Dict]:
         """Run all possible combinations of boolean parameters"""
@@ -479,21 +585,43 @@ class MinizincRunner:
         if optimizer_modes is None:
             optimizer_modes = [True]  # Default for backward compatibility
         
+        # Sort n values to ensure we process from smallest to largest
+        selected_n = sorted(selected_n)
+        
+        # Load previous timeout data from JSON files
+        timed_out_configs = self.load_previous_timeouts(selected_n, optimizer_modes)
+        
         # Generate all combinations of boolean values
         bool_combinations = list(itertools.product([True, False], repeat=len(self.bool_params)))
         total_runs = len(selected_n) * len(bool_combinations) * len(optimizer_modes)
         
         print(f"\nRunning {total_runs} total combinations...")
         print(f"Optimizer modes: {['with optimization' if m else 'without optimization' for m in optimizer_modes]}")
-        print(f"Timeout per combination: {self.timeout_seconds} seconds\n")
+        print(f"Timeout per combination: {self.timeout_seconds} seconds")
+        print(f"Note: Configurations that previously timed out (for same or smaller n) will be skipped\n")
         
         run_count = 0
         skipped_count = 0
+        timeout_skipped_count = 0
+        
         for n in selected_n:
             for use_optimizer in optimizer_modes:
                 for combo in bool_combinations:
                     run_count += 1
                     params = dict(zip(self.bool_params, combo))
+                    
+                    # Create a hashable key for this configuration
+                    params_tuple = tuple(sorted(params.items()))
+                    config_key = (use_optimizer, params_tuple)
+                    
+                    # Check if this configuration timed out for a smaller n
+                    if config_key in timed_out_configs:
+                        timeout_n = timed_out_configs[config_key]
+                        if n >= timeout_n:
+                            timeout_skipped_count += 1
+                            print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer} - SKIPPED (timed out at n={timeout_n})")
+                            print("-" * 60)
+                            continue
                     
                     # Add circle and optimized to params for comparison
                     params_with_meta = params.copy()
@@ -503,39 +631,42 @@ class MinizincRunner:
                     # Check if this configuration already exists
                     if self.config_exists_in_json(n, params_with_meta):
                         skipped_count += 1
-                        print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer}, params={params} - SKIPPED (already exists)")
+                        print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer} - SKIPPED (already exists)")
                         print("-" * 60)
                         continue
                     
-                    print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer}, params={params}")
+                    print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer}")
+                    print(f"  params={params}")
                     
                     result = self.run_pipeline(n, params, use_optimizer)
                     self.save_results([result])
-                    #results.append(result)
                     
-                    # Print summary based on optimizer usage
-                    if use_optimizer:
-                        # Check both CP and optimizer success
-                        if result['cp_success'] and result['optimizer_success']:
-                            print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
-                        elif result['timeout_reached']:
-                            print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
-                        else:
-                            print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
-                                  f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
+                    # Check if this run timed out
+                    if result.get('timeout_reached', False):
+                        timed_out_configs[config_key] = n
+                        print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit (will skip for n>{n})")
                     else:
-                        # Only check CP success when not using optimizer
-                        if result['cp_success']:
-                            print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
-                        elif result['timeout_reached']:
-                            print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                        # Print summary based on optimizer usage
+                        if use_optimizer:
+                            # Check both CP and optimizer success
+                            if result['cp_success'] and result['optimizer_success']:
+                                print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                            else:
+                                print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
+                                      f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
                         else:
-                            print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
+                            # Only check CP success when not using optimizer
+                            if result['cp_success']:
+                                print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                            else:
+                                print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
                     
                     print("-" * 60)
         
         if skipped_count > 0:
             print(f"\n⚠ Skipped {skipped_count} configurations that already exist in JSON files")
+        if timeout_skipped_count > 0:
+            print(f"⏱ Skipped {timeout_skipped_count} configurations due to previous timeouts on smaller n values")
                 
         #return results
         

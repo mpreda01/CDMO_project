@@ -1918,5 +1918,1925 @@
     "sol": [
       [[2, 1]]
     ]
+  },
+  "1769683343.8826652": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683344.424481": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683344.9557467": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.24,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683345.4988515": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683346.16882": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.36,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683346.73711": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683347.299663": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683347.825124": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": true,
+    "optimizer_time": 0.24,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683348.4706144": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683349.1429286": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683349.7378917": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683350.4492104": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683351.122546": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683351.6772206": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683352.3007367": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683352.8795905": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683353.44705": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683354.1499064": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.41,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683354.7006607": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683355.2902427": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683355.893444": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683356.4625907": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683357.0160527": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683357.5935478": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683358.1534188": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683358.7099233": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683359.2874916": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683359.9873939": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683360.5567124": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683361.120197": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683361.6837354": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683362.2370114": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683362.7973125": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683363.3605483": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683364.0734694": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.42,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683364.6491365": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683365.2127006": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683365.9383936": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.38,
+    "optimizer_success": true,
+    "optimizer_time": 0.31,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683366.5097134": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683367.145842": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683367.8654466": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.33,
+    "optimizer_success": true,
+    "optimizer_time": 0.35,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683368.4531515": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683369.0429826": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683369.6183472": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683370.212896": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683370.7850738": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683371.3775861": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683371.95435": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683372.5327418": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683373.2859254": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683373.9382615": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.3,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683374.6950629": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.3,
+    "optimizer_success": true,
+    "optimizer_time": 0.41,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683375.362714": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683375.9273138": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683376.5128686": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683377.1769402": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683377.7572858": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.27,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683378.367575": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.29,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683378.9363322": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.25,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683379.521761": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.28,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683380.1421154": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.31,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683380.8197846": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": true,
+    "optimizer_time": 0.37,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683381.4538717": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": true,
+    "optimizer_time": 0.32,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683382.0773938": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": true},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": true,
+    "optimizer_time": 0.26,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": 1,
+    "sol": [
+      [[2, 1]]
+    ]
+  },
+  "1769683382.3840654": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683382.7256024": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683383.0145638": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683383.3166006": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683383.759643": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683384.0695028": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683384.3642776": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683384.736425": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683385.0559747": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683385.3733757": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683385.7906866": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683386.1477883": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683386.5372498": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683386.9149992": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683387.3285565": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.36,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683387.7189233": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683388.0726366": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683388.59948": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683388.9479477": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683389.290242": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683389.743766": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.4,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683390.381435": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.53,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683390.8452532": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683391.418394": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.5,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683391.9836113": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.48,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683392.39337": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.34,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683392.8368995": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683393.1570065": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683393.4967048": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683393.8158832": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.25,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683394.1290565": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683394.4537914": {
+    "n": 2,
+    "params": {"symmetry_break": true, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683394.7760599": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683395.127196": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.3,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683395.4420419": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683395.764081": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683396.1066628": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683396.4376302": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683396.7483342": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683397.162649": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683397.6391017": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.43,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683398.071829": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683398.4088986": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.28,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683398.8281605": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.37,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683399.1560032": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683399.6366932": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.43,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683400.0860572": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.39,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683400.4779031": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": true, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683400.8257897": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683401.151995": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683401.588832": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.38,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683401.9094381": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683402.2241232": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683402.5538154": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683402.8713646": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683403.1891892": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": true, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683403.5345123": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.29,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683403.9193418": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.32,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683404.294913": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683404.6257179": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": true, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683404.9779882": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.3,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683405.3099766": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": true, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.27,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683405.6191983": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": true, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.26,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
+  },
+  "1769683405.980416": {
+    "n": 2,
+    "params": {"symmetry_break": false, "implied_constraint": false, "use_int_search": false, "use_restart_luby": false, "use_relax_and_reconstruct": false, "chuffed": false, "circle": false, "optimized": false},
+    "cp_success": true,
+    "cp_time": 0.31,
+    "optimizer_success": false,
+    "optimizer_time": 0,
+    "time": 0,
+    "timeout_reached": false,
+    "optimal": true,
+    "obj": "None",
+    "sol": [
+      [[1, 2]]
+    ]
   }
 }
