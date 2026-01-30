@@ -1,0 +1,218 @@
+{
+  "1769727979.7900379": {
+    "time": 300,
+    "solve_time": 300.04,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769728283.3672552": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769728586.1381326": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769728889.2646925": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769729192.395415": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769729495.1944938": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769729797.9992225": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769730100.794695": {
+    "time": 300,
+    "solve_time": 300.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769730403.5985916": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769730706.3758795": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769731009.1527565": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769731312.267762": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  }
+}
