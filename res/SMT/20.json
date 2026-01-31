@@ -1,0 +1,162 @@
+{
+  "1769888623.0135787": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769888925.7645726": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769889229.041857": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769889531.370705": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769890929.4307704": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769891230.9204416": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769891532.247097": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769891833.797223": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769892136.7652557": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769892439.8453183": {
+    "time": 300.0,
+    "solve_time": 300.0,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  }
+}
