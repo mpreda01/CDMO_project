@@ -273,19 +273,8 @@ class STSModel:
             return schedule, None
 
     def solve(self, time_limit=300, optimize=False, solver_choice="z3"):
-        if solver_choice == "cvc5" and optimize:
-            print("ERROR: Optimization is not supported with cvc5 solver.")
-            return {
-                "time": 0,
-                "solve_time": 0,
-                "optimize_time": 0,
-                "optimal": False,
-                "obj": "None",
-                "sol": []
-            }
-        
         if solver_choice == "cvc5":
-            return self._solve_with_cvc5(time_limit)
+            return self._solve_with_cvc5(time_limit, optimize)
         else:
             return self._solve_with_z3(time_limit, optimize)
     
@@ -358,8 +347,9 @@ class STSModel:
             "sol": []
         }
 
-    def _solve_with_cvc5(self, time_limit=300):
-        """Solve using cvc5 by exporting to SMT-LIB2 and calling cvc5 binary."""
+    def _solve_with_cvc5(self, time_limit=300, optimize=False):
+        """Solve using cvc5 by exporting to SMT-LIB2 and calling cvc5 binary.
+        If optimize=True, the cvc5 solution will be optimized using Z3's optimizer."""
         solver = Solver()
         self.create_constraints(solver, use_cvc5_encoding=True)
         
@@ -498,12 +488,28 @@ class STSModel:
         if os.path.exists(smt2_path):
             os.remove(smt2_path)
         
+        # Optimize the solution if requested
+        optimize_time = 0.0
+        obj_val = None
+        if optimize:
+            opt_start = time.time()
+            schedule, obj_val = self.optimize_schedule(schedule)
+            optimize_time = time.time() - opt_start
+        
+        total_time = solve_time + optimize_time
+        
         # Print solution details
         print("\n" + "="*60)
-        print("SOLUTION FOUND (CVC5)")
+        print("SOLUTION FOUND (CVC5" + (" + Z3 OPTIMIZATION)" if optimize else ")"))
         print("="*60)
-        print(f"Solve time: {solve_time:.2f} seconds")
-        print(f"Total time: {solve_time:.2f} seconds")
+        print(f"Solve time (cvc5): {solve_time:.2f} seconds")
+        if optimize:
+            print(f"Optimize time (z3): {optimize_time:.2f} seconds")
+            print(f"Total time: {total_time:.2f} seconds")
+        else:
+            print(f"Total time: {solve_time:.2f} seconds")
+        if optimize and obj_val is not None:
+            print(f"Objective value (max imbalance): {obj_val}")
         print("\nSolution matrix (by periods and weeks):")
         for p, period in enumerate(schedule):
             print(f"Period {p+1}:", end=" ")
@@ -516,11 +522,11 @@ class STSModel:
         print("="*60 + "\n")
         
         return {
-            "time": int(solve_time),
+            "time": int(total_time),
             "solve_time": round(solve_time, 2),
-            "optimize_time": 0,
-            "optimal": True,
-            "obj": "None",
+            "optimize_time": round(optimize_time, 2) if optimize else 0,
+            "optimal": (obj_val == 1) if optimize else True,
+            "obj": obj_val if optimize and obj_val is not None else "None",
             "sol": schedule
         }
     

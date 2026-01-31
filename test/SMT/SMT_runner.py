@@ -196,13 +196,13 @@ def load_previous_timeouts(selected_n, method="classic"):
                     if (method == "circle" and not is_circle) or (method == "classic" and is_circle):
                         continue
                     
-                    # Create params dict without metadata
+                    # Create params dict including solver (since solver performance differs)
                     if method == "classic":
                         # For classic mode: sb_weeks, sb_periods, sb_teams, ic_matches_per_team, ic_period_count, optimize, solver
-                        param_dict = {k: v for k, v in params.items() if k not in ['circle', 'solver']}
+                        param_dict = {k: v for k, v in params.items() if k not in ['circle']}
                     else:
                         # For circle mode: sb_fix_period, sb_lex_periods, implied_constraints, optimize, solver
-                        param_dict = {k: v for k, v in params.items() if k not in ['circle', 'solver']}
+                        param_dict = {k: v for k, v in params.items() if k not in ['circle']}
                     
                     params_tuple = tuple(sorted(param_dict.items()))
                     config_key = params_tuple
@@ -337,8 +337,7 @@ if __name__ == "__main__":
             optimize = input("Optimize solution? (y/n): ").strip().lower().startswith("y")
             
             if solver == "cvc5" and optimize:
-                print("Optimization is not available for cvc5 solver. Terminating.")
-                raise SystemExit(1)
+                print("Note: cvc5 will find a solution, then Z3 will optimize it.")
             
             for n in teams:
                 flags = {
@@ -378,10 +377,8 @@ if __name__ == "__main__":
             flag_names = ["sb_weeks", "sb_periods", "sb_teams", "ic_matches_per_team", "ic_period_count", "optimize"]
             all_flag_combos = list(itertools.product([False, True], repeat=len(flag_names)))
             
-            # Filter out combinations with optimize=True if solver is cvc5
             if solver == "cvc5":
-                all_flag_combos = [combo for combo in all_flag_combos if not combo[-1]]  # optimize is last
-                print("Note: Optimization combinations skipped for cvc5 solver.")
+                print("Note: When optimize=True, cvc5 will find solutions and Z3 will optimize them.")
             
             # Load previous timeout data
             teams_sorted = sorted(teams)
@@ -403,8 +400,9 @@ if __name__ == "__main__":
                     # Create params dict for checking
                     params_with_meta = {**flags_combo, "solver": solver, "circle": False}
                     
-                    # Create hashable key for timeout checking (without solver)
-                    params_tuple = tuple(sorted(flags_combo.items()))
+                    # Create hashable key for timeout checking (including solver)
+                    params_with_solver = {**flags_combo, "solver": solver}
+                    params_tuple = tuple(sorted(params_with_solver.items()))
                     config_key = params_tuple
                     
                     # Check if this configuration timed out for a smaller n
@@ -414,6 +412,17 @@ if __name__ == "__main__":
                             timeout_skipped_count += 1
                             print(f"[{run_count}/{total_combos}] n={n}, solver={solver} - SKIPPED (timed out at n={timeout_n})")
                             continue
+                    
+                    # Check if unoptimized version timed out and current is optimized
+                    if flags_combo['optimize']:
+                        unopt_flags = {**flags_combo, 'optimize': False, 'solver': solver}
+                        unopt_key = tuple(sorted(unopt_flags.items()))
+                        if unopt_key in timed_out_configs:
+                            unopt_timeout_n = timed_out_configs[unopt_key]
+                            if n >= unopt_timeout_n:
+                                timeout_skipped_count += 1
+                                print(f"[{run_count}/{total_combos}] n={n}, solver={solver}, optimize=True - SKIPPED (unoptimized timed out at n={unopt_timeout_n})")
+                                continue
                     
                     # Check if this configuration already exists
                     if config_exists_in_json(n, params_with_meta):
@@ -443,7 +452,14 @@ if __name__ == "__main__":
                     solve_time_val = result.get('solve_time', 0)
                     if (time_val >= 300) or (solve_time_val >= 300):
                         timed_out_configs[config_key] = n
-                        print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n})")
+                        # If unoptimized timed out, also mark optimized as timed out
+                        if not flags_combo['optimize']:
+                            opt_flags = {**flags_combo, 'optimize': True, 'solver': solver}
+                            opt_key = tuple(sorted(opt_flags.items()))
+                            timed_out_configs[opt_key] = n
+                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n}, including optimized version)")
+                        else:
+                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n})")
                     else:
                         print(f"✓ SUCCESS - Time: {time_val:.2f}s")
 
@@ -483,15 +499,13 @@ if __name__ == "__main__":
         
         if mode == "manual":
             solver = input("Select solver (z3/cvc5): ").strip().lower()
-            print("Optimization is not available for cvc5 solver.")
             optimize = input("Optimize solution? (y/n): ").strip().lower().startswith("y")
 
             if solver not in ["z3", "cvc5"]:
                 print("Invalid solver selected. Terminating.")
                 raise SystemExit(1)
             if solver == "cvc5" and optimize:
-                print("Optimization is not available for cvc5 solver. Terminating.")
-                raise SystemExit(1)
+                print("Note: cvc5 will find a solution, then Z3 will optimize it.")
             
             # Ask for parameters setting
             for i, param_name in enumerate(param_names):
@@ -552,8 +566,7 @@ if __name__ == "__main__":
             
             optimize = input("Optimize solution? (y/n): ").strip().lower().startswith("y")
             if solver == "cvc5" and optimize:
-                print("Optimization is not available for cvc5 solver. Terminating.")
-                raise SystemExit(1)
+                print("Note: cvc5 will find solutions, then Z3 will optimize them.")
             
             # Generate all combinations of circle parameters
             circle_param_combos = list(itertools.product([False, True], repeat=len(param_names)))
@@ -578,8 +591,8 @@ if __name__ == "__main__":
                     # Create params dict for checking
                     params_with_meta = {**params_dict, "optimize": optimize, "solver": solver, "circle": True}
                     
-                    # Create hashable key for timeout checking (without solver)
-                    params_for_key = {**params_dict, "optimize": optimize}
+                    # Create hashable key for timeout checking (including solver)
+                    params_for_key = {**params_dict, "optimize": optimize, "solver": solver}
                     params_tuple = tuple(sorted(params_for_key.items()))
                     config_key = params_tuple
                     
@@ -590,6 +603,17 @@ if __name__ == "__main__":
                             timeout_skipped_count += 1
                             print(f"[{run_count}/{total_combos}] n={n}, solver={solver} - SKIPPED (timed out at n={timeout_n})")
                             continue
+                    
+                    # Check if unoptimized version timed out and current is optimized
+                    if optimize:
+                        unopt_params = {**params_dict, "optimize": False, "solver": solver}
+                        unopt_key = tuple(sorted(unopt_params.items()))
+                        if unopt_key in timed_out_configs:
+                            unopt_timeout_n = timed_out_configs[unopt_key]
+                            if n >= unopt_timeout_n:
+                                timeout_skipped_count += 1
+                                print(f"[{run_count}/{total_combos}] n={n}, solver={solver}, optimize=True - SKIPPED (unoptimized timed out at n={unopt_timeout_n})")
+                                continue
                     
                     # Check if this configuration already exists
                     if config_exists_in_json(n, params_with_meta):
@@ -624,7 +648,14 @@ if __name__ == "__main__":
                     solve_time_val = r.get('solve_time', 0)
                     if (time_val >= 300) or (solve_time_val >= 300):
                         timed_out_configs[config_key] = n
-                        print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n})")
+                        # If unoptimized timed out, also mark optimized as timed out
+                        if not optimize:
+                            opt_params = {**params_dict, "optimize": True, "solver": solver}
+                            opt_key = tuple(sorted(opt_params.items()))
+                            timed_out_configs[opt_key] = n
+                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n}, including optimized version)")
+                        else:
+                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n})")
                     else:
                         print(f"✓ SUCCESS - Time: {time_val:.2f}s")
             

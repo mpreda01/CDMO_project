@@ -742,8 +742,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     if solver_choice == "cvc5" and mode == "opt":
-        print("ERRORE: la modalità 'opt' non è supportata con il solver CVC5")
-        sys.exit(1)
+        print("Note: cvc5 will find a solution, then Z3 will optimize it.")
 
     # --- 4) Parse optional parameters (if provided) ---
     # Default parameters
@@ -901,7 +900,7 @@ if __name__ == "__main__":
         
         # --- 9) Se richiesto, esegui la fase di ottimizzazione ---
         if mode == "opt":
-            print("\nRunning optimization...")
+            print("\nRunning optimization" + (" (using Z3)..." if solver_choice == "cvc5" else "..."))
 
 
             opt_stime = time.time()
