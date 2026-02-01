@@ -8,9 +8,9 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
 
 1. **Build and run**
    ```bash
-   docker build -t sts-image .
-   docker-compose up -d
-   docker-compose exec cdmo-solver bash
+   docker compose build
+   docker compose up -d
+   docker compose exec cdmo-solver bash
    ```
 
 2. **Run examples inside the container:**

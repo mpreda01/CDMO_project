@@ -1,287 +1,607 @@
 {
-  "cbc_dec": {
+  "highs_dec_cir": {
     "time": 0,
+    "method": "circle",
     "version": "decision",
-    "symmetry_breaking": "None",
+    "params": {
+      "sb_per": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
-    "sol": [[[1, 2]]]
+    "sol": [[[2, 1]]]
   },
-  "cbc_opt": {
+  "highs_opt_cir": {
     "time": 0,
+    "method": "circle",
     "version": "optimal",
-    "symmetry_breaking": "None",
+    "params": {
+      "sb_per": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[2, 1]]]
   },
-  "cbc_dec_sw1": {
+  "highs_dec_cir_sbper": {
     "time": 0,
+    "method": "circle",
     "version": "decision",
-    "symmetry_breaking": "symmetry_week1",
+    "params": {
+      "sb_per": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
-    "sol": [[[1, 2]]]
+    "sol": [[[2, 1]]]
   },
-  "cbc_opt_sw1": {
+  "highs_opt_cir_sbper": {
     "time": 0,
+    "method": "circle",
     "version": "optimal",
-    "symmetry_breaking": "symmetry_week1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": 1,
-    "sol": [[[1, 2]]]
-  },
-  "cbc_dec_st1": {
-    "time": 0,
-    "version": "decision",
-    "symmetry_breaking": "symmetry_team1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": "None",
-    "sol": [[[1, 2]]]
-  },
-  "cbc_opt_st1": {
-    "time": 0,
-    "version": "optimal",
-    "symmetry_breaking": "symmetry_team1",
+    "params": {
+      "sb_per": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[2, 1]]]
   },
-  "cbc_dec_st1_sw1": {
+  "highs_dec_can": {
     "time": 0,
+    "method": "canonical",
     "version": "decision",
-    "symmetry_breaking": "all",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2]]]
   },
-  "cbc_opt_st1_sw1": {
+  "highs_opt_can": {
     "time": 0,
+    "method": "canonical",
     "version": "optimal",
-    "symmetry_breaking": "all",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[1, 2]]]
   },
-  "highs_dec": {
+  "highs_dec_can_sw1": {
     "time": 0,
+    "method": "canonical",
     "version": "decision",
-    "symmetry_breaking": "None",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2]]]
   },
-  "highs_opt": {
+  "highs_opt_can_sw1": {
     "time": 0,
+    "method": "canonical",
     "version": "optimal",
-    "symmetry_breaking": "None",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[1, 2]]]
   },
-  "highs_dec_sw1": {
+  "highs_dec_can_st1": {
     "time": 0,
+    "method": "canonical",
     "version": "decision",
-    "symmetry_breaking": "symmetry_week1",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2]]]
   },
-  "highs_opt_sw1": {
+  "highs_opt_can_st1": {
     "time": 0,
+    "method": "canonical",
     "version": "optimal",
-    "symmetry_breaking": "symmetry_week1",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[1, 2]]]
   },
-  "highs_dec_st1": {
+  "highs_dec_can_st1_sw1": {
     "time": 0,
+    "method": "canonical",
     "version": "decision",
-    "symmetry_breaking": "symmetry_team1",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2]]]
   },
-  "highs_opt_st1": {
+  "highs_opt_can_st1_sw1": {
     "time": 0,
+    "method": "canonical",
     "version": "optimal",
-    "symmetry_breaking": "symmetry_team1",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[1, 2]]]
   },
-  "highs_dec_st1_sw1": {
+  "cbc_dec_cir": {
     "time": 0,
+    "method": "circle",
     "version": "decision",
-    "symmetry_breaking": "all",
+    "params": {
+      "sb_per": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
-    "sol": [[[1, 2]]]
+    "sol": [[[2, 1]]]
   },
-  "highs_opt_st1_sw1": {
+  "cbc_opt_cir": {
     "time": 0,
+    "method": "circle",
     "version": "optimal",
-    "symmetry_breaking": "all",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": 1,
-    "sol": [[[1, 2]]]
-  },
-  "cplex_dec": {
-    "time": 0,
-    "version": "decision",
-    "symmetry_breaking": "None",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": "None",
-    "sol": [[[1, 2]]]
-  },
-  "cplex_opt": {
-    "time": 0,
-    "version": "optimal",
-    "symmetry_breaking": "None",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": 1,
-    "sol": [[[1, 2]]]
-  },
-  "cplex_dec_sw1": {
-    "time": 0,
-    "version": "decision",
-    "symmetry_breaking": "symmetry_week1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": "None",
-    "sol": [[[1, 2]]]
-  },
-  "cplex_opt_sw1": {
-    "time": 0,
-    "version": "optimal",
-    "symmetry_breaking": "symmetry_week1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": 1,
-    "sol": [[[1, 2]]]
-  },
-  "cplex_dec_st1": {
-    "time": 0,
-    "version": "decision",
-    "symmetry_breaking": "symmetry_team1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": "None",
-    "sol": [[[1, 2]]]
-  },
-  "cplex_opt_st1": {
-    "time": 0,
-    "version": "optimal",
-    "symmetry_breaking": "symmetry_team1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": 1,
-    "sol": [[[1, 2]]]
-  },
-  "cplex_dec_st1_sw1": {
-    "time": 0,
-    "version": "decision",
-    "symmetry_breaking": "all",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": "None",
-    "sol": [[[1, 2]]]
-  },
-  "cplex_opt_st1_sw1": {
-    "time": 0,
-    "version": "optimal",
-    "symmetry_breaking": "all",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": 1,
-    "sol": [[[1, 2]]]
-  },
-  "gurobi_dec": {
-    "time": 0,
-    "version": "decision",
-    "symmetry_breaking": "None",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": "None",
-    "sol": [[[1, 2]]]
-  },
-  "gurobi_opt": {
-    "time": 0,
-    "version": "optimal",
-    "symmetry_breaking": "None",
+    "params": {
+      "sb_per": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[2, 1]]]
   },
-  "gurobi_dec_sw1": {
+  "cbc_dec_cir_sbper": {
     "time": 0,
+    "method": "circle",
     "version": "decision",
-    "symmetry_breaking": "symmetry_week1",
+    "params": {
+      "sb_per": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
-    "sol": [[[1, 2]]]
+    "sol": [[[2, 1]]]
   },
-  "gurobi_opt_sw1": {
+  "cbc_opt_cir_sbper": {
     "time": 0,
+    "method": "circle",
     "version": "optimal",
-    "symmetry_breaking": "symmetry_week1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": 1,
-    "sol": [[[1, 2]]]
-  },
-  "gurobi_dec_st1": {
-    "time": 0,
-    "version": "decision",
-    "symmetry_breaking": "symmetry_team1",
-    "optimal": true,
-    "stop_reason": null,
-    "obj": "None",
-    "sol": [[[1, 2]]]
-  },
-  "gurobi_opt_st1": {
-    "time": 0,
-    "version": "optimal",
-    "symmetry_breaking": "symmetry_team1",
+    "params": {
+      "sb_per": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,
     "sol": [[[2, 1]]]
   },
-  "gurobi_dec_st1_sw1": {
+  "cbc_dec_can": {
     "time": 0,
+    "method": "canonical",
     "version": "decision",
-    "symmetry_breaking": "all",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": "None",
     "sol": [[[1, 2]]]
   },
-  "gurobi_opt_st1_sw1": {
+  "cbc_opt_can": {
     "time": 0,
+    "method": "canonical",
     "version": "optimal",
-    "symmetry_breaking": "all",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "cbc_dec_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "cbc_dec_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "cbc_dec_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cbc_opt_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "cplex_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2, 1]]]
+  },
+  "cplex_opt_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "cplex_dec_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2, 1]]]
+  },
+  "cplex_opt_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "cplex_dec_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cplex_opt_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "cplex_dec_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cplex_opt_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "cplex_dec_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cplex_opt_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "cplex_dec_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "cplex_opt_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_opt_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_dec_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_opt_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_dec_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_dec_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_dec_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2, 1]]]
+  },
+  "gurobi_dec_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[1, 2]]]
+  },
+  "gurobi_opt_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
     "optimal": true,
     "stop_reason": null,
     "obj": 1,

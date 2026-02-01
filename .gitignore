@@ -1,5 +1,13 @@
-licenses/*.lic
-ampl.linux64.tgz
 CDMOenv/
 source/SMT/__pycache__/
 source/SAT/__pycache__/
+
+personalized_res/
+licenses/
+res/MIP/circle/
+source/MIP/circle_schedule.py
+source/CP/CP_cyrcle_method.mzn
+source/CP/n20_NON_TOCCARE.mzn
+source/SAT/SAT_optimizer.py
+source/SAT/SAT_sts.py
+
