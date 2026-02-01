@@ -1,0 +1,610 @@
+{
+  "highs_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "highs_dec_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "highs_dec_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "highs_dec_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "highs_dec_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "highs_dec_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cbc_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "cbc_dec_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "cbc_dec_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cbc_dec_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cbc_dec_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cbc_dec_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cplex_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "cplex_dec_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "cplex_dec_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cplex_dec_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cplex_dec_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "cplex_dec_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "gurobi_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "gurobi_dec_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_cir_sbper": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 1,
+    "sol": []
+  },
+  "gurobi_dec_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "gurobi_dec_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "gurobi_dec_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can_st1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  },
+  "gurobi_dec_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can_st1_sw1": {
+    "time": 0,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": true,
+    "stop_reason": "infeasible",
+    "obj": 0,
+    "sol": []
+  }
+}

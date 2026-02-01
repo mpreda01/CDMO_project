@@ -1,0 +1,6 @@
+amplpy
+pandas
+orjson
+z3-solver
+matplotlib
+psutil
