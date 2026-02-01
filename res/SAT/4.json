@@ -271,7 +271,7 @@
     "sol": []
   },
   "minisat_dec_cla_sbfix_sblex_ic1_ic2": {
-    "time": 0,
+    "time": 1,
     "method": "classic",
     "version": "decision",
     "params": {
@@ -325,7 +325,7 @@
     "sol": []
   },
   "glucose_dec_cla_sblex_ic1_ic2": {
-    "time": 1,
+    "time": 0,
     "method": "classic",
     "version": "decision",
     "params": {
@@ -339,7 +339,7 @@
     "sol": []
   },
   "glucose_dec_cla_sbfix_sblex_ic1_ic2": {
-    "time": 1,
+    "time": 0,
     "method": "classic",
     "version": "decision",
     "params": {

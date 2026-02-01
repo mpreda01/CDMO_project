@@ -451,7 +451,7 @@ def solve_sts(n: int, constraints=None, use_circle_method: bool = True, timeout:
             print(f"  Time: {total_time:.2f}s")
         return {
             'solution': None,
-            'time': total_time,
+            'time': min(total_time, timeout),
             'satisfiable': False,
             'obj': None
         }
@@ -481,7 +481,7 @@ def solve_sts(n: int, constraints=None, use_circle_method: bool = True, timeout:
     if not optimize:
         return {
             'solution': sol,
-            'time': total_time,
+            'time': min(total_time, timeout),
             'satisfiable': True,
             'obj': None
         }
@@ -506,7 +506,7 @@ def solve_sts(n: int, constraints=None, use_circle_method: bool = True, timeout:
             print(f"  Returning feasible solution with obj={obj}")
         return {
             'solution': sol,
-            'time': total_time,
+            'time': min(total_time, timeout),
             'satisfiable': True,
             'obj': obj
         }
@@ -526,7 +526,7 @@ def solve_sts(n: int, constraints=None, use_circle_method: bool = True, timeout:
     
     return {
         'solution': opt_result['solution'],
-        'time': final_time,
+        'time': min(final_time, timeout),
         'satisfiable': True,
         'obj': opt_result['obj']
     }
@@ -663,7 +663,7 @@ def solve_sts_dimacs(n: int, constraints: dict = None, use_circle_method: bool =
             print(f"  Time: {total_time:.2f}s")
         return {
             'solution': None,
-            'time': total_time,
+            'time': min(total_time, timeout),
             'satisfiable': False,
             'obj': None
         }
@@ -696,7 +696,7 @@ def solve_sts_dimacs(n: int, constraints: dict = None, use_circle_method: bool =
     if not optimize:
         return {
             'solution': sol,
-            'time': total_time,
+            'time': min(total_time, timeout),
             'satisfiable': True,
             'obj': None
         }
@@ -721,7 +721,7 @@ def solve_sts_dimacs(n: int, constraints: dict = None, use_circle_method: bool =
             print(f"  Returning feasible solution with obj={obj}")
         return {
             'solution': sol,
-            'time': total_time,
+            'time': min(total_time, timeout),
             'satisfiable': True,
             'obj': obj
         }
@@ -741,7 +741,7 @@ def solve_sts_dimacs(n: int, constraints: dict = None, use_circle_method: bool =
     
     return {
         'solution': opt_result['solution'],
-        'time': final_time,
+        'time': min(final_time, timeout),
         'satisfiable': True,
         'obj': opt_result['obj']
     }
@@ -768,20 +768,20 @@ def print_solution_formatted(solution):
 
 def main():
     
-    n_teams = 12
+    n_teams = 20
 
     timeout = 300
     use_circle_method = True
-    optimize = False 
+    optimize = True 
 
     constraints = {
-        'matches_per_team': True,
-        'different_match_per_period': True,
+        'matches_per_team': False,
+        'different_match_per_period': False,
         'n_fix_period': True,
         'lex_periods': True
     }
 
-    if 0:
+    if 1:
         result = solve_sts(n=n_teams, constraints=constraints, use_circle_method=use_circle_method, timeout=timeout, optimize=optimize, verbose=True)
     else:
         result = solve_sts_dimacs(n=n_teams, constraints=constraints, use_circle_method=use_circle_method, solver="minisat", timeout=timeout, optimize=optimize, verbose=True)

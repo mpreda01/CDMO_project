@@ -10,14 +10,19 @@ import os
 import sys
 import math
 
+# Get the directory where this script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Project root is two levels up from test/SAT/
+PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..'))
+
 # Add source/SAT to path for imports
-sys.path.insert(0, 'source/SAT')
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'source', 'SAT'))
 
 from SAT_solver_final import solve_sts, solve_sts_dimacs
-from solution_checker import check_solution
+from solution_checker import check_solution  # Same folder as runner
 
 TIMEOUT = 300
-OUTPUT_DIR = "res/SAT"
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'res', 'SAT')
 
 
 def get_all_configs():
@@ -151,35 +156,64 @@ def run_solver(config, n, timeout=TIMEOUT):
 
 
 def format_result(config, result):
-    """Format result for JSON output."""
+    """
+    Format result for JSON output.
+    
+    Assignment rules (Section 2.4):
+    - time: integer (floor of actual runtime), max 300
+    - optimal: boolean (true iff solved for decision, or solved to optimality for optimization)
+    - obj: positive integer OR string "None" (NOT JSON null)
+    - sol: list of lists
+    - CRITICAL: time = 300 ⟺ optimal = false (biconditional)
+    """
     time_floor = int(math.floor(result['time']))
     is_optimization = config.get('optimize', False)
     
-    # time = 300 ⟺ optimal = false
-    if not result['satisfiable']:
-        if time_floor >= TIMEOUT:
-            time_floor = TIMEOUT
-        optimal = False
-        stop_reason = "time_limit" if time_floor >= TIMEOUT else None
-    else:
-        optimal = True
-        stop_reason = None
+    # CRITICAL: Enforce timeout limit FIRST - this affects everything else
+    # If time >= TIMEOUT, treat as timeout regardless of satisfiability
+    if time_floor >= TIMEOUT:
+        # Timeout case: time=300, optimal=false, discard solution
+        return {
+            'time': TIMEOUT,
+            'method': 'circle' if config['use_circle_method'] else 'classic',
+            'version': 'optimization' if is_optimization else 'decision',
+            'params': config['params'],
+            'optimal': False,
+            'stop_reason': "time_limit",
+            'obj': "None",  # String "None", NOT null
+            'sol': []
+        }
     
-    # Handle obj field
+    # Within timeout: check satisfiability
+    if not result['satisfiable']:
+        # UNSAT case (within timeout)
+        return {
+            'time': time_floor,
+            'method': 'circle' if config['use_circle_method'] else 'classic',
+            'version': 'optimization' if is_optimization else 'decision',
+            'params': config['params'],
+            'optimal': False,
+            'stop_reason': None,
+            'obj': "None",  # String "None", NOT null
+            'sol': []
+        }
+    
+    # SAT case (within timeout): optimal=true, keep solution
+    # Handle obj field: positive integer for optimization with result, else "None" string
     if is_optimization and result.get('obj') is not None:
         obj_value = result['obj']
     else:
-        obj_value = None
+        obj_value = "None"  # String "None", NOT null
     
     return {
         'time': time_floor,
         'method': 'circle' if config['use_circle_method'] else 'classic',
         'version': 'optimization' if is_optimization else 'decision',
         'params': config['params'],
-        'optimal': optimal,
-        'stop_reason': stop_reason,
+        'optimal': True,
+        'stop_reason': None,
         'obj': obj_value,
-        'sol': result['solution'] if result['satisfiable'] else []
+        'sol': result['solution'] if result['solution'] else []
     }
 
 
@@ -268,8 +302,15 @@ def run_all(max_n=100, start_n=6):
             
             result = run_solver(config, n)
             
-            # Determine status
-            if result['satisfiable']:
+            # Determine status (for logging purposes)
+            timed_out = result['time'] >= TIMEOUT
+            
+            if timed_out:
+                status = "TIMEOUT"
+                # For n=4, timeout/UNSAT is expected - don't mark as failed
+                if n != 4:
+                    failed_configs.add(name)
+            elif result['satisfiable']:
                 valid = validate_solution(result['solution'], n)
                 if valid:
                     status = "SAT"
@@ -278,10 +319,7 @@ def run_all(max_n=100, start_n=6):
                     status = "INVALID"
                     failed_configs.add(name)
             else:
-                if result['time'] >= TIMEOUT:
-                    status = "TIMEOUT"
-                else:
-                    status = "UNSAT"
+                status = "UNSAT"
                 # For n=4, UNSAT is expected - don't mark as failed
                 if n != 4:
                     failed_configs.add(name)
@@ -312,18 +350,19 @@ def run_all(max_n=100, start_n=6):
             result = run_solver(config, n)
             opt_run_count += 1
             
-            # Determine status
-            if result['satisfiable']:
+            # Determine status (for logging purposes)
+            timed_out = result['time'] >= TIMEOUT
+            
+            if timed_out:
+                status = "TIMEOUT"
+            elif result['satisfiable']:
                 valid = validate_solution(result['solution'], n)
                 if valid:
-                    status = f"SAT (obj={result['obj']})"
+                    status = f"SAT (obj={result.get('obj', '?')})"
                 else:
                     status = "INVALID"
             else:
-                if result['time'] >= TIMEOUT:
-                    status = "TIMEOUT"
-                else:
-                    status = "UNSAT"
+                status = "UNSAT"
             
             time_str = f"{result['time']:.2f}s"
             print(f"  {name:45} | {method:7} | opt | {time_str:10} | {status}")
@@ -353,4 +392,4 @@ if __name__ == "__main__":
     parser.add_argument('--max-n', type=int, default=100)
     parser.add_argument('--start-n', type=int, default=2)
     args = parser.parse_args()
-    run_all(max_n=args.max_n, start_n=8)
+    run_all(max_n=args.max_n, start_n=args.start_n)

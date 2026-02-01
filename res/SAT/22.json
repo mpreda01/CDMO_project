@@ -8,7 +8,7 @@
     },
     "optimal": false,
     "stop_reason": "time_limit",
-    "obj": null,
+    "obj": "None",
     "sol": []
   }
 }
