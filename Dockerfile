@@ -54,14 +54,18 @@ RUN ln -sf /usr/bin/python3 /usr/bin/python && \
     ln -sf /usr/bin/pip3 /usr/bin/pip
 
 #FROM python:3.9-slim-bullseye
-RUN python -m pip install amplpy # Install amplpy
-RUN python -m amplpy.modules install highs gurobi cplex cbc
+
+
+RUN python -m pip install --upgrade amplpy # Install amplpy
+#RUN python -m amplpy.modules install highs gurobi cplex cbc
+RUN python -c "from amplpy import modules; modules.install('ampl'); modules.install('highs'); modules.install('cbc'); modules.install('gurobi'); modules.install('cplex')"
+
 
 # Copy AMPL academic license
 COPY licenses/ampl.lic /opt/ampl/ampl.lic
 
 # Set AMPL to use the license
-ENV AMPL_LICENSE_FILE=/opt/ampl/ampl.lic
+ENV AMPL_LICFILE=/opt/ampl/ampl.lic
 
 # Set environment variables
 ENV PATH="/opt/ampl:/opt/minizinc/bin:/opt/cvc5/bin:${PATH}"

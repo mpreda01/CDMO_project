@@ -1,5 +1,4 @@
-# Sports Tournament Scheduling - MIP Model in AMPL
-# Decision and Optimization versions
+# MIP Canonical Model in AMPL
 
 # Parameters
 param n >= 2;
@@ -10,7 +9,6 @@ param optimize_balance default 0 binary;
 param sb_teams default 0 binary;
 param sb_weeks default 0 binary;
 
-# Sets
 set TEAMS := 1..n;
 set WEEKS := 1..(n-1);
 set PERIODS := 1..(n/2);
