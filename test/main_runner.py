@@ -4,8 +4,8 @@ import sys
 scripts = [
     "test/CP/CPcircle_runner.py",
     "test/SMT/SMT_runner.py",
+    "test/SAT/SAT_runner.py",
     "test/MIP/MIP_runner.py",
-    #"test/SAT/SAT_runner.py",
 ]
 
 python_exe = sys.executable

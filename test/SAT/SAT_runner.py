@@ -259,10 +259,19 @@ def save_json(data, filepath):
         f.write(CompactJSONEncoder().encode(data))
 
 
-def run_all(max_n=100, start_n=6):
-    """Run all configurations for all n values until all fail."""
+def run_all(max_n=100, start_n=6, circle_only=False):
+    """Run configurations for all n values.
+    
+    Args:
+        max_n: Maximum n to test
+        start_n: Starting n value
+        circle_only: If True, only run circle method configurations
+    """
     configs = get_all_configs()
-    failed_configs = set()
+    
+    # Filter to circle-only if requested
+    if circle_only:
+        configs = [c for c in configs if c['use_circle_method']]
     
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
@@ -270,9 +279,14 @@ def run_all(max_n=100, start_n=6):
     dec_configs = [c for c in configs if not c.get('optimize', False)]
     opt_configs = [c for c in configs if c.get('optimize', False)]
     
+    mode_str = "CIRCLE ONLY" if circle_only else "ALL CONFIGURATIONS"
     print(f"{'='*80}")
-    print(f"SAT RUNNER - {len(configs)} configurations ({len(dec_configs)} decision, {len(opt_configs)} optimization)")
+    print(f"SAT RUNNER - {mode_str}")
+    print(f"{len(configs)} configurations ({len(dec_configs)} decision, {len(opt_configs)} optimization)")
     print(f"{'='*80}")
+    
+    # Track failed configs across n values (except n=4 to n=6 transition)
+    failed_configs = set()
     
     n = start_n
     while n <= max_n:
@@ -282,11 +296,11 @@ def run_all(max_n=100, start_n=6):
         
         results_for_n = {}
         
-        # Filter active decision configs
+        # Filter out configs that failed at previous n values
         active_dec = [c for c in dec_configs if c['name'] not in failed_configs]
         
         if not active_dec:
-            print("All decision configurations failed. Stopping.")
+            print("All decision configurations have failed. Stopping.")
             break
         
         print(f"Active decision: {len(active_dec)} / {len(dec_configs)}")
@@ -307,9 +321,7 @@ def run_all(max_n=100, start_n=6):
             
             if timed_out:
                 status = "TIMEOUT"
-                # For n=4, timeout/UNSAT is expected - don't mark as failed
-                if n != 4:
-                    failed_configs.add(name)
+                failed_configs.add(name)
             elif result['satisfiable']:
                 valid = validate_solution(result['solution'], n)
                 if valid:
@@ -320,9 +332,7 @@ def run_all(max_n=100, start_n=6):
                     failed_configs.add(name)
             else:
                 status = "UNSAT"
-                # For n=4, UNSAT is expected - don't mark as failed
-                if n != 4:
-                    failed_configs.add(name)
+                failed_configs.add(name)
             
             time_str = f"{result['time']:.2f}s"
             print(f"  {name:45} | {method:7} | dec | {time_str:10} | {status}")
@@ -378,18 +388,37 @@ def run_all(max_n=100, start_n=6):
             save_json(results_for_n, json_path)
             print(f"\nSaved: {json_path} ({len(results_for_n)} results)")
         
+        # Reset failed_configs after n=4 since ALL configs fail there by problem definition
+        # This ensures n=6 gets a fresh start with all configurations
+        if n == 4:
+            failed_configs.clear()
+            print("\n  (Cleared failure tracking - n=4 failures are expected)")
+        
         n += 2
     
     print(f"\n{'='*80}")
-    print(f"DONE - Tested up to n={n-2}")
-    print(f"Failed configs: {len(failed_configs)}")
+    print(f"DONE - Tested n={start_n} to n={n-2}")
     print(f"{'='*80}")
 
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--max-n', type=int, default=100)
+    parser = argparse.ArgumentParser(
+        description="SAT Solver Runner for STS Problem.\n"
+                    "Default: runs circle method only, n=2 to n=10.\n"
+                    "ALL mode: runs all configurations until all fail."
+    )
+    parser.add_argument('mode', nargs='?', default='default', 
+                        help="'ALL' to run all configurations, otherwise runs circle-only mode")
+    parser.add_argument('--max-n', type=int, default=None)
     parser.add_argument('--start-n', type=int, default=2)
     args = parser.parse_args()
-    run_all(max_n=args.max_n, start_n=args.start_n)
+    
+    if args.mode.upper() == 'ALL':
+        # ALL mode: all configurations, run until all fail
+        max_n = args.max_n if args.max_n is not None else 100
+        run_all(max_n=max_n, start_n=args.start_n, circle_only=False)
+    else:
+        # Default mode: circle only, n=2 to n=10
+        max_n = args.max_n if args.max_n is not None else 10
+        run_all(max_n=max_n, start_n=args.start_n, circle_only=True)

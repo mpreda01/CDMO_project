@@ -4,3 +4,5 @@ orjson
 z3-solver
 matplotlib
 psutil
+pysat
+python-sat
