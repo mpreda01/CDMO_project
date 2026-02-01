@@ -419,7 +419,7 @@ class STSModel:
                 "time": int(solve_time),
                 "solve_time": round(solve_time, 2),
                 "optimize_time": 0,
-                "optimal": True,
+                "optimal": not optimize,  # True for decision, False for optimization
                 "obj": "None",
                 "sol": []
             }

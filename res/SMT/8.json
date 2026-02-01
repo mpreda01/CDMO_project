@@ -1823,38 +1823,6 @@
       "solver": "z3"
     }
   },
-  "1769878027.7358084": {
-    "time": 0.0,
-    "solve_time": 0.09,
-    "optimize_time": 0.0,
-    "optimal": true,
-    "obj": "None",
-    "sol": [],
-    "params": {
-      "optimize": false,
-      "circle": true,
-      "sb_fix_period": true,
-      "sb_lex_periods": true,
-      "implied_constraints": false,
-      "solver": "z3"
-    }
-  },
-  "1769878028.03073": {
-    "time": 0.0,
-    "solve_time": 0.1,
-    "optimize_time": 0.0,
-    "optimal": true,
-    "obj": "None",
-    "sol": [],
-    "params": {
-      "optimize": false,
-      "circle": true,
-      "sb_fix_period": true,
-      "sb_lex_periods": true,
-      "implied_constraints": true,
-      "solver": "z3"
-    }
-  },
   "1769878110.0906742": {
     "time": 0.0,
     "solve_time": 0.07,
@@ -1887,11 +1855,107 @@
       "solver": "z3"
     }
   },
-  "1769878110.7088823": {
+  "1769950635.8755345": {
     "time": 0.0,
-    "solve_time": 0.1,
+    "solve_time": 0.13,
     "optimize_time": 0.0,
     "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769950636.362264": {
+    "time": 0.0,
+    "solve_time": 0.16,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950690.2958777": {
+    "time": 0.0,
+    "solve_time": 0.15,
+    "optimize_time": 0.18,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[5,4],[1,3],[2,4],[3,5],[2,1],[8,6],[8,7]],[[6,3],[8,2],[1,5],[8,4],[3,7],[5,7],[6,1]],[[7,2],[6,5],[8,3],[1,7],[4,6],[4,1],[5,2]],[[8,1],[7,4],[7,6],[2,6],[8,5],[3,2],[4,3]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769950691.0022452": {
+    "time": 0.0,
+    "solve_time": 0.2,
+    "optimize_time": 0.16,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[6,3],[1,3],[2,4],[8,4],[2,1],[5,7],[8,7]],[[8,1],[7,4],[7,6],[3,5],[8,5],[3,2],[6,1]],[[7,2],[6,5],[8,3],[1,7],[4,6],[4,1],[5,2]],[[5,4],[8,2],[1,5],[2,6],[3,7],[8,6],[4,3]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950691.6152465": {
+    "time": 0.0,
+    "solve_time": 0.15,
+    "optimize_time": 0.14,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[8,1],[6,5],[2,4],[1,7],[4,6],[3,2],[8,7]],[[7,2],[7,4],[8,3],[3,5],[8,5],[4,1],[6,1]],[[6,3],[1,3],[7,6],[8,4],[2,1],[5,7],[5,2]],[[5,4],[8,2],[1,5],[2,6],[3,7],[8,6],[4,3]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769950692.2457938": {
+    "time": 0.0,
+    "solve_time": 0.2,
+    "optimize_time": 0.14,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[8,1],[6,5],[2,4],[1,7],[4,6],[3,2],[8,7]],[[7,2],[7,4],[8,3],[3,5],[8,5],[4,1],[6,1]],[[6,3],[1,3],[7,6],[8,4],[2,1],[5,7],[5,2]],[[5,4],[8,2],[1,5],[2,6],[3,7],[8,6],[4,3]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950692.6870387": {
+    "time": 0.0,
+    "solve_time": 0.11,
+    "optimize_time": 0.0,
+    "optimal": false,
     "obj": "None",
     "sol": [],
     "params": {
@@ -1903,11 +1967,11 @@
       "solver": "z3"
     }
   },
-  "1769878110.9725156": {
+  "1769950693.15318": {
     "time": 0.0,
-    "solve_time": 0.12,
+    "solve_time": 0.14,
     "optimize_time": 0.0,
-    "optimal": true,
+    "optimal": false,
     "obj": "None",
     "sol": [],
     "params": {
@@ -1917,6 +1981,262 @@
       "sb_lex_periods": true,
       "implied_constraints": true,
       "solver": "z3"
+    }
+  },
+  "1769950783.0078924": {
+    "time": 0.0,
+    "solve_time": 0.34,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[6,3],[6,5],[1,5],[8,4],[2,1],[3,2],[8,7]],[[5,4],[8,2],[8,3],[1,7],[4,6],[5,7],[6,1]],[[7,2],[1,3],[7,6],[2,6],[8,5],[4,1],[4,3]],[[8,1],[7,4],[2,4],[3,5],[3,7],[8,6],[5,2]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950783.776005": {
+    "time": 0.0,
+    "solve_time": 0.37,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[8,1],[6,5],[7,6],[1,7],[8,5],[3,2],[4,3]],[[5,4],[7,4],[8,3],[2,6],[2,1],[5,7],[6,1]],[[6,3],[8,2],[1,5],[8,4],[3,7],[4,1],[5,2]],[[7,2],[1,3],[2,4],[3,5],[4,6],[8,6],[8,7]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950784.3766167": {
+    "time": 0.0,
+    "solve_time": 0.32,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[8,1],[6,5],[7,6],[8,4],[3,7],[3,2],[5,2]],[[7,2],[7,4],[8,3],[2,6],[8,5],[4,1],[6,1]],[[6,3],[8,2],[1,5],[1,7],[4,6],[5,7],[4,3]],[[5,4],[1,3],[2,4],[3,5],[2,1],[8,6],[8,7]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950785.0792103": {
+    "time": 0.0,
+    "solve_time": 0.41,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[8,1],[8,2],[7,6],[3,5],[4,6],[4,1],[5,2]],[[7,2],[6,5],[8,3],[8,4],[2,1],[5,7],[4,3]],[[6,3],[7,4],[2,4],[1,7],[8,5],[3,2],[6,1]],[[5,4],[1,3],[1,5],[2,6],[3,7],[8,6],[8,7]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950785.657201": {
+    "time": 0.0,
+    "solve_time": 0.28,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[8,1],[7,4],[2,4],[3,5],[8,5],[3,2],[6,1]],[[7,2],[8,2],[1,5],[1,7],[4,6],[8,6],[4,3]],[[5,4],[6,5],[8,3],[2,6],[3,7],[4,1],[8,7]],[[6,3],[1,3],[7,6],[8,4],[2,1],[5,7],[5,2]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950786.2858472": {
+    "time": 0.0,
+    "solve_time": 0.33,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[8,1],[7,4],[2,4],[3,5],[8,5],[3,2],[6,1]],[[7,2],[8,2],[1,5],[1,7],[4,6],[8,6],[4,3]],[[5,4],[6,5],[8,3],[2,6],[3,7],[4,1],[8,7]],[[6,3],[1,3],[7,6],[8,4],[2,1],[5,7],[5,2]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950786.842219": {
+    "time": 0.0,
+    "solve_time": 0.27,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950787.4743645": {
+    "time": 0.0,
+    "solve_time": 0.35,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951910.592504": {
+    "time": 0.0,
+    "solve_time": 0.35,
+    "optimize_time": 0.18,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[6,3],[6,5],[1,5],[8,4],[2,1],[3,2],[8,7]],[[5,4],[8,2],[8,3],[1,7],[4,6],[5,7],[6,1]],[[7,2],[1,3],[7,6],[2,6],[8,5],[4,1],[4,3]],[[8,1],[7,4],[2,4],[3,5],[3,7],[8,6],[5,2]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951911.517287": {
+    "time": 0.0,
+    "solve_time": 0.45,
+    "optimize_time": 0.17,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[8,1],[6,5],[7,6],[1,7],[8,5],[3,2],[4,3]],[[5,4],[7,4],[8,3],[2,6],[2,1],[5,7],[6,1]],[[6,3],[8,2],[1,5],[8,4],[3,7],[4,1],[5,2]],[[7,2],[1,3],[2,4],[3,5],[4,6],[8,6],[8,7]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951912.368495": {
+    "time": 0.0,
+    "solve_time": 0.37,
+    "optimize_time": 0.15,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[8,1],[6,5],[7,6],[8,4],[3,7],[3,2],[5,2]],[[7,2],[7,4],[8,3],[2,6],[8,5],[4,1],[6,1]],[[6,3],[8,2],[1,5],[1,7],[4,6],[5,7],[4,3]],[[5,4],[1,3],[2,4],[3,5],[2,1],[8,6],[8,7]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951913.3262053": {
+    "time": 0.0,
+    "solve_time": 0.43,
+    "optimize_time": 0.2,
+    "optimal": false,
+    "obj": 7,
+    "sol": [[[8,1],[8,2],[7,6],[3,5],[4,6],[4,1],[5,2]],[[7,2],[6,5],[8,3],[8,4],[2,1],[5,7],[4,3]],[[6,3],[7,4],[2,4],[1,7],[8,5],[3,2],[6,1]],[[5,4],[1,3],[1,5],[2,6],[3,7],[8,6],[8,7]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951914.189493": {
+    "time": 0.0,
+    "solve_time": 0.35,
+    "optimize_time": 0.18,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,8],[4,7],[4,2],[3,5],[8,5],[2,3],[1,6]],[[2,7],[8,2],[1,5],[7,1],[6,4],[6,8],[4,3]],[[5,4],[6,5],[3,8],[2,6],[7,3],[1,4],[8,7]],[[3,6],[3,1],[7,6],[8,4],[2,1],[5,7],[5,2]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951915.0610392": {
+    "time": 0.0,
+    "solve_time": 0.37,
+    "optimize_time": 0.16,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,8],[4,7],[4,2],[3,5],[8,5],[2,3],[1,6]],[[2,7],[8,2],[1,5],[7,1],[6,4],[6,8],[4,3]],[[5,4],[6,5],[3,8],[2,6],[7,3],[1,4],[8,7]],[[3,6],[3,1],[7,6],[8,4],[2,1],[5,7],[5,2]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951915.6313016": {
+    "time": 0.0,
+    "solve_time": 0.26,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951916.2950475": {
+    "time": 0.0,
+    "solve_time": 0.36,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
     }
   }
 }

@@ -300,6 +300,15 @@ def z3_permutation_constraint(original_schedule,
 
 
 
+def safe_remove_file(filepath):
+    """Safely remove a file, ignoring errors if file is in use or doesn't exist."""
+    try:
+        if os.path.exists(filepath):
+            os.remove(filepath)
+    except (PermissionError, OSError):
+        # File is in use or can't be deleted, ignore
+        pass
+
 
 def z3_permutation_constraint_cvc5(original_schedule,
                                     n_teams,
@@ -461,8 +470,7 @@ def z3_permutation_constraint_cvc5(original_schedule,
     except subprocess.TimeoutExpired:
         tot_time = time.time() - start_time
         # Clean up temporary file
-        if os.path.exists(smt2_path):
-            os.remove(smt2_path)
+        safe_remove_file(smt2_path)
         return s, assign, None, None, unknown, tot_time
 
     tot_time = time.time() - start_time
@@ -470,13 +478,11 @@ def z3_permutation_constraint_cvc5(original_schedule,
 
     if "unsat" in stdout:
         # Clean up temporary file
-        if os.path.exists(smt2_path):
-            os.remove(smt2_path)
+        safe_remove_file(smt2_path)
         return s, assign, None, None, "unsat", tot_time
     if "sat" not in stdout:
         # Clean up temporary file
-        if os.path.exists(smt2_path):
-            os.remove(smt2_path)
+        safe_remove_file(smt2_path)
         return s, assign, None, None, unknown, tot_time
 
     # Parse model from cvc5 output
@@ -502,8 +508,7 @@ def z3_permutation_constraint_cvc5(original_schedule,
                 away_out[p][w] = a
 
     # Clean up temporary file
-    if os.path.exists(smt2_path):
-        os.remove(smt2_path)
+    safe_remove_file(smt2_path)
 
     return s, assign, home_out, away_out, sat, tot_time
 
@@ -928,8 +933,23 @@ if __name__ == "__main__":
                 print("sol:")
                 print_solution_matrix(home, away)
             else:
-                print("Optimization UNSAT.")
+                print("Optimization UNSAT (problem infeasible).")
                 print("optimize_time:", opt_time)
+                print("Total time: %.2f seconds\n" % int(opt_time + sat_time))
+                print("optimal: False")
+                print("obj:", n_teams - 1)
+                print("sol:")
+                print_solution_matrix(home, away)
+                print("Total time: %.2f seconds\n" % int(opt_time + sat_time))
+                print("optimal: False")
+                print("obj:", n_teams - 1)
+                print("sol:")
+                print_solution_matrix(home, away)
+                print("Total time: %.2f seconds\n" % int(opt_time + sat_time))
+                print("optimal: False")
+                print("obj:", n_teams - 1)
+                print("sol:")
+                print_solution_matrix(home, away)
         
         else:
             print("optimize_time: 0")
@@ -950,7 +970,8 @@ if __name__ == "__main__":
         print("SOLVER reports UNSAT: schedule violates constraints.")
         print("solve_time:", round(sat_time, 2))
         print("optimize_time: 0")
-        print("optimal: True")
+        # For UNSAT: optimal=True if decision problem (proved no solution), False if optimization (can't optimize)
+        print("optimal:", "False" if mode == "opt" else "True")
         print("Total time: %.2f seconds\n" % int(sat_time))
         print("obj: None")
         print("sol: []")
