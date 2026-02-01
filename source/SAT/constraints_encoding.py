@@ -22,6 +22,10 @@ def at_least_k(bool_vars, k, name):
 def at_most_k(bool_vars, k, name):
     constraints = []
     n = len(bool_vars)
+    if n == 0:
+        return BoolVal(True)
+    if n <= k:
+        return BoolVal(True)
     s = [[Bool(f"s_{name}_{i}_{j}") for j in range(k)] for i in range(n - 1)]
     constraints.append(Or(Not(bool_vars[0]), s[0][0]))
     constraints += [Not(s[0][j]) for j in range(1, k)]

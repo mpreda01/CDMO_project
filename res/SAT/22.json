@@ -1,0 +1,14 @@
+{
+  "z3_dec_cir_sbfix": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": null,
+    "sol": []
+  }
+}

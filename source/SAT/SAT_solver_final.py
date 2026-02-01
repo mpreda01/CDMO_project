@@ -147,7 +147,8 @@ def create_solver(n: int, solver_args: dict, constraints: dict = None):
     home = solver_args['home']
     away = solver_args['away']
 
-    # Core constraints
+    # CORE CONTRAINTS
+    # Each period has exactly one home and one away team per week, and they must be different
     for w in Weeks:
         for p in Periods:
             solver.add(exactly_one([home[w][p][t] for t in Teams], name=f"home_{w}_{p}"))
@@ -156,6 +157,7 @@ def create_solver(n: int, solver_args: dict, constraints: dict = None):
                 solver.add(Implies(home[w][p][t], Not(away[w][p][t])))
                 solver.add(Implies(away[w][p][t], Not(home[w][p][t])))
 
+    # Each team plays exactly one match per week
     for w in Weeks:
         for t in Teams:
             occ = []
@@ -164,6 +166,7 @@ def create_solver(n: int, solver_args: dict, constraints: dict = None):
                 occ.append(away[w][p][t])
             solver.add(exactly_one(occ, name=f"team_{t}_week_{w}"))
 
+    # Each pair of teams plays exactly one match in the tournament
     for i in Teams:
         for j in Teams:
             if i < j:
@@ -174,6 +177,7 @@ def create_solver(n: int, solver_args: dict, constraints: dict = None):
                         pair_games.append(And(home[w][p][j], away[w][p][i]))
                 solver.add(exactly_one(pair_games, name=f"pair_{i}_{j}"))
 
+    # Each team plays at most twice in the same period
     for t in Teams:
         for p in Periods:
             occ = []
@@ -182,7 +186,7 @@ def create_solver(n: int, solver_args: dict, constraints: dict = None):
                 occ.append(away[w][p][t])
             solver.add(at_most_k(occ, 2, name=f"team_{t}_period_{p}"))
 
-    # Implied constraints
+    # IMPLIED CONSTRAINTS
     if ic_matches_per_team:
         matches_constraints = matches_per_team_constraints(home, away, Teams, Weeks, Periods, n_weeks)
         for c in matches_constraints:
@@ -193,7 +197,7 @@ def create_solver(n: int, solver_args: dict, constraints: dict = None):
         for c in diff_constraints:
             solver.add(c)
 
-    # Symmetry breaking
+    # SYMMETRY BREAKING
     if n_fix_period:
         fix_constraints = fix_period_constraints(home, away, n, n_weeks, n_periods)
         for c in fix_constraints:
@@ -218,7 +222,8 @@ def create_solver_with_circle_method(n: int, solver_args: dict, constraints: dic
     
     ic_matches_per_team = constraints.get('matches_per_team', False)
     ic_different_match_per_period = constraints.get('different_match_per_period', False)
-    if n >= 8:
+    # n_fix_period it's too restrictive pairing with circle method for n<8  (sperimental results)
+    if n >= 8:    
         n_fix_period = constraints.get('n_fix_period', False)
     else: 
         n_fix_period = False
@@ -234,7 +239,10 @@ def create_solver_with_circle_method(n: int, solver_args: dict, constraints: dic
     home = solver_args['home']
     away = solver_args['away']
 
+    # Starting from a circle method generated schedule
     initial_schedule = circle_method(n)
+
+    # CORE CONSTRAINTS
 
     for w, week_matches in enumerate(initial_schedule):
         for p in Periods:
@@ -572,7 +580,7 @@ def solve_sts_dimacs(n: int, constraints: dict = None, use_circle_method: bool =
         s = create_solver(n, solver_args, constraints)
 
     goal = Goal()
-    goal.add(s.assertions())
+    goal.add(s.assertions()) # Get all constraints from solver
 
     tactic = Then(Tactic("simplify"), Tactic("tseitin-cnf"))
     result_goals = tactic(goal)
@@ -760,23 +768,23 @@ def print_solution_formatted(solution):
 
 def main():
     
-    n_teams = 10
+    n_teams = 12
 
     timeout = 300
-    use_circle_method = True 
-    optimize = True 
+    use_circle_method = True
+    optimize = False 
 
     constraints = {
-        'matches_per_team': False,
-        'different_match_per_period': False,
+        'matches_per_team': True,
+        'different_match_per_period': True,
         'n_fix_period': True,
-        'lex_periods': False
+        'lex_periods': True
     }
 
-    if 1:
+    if 0:
         result = solve_sts(n=n_teams, constraints=constraints, use_circle_method=use_circle_method, timeout=timeout, optimize=optimize, verbose=True)
     else:
-        result = solve_sts_dimacs(n=n_teams, constraints=constraints, use_circle_method=use_circle_method, solver="glucose", timeout=timeout, optimize=optimize, verbose=True)
+        result = solve_sts_dimacs(n=n_teams, constraints=constraints, use_circle_method=use_circle_method, solver="minisat", timeout=timeout, optimize=optimize, verbose=True)
  
     if result['satisfiable']:
         print(f"\nFinal solution:")
