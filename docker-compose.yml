@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  cdmo-solver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sts-image
+    hostname: cdmo-solver
+    
+    # Mount the current directory to /app in the container
+    volumes:
+    - type: bind
+      source: ./res
+      target: /app/res
+    - type: bind
+      source: ./test
+      target: /app/test
+    - type: bind
+      source: ./source
+      target: /app/source
+    - type: bind
+      source: ./plots
+      target: /app/plots
+    - type: bind
+      source: ./licenses
+      target: /app/licenses
+      read_only: true
+    
+    # Set working directory
+    working_dir: /app
+    
+    # Environment variables
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - AMPL_LICENSE_FILE=/opt/ampl/ampl.lic
+      - CVC5_BIN=/opt/cvc5/bin/cvc5
+    
+    # Keep container running for interactive use
+    stdin_open: true
+    tty: true
+    
+    # Default command - can be overridden
+    command: /bin/bash
+    
+    # Network mode
+    network_mode: bridge
