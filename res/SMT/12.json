@@ -1,0 +1,1666 @@
+{
+  "1769710304.5599833": {
+    "time": 300,
+    "solve_time": 300.04,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769710337.5821712": {
+    "time": 31,
+    "solve_time": 31.52,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769710655.4064384": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769710956.9337964": {
+    "time": 300,
+    "solve_time": 300.04,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769711258.787612": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769711559.9426172": {
+    "time": 300,
+    "solve_time": 300.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769711861.126797": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769712163.1273098": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769712464.8241167": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769712711.7512233": {
+    "time": 245,
+    "solve_time": 245.28,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2],[3,8],[11,6],[8,12],[6,7],[3,9],[4,2],[5,10],[10,12],[11,5],[1,7]],[[7,5],[12,6],[7,12],[3,11],[4,11],[4,5],[6,10],[1,8],[3,2],[9,8],[10,9]],[[6,4],[2,5],[1,9],[2,7],[3,12],[11,12],[5,8],[6,9],[1,11],[10,7],[8,4]],[[9,12],[10,11],[10,4],[6,5],[9,2],[8,7],[12,1],[4,3],[8,6],[1,3],[2,11]],[[10,3],[4,1],[2,8],[9,4],[8,10],[6,1],[7,3],[11,7],[5,9],[6,2],[12,5]],[[8,11],[7,9],[3,5],[10,1],[1,5],[10,2],[11,9],[12,2],[4,7],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769712957.8305953": {
+    "time": 244,
+    "solve_time": 244.36,
+    "optimize_time": 0.11,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2],[3,8],[11,6],[8,12],[6,7],[9,3],[2,4],[5,10],[10,12],[5,11],[1,7]],[[7,5],[12,6],[7,12],[3,11],[4,11],[4,5],[6,10],[8,1],[2,3],[9,8],[9,10]],[[4,6],[2,5],[1,9],[2,7],[12,3],[11,12],[5,8],[6,9],[11,1],[7,10],[8,4]],[[9,12],[10,11],[10,4],[5,6],[9,2],[7,8],[12,1],[4,3],[6,8],[3,1],[2,11]],[[10,3],[1,4],[8,2],[4,9],[8,10],[6,1],[3,7],[11,7],[5,9],[2,6],[12,5]],[[8,11],[7,9],[3,5],[1,10],[1,5],[10,2],[11,9],[12,2],[7,4],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769713210.9849432": {
+    "time": 251,
+    "solve_time": 251.36,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2],[12,10],[11,8],[4,9],[5,11],[7,3],[7,6],[3,6],[12,1],[4,8],[5,2]],[[8,12],[5,1],[7,2],[6,2],[3,1],[9,11],[10,4],[9,7],[6,11],[12,3],[8,10]],[[5,3],[6,8],[10,1],[12,11],[7,4],[12,5],[3,8],[11,2],[9,10],[9,2],[6,4]],[[4,11],[3,9],[5,6],[1,7],[8,9],[6,10],[2,12],[8,1],[4,5],[10,11],[7,12]],[[10,7],[11,7],[12,9],[8,5],[10,2],[1,4],[5,9],[12,4],[3,2],[6,1],[11,3]],[[6,9],[4,2],[3,4],[10,3],[6,12],[2,8],[1,11],[10,5],[8,7],[5,7],[9,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769713511.6888573": {
+    "time": 298,
+    "solve_time": 298.75,
+    "optimize_time": 0.11,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2],[10,12],[11,8],[9,4],[11,5],[7,3],[7,6],[3,6],[12,1],[4,8],[2,5]],[[8,12],[1,5],[7,2],[6,2],[3,1],[9,11],[10,4],[9,7],[6,11],[12,3],[8,10]],[[5,3],[6,8],[10,1],[11,12],[7,4],[12,5],[8,3],[2,11],[10,9],[9,2],[4,6]],[[4,11],[9,3],[5,6],[1,7],[8,9],[10,6],[12,2],[1,8],[5,4],[11,10],[7,12]],[[10,7],[11,7],[12,9],[8,5],[2,10],[4,1],[5,9],[4,12],[3,2],[6,1],[11,3]],[[6,9],[2,4],[3,4],[3,10],[6,12],[2,8],[1,11],[5,10],[7,8],[5,7],[1,9]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769713813.249795": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769714114.710321": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769714416.5942855": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769714718.1804996": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769715020.0421212": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769715321.6259012": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769715623.719616": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769715925.9121692": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769716227.336678": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769716528.885331": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769716830.564106": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769717132.3534172": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769717403.318165": {
+    "time": 268,
+    "solve_time": 268.83,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2],[3,8],[11,6],[8,12],[6,7],[3,9],[4,2],[5,10],[10,12],[11,5],[1,7]],[[7,5],[12,6],[7,12],[3,11],[4,11],[4,5],[6,10],[1,8],[3,2],[9,8],[10,9]],[[6,4],[2,5],[1,9],[2,7],[3,12],[11,12],[5,8],[6,9],[1,11],[10,7],[8,4]],[[9,12],[10,11],[10,4],[6,5],[9,2],[8,7],[12,1],[4,3],[8,6],[1,3],[2,11]],[[10,3],[4,1],[2,8],[9,4],[8,10],[6,1],[7,3],[11,7],[5,9],[6,2],[12,5]],[[8,11],[7,9],[3,5],[10,1],[1,5],[10,2],[11,9],[12,2],[4,7],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769717630.925998": {
+    "time": 225,
+    "solve_time": 225.77,
+    "optimize_time": 0.13,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2],[3,8],[11,6],[12,8],[6,7],[3,9],[2,4],[10,5],[10,12],[5,11],[1,7]],[[5,7],[12,6],[7,12],[3,11],[11,4],[4,5],[6,10],[1,8],[3,2],[9,8],[9,10]],[[6,4],[2,5],[1,9],[2,7],[12,3],[11,12],[8,5],[6,9],[11,1],[7,10],[8,4]],[[9,12],[10,11],[4,10],[5,6],[9,2],[7,8],[12,1],[4,3],[8,6],[1,3],[2,11]],[[3,10],[1,4],[8,2],[4,9],[10,8],[6,1],[7,3],[11,7],[5,9],[2,6],[12,5]],[[8,11],[7,9],[3,5],[10,1],[5,1],[10,2],[9,11],[2,12],[7,4],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769717933.042264": {
+    "time": 300,
+    "solve_time": 300.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769718235.0451066": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769718536.3373396": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769718837.7929368": {
+    "time": 300,
+    "solve_time": 300.0,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769719139.2361376": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769719440.6975853": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769719742.2600462": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769720044.0808036": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769720346.3629296": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769720648.1139143": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769720949.6363003": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769721250.9173007": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769721552.723819": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769721854.3639693": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769722108.0039473": {
+    "time": 251,
+    "solve_time": 251.6,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2],[3,8],[11,6],[8,12],[6,7],[3,9],[4,2],[5,10],[10,12],[11,5],[1,7]],[[7,5],[12,6],[7,12],[3,11],[4,11],[4,5],[6,10],[1,8],[3,2],[9,8],[10,9]],[[6,4],[2,5],[1,9],[2,7],[3,12],[11,12],[5,8],[6,9],[1,11],[10,7],[8,4]],[[9,12],[10,11],[10,4],[6,5],[9,2],[8,7],[12,1],[4,3],[8,6],[1,3],[2,11]],[[10,3],[4,1],[2,8],[9,4],[8,10],[6,1],[7,3],[11,7],[5,9],[6,2],[12,5]],[[8,11],[7,9],[3,5],[10,1],[1,5],[10,2],[11,9],[12,2],[4,7],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769722370.1713388": {
+    "time": 260,
+    "solve_time": 260.42,
+    "optimize_time": 0.12,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1],[3,8],[6,11],[8,12],[6,7],[3,9],[4,2],[5,10],[10,12],[11,5],[7,1]],[[5,7],[6,12],[7,12],[3,11],[11,4],[4,5],[10,6],[8,1],[3,2],[9,8],[9,10]],[[6,4],[2,5],[1,9],[2,7],[12,3],[11,12],[5,8],[9,6],[1,11],[7,10],[8,4]],[[12,9],[10,11],[4,10],[6,5],[9,2],[8,7],[12,1],[4,3],[8,6],[1,3],[11,2]],[[10,3],[1,4],[2,8],[9,4],[8,10],[1,6],[3,7],[11,7],[5,9],[2,6],[12,5]],[[11,8],[7,9],[5,3],[10,1],[1,5],[10,2],[9,11],[12,2],[7,4],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769722671.9425604": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769722974.044568": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769723275.6419525": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769723577.1843789": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769723878.6350203": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769724180.3568842": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769724481.9464304": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769724783.7277231": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769725085.5096858": {
+    "time": 300,
+    "solve_time": 300.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769725387.5869205": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769725688.8498585": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769725990.0961967": {
+    "time": 300,
+    "solve_time": 300.03,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769726291.8481832": {
+    "time": 300,
+    "solve_time": 300.01,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769726593.3099203": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769726837.581208": {
+    "time": 242,
+    "solve_time": 242.64,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2],[3,8],[11,6],[8,12],[6,7],[3,9],[4,2],[5,10],[10,12],[11,5],[1,7]],[[7,5],[12,6],[7,12],[3,11],[4,11],[4,5],[6,10],[1,8],[3,2],[9,8],[10,9]],[[6,4],[2,5],[1,9],[2,7],[3,12],[11,12],[5,8],[6,9],[1,11],[10,7],[8,4]],[[9,12],[10,11],[10,4],[6,5],[9,2],[8,7],[12,1],[4,3],[8,6],[1,3],[2,11]],[[10,3],[4,1],[2,8],[9,4],[8,10],[6,1],[7,3],[11,7],[5,9],[6,2],[12,5]],[[8,11],[7,9],[3,5],[10,1],[1,5],[10,2],[11,9],[12,2],[4,7],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769727116.912943": {
+    "time": 277,
+    "solve_time": 277.26,
+    "optimize_time": 0.13,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1],[3,8],[11,6],[12,8],[6,7],[3,9],[4,2],[5,10],[10,12],[11,5],[1,7]],[[7,5],[12,6],[7,12],[3,11],[4,11],[4,5],[6,10],[1,8],[3,2],[8,9],[9,10]],[[6,4],[5,2],[1,9],[2,7],[12,3],[11,12],[5,8],[9,6],[11,1],[7,10],[8,4]],[[9,12],[10,11],[10,4],[6,5],[2,9],[8,7],[12,1],[4,3],[8,6],[3,1],[2,11]],[[10,3],[4,1],[2,8],[9,4],[8,10],[1,6],[7,3],[11,7],[5,9],[6,2],[12,5]],[[11,8],[7,9],[5,3],[10,1],[1,5],[10,2],[9,11],[12,2],[7,4],[4,12],[6,3]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769727375.2792873": {
+    "time": 256,
+    "solve_time": 256.52,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2],[12,10],[11,8],[4,9],[5,11],[7,3],[7,6],[3,6],[12,1],[4,8],[5,2]],[[8,12],[5,1],[7,2],[6,2],[3,1],[9,11],[10,4],[9,7],[6,11],[12,3],[8,10]],[[5,3],[6,8],[10,1],[12,11],[7,4],[12,5],[3,8],[11,2],[9,10],[9,2],[6,4]],[[4,11],[3,9],[5,6],[1,7],[8,9],[6,10],[2,12],[8,1],[4,5],[10,11],[7,12]],[[10,7],[11,7],[12,9],[8,5],[10,2],[1,4],[5,9],[12,4],[3,2],[6,1],[11,3]],[[6,9],[4,2],[3,4],[10,3],[6,12],[2,8],[1,11],[10,5],[8,7],[5,7],[9,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769727677.3835301": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769878031.6777275": {
+    "time": 0.0,
+    "solve_time": 0.34,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[10,3],[8,7],[1,5],[10,9],[2,8],[12,6],[2,1],[5,11],[12,9],[6,3],[7,4]],[[9,4],[12,2],[10,7],[3,5],[11,10],[4,8],[3,11],[7,9],[6,1],[8,1],[6,5]],[[12,1],[11,4],[12,3],[11,8],[4,6],[5,7],[5,9],[3,2],[8,10],[7,2],[10,1]],[[8,5],[10,5],[2,4],[2,6],[1,9],[3,9],[6,8],[4,1],[7,11],[12,10],[12,11]],[[11,2],[9,6],[9,8],[12,4],[3,7],[1,11],[12,7],[6,10],[5,2],[5,4],[8,3]],[[7,6],[1,3],[11,6],[1,7],[12,5],[2,10],[4,10],[12,8],[4,3],[9,11],[9,2]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769878032.3455434": {
+    "time": 0.0,
+    "solve_time": 0.49,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[7,6],[10,5],[9,8],[1,7],[12,5],[1,11],[6,8],[3,2],[4,3],[12,10],[9,2]],[[11,2],[11,4],[1,5],[10,9],[4,6],[3,9],[12,7],[6,10],[5,2],[8,1],[8,3]],[[9,4],[12,2],[11,6],[3,5],[3,7],[5,7],[4,10],[12,8],[6,1],[9,11],[10,1]],[[8,5],[1,3],[10,7],[2,6],[11,10],[4,8],[2,1],[7,9],[12,9],[5,4],[12,11]],[[10,3],[8,7],[2,4],[12,4],[1,9],[12,6],[3,11],[5,11],[8,10],[7,2],[6,5]],[[12,1],[9,6],[12,3],[11,8],[2,8],[2,10],[5,9],[4,1],[7,11],[6,3],[7,4]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769878033.14637": {
+    "time": 0.0,
+    "solve_time": 0.64,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[8,7],[12,3],[11,8],[4,6],[1,11],[4,10],[7,9],[5,2],[6,3],[9,2]],[[11,2],[10,5],[10,7],[2,6],[1,9],[3,9],[6,8],[12,8],[4,3],[5,4],[12,11]],[[10,3],[9,6],[1,5],[12,4],[2,8],[5,7],[2,1],[6,10],[7,11],[9,11],[8,3]],[[9,4],[1,3],[2,4],[10,9],[3,7],[12,6],[12,7],[5,11],[8,10],[8,1],[6,5]],[[8,5],[12,2],[11,6],[1,7],[11,10],[4,8],[5,9],[3,2],[6,1],[12,10],[7,4]],[[7,6],[11,4],[9,8],[3,5],[12,5],[2,10],[3,11],[4,1],[12,9],[7,2],[10,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769878033.9598482": {
+    "time": 0.0,
+    "solve_time": 0.66,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[8,7],[2,4],[10,9],[1,9],[12,6],[3,11],[5,11],[8,10],[6,3],[7,4]],[[11,2],[9,6],[12,3],[1,7],[2,8],[4,8],[5,9],[4,1],[7,11],[12,10],[6,5]],[[10,3],[10,5],[11,6],[12,4],[4,6],[3,9],[2,1],[7,9],[5,2],[8,1],[12,11]],[[9,4],[12,2],[10,7],[11,8],[12,5],[5,7],[6,8],[3,2],[4,3],[9,11],[10,1]],[[8,5],[11,4],[1,5],[2,6],[3,7],[1,11],[4,10],[6,10],[12,9],[7,2],[8,3]],[[7,6],[1,3],[9,8],[3,5],[11,10],[2,10],[12,7],[12,8],[6,1],[5,4],[9,2]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769878034.6225116": {
+    "time": 0.0,
+    "solve_time": 0.5,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[10,5],[11,6],[10,9],[4,6],[4,8],[12,7],[3,2],[7,11],[8,1],[9,2]],[[9,4],[12,2],[1,5],[1,7],[3,7],[2,10],[6,8],[12,8],[4,3],[9,11],[6,5]],[[8,5],[9,6],[12,3],[3,5],[11,10],[1,11],[2,1],[6,10],[12,9],[7,2],[7,4]],[[7,6],[11,4],[10,7],[12,4],[2,8],[3,9],[5,9],[5,11],[6,1],[12,10],[8,3]],[[11,2],[1,3],[9,8],[2,6],[12,5],[5,7],[4,10],[4,1],[8,10],[6,3],[12,11]],[[10,3],[8,7],[2,4],[11,8],[1,9],[12,6],[3,11],[7,9],[5,2],[5,4],[10,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769878035.1673398": {
+    "time": 0.0,
+    "solve_time": 0.4,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[10,5],[1,5],[2,6],[11,10],[4,8],[12,7],[7,9],[4,3],[6,3],[9,2]],[[9,4],[12,2],[11,6],[3,5],[1,9],[2,10],[4,10],[12,8],[7,11],[8,1],[6,5]],[[7,6],[8,7],[12,3],[10,9],[4,6],[1,11],[2,1],[5,11],[12,9],[5,4],[8,3]],[[11,2],[1,3],[9,8],[12,4],[2,8],[5,7],[3,11],[6,10],[6,1],[12,10],[7,4]],[[10,3],[9,6],[10,7],[11,8],[12,5],[3,9],[6,8],[4,1],[5,2],[7,2],[12,11]],[[8,5],[11,4],[2,4],[1,7],[3,7],[12,6],[5,9],[3,2],[8,10],[9,11],[10,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769878120.3360057": {
+    "time": 0.0,
+    "solve_time": 0.46,
+    "optimize_time": 0.41,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[12,1],[10,5],[11,6],[10,9],[6,4],[4,8],[7,12],[2,3],[7,11],[8,1],[9,2]],[[4,9],[12,2],[1,5],[1,7],[3,7],[2,10],[6,8],[8,12],[4,3],[9,11],[6,5]],[[8,5],[9,6],[3,12],[3,5],[11,10],[1,11],[2,1],[6,10],[9,12],[7,2],[7,4]],[[7,6],[11,4],[10,7],[4,12],[2,8],[3,9],[5,9],[5,11],[1,6],[12,10],[8,3]],[[11,2],[3,1],[9,8],[2,6],[12,5],[5,7],[4,10],[1,4],[8,10],[6,3],[12,11]],[[10,3],[8,7],[4,2],[11,8],[1,9],[6,12],[3,11],[7,9],[5,2],[5,4],[10,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769878121.2270381": {
+    "time": 0.0,
+    "solve_time": 0.39,
+    "optimize_time": 0.35,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,12],[10,5],[5,1],[6,2],[11,10],[8,4],[12,7],[7,9],[4,3],[6,3],[2,9]],[[9,4],[2,12],[11,6],[3,5],[1,9],[2,10],[4,10],[8,12],[7,11],[1,8],[6,5]],[[7,6],[8,7],[3,12],[10,9],[4,6],[1,11],[1,2],[5,11],[9,12],[4,5],[3,8]],[[11,2],[3,1],[9,8],[12,4],[2,8],[5,7],[3,11],[6,10],[6,1],[12,10],[4,7]],[[10,3],[9,6],[10,7],[11,8],[12,5],[3,9],[6,8],[4,1],[5,2],[7,2],[12,11]],[[8,5],[11,4],[2,4],[1,7],[7,3],[12,6],[5,9],[2,3],[8,10],[9,11],[10,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950638.5706081": {
+    "time": 0.0,
+    "solve_time": 0.63,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769950639.6684303": {
+    "time": 0.0,
+    "solve_time": 0.78,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950699.8907475": {
+    "time": 1.0,
+    "solve_time": 0.62,
+    "optimize_time": 0.47,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[10,3],[8,7],[1,5],[10,9],[2,8],[12,6],[2,1],[5,11],[12,9],[6,3],[7,4]],[[9,4],[12,2],[10,7],[3,5],[11,10],[4,8],[3,11],[7,9],[6,1],[8,1],[6,5]],[[12,1],[11,4],[12,3],[11,8],[4,6],[5,7],[5,9],[3,2],[8,10],[7,2],[10,1]],[[8,5],[10,5],[2,4],[2,6],[1,9],[3,9],[6,8],[4,1],[7,11],[12,10],[12,11]],[[11,2],[9,6],[9,8],[12,4],[3,7],[1,11],[12,7],[6,10],[5,2],[5,4],[8,3]],[[7,6],[1,3],[11,6],[1,7],[12,5],[2,10],[4,10],[12,8],[4,3],[9,11],[9,2]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769950701.5280285": {
+    "time": 1.0,
+    "solve_time": 0.86,
+    "optimize_time": 0.48,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[7,6],[10,5],[9,8],[1,7],[12,5],[1,11],[6,8],[3,2],[4,3],[12,10],[9,2]],[[11,2],[11,4],[1,5],[10,9],[4,6],[3,9],[12,7],[6,10],[5,2],[8,1],[8,3]],[[9,4],[12,2],[11,6],[3,5],[3,7],[5,7],[4,10],[12,8],[6,1],[9,11],[10,1]],[[8,5],[1,3],[10,7],[2,6],[11,10],[4,8],[2,1],[7,9],[12,9],[5,4],[12,11]],[[10,3],[8,7],[2,4],[12,4],[1,9],[12,6],[3,11],[5,11],[8,10],[7,2],[6,5]],[[12,1],[9,6],[12,3],[11,8],[2,8],[2,10],[5,9],[4,1],[7,11],[6,3],[7,4]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950703.7379973": {
+    "time": 1.0,
+    "solve_time": 1.42,
+    "optimize_time": 0.5,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[12,1],[8,7],[12,3],[11,8],[4,6],[1,11],[4,10],[7,9],[5,2],[6,3],[9,2]],[[11,2],[10,5],[10,7],[2,6],[1,9],[3,9],[6,8],[12,8],[4,3],[5,4],[12,11]],[[10,3],[9,6],[1,5],[12,4],[2,8],[5,7],[2,1],[6,10],[7,11],[9,11],[8,3]],[[9,4],[1,3],[2,4],[10,9],[3,7],[12,6],[12,7],[5,11],[8,10],[8,1],[6,5]],[[8,5],[12,2],[11,6],[1,7],[11,10],[4,8],[5,9],[3,2],[6,1],[12,10],[7,4]],[[7,6],[11,4],[9,8],[3,5],[12,5],[2,10],[3,11],[4,1],[12,9],[7,2],[10,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769950706.0416312": {
+    "time": 1.0,
+    "solve_time": 1.4,
+    "optimize_time": 0.57,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[12,1],[8,7],[2,4],[10,9],[1,9],[12,6],[3,11],[5,11],[8,10],[6,3],[7,4]],[[11,2],[9,6],[12,3],[1,7],[2,8],[4,8],[5,9],[4,1],[7,11],[12,10],[6,5]],[[10,3],[10,5],[11,6],[12,4],[4,6],[3,9],[2,1],[7,9],[5,2],[8,1],[12,11]],[[9,4],[12,2],[10,7],[11,8],[12,5],[5,7],[6,8],[3,2],[4,3],[9,11],[10,1]],[[8,5],[11,4],[1,5],[2,6],[3,7],[1,11],[4,10],[6,10],[12,9],[7,2],[8,3]],[[7,6],[1,3],[9,8],[3,5],[11,10],[2,10],[12,7],[12,8],[6,1],[5,4],[9,2]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950707.0788596": {
+    "time": 0.0,
+    "solve_time": 0.69,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769950708.2469964": {
+    "time": 0.0,
+    "solve_time": 0.85,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950813.4289823": {
+    "time": 14.0,
+    "solve_time": 14.51,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[10,3],[11,4],[11,6],[2,6],[1,9],[5,7],[12,7],[4,1],[5,2],[12,10],[8,3]],[[7,6],[9,6],[1,5],[12,4],[2,8],[3,9],[3,11],[5,11],[8,10],[7,2],[10,1]],[[8,5],[1,3],[12,3],[1,7],[12,5],[4,8],[4,10],[6,10],[7,11],[9,11],[9,2]],[[11,2],[10,5],[2,4],[10,9],[3,7],[1,11],[6,8],[12,8],[12,9],[6,3],[7,4]],[[9,4],[8,7],[9,8],[3,5],[11,10],[12,6],[2,1],[3,2],[6,1],[5,4],[12,11]],[[12,1],[12,2],[10,7],[11,8],[4,6],[2,10],[5,9],[7,9],[4,3],[8,1],[6,5]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950821.862661": {
+    "time": 8.0,
+    "solve_time": 8.17,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[7,6],[8,7],[12,3],[10,9],[1,9],[1,11],[4,10],[3,2],[5,2],[5,4],[12,11]],[[10,3],[10,5],[11,6],[1,7],[2,8],[12,6],[5,9],[12,8],[4,3],[9,11],[7,4]],[[9,4],[9,6],[2,4],[3,5],[11,10],[2,10],[12,7],[5,11],[6,1],[8,1],[8,3]],[[12,1],[11,4],[9,8],[12,4],[3,7],[5,7],[2,1],[6,10],[8,10],[6,3],[9,2]],[[11,2],[1,3],[10,7],[11,8],[12,5],[3,9],[6,8],[4,1],[12,9],[7,2],[6,5]],[[8,5],[12,2],[1,5],[2,6],[4,6],[4,8],[3,11],[7,9],[7,11],[12,10],[10,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950827.712674": {
+    "time": 300,
+    "solve_time": 300.04,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769950838.394328": {
+    "time": 16.0,
+    "solve_time": 16.26,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[11,4],[1,5],[11,8],[3,7],[12,6],[4,10],[7,9],[8,10],[6,3],[9,2]],[[11,2],[9,6],[2,4],[3,5],[1,9],[5,7],[3,11],[12,8],[6,1],[12,10],[7,4]],[[10,3],[10,5],[9,8],[2,6],[4,6],[1,11],[12,7],[4,1],[5,2],[9,11],[8,3]],[[9,4],[1,3],[10,7],[1,7],[2,8],[2,10],[6,8],[5,11],[12,9],[5,4],[12,11]],[[8,5],[8,7],[11,6],[12,4],[12,5],[3,9],[2,1],[6,10],[4,3],[7,2],[10,1]],[[7,6],[12,2],[12,3],[10,9],[11,10],[4,8],[5,9],[3,2],[7,11],[8,1],[6,5]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950842.4659388": {
+    "time": 3.0,
+    "solve_time": 3.8,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[9,6],[10,7],[12,4],[11,10],[4,8],[3,11],[3,2],[5,2],[8,1],[6,5]],[[11,2],[10,5],[1,5],[11,8],[1,9],[12,6],[4,10],[7,9],[4,3],[7,2],[8,3]],[[10,3],[11,4],[9,8],[2,6],[12,5],[5,7],[6,8],[4,1],[7,11],[12,10],[9,2]],[[9,4],[1,3],[11,6],[1,7],[2,8],[3,9],[12,7],[6,10],[8,10],[5,4],[12,11]],[[8,5],[12,2],[2,4],[10,9],[3,7],[1,11],[5,9],[12,8],[6,1],[6,3],[7,4]],[[7,6],[8,7],[12,3],[3,5],[4,6],[2,10],[2,1],[5,11],[12,9],[9,11],[10,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950851.9089594": {
+    "time": 9.0,
+    "solve_time": 9.17,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[9,6],[2,4],[11,8],[4,6],[5,7],[12,7],[3,2],[8,10],[9,11],[10,1]],[[8,5],[12,2],[11,6],[1,7],[1,9],[3,9],[4,10],[12,8],[5,2],[6,3],[7,4]],[[7,6],[10,5],[12,3],[3,5],[11,10],[1,11],[6,8],[4,1],[12,9],[7,2],[9,2]],[[9,4],[8,7],[9,8],[12,4],[3,7],[2,10],[3,11],[5,11],[6,1],[12,10],[6,5]],[[11,2],[1,3],[10,7],[2,6],[12,5],[4,8],[5,9],[6,10],[4,3],[8,1],[12,11]],[[10,3],[11,4],[1,5],[10,9],[2,8],[12,6],[2,1],[7,9],[7,11],[5,4],[8,3]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950859.1617725": {
+    "time": 6.0,
+    "solve_time": 6.98,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[12,1],[9,6],[2,4],[10,9],[2,8],[1,11],[12,7],[6,10],[7,11],[5,4],[8,3]],[[10,3],[12,2],[11,6],[3,5],[1,9],[4,8],[5,9],[12,8],[6,1],[7,2],[7,4]],[[7,6],[10,5],[12,3],[11,8],[11,10],[5,7],[2,1],[4,1],[12,9],[6,3],[9,2]],[[11,2],[8,7],[1,5],[12,4],[4,6],[3,9],[3,11],[7,9],[8,10],[12,10],[6,5]],[[9,4],[1,3],[10,7],[2,6],[12,5],[2,10],[6,8],[5,11],[4,3],[8,1],[12,11]],[[8,5],[11,4],[9,8],[1,7],[3,7],[12,6],[4,10],[3,2],[5,2],[9,11],[10,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950861.9481394": {
+    "time": 2.0,
+    "solve_time": 2.51,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950864.380363": {
+    "time": 2.0,
+    "solve_time": 2.16,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951129.6251845": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769951431.6456187": {
+    "time": 300,
+    "solve_time": 300.02,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769951943.756641": {
+    "time": 14.0,
+    "solve_time": 13.48,
+    "optimize_time": 0.55,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[10,3],[11,4],[11,6],[2,6],[1,9],[5,7],[12,7],[4,1],[5,2],[12,10],[8,3]],[[7,6],[9,6],[1,5],[12,4],[2,8],[3,9],[3,11],[5,11],[8,10],[7,2],[10,1]],[[8,5],[1,3],[12,3],[1,7],[12,5],[4,8],[4,10],[6,10],[7,11],[9,11],[9,2]],[[11,2],[10,5],[2,4],[10,9],[3,7],[1,11],[6,8],[12,8],[12,9],[6,3],[7,4]],[[9,4],[8,7],[9,8],[3,5],[11,10],[12,6],[2,1],[3,2],[6,1],[5,4],[12,11]],[[12,1],[12,2],[10,7],[11,8],[4,6],[2,10],[5,9],[7,9],[4,3],[8,1],[6,5]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951951.8043468": {
+    "time": 7.0,
+    "solve_time": 7.23,
+    "optimize_time": 0.54,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[7,6],[8,7],[12,3],[10,9],[1,9],[1,11],[4,10],[3,2],[5,2],[5,4],[12,11]],[[10,3],[10,5],[11,6],[1,7],[2,8],[12,6],[5,9],[12,8],[4,3],[9,11],[7,4]],[[9,4],[9,6],[2,4],[3,5],[11,10],[2,10],[12,7],[5,11],[6,1],[8,1],[8,3]],[[12,1],[11,4],[9,8],[12,4],[3,7],[5,7],[2,1],[6,10],[8,10],[6,3],[9,2]],[[11,2],[1,3],[10,7],[11,8],[12,5],[3,9],[6,8],[4,1],[12,9],[7,2],[6,5]],[[8,5],[12,2],[1,5],[2,6],[4,6],[4,8],[3,11],[7,9],[7,11],[12,10],[10,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951967.991345": {
+    "time": 15.0,
+    "solve_time": 15.45,
+    "optimize_time": 0.46,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[12,1],[11,4],[1,5],[11,8],[3,7],[12,6],[4,10],[7,9],[8,10],[6,3],[9,2]],[[11,2],[9,6],[2,4],[3,5],[1,9],[5,7],[3,11],[12,8],[6,1],[12,10],[7,4]],[[10,3],[10,5],[9,8],[2,6],[4,6],[1,11],[12,7],[4,1],[5,2],[9,11],[8,3]],[[9,4],[1,3],[10,7],[1,7],[2,8],[2,10],[6,8],[5,11],[12,9],[5,4],[12,11]],[[8,5],[8,7],[11,6],[12,4],[12,5],[3,9],[2,1],[6,10],[4,3],[7,2],[10,1]],[[7,6],[12,2],[12,3],[10,9],[11,10],[4,8],[5,9],[3,2],[7,11],[8,1],[6,5]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951971.5412736": {
+    "time": 3.0,
+    "solve_time": 2.84,
+    "optimize_time": 0.48,
+    "optimal": false,
+    "obj": 11,
+    "sol": [[[12,1],[9,6],[10,7],[12,4],[11,10],[4,8],[3,11],[3,2],[5,2],[8,1],[6,5]],[[11,2],[10,5],[1,5],[11,8],[1,9],[12,6],[4,10],[7,9],[4,3],[7,2],[8,3]],[[10,3],[11,4],[9,8],[2,6],[12,5],[5,7],[6,8],[4,1],[7,11],[12,10],[9,2]],[[9,4],[1,3],[11,6],[1,7],[2,8],[3,9],[12,7],[6,10],[8,10],[5,4],[12,11]],[[8,5],[12,2],[2,4],[10,9],[3,7],[1,11],[5,9],[12,8],[6,1],[6,3],[7,4]],[[7,6],[8,7],[12,3],[3,5],[4,6],[2,10],[2,1],[5,11],[12,9],[9,11],[10,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951979.153569": {
+    "time": 7.0,
+    "solve_time": 6.84,
+    "optimize_time": 0.52,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,12],[9,6],[4,2],[11,8],[6,4],[7,5],[12,7],[3,2],[8,10],[9,11],[1,10]],[[8,5],[2,12],[11,6],[7,1],[1,9],[3,9],[10,4],[8,12],[2,5],[3,6],[7,4]],[[6,7],[5,10],[3,12],[5,3],[10,11],[11,1],[8,6],[4,1],[12,9],[2,7],[2,9]],[[9,4],[8,7],[9,8],[4,12],[3,7],[10,2],[11,3],[5,11],[1,6],[10,12],[6,5]],[[2,11],[1,3],[7,10],[6,2],[12,5],[4,8],[9,5],[6,10],[4,3],[8,1],[12,11]],[[10,3],[11,4],[5,1],[10,9],[2,8],[12,6],[1,2],[7,9],[7,11],[5,4],[3,8]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951985.957152": {
+    "time": 6.0,
+    "solve_time": 6.05,
+    "optimize_time": 0.5,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[12,1],[9,6],[2,4],[10,9],[2,8],[1,11],[7,12],[6,10],[7,11],[4,5],[8,3]],[[10,3],[2,12],[11,6],[5,3],[1,9],[4,8],[5,9],[8,12],[6,1],[2,7],[7,4]],[[7,6],[10,5],[3,12],[11,8],[11,10],[5,7],[2,1],[4,1],[12,9],[6,3],[9,2]],[[11,2],[8,7],[1,5],[12,4],[4,6],[3,9],[3,11],[7,9],[8,10],[10,12],[6,5]],[[9,4],[1,3],[10,7],[2,6],[12,5],[10,2],[6,8],[5,11],[4,3],[8,1],[12,11]],[[8,5],[11,4],[9,8],[1,7],[3,7],[12,6],[4,10],[3,2],[5,2],[9,11],[1,10]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951988.1281345": {
+    "time": 1.0,
+    "solve_time": 1.89,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951990.2332714": {
+    "time": 1.0,
+    "solve_time": 1.8,
+    "optimize_time": 0.0,
+    "optimal": false,
+    "obj": "None",
+    "sol": [],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  }
+}
