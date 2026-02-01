@@ -1,0 +1,356 @@
+{
+  "z3_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cir_sbfix": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cir_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cir_sbfix_ic1_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cir_sbfix": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cir_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cir_sbfix_ic1_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cir_sbfix": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cir_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cir_sbfix_ic1_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cla": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cla_sbfix_sblex": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cla_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cla_sblex_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cla_sbfix_sblex_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cla": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cla_sbfix_sblex": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cla_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cla_sblex_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cla_sbfix_sblex_ic1_ic2": {
+    "time": 1,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla_sbfix_sblex": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla_sblex_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla_sbfix_sblex_ic1_ic2": {
+    "time": 0,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": []
+  }
+}

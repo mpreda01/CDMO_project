@@ -1,0 +1,598 @@
+{
+  "z3_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3,4],[6,2],[1,5],[1,2],[6,5]],[[6,1],[4,5],[2,4],[3,5],[2,3]],[[2,5],[1,3],[6,3],[6,4],[1,4]]]
+  },
+  "z3_dec_cir_sbfix": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3,4],[6,2],[1,5],[1,2],[6,5]],[[6,1],[4,5],[2,4],[3,5],[2,3]],[[2,5],[1,3],[6,3],[6,4],[1,4]]]
+  },
+  "z3_dec_cir_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2,5],[6,2],[6,3],[3,5],[1,4]],[[3,4],[1,3],[2,4],[1,2],[6,5]],[[6,1],[4,5],[1,5],[6,4],[2,3]]]
+  },
+  "z3_dec_cir_sbfix_ic1_ic2": {
+    "time": 2,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[6,1],[1,3],[2,4],[3,5],[6,5]],[[2,5],[4,5],[6,3],[1,2],[1,4]],[[3,4],[6,2],[1,5],[6,4],[2,3]]]
+  },
+  "minisat_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2,5],[1,3],[2,4],[6,4],[6,5]],[[3,4],[6,2],[1,5],[3,5],[1,4]],[[6,1],[4,5],[6,3],[1,2],[2,3]]]
+  },
+  "minisat_dec_cir_sbfix": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2,5],[1,3],[2,4],[6,4],[6,5]],[[3,4],[6,2],[1,5],[3,5],[1,4]],[[6,1],[4,5],[6,3],[1,2],[2,3]]]
+  },
+  "minisat_dec_cir_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[2,5],[1,3],[2,4],[6,4],[6,5]],[[3,4],[6,2],[1,5],[3,5],[1,4]],[[6,1],[4,5],[6,3],[1,2],[2,3]]]
+  },
+  "minisat_dec_cir_sbfix_ic1_ic2": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cir": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3,4],[4,5],[6,3],[1,2],[6,5]],[[6,1],[6,2],[2,4],[3,5],[1,4]],[[2,5],[1,3],[1,5],[6,4],[2,3]]]
+  },
+  "glucose_dec_cir_sbfix": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3,4],[4,5],[6,3],[1,2],[6,5]],[[6,1],[6,2],[2,4],[3,5],[1,4]],[[2,5],[1,3],[1,5],[6,4],[2,3]]]
+  },
+  "glucose_dec_cir_ic2": {
+    "time": 0,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3,4],[4,5],[6,3],[1,2],[6,5]],[[6,1],[6,2],[2,4],[3,5],[1,4]],[[2,5],[1,3],[1,5],[6,4],[2,3]]]
+  },
+  "glucose_dec_cir_sbfix_ic1_ic2": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "z3_dec_cla": {
+    "time": 1,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[5,6],[3,5],[6,4],[3,4],[2,1]],[[2,3],[1,6],[3,1],[6,2],[4,5]],[[4,1],[2,4],[2,5],[5,1],[3,6]]]
+  },
+  "z3_dec_cla_sbfix_sblex": {
+    "time": 3,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[4,6],[4,2],[3,1],[6,5],[5,2]],[[3,2],[6,1],[4,5],[2,1],[3,6]],[[1,5],[5,3],[2,6],[3,4],[1,4]]]
+  },
+  "z3_dec_cla_ic1_ic2": {
+    "time": 7,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3,2],[5,6],[6,4],[4,1],[1,5]],[[6,1],[3,4],[5,2],[5,3],[4,2]],[[5,4],[2,1],[1,3],[6,2],[6,3]]]
+  },
+  "z3_dec_cla_sblex_ic1_ic2": {
+    "time": 5,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[5,1],[2,4],[3,4],[3,6],[6,2]],[[6,4],[3,1],[2,5],[2,1],[3,5]],[[3,2],[6,5],[1,6],[5,4],[1,4]]]
+  },
+  "z3_dec_cla_sbfix_sblex_ic1_ic2": {
+    "time": 5,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[3,6],[2,1],[5,4],[6,1],[3,2]],[[2,4],[6,4],[3,1],[5,2],[6,5]],[[1,5],[5,3],[2,6],[3,4],[1,4]]]
+  },
+  "minisat_dec_cla": {
+    "time": 2,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[5,4],[6,5],[3,6],[4,3],[2,1]],[[6,2],[4,1],[2,4],[1,6],[3,5]],[[3,1],[2,3],[1,5],[5,2],[4,6]]]
+  },
+  "minisat_dec_cla_sbfix_sblex": {
+    "time": 2,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[6,2],[5,1],[4,2],[3,6],[3,4]],[[3,1],[4,6],[5,3],[5,2],[2,1]],[[5,4],[2,3],[6,1],[1,4],[5,6]]]
+  },
+  "minisat_dec_cla_ic1_ic2": {
+    "time": 300,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cla_sblex_ic1_ic2": {
+    "time": 300,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "minisat_dec_cla_sbfix_sblex_ic1_ic2": {
+    "time": 300,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla": {
+    "time": 2,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[5,4],[6,5],[1,6],[1,4],[2,3]],[[6,2],[3,4],[2,4],[3,6],[1,5]],[[1,3],[2,1],[3,5],[2,5],[4,6]]]
+  },
+  "glucose_dec_cla_sbfix_sblex": {
+    "time": 1,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[6,4],[3,5],[2,1],[3,6],[4,5]],[[5,2],[2,6],[4,3],[5,1],[6,1]],[[3,1],[4,1],[5,6],[4,2],[2,3]]]
+  },
+  "glucose_dec_cla_ic1_ic2": {
+    "time": 300,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla_sblex_ic1_ic2": {
+    "time": 300,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "glucose_dec_cla_sbfix_sblex_ic1_ic2": {
+    "time": 300,
+    "method": "classic",
+    "version": "decision",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "z3_opt_cir": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,4],[2,6],[5,1],[2,1],[6,5]],[[6,1],[4,5],[4,2],[3,5],[2,3]],[[5,2],[1,3],[3,6],[4,6],[1,4]]]
+  },
+  "z3_opt_cir_sbfix": {
+    "time": 0,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,4],[2,6],[5,1],[2,1],[6,5]],[[6,1],[4,5],[4,2],[3,5],[2,3]],[[5,2],[1,3],[3,6],[4,6],[1,4]]]
+  },
+  "z3_opt_cir_ic2": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2,5],[2,6],[6,3],[3,5],[1,4]],[[3,4],[3,1],[4,2],[1,2],[5,6]],[[1,6],[4,5],[5,1],[6,4],[2,3]]]
+  },
+  "z3_opt_cir_sbfix_ic1_ic2": {
+    "time": 6,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[6,1],[1,3],[4,2],[3,5],[5,6]],[[2,5],[4,5],[3,6],[1,2],[4,1]],[[3,4],[2,6],[5,1],[6,4],[2,3]]]
+  },
+  "minisat_opt_cir": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2,5],[1,3],[4,2],[4,6],[6,5]],[[3,4],[2,6],[5,1],[3,5],[4,1]],[[1,6],[5,4],[6,3],[2,1],[3,2]]]
+  },
+  "minisat_opt_cir_sbfix": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2,5],[1,3],[4,2],[4,6],[6,5]],[[3,4],[2,6],[5,1],[3,5],[4,1]],[[1,6],[5,4],[6,3],[2,1],[3,2]]]
+  },
+  "minisat_opt_cir_ic2": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[2,5],[1,3],[4,2],[4,6],[6,5]],[[3,4],[2,6],[5,1],[3,5],[4,1]],[[1,6],[5,4],[6,3],[1,2],[2,3]]]
+  },
+  "glucose_opt_cir": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "sb_fix": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,4],[4,5],[3,6],[1,2],[6,5]],[[6,1],[2,6],[4,2],[3,5],[1,4]],[[5,2],[1,3],[5,1],[6,4],[2,3]]]
+  },
+  "glucose_opt_cir_sbfix": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,4],[4,5],[3,6],[1,2],[6,5]],[[6,1],[2,6],[4,2],[3,5],[1,4]],[[5,2],[1,3],[5,1],[6,4],[2,3]]]
+  },
+  "glucose_opt_cir_ic2": {
+    "time": 1,
+    "method": "circle",
+    "version": "optimization",
+    "params": {
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,4],[4,5],[3,6],[1,2],[6,5]],[[6,1],[2,6],[4,2],[3,5],[1,4]],[[5,2],[1,3],[5,1],[6,4],[2,3]]]
+  },
+  "z3_opt_cla": {
+    "time": 1,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[5,6],[5,3],[6,4],[4,3],[2,1]],[[3,2],[6,1],[3,1],[2,6],[4,5]],[[1,4],[4,2],[2,5],[1,5],[6,3]]]
+  },
+  "z3_opt_cla_sbfix_sblex": {
+    "time": 1,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[6,4],[3,5],[4,2],[1,6],[1,2]],[[3,1],[2,6],[1,5],[5,4],[4,3]],[[5,2],[4,1],[3,6],[2,3],[6,5]]]
+  },
+  "z3_opt_cla_ic1_ic2": {
+    "time": 6,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,2],[6,5],[6,4],[1,4],[1,5]],[[6,1],[4,3],[5,2],[3,5],[4,2]],[[5,4],[2,1],[1,3],[2,6],[3,6]]]
+  },
+  "z3_opt_cla_sblex_ic1_ic2": {
+    "time": 9,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,1],[5,2],[4,2],[6,5],[6,4]],[[5,4],[6,3],[1,6],[1,2],[2,3]],[[2,6],[4,1],[3,5],[4,3],[5,1]]]
+  },
+  "z3_opt_cla_sbfix_sblex_ic1_ic2": {
+    "time": 5,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true,
+      "ic_matches": true,
+      "ic_diff_match": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[3,6],[1,2],[4,5],[1,6],[2,3]],[[2,4],[6,4],[1,3],[2,5],[5,6]],[[5,1],[3,5],[6,2],[4,3],[4,1]]]
+  },
+  "minisat_opt_cla": {
+    "time": 2,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[5,4],[5,6],[6,1],[1,4],[2,3]],[[3,6],[4,2],[3,4],[6,2],[1,5]],[[1,2],[3,1],[2,5],[5,3],[4,6]]]
+  },
+  "minisat_opt_cla_sbfix_sblex": {
+    "time": 2,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[6,4],[5,4],[2,1],[3,6],[5,3]],[[2,5],[1,6],[3,4],[1,5],[2,6]],[[1,3],[3,2],[6,5],[4,2],[4,1]]]
+  },
+  "glucose_opt_cla": {
+    "time": 2,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_fix": false,
+      "sb_lex": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[5,4],[5,6],[6,1],[4,1],[2,3]],[[2,6],[3,4],[4,2],[6,3],[1,5]],[[3,1],[1,2],[3,5],[5,2],[4,6]]]
+  },
+  "glucose_opt_cla_sbfix_sblex": {
+    "time": 2,
+    "method": "classic",
+    "version": "optimization",
+    "params": {
+      "sb_fix": true,
+      "sb_lex": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[6,3],[4,1],[2,5],[5,6],[3,2]],[[4,5],[2,6],[4,3],[3,1],[1,5]],[[1,2],[5,3],[1,6],[2,4],[6,4]]]
+  }
+}
