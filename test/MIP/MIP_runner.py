@@ -635,7 +635,7 @@ class STSMIPRunner:
 def main():
     """Main function to run the MIP solver."""
     if len(sys.argv) < 2:
-        team_sizes = [2, 4, 6] ## add 22
+        team_sizes = [2, 4, 6, 8, 10]
         params = {
                 "sb_weeks":True,
                 "sb_teams":True,
@@ -789,7 +789,7 @@ def main():
                     }
 
         if not team_sizes:
-            team_sizes = [2,4,6,8,10,12]
+            team_sizes = [2,4,6,8,10]
     
         if not run_decision and not run_optimization:
             print("Error: Cannot use both --decision-only and --optimization-only")

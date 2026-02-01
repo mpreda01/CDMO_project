@@ -353,14 +353,14 @@ class MinizincRunner:
             })
             return result
             
-        # Step 2: Extract data for optimizer
+        # Extract data for optimizer
         optimizer_data = self.extract_optimizer_data(cp_output)
         if not optimizer_data:
             print("Failed to extract optimizer data from CP_3.0.mzn output")
             result['time'] = cp_time
             return result
             
-        # Step 3: Run optimizer_2.0.mzn
+        # Run optimizer_2.0.mzn
         print(f"Running optimizer_2.0.mzn for n={n}...")
         opt_success, opt_output, opt_time, opt_error = self.run_minizinc(
             '../../source/CP/optimizer_2.0.mzn', optimizer_data, int(remaining_time)
@@ -434,7 +434,7 @@ class MinizincRunner:
             optimizer_modes = [False]  # Only without optimization
             print(f"Optimizer modes: without optimization\n")
         else:
-            optimizer_modes = [True]  # Only with optimization (default)
+            optimizer_modes = [True]  # Only with optimization
             print(f"Optimizer modes: with optimization\n")
         
         # Get n values
@@ -644,29 +644,29 @@ class MinizincRunner:
                     # Check if this run timed out
                     if result.get('timeout_reached', False):
                         timed_out_configs[config_key] = n
-                        print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit (will skip for n>{n})")
+                        print(f"TIMEOUT - Reached {self.timeout_seconds}s limit (will skip for n>{n})")
                     else:
                         # Print summary based on optimizer usage
                         if use_optimizer:
                             # Check both CP and optimizer success
                             if result['cp_success'] and result['optimizer_success']:
-                                print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                                print(f"SUCCESS - Total time: {result['time']:.2f}s")
                             else:
-                                print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
+                                print(f"FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
                                       f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
                         else:
                             # Only check CP success when not using optimizer
                             if result['cp_success']:
-                                print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                                print(f"SUCCESS - Total time: {result['time']:.2f}s")
                             else:
-                                print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
+                                print(f"FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
                     
                     print("-" * 60)
         
         if skipped_count > 0:
-            print(f"\n⚠ Skipped {skipped_count} configurations that already exist in JSON files")
+            print(f"\nSkipped {skipped_count} configurations that already exist in JSON files")
         if timeout_skipped_count > 0:
-            print(f"⏱ Skipped {timeout_skipped_count} configurations due to previous timeouts on smaller n values")
+            print(f"Skipped {timeout_skipped_count} configurations due to previous timeouts on smaller n values")
                 
         #return results
         
@@ -696,20 +696,20 @@ class MinizincRunner:
                 if use_optimizer:
                     # Check both CP and optimizer success
                     if result['cp_success'] and result['optimizer_success']:
-                        print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                        print(f"SUCCESS - Total time: {result['time']:.2f}s")
                     elif result['timeout_reached']:
-                        print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                        print(f"TIMEOUT - Reached {self.timeout_seconds}s limit")
                     else:
-                        print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
+                        print(f"FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}, "
                               f"OPT: {'OK' if result['optimizer_success'] else 'FAIL'}")
                 else:
                     # Only check CP success when not using optimizer
                     if result['cp_success']:
-                        print(f"✓ SUCCESS - Total time: {result['time']:.2f}s")
+                        print(f"SUCCESS - Total time: {result['time']:.2f}s")
                     elif result['timeout_reached']:
-                        print(f"⏱ TIMEOUT - Reached {self.timeout_seconds}s limit")
+                        print(f"TIMEOUT - Reached {self.timeout_seconds}s limit")
                     else:
-                        print(f"✗ FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
+                        print(f"FAILED - CP: {'OK' if result['cp_success'] else 'FAIL'}")
                           
                 print("-" * 60)
             
@@ -750,7 +750,7 @@ class MinizincRunner:
             # Add new results with current timestamp
             for result in group_results:
                 current_timestamp = str(time.time())
-                existing_data[current_timestamp] = result  # Direttamente l'oggetto, non un array
+                existing_data[current_timestamp] = result
 
             # Save back to file with custom formatting
             with open(filename, 'w', encoding='utf-8') as f:

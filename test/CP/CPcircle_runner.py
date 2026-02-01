@@ -156,7 +156,7 @@ def run_n20_optimizer(n: int,
     # Generate initial schedule using circle method
     print(f"Generating initial schedule for {n} teams using circle_method...")
     home, away = circle_method(n)
-    print(f"✓ Generated {len(home)} matches\n")
+    print(f"Generated {len(home)} matches\n")
     
     # Find MiniZinc
     minizinc = find_minizinc()
@@ -192,7 +192,7 @@ def run_n20_optimizer(n: int,
         n20_model = os.path.abspath(n20_model)
         
         if not os.path.exists(n20_model):
-            print(f"✗ Model file not found: {n20_model}")
+            print(f"Model file not found: {n20_model}")
             if return_result:
                 params = {
                     'use_int_search': use_int_search,
@@ -244,20 +244,20 @@ def run_n20_optimizer(n: int,
                     print(stdout)
                 
                 if stderr:
-                    print(f"\n⚠ Stderr:\n{stderr}")
+                    print(f"\nStderr:\n{stderr}")
                 
                 result_returncode = process.returncode
                 result_stdout = stdout
                 result_stderr = stderr
                 
             except subprocess.TimeoutExpired:
-                print(f"⚠ Timeout reached ({timeout}s), terminating n20 process...")
+                print(f"Timeout reached ({timeout}s), terminating n20 process...")
                 kill_process_tree(process)
                 
                 try:
                     process.wait(timeout=5)
                 except subprocess.TimeoutExpired:
-                    print(f"⚠ Force killing n20 process...")
+                    print(f"Force killing n20 process...")
                     process.kill()
                     process.wait()
                 
@@ -265,7 +265,7 @@ def run_n20_optimizer(n: int,
                 raise subprocess.TimeoutExpired(n20_model, timeout)
         
         except subprocess.TimeoutExpired:
-            print(f"\n⚠ Timeout after {timeout}s")
+            print(f"\nTimeout after {timeout}s")
             if return_result:
                 params = {
                     'use_int_search': use_int_search,
@@ -293,7 +293,7 @@ def run_n20_optimizer(n: int,
             return False, "Timeout"
         
         if result_returncode != 0:
-            print(f"\n✗ n20 Failed (exit code {result_returncode})")
+            print(f"\nn20 Failed (exit code {result_returncode})")
             if return_result:
                 params = {
                     'use_int_search': use_int_search,
@@ -320,7 +320,7 @@ def run_n20_optimizer(n: int,
                 }
             return False, result_stderr
         
-        print(f"\n✓ n20 Success (Time: {n20_time:.2f}s)")
+        print(f"\nn20 Success (Time: {n20_time:.2f}s)")
         
         # If not using optimizer, return n20 result
         if not use_optimizer:
@@ -342,7 +342,7 @@ def run_n20_optimizer(n: int,
         optimizer_data = extract_optimizer_data(n20_output, n)
         
         if not optimizer_data:
-            print("⚠ Failed to extract optimizer data, returning n20 output")
+            print("Failed to extract optimizer data, returning n20 output")
             if return_result:
                 params = {
                     'use_int_search': use_int_search,
@@ -359,7 +359,7 @@ def run_n20_optimizer(n: int,
         # Check remaining time
         remaining_time = timeout - n20_time
         if remaining_time <= 0:
-            print("⚠ Timeout reached, skipping optimizer")
+            print("Timeout reached, skipping optimizer")
             if return_result:
                 params = {
                     'use_int_search': use_int_search,
@@ -396,7 +396,7 @@ def run_n20_optimizer(n: int,
         optimizer_model = os.path.abspath(optimizer_model)
         
         if not os.path.exists(optimizer_model):
-            print(f"⚠ Optimizer file not found: {optimizer_model}")
+            print(f"Optimizer file not found: {optimizer_model}")
             if return_result:
                 params = {
                     'use_int_search': use_int_search,
@@ -434,20 +434,20 @@ def run_n20_optimizer(n: int,
                     print(stdout)
                 
                 if stderr:
-                    print(f"\n⚠ Stderr:\n{stderr}")
+                    print(f"\nStderr:\n{stderr}")
                 
                 opt_returncode = opt_process.returncode
                 opt_stdout = stdout
                 opt_stderr = stderr
                 
             except subprocess.TimeoutExpired:
-                print(f"⚠ Optimizer timeout reached, terminating process...")
+                print(f"Optimizer timeout reached, terminating process...")
                 kill_process_tree(opt_process)
                 
                 try:
                     opt_process.wait(timeout=5)
                 except subprocess.TimeoutExpired:
-                    print(f"⚠ Force killing optimizer process...")
+                    print(f"Force killing optimizer process...")
                     opt_process.kill()
                     opt_process.wait()
                 
@@ -455,7 +455,7 @@ def run_n20_optimizer(n: int,
                 raise subprocess.TimeoutExpired(optimizer_model, remaining_time)
             
             if opt_returncode == 0:
-                print(f"\n✓ Optimizer Success (Time: {opt_time:.2f}s)")
+                print(f"\nOptimizer Success (Time: {opt_time:.2f}s)")
                 total_time = time.time() - start_time
                 print(f"Total time: {total_time:.2f}s")
                 
@@ -471,7 +471,7 @@ def run_n20_optimizer(n: int,
                     return parse_output_to_result(n, params, opt_stdout, total_time, n20_time, opt_time, True, True, use_optimizer=use_optimizer)
                 return True, opt_stdout
             else:
-                print(f"\n⚠ Optimizer failed, returning n20 output")
+                print(f"\nOptimizer failed, returning n20 output")
                 
                 if return_result:
                     params = {
@@ -487,7 +487,7 @@ def run_n20_optimizer(n: int,
                 return True, n20_output
                 
         except subprocess.TimeoutExpired:
-            print(f"\n⚠ Optimizer timeout, returning n20 output")
+            print(f"\nOptimizer timeout, returning n20 output")
             
             if return_result:
                 params = {
@@ -512,7 +512,7 @@ def run_n20_optimizer(n: int,
                 pass
             
     except Exception as e:
-        print(f"\n✗ Error: {e}")
+        print(f"\nError: {e}")
         if return_result:
             params = {
                 'use_int_search': use_int_search,
@@ -844,12 +844,12 @@ def find_minizinc():
             result = subprocess.run([path, "--version"], 
                                   capture_output=True, timeout=5)
             if result.returncode == 0:
-                print(f"✓ Found MiniZinc: {path}\n")
+                print(f"Found MiniZinc: {path}\n")
                 return path
         except:
             continue
     
-    print("✗ MiniZinc not found!")
+    print("MiniZinc not found!")
     sys.exit(1)
 
 
@@ -857,7 +857,7 @@ def run_minizinc(mzn_file, n_value, timeout=300):
     """Run MiniZinc file with parameter n"""
     
     if not os.path.exists(mzn_file):
-        print(f"✗ File not found: {mzn_file}")
+        print(f"File not found: {mzn_file}")
         return False
     
     minizinc = find_minizinc()
@@ -886,20 +886,20 @@ def run_minizinc(mzn_file, n_value, timeout=300):
             print(result.stdout)
         
         if result.stderr:
-            print(f"\n⚠ Stderr:\n{result.stderr}")
+            print(f"\nStderr:\n{result.stderr}")
         
         if result.returncode == 0:
-            print("\n✓ Success")
+            print("\nSuccess")
             return True
         else:
-            print(f"\n✗ Failed (exit code {result.returncode})")
+            print(f"\nFailed (exit code {result.returncode})")
             return False
             
     except subprocess.TimeoutExpired:
-        print(f"\n⚠ Timeout after {timeout}s")
+        print(f"\nTimeout after {timeout}s")
         return False
     except Exception as e:
-        print(f"\n✗ Error: {e}")
+        print(f"\nError: {e}")
         return False
     finally:
         os.unlink(dzn_file)
@@ -1001,15 +1001,15 @@ def run_n20_interactive():
                     if use_optimizer:
                         # Check both n20 and optimizer success
                         if result.get('n20_success') and result.get('optimizer_success'):
-                            print(f"✓ SUCCESS for n={n}")
+                            print(f"SUCCESS for n={n}")
                         else:
-                            print(f"✗ FAILED for n={n}")
+                            print(f"FAILED for n={n}")
                     else:
                         # Only check n20 success when not using optimizer
                         if result.get('n20_success'):
-                            print(f"✓ SUCCESS for n={n}")
+                            print(f"SUCCESS for n={n}")
                         else:
-                            print(f"✗ FAILED for n={n}")
+                            print(f"FAILED for n={n}")
                 print("-" * 60 + "\n")
     else:
         # All combinations mode
@@ -1051,15 +1051,15 @@ def run_n20_interactive():
                         if use_optimizer:
                             # Check both n20 and optimizer success
                             if result.get('n20_success') and result.get('optimizer_success'):
-                                print(f"✓ SUCCESS")
+                                print(f"SUCCESS")
                             else:
-                                print(f"✗ FAILED")
+                                print(f"FAILED")
                         else:
                             # Only check n20 success when not using optimizer
                             if result.get('n20_success'):
-                                print(f"✓ SUCCESS")
+                                print(f"SUCCESS")
                             else:
-                                print(f"✗ FAILED")
+                                print(f"FAILED")
                         
                         # Save result immediately after computation
                         save_results([result])
@@ -1067,12 +1067,12 @@ def run_n20_interactive():
                     print("-" * 60 + "\n")
         
         if skipped_count > 0:
-            print(f"\n⚠ Skipped {skipped_count} configurations that already exist in JSON files")
+            print(f"\nSkipped {skipped_count} configurations that already exist in JSON files")
                 
     # Save all results
     if results:
         save_results(results)
-        print(f"\n✓ All results saved! Total runs: {len(results)}")
+        print(f"\nAll results saved! Total runs: {len(results)}")
 
 
 def test_circle_method():
@@ -1109,8 +1109,81 @@ def test_circle_method():
 
 if __name__ == "__main__":
     
+    if len(sys.argv) == 1:
+        selected_n = [2, 4, 6, 8, 10]
+        results = []
+        bool_params = [
+            'use_int_search',
+            'use_restart_luby',
+            'use_relax_and_reconstruct',
+            'chuffed',
+            'symm_brake',
+            'ic_diff_match_in_week'
+        ]
+        config = {'all_combinations': True, 'bool_params': bool_params, 'optimizer_modes': [True]}
+        bool_params = config['bool_params']
+        optimizer_modes = config.get('optimizer_modes', [True])  # Default to [True] for backward compatibility
+        bool_combinations = list(itertools.product([True, False], repeat=len(bool_params)))
+        total_runs = len(selected_n) * len(bool_combinations) * len(optimizer_modes)
+        
+        print(f"\nRunning {total_runs} total combinations...")
+        print(f"Optimizer modes: {['with optimization' if m else 'without optimization' for m in optimizer_modes]}\n")
+        
+        run_count = 0
+        skipped_count = 0
+        for n in selected_n:
+            for use_optimizer in optimizer_modes:
+                for combo in bool_combinations:
+                    run_count += 1
+                    params = dict(zip(bool_params, combo))
+                    
+                    # Add circle and optimized to params for comparison
+                    params_with_meta = params.copy()
+                    params_with_meta['circle'] = True
+                    params_with_meta['optimized'] = use_optimizer
+                    
+                    # Check if this configuration already exists
+                    if config_exists_in_json(n, params_with_meta):
+                        skipped_count += 1
+                        print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer}, params={params} - SKIPPED (already exists)")
+                        print("-" * 60 + "\n")
+                        continue
+                    
+                    print(f"[{run_count}/{total_runs}] n={n}, opt={use_optimizer}, params={params}")
+                    print("=" * 60)
+                    
+                    result = run_n20_optimizer(n, **params, use_optimizer=use_optimizer, return_result=True)
+                    results.append(result)
+                    
+                    if isinstance(result, dict):
+                        if use_optimizer:
+                            # Check both n20 and optimizer success
+                            if result.get('n20_success') and result.get('optimizer_success'):
+                                print(f"SUCCESS")
+                            else:
+                                print(f"FAILED")
+                        else:
+                            # Only check n20 success when not using optimizer
+                            if result.get('n20_success'):
+                                print(f"SUCCESS")
+                            else:
+                                print(f"FAILED")
+                        
+                        # Save result immediately after computation
+                        save_results([result])
+                        
+                    print("-" * 60 + "\n")
+        
+        if skipped_count > 0:
+            print(f"\nSkipped {skipped_count} configurations that already exist in JSON files")
+                
+        # Save all results
+        if results:
+            save_results(results)
+            print(f"\nAll results saved! Total runs: {len(results)}")
+        sys.exit(0)
     # If called with no arguments or --interactive, run interactive mode
-    if len(sys.argv) == 1 or (len(sys.argv) == 2 and sys.argv[1] in ['--interactive', '-i']):
+    if (len(sys.argv) == 2 and sys.argv[1] in ['--interactive', '-i']):
         run_n20_interactive()
         sys.exit(0)
     
@@ -1124,7 +1197,7 @@ if __name__ == "__main__":
         try:
             n = int(sys.argv[2])
             if n % 2 != 0:
-                print(f"✗ n must be even, got {n}")
+                print(f"n must be even, got {n}")
                 sys.exit(1)
             
             # Parse optional boolean flags
@@ -1139,13 +1212,13 @@ if __name__ == "__main__":
                     elif value.lower() in ['false', '0', 'no']:
                         kwargs[key] = False
                     else:
-                        print(f"⚠ Invalid boolean value for {key}: {value}")
+                        print(f"Invalid boolean value for {key}: {value}")
             
             success, output = run_n20_optimizer(n, **kwargs)
             sys.exit(0 if success else 1)
             
         except ValueError as e:
-            print(f"✗ Error: {e}")
+            print(f"Error: {e}")
             sys.exit(1)
     
     # If called with --circle flag and n, use circle_method
@@ -1153,7 +1226,7 @@ if __name__ == "__main__":
         try:
             n = int(sys.argv[2])
             if n % 2 != 0:
-                print(f"✗ n must be even, got {n}")
+                print(f"n must be even, got {n}")
                 sys.exit(1)
             
             print(f"Generating schedule using circle_method for {n} teams")
@@ -1177,7 +1250,7 @@ if __name__ == "__main__":
             print("=" * 60)
             sys.exit(0)
         except ValueError as e:
-            print(f"✗ Error: {e}")
+            print(f"Error: {e}")
             sys.exit(1)
     # Otherwise, run MiniZinc with file
     if len(sys.argv) < 3:
@@ -1210,9 +1283,9 @@ if __name__ == "__main__":
     try:
         n_value = int(sys.argv[2])
         if n_value % 2 != 0:
-            print(f"⚠ Warning: n={n_value} is odd (should be even)")
+            print(f"Warning: n={n_value} is odd (should be even)")
     except ValueError:
-        print(f"✗ Second argument must be integer, got: {sys.argv[2]}")
+        print(f"Second argument must be integer, got: {sys.argv[2]}")
         sys.exit(1)
     
     success = run_minizinc(mzn_file, n_value)

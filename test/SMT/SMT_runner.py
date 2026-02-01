@@ -10,9 +10,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'source', 'S
 from STSModel import STSModel
 
 
-# -------------------------
+
 # Parse circle2.py output
-# -------------------------
 def parse_circle2_output(output_text):
     """
     Parse the output from circle2.py to extract specific information.
@@ -77,7 +76,7 @@ def parse_circle2_output(output_text):
                 except ValueError:
                     result['optimize_time'] = match.group(1).strip()
         
-        # Extract Total time value (case-insensitive)
+        # Extract Total time value
         elif 'total time:' in stripped.lower():
             match = re.search(r'[Tt]otal time:\s*(.+)', stripped)
             if match:
@@ -155,9 +154,8 @@ def parse_circle2_output(output_text):
     return result
 
 
-# -------------------------
+
 # Input/Output JSON
-# -------------------------
 def load_json_dict(filename):
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as f:
@@ -306,32 +304,36 @@ def write_compact_json_dict(filename, data):
 
 
 if __name__ == "__main__":
-    valid_teams = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-    team_input = input(f"Insert number of teams ({valid_teams}) or 'all': ").strip()
-
-    if team_input.lower() == "all":
-        teams = valid_teams
+    if len(sys.argv) == 1:
+        teams = [2, 4, 6, 8, 10]
+        method_input = "circle"
     else:
-        parts = [p.strip() for p in team_input.split(",") if p.strip() != ""]
-        teams = []
-        for p in parts:
-            try:
-                v = int(p)
-                if v in valid_teams:
-                    teams.append(v)
-            except Exception:
-                pass
+        valid_teams = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+        team_input = input(f"Insert number of teams ({valid_teams}) or 'all': ").strip()
 
-    if not teams:
-        print("No valid number of teams provided. Terminating.")
-        raise SystemExit(1)
-    
-    valid_methods = ["classic", "circle"]
-    method_input = input(f"Select method: (classic/circle) ({valid_methods}): ").strip().lower()
+        if team_input.lower() == "all":
+            teams = valid_teams
+        else:
+            parts = [p.strip() for p in team_input.split(",") if p.strip() != ""]
+            teams = []
+            for p in parts:
+                try:
+                    v = int(p)
+                    if v in valid_teams:
+                        teams.append(v)
+                except Exception:
+                    pass
 
-    if method_input not in valid_methods:
-        print("Invalid method selected. Terminating.")
-        raise SystemExit(1)
+        if not teams:
+            print("No valid number of teams provided. Terminating.")
+            raise SystemExit(1)
+        
+        valid_methods = ["classic", "circle"]
+        method_input = input(f"Select method: (classic/circle) ({valid_methods}): ").strip().lower()
+
+        if method_input not in valid_methods:
+            print("Invalid method selected. Terminating.")
+            raise SystemExit(1)
     
 
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'res', 'SMT'))
@@ -474,16 +476,16 @@ if __name__ == "__main__":
                             opt_flags = {**flags_combo, 'optimize': True, 'solver': solver}
                             opt_key = tuple(sorted(opt_flags.items()))
                             timed_out_configs[opt_key] = n
-                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n}, including optimized version)")
+                            print(f"TIMEOUT - Reached 300s limit (will skip for n>{n}, including optimized version)")
                         else:
-                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n})")
+                            print(f"TIMEOUT - Reached 300s limit (will skip for n>{n})")
                     else:
-                        print(f"✓ SUCCESS - Time: {time_val:.2f}s")
+                        print(f"SUCCESS - Time: {time_val:.2f}s")
 
             if skipped_count > 0:
-                print(f"\n⚠ Skipped {skipped_count} configurations that already exist in JSON files")
+                print(f"\nSkipped {skipped_count} configurations that already exist in JSON files")
             if timeout_skipped_count > 0:
-                print(f"⏱ Skipped {timeout_skipped_count} configurations due to previous timeouts on smaller n values")
+                print(f"Skipped {timeout_skipped_count} configurations due to previous timeouts on smaller n values")
             print(f"\nAll combinations saved in respective JSON files")
 
         else:
@@ -507,8 +509,10 @@ if __name__ == "__main__":
             "sb_lex_periods",
             "implied_constraints"
         ]
-
-        mode = input("Select mode (manual/all): ").strip().lower()
+        if len(sys.argv) == 1:
+            mode = "all"
+        else:
+            mode = input("Select mode (manual/all): ").strip().lower()
 
         if mode not in ["manual", "all"]:
             print("Unknown mode. Use 'manual' o 'all'.")
@@ -576,12 +580,18 @@ if __name__ == "__main__":
                 print(f"Result saved in {filename}")
         
         elif mode == "all":
-            solver = input("Select solver (z3/cvc5): ").strip().lower()
+            if len(sys.argv) == 1:
+                solver = "z3"
+            else:
+                solver = input("Select solver (z3/cvc5): ").strip().lower()
             if solver not in ["z3", "cvc5"]:
                 print("Invalid solver selected. Terminating.")
                 raise SystemExit(1)
             
-            optimize = input("Optimize solution? (y/n): ").strip().lower().startswith("y")
+            if len(sys.argv) == 1:
+                optimize = True
+            else:
+                optimize = input("Optimize solution? (y/n): ").strip().lower().startswith("y")
             if solver == "cvc5" and optimize:
                 print("Note: cvc5 will find solutions, then Z3 will optimize them.")
             
@@ -662,12 +672,12 @@ if __name__ == "__main__":
                     
                     # Debug: check for issues
                     if result.returncode != 0:
-                        print(f"  ⚠ circle2.py exited with code {result.returncode}")
+                        print(f"  circle2.py exited with code {result.returncode}")
                         print(f"  Full stderr:\n{stderr}")
                     if stderr:
                         print(f"  stderr: {stderr[:300]}")
                     if not output.strip():
-                        print(f"  ⚠ WARNING: No output from circle2.py")
+                        print(f"  WARNING: No output from circle2.py")
                         print(f"  Command: {cmd}")
                         # Skip this configuration if there's truly no output
                         continue
@@ -685,7 +695,7 @@ if __name__ == "__main__":
                     
                     # Validate that we got meaningful data, if not set safe defaults
                     if r.get('time') is None and r.get('solve_time') is None:
-                        print(f"  ⚠ WARNING - Missing timing data, setting defaults")
+                        print(f"  WARNING - Missing timing data, setting defaults")
                         # Check if output indicates an actual run
                         if 'sat' not in output.lower() and 'unsat' not in output.lower() and 'timeout' not in output.lower():
                             print(f"  Output appears invalid. First 300 chars:")
@@ -719,16 +729,16 @@ if __name__ == "__main__":
                             opt_params = {**params_dict, "optimize": True, "solver": solver}
                             opt_key = tuple(sorted(opt_params.items()))
                             timed_out_configs[opt_key] = n
-                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n}, including optimized version)")
+                            print(f"TIMEOUT - Reached 300s limit (will skip for n>{n}, including optimized version)")
                         else:
-                            print(f"⏱ TIMEOUT - Reached 300s limit (will skip for n>{n})")
+                            print(f"TIMEOUT - Reached 300s limit (will skip for n>{n})")
                     else:
-                        print(f"✓ SUCCESS - Time: {time_val:.2f}s")
+                        print(f"SUCCESS - Time: {time_val:.2f}s")
             
             if skipped_count > 0:
-                print(f"\\n⚠ Skipped {skipped_count} configurations that already exist in JSON files")
+                print(f"\\nSkipped {skipped_count} configurations that already exist in JSON files")
             if timeout_skipped_count > 0:
-                print(f"⏱ Skipped {timeout_skipped_count} configurations due to previous timeouts on smaller n values")
+                print(f"Skipped {timeout_skipped_count} configurations due to previous timeouts on smaller n values")
             print(f"\\nAll combinations saved in respective JSON files")
                 
 
