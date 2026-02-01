@@ -8,7 +8,6 @@ scripts = [
     "test/SMT/SMT_runner.py"
 ]
 
-# Execute each script one after the other
 for script in scripts:
     print(f"Running {script}...")
     result = subprocess.run(["python", script], capture_output=True, text=True)
