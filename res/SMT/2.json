@@ -1,0 +1,2818 @@
+{
+  "1769708624.9279716": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708624.9499671": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708624.9659946": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708624.9839709": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.0019674": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.0209718": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.0468745": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.0648513": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.0798492": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.096853": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.1138768": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.133852": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.149877": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.1698608": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.1848538": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.2028494": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.2198675": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.2398598": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.2558491": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.2738574": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.2898595": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.3078616": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.3248477": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.3448598": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.3598597": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.3788517": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.3948517": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.4128504": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.428877": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.4488523": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.463877": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.4819143": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.5009143": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.5209124": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.5479133": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.5829148": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.6119153": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.635911": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.6599152": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.6849058": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.7009053": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.719911": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.735911": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.75691": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.7729306": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.7959135": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.8129148": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.8319075": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.8499126": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.8689125": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.8879213": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.9079084": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.9269116": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.9477987": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.9689338": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708625.9969368": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.014951": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.0369394": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.0549312": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.0749276": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.0919487": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.1129272": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.1309404": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769708626.1499305": {
+    "time": 0,
+    "solve_time": 0.0,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "z3"
+    }
+  },
+  "1769709040.3407671": {
+    "time": 0,
+    "solve_time": 0.04,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.3930829": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.4453819": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.4978366": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.5471778": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.5968692": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.6521165": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.710696": {
+    "time": 0,
+    "solve_time": 0.04,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.7660923": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.8233747": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.877422": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.9255602": {
+    "time": 0,
+    "solve_time": 0.04,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709040.9798434": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.0346327": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.0838318": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.135359": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.1887627": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.2430162": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.2963703": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.358911": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.416545": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.4691582": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.523262": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.5781195": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.6270158": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.6834772": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.735054": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.7887876": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.8486857": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.9058223": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709041.9569895": {
+    "time": 0,
+    "solve_time": 0.04,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769709042.0207064": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": false,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769876081.5287092": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876081.9151845": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769876082.320227": {
+    "time": 0.0,
+    "solve_time": 0.02,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876082.659711": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769876082.8714964": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876083.0690334": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769876083.2558904": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876083.4557986": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769876236.6201265": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876236.830886": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769876237.0282886": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876237.2055025": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769876237.356908": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876237.519572": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769876237.6767218": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "z3"
+    }
+  },
+  "1769876237.8230944": {
+    "time": 0.0,
+    "solve_time": 0.01,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "z3"
+    }
+  },
+  "1769950573.9092255": {
+    "time": 0,
+    "solve_time": 0.09,
+    "optimize_time": 0.03,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950573.9655783": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.0197768": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.0744338": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.1275222": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.1808405": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.2324796": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.285316": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.3357666": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.3872359": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.4416292": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.4969327": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.5522234": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.604701": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.6689856": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.725801": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": false,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.778853": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.8379595": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.8974493": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950574.9552364": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.0237067": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.0824435": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.1487858": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.204295": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": false,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.2614815": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.3270788": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.385231": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.455151": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": false,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.539638": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.6017413": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": false,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.659259": {
+    "time": 0,
+    "solve_time": 0.02,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": false,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950575.7259288": {
+    "time": 0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[1,2]]],
+    "params": {
+      "sb_weeks": true,
+      "sb_periods": true,
+      "sb_teams": true,
+      "ic_matches_per_team": true,
+      "ic_period_count": true,
+      "optimize": true,
+      "circle": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950773.041579": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950773.361734": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950773.7206497": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950774.0466235": {
+    "time": 0.0,
+    "solve_time": 0.04,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950774.3925755": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950774.7190769": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769950775.0380518": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769950775.357329": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": "None",
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": false,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951900.326327": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951900.6308641": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951900.921015": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951901.221276": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": false,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951901.5185184": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951901.805151": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": false,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  },
+  "1769951902.1382687": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.01,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": false,
+      "solver": "cvc5"
+    }
+  },
+  "1769951902.4525795": {
+    "time": 0.0,
+    "solve_time": 0.03,
+    "optimize_time": 0.0,
+    "optimal": true,
+    "obj": 1,
+    "sol": [[[2,1]]],
+    "params": {
+      "optimize": true,
+      "circle": true,
+      "sb_fix_period": true,
+      "sb_lex_periods": true,
+      "implied_constraints": true,
+      "solver": "cvc5"
+    }
+  }
+}
