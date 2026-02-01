@@ -137,6 +137,21 @@ def parse_circle2_output(output_text):
     if result['sol'] is None:
         result['sol'] = []
     
+    # Calculate time if not found but solve_time is available
+    if result['time'] is None and result['solve_time'] is not None:
+        solve_t = result['solve_time'] if result['solve_time'] is not None else 0
+        opt_t = result['optimize_time'] if result['optimize_time'] is not None else 0
+        result['time'] = int(solve_t + opt_t)
+    
+    # Optimal field should be provided by circle2.py with correct logic
+    # If missing, default to False (indicates error/timeout)
+    if result['optimal'] is None:
+        result['optimal'] = False
+    
+    # Set obj to "None" if not found
+    if result['obj'] is None:
+        result['obj'] = "None"
+    
     return result
 
 
@@ -186,6 +201,8 @@ def load_previous_timeouts(selected_n, method="classic"):
                 solve_time_val = result.get('solve_time', 0)
                 
                 # Check if it's a timeout (300 seconds)
+                time_val = time_val or 0
+                solve_time_val = solve_time_val or 0
                 is_timeout = (time_val >= 300) or (solve_time_val >= 300)
                 
                 if is_timeout and 'params' in result:
@@ -627,13 +644,59 @@ if __name__ == "__main__":
                     params_str = ", ".join([f"{param_names[i]}={combo[i]}" for i in range(len(param_names))])
                     
                     mode_arg = "opt" if optimize else "sat"
-                    cmd = f'python "{os.path.join(os.path.dirname(__file__), "..", "..", "source", "SMT", "circle2.py")}" {n} {mode_arg} {solver} "[{params_str}]"'
+                    # Use Python from .venv in source/SMT/
+                    venv_python = os.path.join(os.path.dirname(__file__), "..", "..", "source", "SMT", ".venv", "Scripts", "python.exe")
+                    if not os.path.exists(venv_python):
+                        venv_python = "python"  # Fallback to system python
+                    circle2_path = os.path.join(os.path.dirname(__file__), "..", "..", "source", "SMT", "circle2.py")
+                    cmd = f'"{venv_python}" "{circle2_path}" {n} {mode_arg} {solver} "[{params_str}]"'
+                    
+                    # Debug: print command for first few runs
+                    if run_count <= 3:
+                        print(f"  DEBUG Command: {cmd}")
                     
                     import subprocess
                     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
                     output = result.stdout
+                    stderr = result.stderr
+                    
+                    # Debug: check for issues
+                    if result.returncode != 0:
+                        print(f"  ⚠ circle2.py exited with code {result.returncode}")
+                        print(f"  Full stderr:\n{stderr}")
+                    if stderr:
+                        print(f"  stderr: {stderr[:300]}")
+                    if not output.strip():
+                        print(f"  ⚠ WARNING: No output from circle2.py")
+                        print(f"  Command: {cmd}")
+                        # Skip this configuration if there's truly no output
+                        continue
+                    
+                    # Debug: show first 500 chars of output for failed runs
+                    if result.returncode != 0:
+                        print(f"  Output (first 500 chars): {output[:500]}")
                     
                     r = parse_circle2_output(output)
+                    
+                    # Debug: show parsed result and raw output for first few runs
+                    if run_count <= 3:
+                        print(f"  DEBUG Parsed result: time={r.get('time')}, solve_time={r.get('solve_time')}, optimize_time={r.get('optimize_time')}, optimal={r.get('optimal')}, obj={r.get('obj')}, sol_len={len(r.get('sol', []))}")
+                        print(f"  DEBUG Raw output (last 800 chars):\n{output[-800:]}")
+                    
+                    # Validate that we got meaningful data, if not set safe defaults
+                    if r.get('time') is None and r.get('solve_time') is None:
+                        print(f"  ⚠ WARNING - Missing timing data, setting defaults")
+                        # Check if output indicates an actual run
+                        if 'sat' not in output.lower() and 'unsat' not in output.lower() and 'timeout' not in output.lower():
+                            print(f"  Output appears invalid. First 300 chars:")
+                            print(f"  {output[:300]}")
+                        # Set safe defaults
+                        r['time'] = r.get('time') or 0
+                        r['solve_time'] = r.get('solve_time') or 0
+                        r['optimize_time'] = r.get('optimize_time') or 0
+                        r['optimal'] = r.get('optimal') if r.get('optimal') is not None else False
+                        r['obj'] = r.get('obj') or "None"
+                    
                     r["params"] = params_with_meta
                     
                     filename = os.path.join(output_dir, f"{n}.json")
@@ -646,6 +709,9 @@ if __name__ == "__main__":
                     # Check if this run timed out and add to tracking
                     time_val = r.get('time', 0)
                     solve_time_val = r.get('solve_time', 0)
+                    # Check if it's a timeout (300 seconds)
+                    time_val = time_val or 0
+                    solve_time_val = solve_time_val or 0
                     if (time_val >= 300) or (solve_time_val >= 300):
                         timed_out_configs[config_key] = n
                         # If unoptimized timed out, also mark optimized as timed out

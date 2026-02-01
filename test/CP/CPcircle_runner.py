@@ -132,7 +132,7 @@ def run_n20_optimizer(n: int,
                       use_optimizer: bool = True,
                       return_result: bool = False) -> Tuple[bool, str]:
     """
-    Run n20_NON_TOCCARE.mzn optimizer with circle_method generated schedule,
+    Run  optimizer with circle_method generated schedule,
     optionally followed by optimizer_2.0.mzn for further optimization.
     
     Args:
@@ -179,16 +179,16 @@ def run_n20_optimizer(n: int,
         dzn_file = f.name
     
     try:
-        print(f"Running n20_NON_TOCCARE.mzn optimizer...")
+        print(f"Running circle.mzn optimizer...")
         print(f"Timeout: {timeout}s")
         print("=" * 60)
         
         # Determine solver
         solver = 'Chuffed' if chuffed else 'Gecode'
         
-        # Path to n20 model (relative to test/CP directory)
+        # Path to circle model (relative to test/CP directory)
         n20_model = os.path.join(os.path.dirname(__file__), 
-                                  '..', '..', 'source', 'CP', 'n20_NON_TOCCARE.mzn')
+                                  '..', '..', 'source', 'CP', 'circle.mzn')
         n20_model = os.path.abspath(n20_model)
         
         if not os.path.exists(n20_model):
