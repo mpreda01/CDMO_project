@@ -1,0 +1,610 @@
+{
+  "highs_dec_cir": {
+    "time": 173,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": "None",
+    "sol": [[[19, 2], [18, 5], [13, 12], [18, 9], [19, 10], [8, 4], [12, 2], [9, 7], [14, 4], [17, 3], [20, 11], [17, 7], [6, 1], [15, 13], [20, 15], [8, 5], [14, 1], [11, 6], [16, 3]], [[17, 4], [17, 6], [15, 10], [7, 1], [16, 13], [16, 15], [19, 14], [11, 5], [20, 9], [18, 2], [13, 9], [20, 12], [4, 3], [18, 10], [6, 5], [12, 1], [8, 7], [14, 3], [11, 8]], [[13, 8], [16, 7], [19, 6], [14, 13], [18, 11], [10, 2], [8, 6], [15, 1], [15, 3], [20, 10], [17, 5], [3, 2], [14, 12], [5, 4], [19, 11], [9, 4], [20, 17], [16, 1], [12, 7]], [[11, 10], [14, 9], [5, 1], [15, 12], [6, 4], [18, 13], [11, 3], [20, 8], [16, 2], [14, 6], [19, 3], [19, 5], [17, 9], [16, 12], [7, 4], [17, 15], [13, 2], [10, 7], [18, 1]], [[18, 3], [19, 4], [4, 2], [19, 8], [20, 5], [17, 14], [17, 16], [13, 3], [12, 6], [15, 5], [2, 1], [13, 11], [15, 11], [20, 14], [10, 1], [7, 6], [18, 16], [9, 8], [10, 9]], [[16, 5], [15, 8], [18, 7], [20, 4], [9, 1], [7, 5], [13, 1], [12, 4], [19, 18], [11, 9], [14, 8], [14, 10], [16, 10], [6, 3], [17, 13], [11, 2], [12, 3], [15, 2], [20, 19]], [[20, 1], [12, 11], [14, 11], [6, 2], [17, 12], [20, 6], [18, 15], [19, 16], [17, 1], [13, 7], [15, 7], [16, 8], [18, 8], [19, 9], [9, 2], [10, 3], [10, 5], [13, 4], [14, 5]], [[14, 7], [20, 2], [20, 3], [5, 3], [15, 14], [11, 1], [10, 4], [18, 17], [10, 8], [16, 4], [16, 6], [15, 9], [19, 7], [8, 1], [18, 12], [19, 13], [9, 6], [12, 5], [17, 2]], [[12, 9], [3, 1], [17, 8], [16, 11], [8, 2], [9, 3], [20, 7], [10, 6], [13, 5], [19, 1], [12, 10], [18, 6], [20, 13], [7, 2], [16, 14], [18, 14], [11, 4], [19, 17], [15, 4]], [[15, 6], [13, 10], [16, 9], [17, 10], [7, 3], [19, 12], [9, 5], [14, 2], [11, 7], [12, 8], [18, 4], [4, 1], [5, 2], [17, 11], [8, 3], [20, 16], [19, 15], [20, 18], [13, 6]]]
+  },
+  "highs_opt_cir": {
+    "time": 84,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[5, 16], [14, 9], [4, 2], [17, 10], [18, 11], [19, 12], [7, 20], [1, 15], [11, 7], [2, 18], [14, 8], [20, 12], [6, 1], [15, 13], [8, 3], [9, 4], [10, 5], [19, 17], [3, 16]], [[1, 20], [4, 19], [16, 9], [7, 1], [15, 14], [18, 13], [9, 5], [2, 14], [12, 6], [15, 5], [4, 18], [3, 2], [16, 10], [17, 11], [17, 13], [10, 3], [8, 7], [11, 6], [20, 19]], [[11, 10], [16, 7], [6, 19], [15, 12], [9, 1], [8, 4], [12, 2], [11, 5], [19, 18], [13, 7], [13, 9], [16, 8], [4, 3], [6, 3], [10, 1], [17, 15], [20, 17], [20, 18], [14, 5]], [[14, 7], [13, 10], [17, 8], [6, 2], [6, 4], [16, 15], [11, 3], [13, 3], [1, 17], [20, 10], [20, 11], [4, 1], [5, 2], [19, 9], [18, 12], [18, 14], [19, 15], [9, 8], [12, 7]], [[3, 18], [2, 20], [13, 12], [8, 19], [17, 12], [11, 1], [10, 4], [9, 7], [3, 15], [1, 19], [5, 17], [14, 10], [18, 8], [5, 4], [16, 14], [20, 16], [9, 6], [2, 15], [13, 6]], [[4, 17], [6, 17], [15, 10], [4, 20], [5, 20], [9, 3], [1, 13], [19, 16], [13, 5], [12, 8], [15, 7], [6, 18], [7, 19], [16, 12], [9, 2], [11, 2], [1, 14], [3, 14], [11, 8]], [[2, 19], [3, 1], [14, 11], [18, 9], [16, 13], [7, 5], [8, 6], [8, 20], [14, 4], [3, 17], [16, 6], [17, 7], [15, 11], [18, 10], [20, 15], [1, 12], [2, 13], [12, 5], [10, 9]], [[13, 8], [12, 11], [7, 18], [14, 13], [19, 10], [6, 20], [18, 15], [10, 6], [2, 16], [11, 9], [2, 1], [5, 19], [17, 9], [20, 14], [7, 4], [8, 5], [12, 3], [1, 16], [4, 15]], [[15, 6], [15, 8], [5, 1], [5, 3], [7, 3], [10, 2], [19, 14], [18, 17], [9, 20], [4, 16], [12, 10], [13, 11], [14, 12], [8, 1], [19, 11], [7, 6], [18, 16], [13, 4], [2, 17]], [[12, 9], [5, 18], [3, 20], [16, 11], [8, 2], [17, 14], [17, 16], [12, 4], [10, 8], [14, 6], [3, 19], [15, 9], [20, 13], [7, 2], [6, 5], [19, 13], [11, 4], [10, 7], [1, 18]]]
+  },
+  "highs_dec_cir_sbper": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_cir_sbper": {
+    "time": 142,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": true,
+    "stop_reason": null,
+    "obj": 1,
+    "sol": [[[1, 20], [14, 9], [17, 8], [8, 19], [6, 4], [18, 13], [12, 2], [11, 5], [13, 5], [3, 17], [15, 7], [3, 2], [16, 10], [20, 14], [7, 4], [12, 1], [19, 15], [11, 6], [10, 9]], [[2, 19], [12, 11], [5, 1], [14, 13], [19, 10], [9, 3], [17, 16], [8, 20], [3, 15], [2, 18], [16, 6], [15, 9], [6, 1], [5, 4], [17, 13], [18, 14], [11, 4], [10, 7], [12, 7]], [[3, 18], [4, 19], [15, 10], [16, 11], [17, 12], [10, 2], [8, 6], [19, 16], [9, 20], [13, 7], [20, 11], [4, 1], [18, 8], [15, 13], [9, 2], [7, 6], [1, 14], [5, 12], [14, 5]], [[17, 4], [5, 18], [16, 9], [15, 12], [15, 14], [11, 1], [11, 3], [10, 6], [10, 8], [1, 19], [3, 19], [20, 12], [17, 9], [7, 2], [16, 14], [8, 5], [2, 13], [20, 18], [13, 6]], [[16, 5], [13, 10], [3, 20], [18, 9], [8, 2], [7, 5], [19, 14], [1, 15], [12, 6], [12, 8], [2, 1], [7, 17], [20, 13], [17, 11], [19, 11], [9, 4], [18, 16], [14, 3], [4, 15]], [[15, 6], [3, 1], [14, 11], [4, 20], [7, 3], [8, 4], [1, 13], [9, 7], [2, 16], [20, 10], [13, 9], [6, 18], [5, 2], [16, 12], [18, 12], [17, 15], [10, 5], [19, 17], [11, 8]], [[14, 7], [2, 20], [6, 19], [17, 10], [9, 1], [19, 12], [18, 15], [4, 12], [1, 17], [11, 9], [14, 8], [13, 11], [4, 3], [18, 10], [6, 5], [20, 16], [8, 7], [2, 15], [3, 16]], [[13, 8], [6, 17], [18, 7], [7, 1], [5, 20], [17, 14], [9, 5], [2, 14], [19, 18], [4, 16], [12, 10], [8, 16], [15, 11], [6, 3], [10, 1], [2, 11], [12, 3], [13, 4], [20, 19]], [[12, 9], [16, 7], [13, 12], [6, 2], [11, 18], [16, 15], [10, 4], [3, 13], [4, 14], [14, 6], [5, 17], [5, 19], [7, 19], [1, 8], [20, 15], [10, 3], [20, 17], [9, 8], [1, 18]], [[11, 10], [15, 8], [4, 2], [5, 3], [16, 13], [6, 20], [7, 20], [18, 17], [11, 7], [15, 5], [4, 18], [14, 10], [14, 12], [19, 9], [8, 3], [19, 13], [9, 6], [1, 16], [2, 17]]]
+  },
+  "highs_dec_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_dec_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "highs_opt_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_cir": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_cir": {
+    "time": 300,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_cir_sbper": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_cir_sbper": {
+    "time": 300,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_dec_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cbc_opt_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_dec_cir": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_cir": {
+    "time": 300,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_dec_cir_sbper": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_cir_sbper": {
+    "time": 300,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_dec_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_dec_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_dec_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_dec_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "cplex_opt_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_cir": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_cir": {
+    "time": 300,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_cir_sbper": {
+    "time": 300,
+    "method": "circle",
+    "version": "decision",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_cir_sbper": {
+    "time": 300,
+    "method": "circle",
+    "version": "optimal",
+    "params": {
+      "sb_per": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": false,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can_st1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": false
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_dec_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "decision",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  },
+  "gurobi_opt_can_st1_sw1": {
+    "time": 300,
+    "method": "canonical",
+    "version": "optimal",
+    "params": {
+      "sb_teams": true,
+      "sb_weeks": true
+    },
+    "optimal": false,
+    "stop_reason": "time_limit",
+    "obj": "None",
+    "sol": []
+  }
+}
