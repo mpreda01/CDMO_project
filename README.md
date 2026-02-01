@@ -13,20 +13,41 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
    docker compose exec cdmo-solver bash
    ```
 
-2. **Run examples inside the container:**
+2. **General runs inside the container:**
+   Following commands allow to run the model for n=[2,..,10] exploiting the circle method
+   ```bash
+   # CP solver
+   python test/CP/CP_runner.py
+   
+   # SAT Solver
+   python test/SAT/SAT_runner.py
+
+   # SMT Solver
+   python test/SMT/SMT_runner.py
+
+   # MIP solver  
+   python test/MIP/MIP_runner.py
+   ```
+   A general runner allows to run all the commands above in one single command:
+   ```bash
+   python test/main_runner.py
+   ```
+3. **Specific runs inside the container:**
    ```bash
    # CP solver
    python test/CP/CP_runner.py                # then specify configuration
    
    # SAT Solver
-   python test/SAT/SAT_runner.py 4
+   python test/SAT/SAT_runner.py
 
    # SMT Solver
    python test/SMT/SMT_runner.py              # then specify configuration
 
    # MIP solver  
-   python test/MIP/MIP_runner.py 6
-   ```
+   python test/MIP/MIP_runner.py 2 4 12       # to run specific n° teams
+   python test/MIP/MIP_runner.py --decision-only # to run only the decision method
+   python test/MIP/MIP_runner.py --optimization-only # to run only the optimization method
+   python test/MIP/MIP_runner.py --no-circle  # to run only canonical method
 
 ### Option 2: Local Installation
 
@@ -45,39 +66,6 @@ Sports Tournament Scheduling is addressed within a unified framework that employ
    
    Instructions are the same as in the Docker container
 
-## Personalized executions:
-
-For **MIP**:
-
-- `--solvers cplex` &nbsp;&nbsp;&nbsp;&nbsp;Run only selected solvers.
-- `--teams 6 8 10` &nbsp;&nbsp;&nbsp;&nbsp;Specify exact team numbers.
-- `--time-limit 600` &nbsp;&nbsp;&nbsp;&nbsp;Personalized the time limit (in seconds) per run (default 300s).
-- `--no-combination` &nbsp;&nbsp;&nbsp;&nbsp;Execute the solver runner only for configurations with all the symmetry breaking constraints.
-- `--decision-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the decision version (no objective function).
-- `--optimization-only` &nbsp;&nbsp;&nbsp;&nbsp;Run the solvers only for the optimization version (minimize home/away imbalance).
-
-For **SAT**:
-- `optimize` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver only for the optimization version (minimize home/away imbalance).
-- `basic` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver with only one symmetry breaking constraint.
-- `moderate` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver with two symmetry breaking constraints.
-- `full` &nbsp;&nbsp;&nbsp;&nbsp;Run the solver with all symetry breaking constraints.
-
-#### Example:
-
-```bash
-# CP solver
-python test/SAT/SAT_runner.py 6 moderate
-   
-# SAT Solver
-python test/SAT/SAT_runner.py 8 optimize
-
-# SMT Solver
-python test/MIP/MIP_runner.py 12 --no-combination
-
-# MIP solver  
-python test/MIP/MIP_runner.py 10 --solver gurobi
-```
-
 ## Project Structure
 
 ```
@@ -94,10 +82,13 @@ source/
 └── SMT/         # Z3 SMT theory solver
 
 test/
-├── CP/CP_runner.py         # CP solver runner
-├── MIP/MIP_runner.py       # MIP solver runner
-├── SAT/SAT_runner.py       # SAT solver runner
-└── SMT/SMT_runner.py       # SMT solver runner
+├── CP/CPcanonical_runner.py         # CP canonical solver runner
+├── CP/CPcircle_runner.py                  # CP solver runner
+├── MIP/MIP_runner.py                # MIP solver runner
+├── SAT/SAT_runner.py                # SAT solver runner
+├── SMT/SMT_runner.py                # SMT solver runner
+└── main_runner.py                   # Runner for all techinques using circle method
+
 ```
 
 ## Key Constraints
